@@ -11,7 +11,8 @@ An example of an image:
 ![Toca.io](/images/tocaio.png)
 
 * Unordered list item (using an asterisk)
-- Unordered list item (using a dash is also valid)
+* Unordered list item (using an asterisk)
+- Unordered list item (using a dash is also valid, but shouldn't nbe mixed)
 
 1. Ordered list item
 2. Ordered list item
