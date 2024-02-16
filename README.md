@@ -7,17 +7,17 @@ Each document should be in it's own file, be named in a URL-safe way (the file w
 ### Variable chip
 Render a variable (eg pink) datachip. Takes a label argument and an optional type property.
 
-`:datachip-variable[label]{type: "String"}`
+`:datachip-variable[label]{type="String"}`
 
 ### Action chip
 Render an action result (eg green) datachip. Takes a label argument and an optional type property.
 
-`:datachip-action[label]{type: "Number"}`
+`:datachip-action[label]{type="Number"}`
 
 ### Datastore chip
 Render a datastore (eg blue) datachip. Takes a label argument and an option type property,
 
-`:datachip-datastore[label]{type: "Boolean"}`
+`:datachip-datastore[label]{type="Boolean"}`
 
 ## Images
 Images are standard markdown elements. Images files should be uploaded to this repository and relatively linked.

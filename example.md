@@ -15,4 +15,4 @@ This is an example of a page of documentation.
 
 This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation.
 
-This is what a datachip looks like :datachip-variable[some text]{type: "String"}
+This is what a datachip looks like :datachip-variable[some text]{type="String"}
