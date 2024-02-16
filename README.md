@@ -22,4 +22,4 @@ Render a datastore (eg blue) datachip. Takes a label argument and an option type
 ## Images
 Images are standard markdown elements. Images files should be uploaded to this repository and relatively linked.
 
-`![Alt text](./images/someimage.jpg)`
+`![Alt text](/images/someimage.jpg)`
