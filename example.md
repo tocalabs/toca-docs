@@ -16,6 +16,7 @@ An example of an image:
 
 1. Ordered list item
 2. Ordered list item
+3. Ordered list item
 
 | Column one | Column two | Column three |
 | ---------- | ---------- | ------------ |
