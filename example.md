@@ -1,4 +1,4 @@
-![Toca.io](./images/tocaio.png)
+![Toca.io](/images/tocaio.png)
 
 This is an example of a page of documentation.
 
