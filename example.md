@@ -1,18 +1,24 @@
-![Toca.io](/images/tocaio.png)
+This is an example of a page of documentation. Start with a paragraph explaining general description of the feature/concept. You don't need to include a title - this will be handled in the UI. You can use all standard markdown:
 
-This is an example of a page of documentation.
+## Heading (h2)
+### Subheading (h3)
+#### Subheading (h4)
 
-* This is an example of a page of documentation.
-* This is an example of a page of documentation.
-* This is an example of a page of documentation.
+Paragraph of text with _italic_ or *italic* and **bold** text. Also available is ~strikethrough~. [Text can be linked](https://toca.io).
 
-## Some text here
-This is an example of a page of documentation.
+An example of an image:
 
-1. This is an example of a page of documentation.
-2. This is an example of a page of documentation.
-3. This is an example of a page of documentation.
+![Toca.io](/images/tocaio.png){width="200"}
 
-This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation. This is an example of a page of documentation.
+* Unordered list item (using an asterisk)
+- Unordered list item (using a dash is also valid)
+
+1. Ordered list item
+2. Ordered list item
+
+| Column one | Column two | Column three |
+| ---------- | ---------- | ------------ |
+| Value      | Value      | Value        |
+| Value      | Value      | Value        |
 
 This is what a datachip looks like :datachip-variable[some text]{type="String"}
