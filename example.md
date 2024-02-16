@@ -12,7 +12,7 @@ An example of an image:
 
 * Unordered list item (using an asterisk)
 * Unordered list item (using an asterisk)
-- Unordered list item (using a dash is also valid, but shouldn't nbe mixed)
+- Unordered list item (using a dash is also valid, but shouldn't be mixed)
 
 1. Ordered list item
 2. Ordered list item
