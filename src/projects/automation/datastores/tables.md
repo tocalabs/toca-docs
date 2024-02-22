@@ -10,7 +10,7 @@ As the data types of each column are always known, it also allows you to build s
 The following formats are available:
 
 | Type | Description |
-|---   |  |
+|---   | --- |
 | String | Used to store any text based data, this is stored as a `longtext` type behind the scenes. |
 | Number | Used to store any numerical data, can handle decimal points |
 | Boolean | Stores `true` or `false` |
