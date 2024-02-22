@@ -52,15 +52,19 @@ A 1:many relationship means 1 row of data in Table A can relate to many rows of 
 For example, you might have a table of _managers_ and a table of _employees_ and each manager might oversee many employees.
 
 **Benefits of Relational Data**
+
 Creating relationships between your data has many benefits such as:
 
 - Referential Integrity
+
 _Because a table **must** have valid references to it's related data at all times, it automatically prevents you from deleting a row of data that is relied upon by other tables.. This also allows you to make sure your data is accurate._
 
 - Better Ergonomics
+
 _Because the relationships between tables are predefined, Apps and Automation actions understand the structure of data and allow you to access related data without having to make separate queries to the related tables._
 
 - Less Redundancy
+
 _By allowing you to create relationships between your data, it will naturally lead to less replicated and redundant data in your tables. This is because instead of duplicating the same data when it is required by many tables, you can just have them all relate to the data they need._
 
 **Examples of Relational Data**
