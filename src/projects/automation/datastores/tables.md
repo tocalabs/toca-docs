@@ -7,7 +7,9 @@
 
 Every column in a table has a predefined type, this helps to make sure that your data is always in the right format.
 As the data types of each column are always known, it also allows you to build safer Apps and Automation by making sure your data is always in the correct format.
-The following formats are available: | Type | Description |
+The following formats are available:
+
+| Type | Description |
 |---   |  |
 | String | Used to store any text based data, this is stored as a `longtext` type behind the scenes. |
 | Number | Used to store any numerical data, can handle decimal points |
