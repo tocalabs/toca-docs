@@ -8,7 +8,7 @@ Paragraph of text with _italic_ or *italic* and **bold** text. Also available is
 
 An example of an image:
 
-![Toca.io](/images/tocaio.png)
+![Toca.io](/src/assets/tocaio.png)
 
 * Unordered list item (using an asterisk)
 * Unordered list item (using an asterisk)
