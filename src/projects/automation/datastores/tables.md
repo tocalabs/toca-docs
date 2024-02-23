@@ -14,7 +14,7 @@ Tables in the platform draw a lot of inspiration from database tables so you are
 You can also control access to your table by setting up row level permissions for granular levels of access control.
 
 
-- :docs-link[Data Types]{id="tables/data_types"}
-- :docs-link[Default Values]{id="tables/default_values"}
-- :docs-link[Table Relationships]{id="tables/table_relationships"}
-- :docs-link[Row Level Permissions]{id="tables/row_level_permissions"}
+- :docs-link[Data Types]{id="projects/automation/datastores/tables/data_types"}
+- :docs-link[Default Values]{id="projects/automation/datastores/tables/default_values"}
+- :docs-link[Table Relationships]{id="projects/automation/datastores/tables/table_relationships"}
+- :docs-link[Row Level Permissions]{id="projects/automation/datastores/tables/row_level_permissions"}
