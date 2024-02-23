@@ -6,7 +6,7 @@ As the data types of each column are always known, it also allows you to build s
 ![Column Diagram](/src/assets/table_diagram.png)
 
 
-The following formats are available:
+The following types are available:
 
 | Type | Description |
 |---   | --- |
