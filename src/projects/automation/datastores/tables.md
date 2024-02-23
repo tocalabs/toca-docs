@@ -40,6 +40,9 @@ Alternatively, some types (e.g. a `DateTime` or `UUID` type) give you the option
 Tables can be joined together using foreign keys. This is named "relational data" as the data is forming a relationship.
 This helps us to model our data in the most accurate way possible as more often than not, data in the real world is related.
 
+![Related Tables Diagram](/src/assets/related_data.png)
+
+
 You can have two different kind of relationships between tables:
 1. _One to One_
 
