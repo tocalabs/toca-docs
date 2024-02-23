@@ -9,7 +9,7 @@ The following formats are available:
 | String | Used to store any text based data, this is stored as a `longtext` type behind the scenes. |
 | Number | Used to store any numerical data, can handle decimal points |
 | Boolean | Stores `true` or `false` |
-| Time | A fixed 24-hour time in the format of `HH:MM:SS` e.g. `20:52:22` |
+| Time | A fixed 24-hour timestamp in the format of `HH:MM:SS` e.g. `20:52:22` |
 | Date | A date and 24-hour time in the format of `dd/mm/YYYY` e.g. `05/09/2018` represents the 5th September 2018 |
 | DateTime | A fixed date in the format of `dd/mm/YYYY HH:MM:SS` e.g. `05/09/2018 09:00:00` represents 9am on the 5th September 2018 |
 | JSON | Stores valid `JSON`, this is useful for storing complex objects e.g. `{ "name": "Toca.io" }` |

@@ -6,3 +6,10 @@ Alternatively, some types (e.g. a `DateTime` or `UUID` type) give you the option
 - the row is created
 - the row is updated
 
+Below is a list of types and their default value options:
+
+| Type | Default Value | Auto generate on Creation | Auto generate on Update |
+| --- | ---- | --- | --- |
+| String | A hardcoded static piece of text | [ ] | [ ] |
+| Number | A constant number | [ ] | [ ] |
+| Boolean | Either `true` or `false` | [ ] | [ ] |
