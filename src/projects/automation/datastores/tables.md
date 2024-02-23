@@ -90,6 +90,14 @@ Row level permissions work by allowing a row to be accessed either by:
 
 > N.B. You can only assign App related permissions to table rows if the datastore is listed as a resource of the App in question.
 
+Row level permissions are the most secure way of limiting access to data as the permissions are checked when data is requested or updated on the server side.
+You can think of permissions as an extra condition that is checked when the read is updated or read:
+```sql
+SELECT id, actor_name, date_of_birth FROM actors
+WHERE id = {row_id}
+AND permissions CONTAINS {user_permission};
+```
+
 The level of access to a particular row can be controlled by selecting any of the following permissions:
 
 | Permission Name | Description |
