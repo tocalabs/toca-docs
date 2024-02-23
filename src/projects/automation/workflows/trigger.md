@@ -4,6 +4,8 @@ A trigger node allows you to run other workflow as part of the current workflow.
 
 The trigger node works in tandem with a :docs-link[Listener]{id="projects/automation/workflows/listener"} to start a workflow by making an API call to the listener, which in turn starts the workflow. This allows you to design your workflows in a more modular way, which encourages better design and maintainability.
 
+![Trigger Diagram](/src/assets/trigger_diagram.png){width=60%}
+
 You must provide the Trigger with the name of the listener you wish to call, an API key (not required if listener is public) and any inputs.
 Data can be passed into the trigger node so that the other workflow can be run with inputs.
 The node does not return anything but will fail if the API call was unsuccessful, indicating it was unable to start the other workflow.
