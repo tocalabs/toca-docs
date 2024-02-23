@@ -1,6 +1,6 @@
 # Tables
 
-
+Tables are where you can store your structured data, they are very similar to spreadsheets.
 // Overview
 
 - :docs-link[Data Types]{id="tables/data_types"}

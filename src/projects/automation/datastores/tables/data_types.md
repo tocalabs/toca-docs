@@ -2,6 +2,10 @@
 
 Every column in a table has a predefined type, this helps to make sure that your data is always in the right format.
 As the data types of each column are always known, it also allows you to build safer Apps and Automation by making sure your data is always in the correct format.
+
+![Column Diagram](/src/assets/table_diagram.png)
+
+
 The following formats are available:
 
 | Type | Description |
