@@ -1,3 +1,24 @@
 # Connectors
 
-A connector allows you to define a way for your workflow to be run via an API call.
+Connectors allow you to run the workflow via a HTTP Request, therefore allowing other software to connect to your workflow.
+
+There are two parts to a connector, the **transformer** which takes in the request and the **generator** which generates the response.
+You can have one transformer per connector but there can be many generators, as you may want to return different responses based on what happens in your workflow.
+
+The transformer defines how the request is received and parsed, allowing query parameters, headers and the request body to be parsed and formatted before being injected into the workflow. The generators can have inputs defined so you can return outputs from your activities and use them to form the response.
+
+![Connector Diagram](/src/assets/connector_diagram.png)
+
+Connectors are conceptually similar to Listeners but with a few key differences:
+- Connectors are designed for _external_ use
+- Connectors allow you to define a response
+- Connectors can receive a request in any format, it does not have to be a particular model or content type
+
+
+Toca comes with the following connectors:
+- GET - Designed to be used in scenarios where the workflow is returning some data
+- POST - Designed for when a workflow is inserting some data
+- PUT - Designed for when a worklow is updating data by replacing it
+- DELETE - Designed for when a workflow is deleting data
+- PATCH - Designed for when a workflow is amending data by adding to it
+
