@@ -22,3 +22,4 @@ Toca comes with the following connectors:
 - DELETE - Designed for when a workflow is deleting data
 - PATCH - Designed for when a workflow is amending data by adding to it
 
+If you want to build your own connector, then you can do so in the TDK.
