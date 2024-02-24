@@ -21,5 +21,7 @@ Toca comes with the following connectors:
 - PUT - Designed for when a worklow is updating data by replacing it
 - DELETE - Designed for when a workflow is deleting data
 - PATCH - Designed for when a workflow is amending data by adding to it
+- UPLOAD - Designed for when you need to upload a file as an input to a workflow
+- DOWNLOAD - Designed for when you need to return a file as an response from a workflow
 
 If you want to build your own connector, then you can do so in the TDK.
