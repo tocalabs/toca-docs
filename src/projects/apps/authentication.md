@@ -77,8 +77,11 @@ Finally, Anders is assigned to the `Junior Engineer` group so only has the `View
 ### Page Permissions
 
 If your app has authentication enabled, then you have the option to restrict access to every page in your appllication.
-Each page only has one permission required to view it:
-- **Read**
+The following permission is available on pages.
+
+| Resource | Permissions | Description |
+| --- | --- | --- |
+| Page | Read | **Read** allows the user to view the the page |
 
 You can assign specific Roles in your app to have the Read permission on each page, for example you might have a page that allows managers to approve annual leave and you only want users who have the `Manager` role to be able to view the page. 
 
