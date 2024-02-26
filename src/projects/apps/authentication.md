@@ -58,7 +58,7 @@ You also need to provide the path to the ID field so if your reponse from the Pr
     "email": "mikoll@contoso.com"
 }
 ```
-Then the path to the ID field will be `sub`.
+then the path to the ID field will be `sub`.
 
 You also need to provide the relevant scopes to access some of the user information. Typically you require the `profile` scope to get any name information and you require the `email` scope to get information about the users email.
 
@@ -92,7 +92,11 @@ Finally, Anders is assigned to the `Junior Engineer` group so only has the `View
 
 #### Default Group for New Users
 
+When creating a group, it has the option to be the default group that is assigned to a user when they are authenticated, it is often a good idea to assign this option to the most basic Group to make sure that new users don't get elevated permissions before being assigned to their appropriate Groups.
+
 #### Default Group for Unauthenticated Users
+
+It can be a good idea to have a Group specially designated for unauthenticated users so that you can distinguish between unauthenticated users and authenticated users. There is an option when creating or editing a group to automatically assign a group to unauthenticated users.
 
 ### Page Permissions
 
