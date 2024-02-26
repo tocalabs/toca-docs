@@ -48,6 +48,10 @@ A user can then have one or more groups assigned to them and the roles are addit
 
 ![App Users, Groups and Roles Diagram](/src/assets/app_auth.png)
 
+In the above example, Graydon is assigned to both the `Line Manager` group and the `Senior Engineer` group and as a result, he has access to all the roles.
+Guido is only assigned to the `Senior Engineer` group, but as the `Senior Engineer` group is associated with both the `Contributor` and `Viewer` roles, he has both those permissions.
+Finally, Anders is assigned to the `Junior Engineer` group so only has the `Viewer` role attributed with his user.
+
 ### Page Permissions
 
 ### Resource Permissions
