@@ -44,6 +44,26 @@ In Apps, you can use any :docs-link[Identity Provider]{id="admin/identity_provid
 The main difference between OAuth2 and OpenID in Apps is that OpenID guarantees certain information can be retrieved for the user that has logged in such as username, name, date of birth, address, email and more.
 This is why when your App only uses OAuth2 there is no username in your App Users table as the platform cannot guarantee that it is provided that information.
 
+In both OAuth2 and OpenID authenticated apps you need to provide the ProfileURL (can also be known as the User Info endpoint) as this is used to fetch the user ID from the authentication provider you are using.
+For example for Google the profile URL is [https://www.googleapis.com/oauth2/v1/userinfo](https://www.googleapis.com/oauth2/v1/userinfo) and for Microsoft it is [https://graph.microsoft.com/oidc/userinfo](https://graph.microsoft.com/oidc/userinfo).
+
+You also need to provide the path to the ID field so if your reponse from the Profile API looks like this:
+```json
+{
+    "sub": "OLu859SGc2Sr9ZsqbkG-QbeLgJlb41KcdiPoLYNpSFA",
+    "name": "Mikah Ollenburg",
+    "family_name": "Ollenburg",
+    "given_name": "Mikah",
+    "picture": "https://graph.microsoft.com/v1.0/me/photo/$value",
+    "email": "mikoll@contoso.com"
+}
+```
+Then the path to the ID field will be `sub`.
+
+You also need to provide the relevant scopes to access some of the user information. Typically you require the `profile` scope to get any name information and you require the `email` scope to get information about the users email.
+
+If you are using OpenID as your authentication protocol then you'll need to also provide a path to the email field (this would be `email` from the above JSON) and a path to the name field (this could be either the `name` or `given_name` field in the above JSON).
+When using OpenID it is advised to use at a minimum the following scopes `openid profile email`.
 
 ### Registration and Approval
 
@@ -58,9 +78,9 @@ When new users are registered, you can restrict their access behind an approval 
 
 The authorization framework uses the concept of Groups and Roles to manage access to resources and content in your app.
 
-A **Role** is a named permission that can be placed on resources or content to restrict the level of access e.g. Manager, Contributor, Viewer
+A **Role** is a named permission that can be placed on resources or content to restrict the level of access e.g. `Manager`, `Contributor`, `Viewer`.
 
-A **Group** is a collection of one or more roles and a user is assigned to one or more groups. Some examples of groups might include "Head of Department", "Senior Engineer", "Junior Engineer" 
+A **Group** is a collection of one or more roles and a user is assigned to one or more groups. Some examples of groups might include `Head of Department`, `Senior Engineer`, `Junior Engineer`.
 
 A user can then have one or more groups assigned to them and the roles are additive, meaning a user will always have every role from all the groups they are assigned to.
 
