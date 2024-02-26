@@ -19,7 +19,24 @@ Once you have been able to identify who a user is, you can control what they are
 - Each resource your app links to (Datastores, Listeners and CMS)
 - Content within your pages
 
-## Users, Groups and Roles
+## Authentication
+
+### App Teams
+
+
+### Username & Password
+
+Registration
+
+### OAuth2/OpenID
+
+Registration
+
+
+
+## Authorization
+
+### Users, Groups and Roles
 
 The authorization framework uses the concept of Groups and Roles to manage access to resources and content in your app.
 
@@ -31,4 +48,6 @@ A user can then have one or more groups assigned to them and the roles are addit
 
 ![App Users, Groups and Roles Diagram](/src/assets/app_auth.png)
 
+### Page Permissions
 
+### Resource Permissions
