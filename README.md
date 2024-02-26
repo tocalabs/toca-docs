@@ -20,7 +20,7 @@ Render a datastore (eg blue) datachip. Takes a label argument and an option type
 `:datachip-datastore[label]{type="Boolean"}`
 
 ## Images
-Images files should be uploaded to this repository and relatively linked. You can either use the standard markdown image format, or if you need extra control (eg adding width or height attributes) you can use a directive.
+Image files should be uploaded to this repository and relatively linked. You can either use the standard markdown image format, or if you need extra control (eg adding width or height attributes) you can use a directive.
 
 * Standard format `![Alt text](src/images/someimage.jpg)`
 * Directive `:img{src="/src/images/someimage.jpg" alt="Alt text" width="320px" height="240px"}`
