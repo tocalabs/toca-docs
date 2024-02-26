@@ -80,7 +80,7 @@ The authorization framework uses the concept of Groups and Roles to manage acces
 
 A **Role** is a named permission that can be placed on resources or content to restrict the level of access e.g. `Manager`, `Contributor`, `Viewer`.
 
-A **Group** is a collection of one or more roles and a user is assigned to one or more groups. Some examples of groups might include `Head of Department`, `Senior Engineer`, `Junior Engineer`.
+A **Group** is a collection of one or more roles and a user is assigned to one or more groups. Some examples of groups might include `Line Managers`, `Senior Engineer`, `Junior Engineer`.
 
 A user can then have one or more groups assigned to them and the roles are additive, meaning a user will always have every role from all the groups they are assigned to.
 
