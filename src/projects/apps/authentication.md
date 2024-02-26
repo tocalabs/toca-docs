@@ -24,6 +24,7 @@ Once you have been able to identify who a user is, you can control what they are
 The authorization framework uses the concept of Groups and Roles to manage access to resources and content in your app.
 
 A **Role** is a named permission that can be placed on resources or content to restrict the level of access e.g. Manager, Contributor, Viewer
+
 A **Group** is a collection of one or more roles and a user is assigned to one or more groups. Some examples of groups might include "Head of Department", "Senior Engineer", "Junior Engineer" 
 
 A user can then have one or more groups assigned to them and the roles are additive, meaning a user will always have every role from all the groups they are assigned to.
