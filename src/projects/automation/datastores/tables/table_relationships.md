@@ -46,3 +46,5 @@ If you had a table of movies, a table of categories and a table of actors you mi
 - Movies 1:Many Actors
 
 ![Table Relationship Example](/src/assets/table_relationships.png)
+
+Read :docs-link[here]{id="projects/automation/datastores/tables/default_values"} to find out more about default values and read on to find out more about :docs-link[Row Level Permissions]{id="projects/automation/datastores/tables/row_level_permissions"}.

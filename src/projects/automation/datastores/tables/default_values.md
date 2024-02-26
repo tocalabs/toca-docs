@@ -22,3 +22,5 @@ Below is a list of types and their default value options:
 | JSON | A harcoded piece of valid JSON e.g. `[ ]` or `{ }` | - | - |
 | UUID | - | Generate a random and unique ID when the row is created | - |
 | Table Relation | - | - | - |
+
+To read more about the data types mentioned above, read :docs-link[here]{id="projects/automation/datastores/tables/data_types"}. To find out more about table relationships read the :docs-link[next page]{id="projects/automation/datastores/tables/table_relationships"}.
