@@ -20,9 +20,10 @@ Render a datastore (eg blue) datachip. Takes a label argument and an option type
 `:datachip-datastore[label]{type="Boolean"}`
 
 ## Images
-Images are standard markdown elements. Images files should be uploaded to this repository and relatively linked.
+Image files should be uploaded to this repository and relatively linked. You can either use the standard markdown image format, or if you need extra control (eg adding width or height attributes) you can use a directive.
 
-`![Alt text](/images/someimage.jpg)`
+* Standard format `![Alt text](src/images/someimage.jpg)`
+* Directive `:img{src="/src/images/someimage.jpg" alt="Alt text" width="320px" height="240px"}`
 
 ## Linking to other docs
 You can link to other docs using the `docs-link` entity. You need to provide an `id` and and optional `type` (if not provided it will assume you want platform documention). For platform documentation the `id` is the filename. For TDK entities the id will be the `definitionId` or `actionId`.
