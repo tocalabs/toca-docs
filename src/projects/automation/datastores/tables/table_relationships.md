@@ -8,6 +8,7 @@ This helps us to model our data in the most accurate way possible as more often 
 ### Types of Relationship
 
 You can have two different kind of relationships between tables:
+
  **_One to One_**
 
 A 1:1 relationship means 1 row of data in Table A can relate to 1 row of data in Table B.
