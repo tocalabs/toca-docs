@@ -18,7 +18,7 @@ There are several key operators you can use to create your conditions:
 | `>=` | If right hand side is less than or equal to left hand side then it is true |
 | `!` | NOT - allows you to reverse the value of a statement (i.e. true becomes false, false becomes true) |
 | `&&` | AND - allows you to chain conditions together. Will be true if ALL conditions are true |
-| `||` | OR - allows you to chain conditions together. Will be true if any of the conditions are true |
+| ` || ` | OR - allows you to chain conditions together. Will be true if any of the conditions are true |
 | `else` | A special operator that can be used instead of specifying a condition to denote that this path should be used if no other conditions are true |
 
 Additionally, brackets `( )` can be used to group conditions together.
