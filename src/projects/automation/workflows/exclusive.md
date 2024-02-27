@@ -10,15 +10,15 @@ There are several key operators you can use to create your conditions:
 
 | Operator | Description |
 | --- | --- |
-| `==` | If right hand side equals left hand side then it is true |
-| `!=` | If right hand side does not equal left hand side then it is true |
-| `<` | If right hand side is greater than left hand side then it is true |
-| `>` | If right hand side is less than right hand side then it is true |
-| `<=` | If right hand side is greater than or equal to left hand side then it is true |
-| `>=` | If right hand side is less than or equal to left hand side then it is true |
-| `!` | NOT - allows you to reverse the value of a statement (i.e. true becomes false, false becomes true) |
+| `==` | If left hand side equals right hand side then it is true |
+| `!=` | If left hand side does not equal right hand side then it is true |
+| `<` | If left hand side is less than right hand side then it is true |
+| `>` | If left hand side is greater than right hand side then it is true |
+| `<=` | If left hand side is less than or equal to right hand side then it is true |
+| `>=` | If left hand side is greater than or equal to right hand side then it is true |
 | `&&` | AND - allows you to chain conditions together. Will be true if ALL conditions are true |
 | `\|\|` | OR - allows you to chain conditions together. Will be true if any of the conditions are true |
+| `!` | NOT - allows you to reverse the value of a statement e.g. `false == !true` would evalutate to true |
 | `else` | A special operator that can be used instead of specifying a condition to denote that this path should be used if no other conditions are true |
 
 Additionally, brackets `( )` can be used to group conditions together.
