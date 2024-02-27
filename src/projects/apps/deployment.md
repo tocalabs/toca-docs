@@ -11,8 +11,8 @@ These are the tasks that are happening behind the scenes when you deploy your Ap
 2. Build the code into optimised bundles that the browser understands
 3. Store the build files in file storage
 4. Set up an HTTP server to serve and route network traffic to the relevant pages in your Apps
-    a. This includes adding authorisation to the server to make sure only users with permission can access each page and piece of content
-    b. This also includes navigating to default error pages such as `404 - Not Found`
+    - This includes adding authorisation to the server to make sure only users with permission can access each page and piece of content
+    - This also includes navigating to default error pages such as `404 - Not Found`
 
 If you have deployed to an App Gateway then it is also:
 
