@@ -1,6 +1,6 @@
 # Dynamic Page
 
-A dynamic page is a page that is driven by a data from a datasource such as a table in a datastore. It allows for a design to be implemented and then repeated for every row of data in the datasource.
+A dynamic page is a page that is driven by data from a datasource such as a table in a datastore. It allows for a design to be implemented and then repeated for every row of data in the datasource.
 
 Dynamic Pages support both **:docs-link[Tables]{id="projects/datastores/tables"}** and **:docs-link[CMS Types]{id="resources/cms/types"}** as data sources.
 
