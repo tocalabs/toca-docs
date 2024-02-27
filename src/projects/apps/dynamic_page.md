@@ -6,7 +6,7 @@ Dynamic Pages support both **:docs-link[Tables]{id="projects/datastores/tables"}
 
 The data from the data source is available to each component and app action on the dynamic page through the `Context` object.
 
->> Insert Excalidraw of Table row to Dynamic Page
+![Dynamic Page Diagram](/src/assets/dynamic_page.png)
 
 ## Data Sources
 
