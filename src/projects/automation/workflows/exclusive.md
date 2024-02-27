@@ -6,8 +6,37 @@ The conditions can use workflow inputs, activity outputs and datastore variables
 
 They can also be used to introduce loops into your workflow as well as error handling.
 
-There are several key identifiers you can use to create your conditions:
+There are several key operators you can use to create your conditions:
 
-| Identifier | Description |
+| Operator | Description |
 | --- | --- |
-| `&&` | AND |
+| `==` | If right hand side equals left hand side then it is true |
+| `!=` | If right hand side does not equal left hand side then it is true |
+| `<` | If right hand side is greater than left hand side then it is true |
+| `>` | If right hand side is less than right hand side then it is true |
+| `<=` | If right hand side is greater than or equal to left hand side then it is true |
+| `>=` | If right hand side is less than or equal to left hand side then it is true |
+| `!` | NOT - allows you to reverse the value of a statement (i.e. true becomes false, false becomes true) |
+| `&&` | AND - allows you to chain conditions together. Will be true if ALL conditions are true |
+| `||` | OR - allows you to chain conditions together. Will be true if any of the conditions are true |
+| `else` | A special operator that can be used instead of specifying a condition to denote that this path should be used if no other conditions are true |
+
+Additionally, brackets `( )` can be used to group conditions together.
+
+## Examples
+
+The example below checks if a datachip is equal to "failed".
+
+:datachip-variable[Status]{type="String"} == "failed"
+
+The example below checks if a datachip is less than 10.
+
+:datachip-variable[LoopCount]{type="Number"} < 10
+
+The example below checks if a datachip is less than 10 and the activity did not fail.
+
+:datachip-variable[LoopCount]{type="Number"} < 10 && :datachip-action[activityFailed]{type="Boolean"} != false
+
+The example below checks if a datachip is not == "JSON" or datachip is not "HTML".
+
+:datachip-variable[ContentType]{type="String"} != "JSON" || :datachip-variable[ContentType]{type="String"} != "HTML"
