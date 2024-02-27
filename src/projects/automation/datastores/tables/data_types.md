@@ -24,3 +24,6 @@ The following types are available:
 
 You can "cast" columns from one type to another by changing the column type, however there can be some incompatibilities between types.
 For example, if you cast a timestamp to a date, you will lose all the time information that was previously saved.
+
+Most datatypes support default values, read on for more information:
+- :docs-link[Default Values]{id="projects/automation/datastores/tables/default_values"}

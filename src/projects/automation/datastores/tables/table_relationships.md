@@ -8,19 +8,20 @@ This helps us to model our data in the most accurate way possible as more often 
 ### Types of Relationship
 
 You can have two different kind of relationships between tables:
+
  **_One to One_**
 
-A 1:1 relationship means 1 row of data in Table A can relate to 1 row of data in Table B.
+A 1-1 relationship means 1 row of data in Table A can relate to 1 row of data in Table B.
 For example, you might have a table of _employees_ and a table of _addresses_ and each employee only has one address.
 
 **_One to Many_**
 
-A 1:many relationship means 1 row of data in Table A can relate to many rows of data in Table B.
+A 1-Many relationship means 1 row of data in Table A can relate to many rows of data in Table B.
 For example, you might have a table of _managers_ and a table of _employees_ and each manager might oversee many employees.
 
 ### Benefits of Relational Data
 
-Creating relationships between your data has many benefits such as:
+Creating relationships between your data has several benefits such as:
 
 **Referential Integrity**
 
@@ -41,7 +42,9 @@ _By allowing you to create relationships between your data, it will naturally le
 - Each movie contains several actors
 
 If you had a table of movies, a table of categories and a table of actors you might relate them as follows:
-- Movies 1:1 Categories
-- Movies 1:Many Actors
+- Movies 1-1 Categories
+- Movies 1-Many Actors
 
 ![Table Relationship Example](/src/assets/table_relationships.png)
+
+Read :docs-link[here]{id="projects/automation/datastores/tables/default_values"} to find out more about default values and read on to find out more about :docs-link[Row Level Permissions]{id="projects/automation/datastores/tables/row_level_permissions"}.
