@@ -55,3 +55,5 @@ The following permissions are available on each resource type:
 By assigning Roles from your app the above permissions you can restrict the capabilities of each group of users. For example, this would be useful if you have a workflow that approves a pay rise and you want to restrict this to only be executed by users who have the `Manager` role.
 
 If a user does not have permission to view content from a datastore then they will simply not see the content and if they attempt to execute a listener when they do not have permission to do so then it will fail to execute.
+
+Read more about :docs-link[App Authentication]{id="projects/apps/auth/authentication"}.

@@ -50,3 +50,5 @@ You can set up the option to allow new users to register their own accounts, thi
 
 When new users are registered, you can restrict their access behind an approval system which requires them to be approved in the App's project page. This prevents users from being able to register and immediately start accessing the App, they have to wait until they've been approved.
 > Approval is only available for Apps using the `Username & Password` protocol.
+
+Find out more about :docs-link[App Authorization]{id="projects/apps/auth/authorization"}.
