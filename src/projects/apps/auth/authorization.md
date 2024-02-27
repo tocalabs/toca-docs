@@ -6,7 +6,7 @@ The authorization framework uses the concept of Groups and Roles to manage acces
 
 A **Role** is a named permission that can be placed on resources or content to restrict the level of access e.g. `Manager`, `Contributor`, `Viewer`.
 
-A **Group** is a collection of one or more roles and a user is assigned to one or more groups. Some examples of groups might include `Line Managers`, `Senior Engineer`, `Junior Engineer`.
+A **Group** is a collection of one or more roles and a user is assigned to one or more groups. Some examples of groups might include `Line Managers`, `Senior Engineers`, `Junior Engineers`.
 
 A user can then have one or more groups assigned to them and the roles are additive, meaning a user will always have every role from all the groups they are assigned to.
 
@@ -35,7 +35,7 @@ The following permission is available on pages.
 
 You can assign specific Roles in your app to have the Read permission on each page, for example you might have a page that allows managers to approve annual leave and you only want users who have the `Manager` role to be able to view the page. 
 
-If a user does not have a role associated with their user that grants them Read access to the page then when they try to view it they will be directed to a `401 - Unauthorized` if they are logged in or the `Login` page if they are already logged in.
+If a user does not have a role associated with their user that grants them Read access to the page then when they try to view it they will be directed to a `401 - Unauthorized` if they are logged in or the `Login` page if they aren't. 
 
 > N.B. If your App contains a login page then make sure you have not restricted access to this page as otherwise unauthenticated users will never be able to access the login page!
 
