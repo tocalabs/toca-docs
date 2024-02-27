@@ -1,7 +1,7 @@
 # App Authentication & Authorization
 
 Authentication is a way of controlling who can access your app by requiring users to log into your application.
-Authorization then allows you to restrict what users can see and do once logged into your application.
+Authorization then allows you to restrict what users can see and do once logged into your application. You can read more about this [here](https://auth0.com/docs/get-started/identity-fundamentals/authentication-and-authorization).
 
 By enabling authentication, you are asking users to provide information about who they are, usually through a set of credentials.
 Once a user is authenticated, then you can leverage the inbuilt authorization framework to control that users access to various parts of your App.

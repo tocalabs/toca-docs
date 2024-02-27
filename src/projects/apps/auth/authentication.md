@@ -17,7 +17,8 @@ Once a user is created, they can be assigned to one or more Groups which will au
 
 ### OAuth2/OpenID
 
-The OAuth2 and OpenID frameworks are very similar to each other and both allow you to utilise another authentication provider (e.g. Microsoft or Google) for your Apps authentication. If you have ever used an app or website that gives you the option to log in with Google, LinkedIn or Microsoft then this is OAuth2 and OpenID behind the scenes.
+The OAuth2 and OpenID frameworks are very similar to each other and both allow you to utilise another authentication provider (e.g. Microsoft or Google) for your Apps authentication. If you have ever used an app or website that gives you the option to log in with Google, LinkedIn or Microsoft then this is OAuth2 and OpenID behind the scenes. The reason they are so similar is that OpenID is a standard that implements OAuth2 but builds on top of it as well, guaranteeing additional information about the user.
+
 In Apps, you can use any :docs-link[Identity Provider]{id="admin/identity_providers"} that you have set up in your platform as the authentication provider for your App.
 
 The main difference between OAuth2 and OpenID in Apps is that OpenID guarantees certain information can be retrieved for the user that has logged in such as username, name, date of birth, address, email and more.
