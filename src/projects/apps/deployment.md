@@ -15,4 +15,5 @@ These are the tasks that are happening behind the scenes when you deploy your Ap
     b. This also includes navigating to default error pages such as `404 - Not Found`
 
 If you have deployed to an App Gateway then it is also:
+
 5. Setting up SSL certificate to make sure network traffic to your App is secure
