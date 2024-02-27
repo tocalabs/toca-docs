@@ -15,3 +15,4 @@ There are two types of data source which are supported in a dynamic page:
 1. Table - Each page produced by the dynamic page represents a single row of data
 2. CMS Type - Each page produced by the dynamic page represents a single content entry
 
+![Dynamic Page Example](/src/assets/dynamic_page_example.png)
