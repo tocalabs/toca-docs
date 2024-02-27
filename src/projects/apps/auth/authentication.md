@@ -24,6 +24,8 @@ In Apps, you can use any :docs-link[Identity Provider]{id="admin/identity_provid
 The main difference between OAuth2 and OpenID in Apps is that OpenID guarantees certain information can be retrieved for the user that has logged in such as username, name, date of birth, address, email and more.
 This is why when your App only uses OAuth2 there is no username in your App Users table as the platform cannot guarantee that it is provided that information.
 
+#### Scopes & Required Fields
+
 In both OAuth2 and OpenID authenticated apps you need to provide the ProfileURL (can also be known as the User Info endpoint) as this is used to fetch the user ID from the authentication provider you are using.
 For example for Google the profile URL is [https://www.googleapis.com/oauth2/v1/userinfo](https://www.googleapis.com/oauth2/v1/userinfo) and for Microsoft it is [https://graph.microsoft.com/oidc/userinfo](https://graph.microsoft.com/oidc/userinfo).
 
@@ -42,8 +44,9 @@ then the path to the ID field will be `sub`.
 
 You also need to provide the relevant scopes to access some of the user information. Typically you require the `profile` scope to get any name information and you require the `email` scope to get information about the users email.
 
-If you are using OpenID as your authentication protocol then you'll need to also provide a path to the email field (this would be `email` from the above JSON) and a path to the name field (this could be either the `name` or `given_name` field in the above JSON).
-When using OpenID it is advised to use at a minimum the following scopes `openid profile email`.
+If you are using OpenID, you must provide the `openid` scope as otherwise it is not considered to conform to the OpenID protocol. With OpenID it is advised to use as a minimum the following scopes `openid profile email`.
+
+You'll also need to provide a path to the email field (this would be `email` from the above JSON) and a path to the name field (this could be either the `name` or `given_name` field in the above JSON).
 
 ### Registration and Approval
 
