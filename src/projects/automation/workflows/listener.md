@@ -1,7 +1,7 @@
 # Listener 
 
 A listener allows you to run the workflow from other parts of the platform such as running a workflow from an App or running a workflow from another workflow.
-A listener resides on the Start node as it is a way of starting a workflow, along with manually running a workflow or running it via a :docs-link[schedule]{id="projects/automation/schedule"}.
+A listener resides on the Start node as it is a way of starting a workflow, along with manually running a workflow or running it via a :docs-link[Schedule]{id="projects/automation/schedules"}.
 
 Behind the scenes, a listener acts like a callable API and is actually triggered by making a POST API call to the listener with the expected inputs.
 It allows you to specify a name, **which must be unique**, an API key if you wish to secure the listener and a series of inputs that are then passed into the workflow.
