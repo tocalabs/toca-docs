@@ -11,4 +11,4 @@ From the properties of the component you can select:
 
 A negative X value places the shadow to the left of the element. A negative Y value places the shadow above the element.
 
-![![Shadow](/src/assets/Shadow.png)]()
+![Shadow](/src/assets/shadow.png)
