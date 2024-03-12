@@ -13,6 +13,7 @@
 
 In web development, this is referred to as the "Box Model", you can learn more about this [here](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model). 
 
+### Margin
 
 Let's explore **margins** first. Consider the component illustrated below, which has a margin of 10 pixels:
      
@@ -21,12 +22,16 @@ Let's explore **margins** first. Consider the component illustrated below, which
 
 This means that there will be at least 10 pixels of space between this component and neighbouring components from the page — the margin “pushes away” its neighbours.
 
+### Padding
+
 On the other hand, **padding** is located inside the border of a component. The component below has padding of 10px on the left and right sides, and padding of 15px on the top and bottom sides:
 
 ![Padding Diagram](/src/assets/padding.png)
 
 
 In the Properties of the components and layouts, there is the option to increase the Margin and/or the Padding up to 64 px on each side. 
+
+### Border
 
 There you can also customise the Border by adding:
 

@@ -3,7 +3,7 @@
 The Background properties are used to add background effects for components.
 
 From the properties of the component you can select:
-- **Upload an image** From your local storage.
+- **Upload an image**: From your local storage.
 - **Pick Datachip**: You can pick an image as a datachip from the Datastore. 
 - **Colour**: Sets the background colour of a component.
 - **Blend mode**: Sets how an element's background images should blend with each other and with the element's background color.
