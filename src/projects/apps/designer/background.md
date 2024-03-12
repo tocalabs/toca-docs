@@ -3,7 +3,7 @@
 The Background properties are used to add background effects for components.
 
 From the properties of the component you can select:
-- **Upload an image**: From your local storage.
+- **Upload an image**: From your computer.
 - **Pick Datachip**: You can pick an image as a datachip from the Datastore. 
 - **Colour**: Sets the background colour of a component.
 - **Blend mode**: Sets how an element's background images should blend with each other and with the element's background color.
@@ -16,7 +16,7 @@ From the properties of the component you can select:
 | _Repeat_ | The background image is repeated both vertically and horizontally. |
 | _Repeat X_ | The background image is repeated only horizontally. |
 | _Repeat Y_ | The background image is repeated only vertically |
-| – _Revert_ | Lets you 'undo' styles applied to a component, going back to the parent component. |
+| _Revert_ | Lets you 'undo' styles applied to a component, going back to the parent component. |
 | _Round_ | The background image is repeated and squished or stretched to fill the space (no gaps). |
  | _Space_ | The background image is repeated as much as possible without clipping.|
 
