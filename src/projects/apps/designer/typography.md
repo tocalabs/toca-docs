@@ -4,8 +4,8 @@ These properties cover the font and it's styling used with this component.
 
 ### Font Family
 Select a set of fonts to use in priority order (ie the first font will be the font that will be used unless it cannot be loaded, in which case the browser will try to use the next and so on). A font is one of the following:
-* **Google font**: loaded from the Google fonts library.
-* **Custom font**: a font from a file (or files) that you upload. Enter the name of your custom font into the font selector and press `enter`. Then attach the font file(s) (format should be `WOFF` or `WOFF2`) with the appropriate style and weight options and `Submit`. For example a font with `normal`, `italic`, `bold` and `bold italic` will be 4 separate rows.
+* **Google font**: loaded from the [Google fonts library](https://fonts.google.com/).
+* **Custom font**: a font from a file (or files) that you upload. Enter the name of your custom font into the font selector and press `enter`. Then attach the font file(s) (format should be [`WOFF` or `WOFF2`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/WOFF)) with the appropriate style and weight options and `Submit`. For example a font with `normal`, `italic`, `bold` and `bold italic` will be 4 separate rows.
 * **System font**: a font that is expected to be installed on a user's computer. The font selector will suggest some common system fonts (eg `Arial`, `Georgia` etc.), but you can enter your own by typing it's name and pressing `enter`. You will then see the `Upload custom font` dialog box where you should select the `System` tab, and then press `Submit`.
 * **Family**: a generic name for a type of font, typically used as the last fallback in a font family. These are suggested by the font selector and are: `serif`, `sans-serif`, `monospace` and `fantasy`.
 
