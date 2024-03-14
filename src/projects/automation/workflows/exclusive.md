@@ -37,6 +37,6 @@ The example below checks if a datachip is less than 10 and the activity did not 
 
 :datachip-variable[LoopCount]{type="Number"} < 10 && :datachip-action[activityFailed]{type="Boolean"} != false
 
-The example below checks if a datachip is either == "JSON" or if the datachip is equal to "HTML".
+The example below checks if a datachip is either equal to "JSON" or if the datachip is equal to "HTML".
 
 :datachip-variable[ContentType]{type="String"} == "JSON" || :datachip-variable[ContentType]{type="String"} == "HTML"
