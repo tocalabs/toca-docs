@@ -14,5 +14,5 @@ To edit a dashboard you must enter edit mode.
 
 **Shortcuts**
 
-- Space - Enable edit mode.
-- Esc- Disable edit mode.
+- `Space` - Enable edit mode.
+- `Esc` - Disable edit mode.
