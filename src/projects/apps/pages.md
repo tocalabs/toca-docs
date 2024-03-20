@@ -1,4 +1,15 @@
-# Dynamic Page
+# Pages
+
+Pages in a web app are structured documents that are identified by a distinct URL. A web app is typically made up of many pages that are linked together under a single domain (or app slug).
+
+There are two types of pages in Toca apps and which one you use will depend on what content you want to display on it.
+
+
+## Static Page
+
+A page where the content by and large remains the same, such as a home page, login page or Contact Us page. The opposite of this is a dynamic page and this is more useful when you want to repeat a page's design but for different data.
+
+## Dynamic Page
 
 A dynamic page is a page that is driven by data from a datasource such as a table in a datastore. It allows for a design to be implemented and then repeated for every row of data in the datasource.
 
