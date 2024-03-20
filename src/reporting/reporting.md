@@ -35,7 +35,7 @@ The jobs list will only be updated once the 'update query' button has been press
 
  **Dashboards** - Dashboards are a way of visualising your reporting data. Each report can have multiple dashboards which illustrate different things. Create a dashboard by pressing the '+' icon in the top left corner. More about dashboards - **Link to dashboard page**
 
- ![0a007eba3299d28b01eee59a363b0548.png](./0a007eba3299d28b01eee59a363b0548.png)
+ ![Reporting Diagram](/src/assets/reporting.png)
 
 **Deleting Job Data** - Jobs can be deleted individually by selecting the checkboxes and pressing 'delete selected'. Jobs selected in this way will not be permanently deleted and may still appear as greyed out in your jobs list if 'show deleted jobs' is set to true.
 
