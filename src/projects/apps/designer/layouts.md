@@ -1,6 +1,6 @@
 # Layouts 
 
-Layouts ar,e a structured template of components that sit together to form a coherent design.
+Layouts are a structured template of components that sit together to form a coherent design.
 
 You can use these layout templates as starting points and customize them as needed to match the app's branding and functionality. Layouts are best thought of as scaffolding that you can use to quickly develop your app pages, you just have to configure the content that the layouts are using.
 
