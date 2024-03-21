@@ -30,13 +30,11 @@ An action result looks like this :datachip-action[userData]{type="JSON"}.
 A datastore variable looks like this :datachip-datastore[userData]{type="JSON"}.
 
 
-If you want to update the result of an action, the easiest way is to store the result as a variable. This can be updated later throughout an activity. You can create a variable as a table and then wish to add items to the table later in the Activity.
-
 Variables, unlike action results, are changeable and can have their values updated throughout an activity.
 
-Variables are often created via Set Variable action and any action result can be outputted as a variable (bottom of the action menu). Their notation is `$$ExampleText$$`. Once they are created you can hover over them to see the data.
+Variables are often created via Set Variable action but any action result can be used to create and set a variable (bottom of the action menu). Their notation is `$$ExampleText$$`. Once they are created you can hover over them to see the data.
 
-Datachips can be renamed (they will still work in actions, datachips will be updated everywhere).:datachip-action[label]{type="Number"}
+Datachips can be renamed (they will still work in actions, datachips will be updated everywhere).
 
 To delete a variable, either click on the icon 'x' corresponding to the variable or remove the action that created the variable.
 
