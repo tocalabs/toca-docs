@@ -3,10 +3,10 @@
 
 An Automation Project is a place to create, store and manage your automated processes. They contain:
 
-* :docs-link[Activities]{id="projects/automation/activity"}
-* :docs-link[Workflows]{id="projects/automation/workflows/workflows"}
-* :docs-link[Datastores]{id="projects/automation/datastores/datastores"}
-* :docs-link[Schedules]{id="projects/automation/schedules"}
+* :docs-link[Activities]{id="projects/automation/activities/activity"} - Individual automation tasks such as "Open a browser and log in to web app" or "Process data and add it to a table". These are your basic building blocks of automation.
+* :docs-link[Workflows]{id="projects/automation/workflows/workflows"} - Orchestrate your activities by combining them together in a sequence. This is where you put your building blocks together to form something more consequential.
+* :docs-link[Datastores]{id="projects/automation/datastores/datastores"} - Read and write to a persistent data layer from your activities
+* :docs-link[Schedules]{id="projects/automation/schedules"} - Run your workflows on a routine basis
 
 ![Automation Hierachy](/src/assets/automation_project.png)
 
@@ -19,3 +19,5 @@ One of the most important things to do before embarking on your automation proje
 *   Repeatable
 *   Clearly defined rules
 *   Can be broken down into smaller steps
+
+You might build an automation project which serves as the backend for an App you are building, or your automation project might serve as a collection of desktop automation tasks for automating a business process, or it might contain both!
