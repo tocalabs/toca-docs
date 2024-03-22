@@ -6,6 +6,8 @@ Your app will be built and then hosted for you either on the current platform or
 
 You can deploy any version of your Application and you can customise the `slug` your App is hosted on. If you have an App Gateway connected to your platform then you can deploy the same App multiple times under different URLs.
 
+![App Deployment](/src/assets/app_deployment.png)
+
 These are the tasks that are happening behind the scenes when you deploy your App:
 1. Convert your pages, designs and in page logic into code
 2. Build the code into optimised bundles that the browser understands
