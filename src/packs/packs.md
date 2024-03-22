@@ -25,7 +25,7 @@ Hubs are the mechanism by which you can share packs built in the TDK across mult
 ### Dependencies
 
 A pack can have dependencies that it relies on to be installed and run correctly, examples of this might be:
-- An action pack depending on action helpers
+- An Action Pack depending on Action Helpers
 - An App Component Group depending on App components
 - An App Action Group depending on App Actions
 
