@@ -3,7 +3,8 @@ __Thursday 28th March 2024__
 
 ### What's New
 
-- "Subscribe to changes" in apps - 
+"Subscribe to changes" in apps 
+
 
 - Documentation
 
