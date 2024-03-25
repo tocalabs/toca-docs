@@ -3,6 +3,11 @@
 In page logic allows you to trigger actions within your App based on an interaction such as clicking on a button or typing in a text field. This allows you to make your apps more interactive and reactive to the user. 
 The actions available cover a wide array of functionality such as making API calls, interacting with other entities in the Toca platform and updating elements on the current page.
 
+Some common use cases of this are as follows:
+- When a user first loads a page, trigger a flow to fetch data from an external API, process the response and set the content of a component on the page to the response (e.g. fetch live weather data and display it on the page)
+- Hide or show parts of your page based on data that the user has submitted (e.g. show different input fields in a form if user selects type of company as PLC vs Limited)
+- Change properties of components on the page based on users selection of filters (e.g. display a chart alongside different filter options, once any of the filter options change, redraw the chart to reflect changes)
+
 You can design an IPL flow on any component on a page as well as the page itself, the component/page you design the flow on depends on what event you want the flow to be triggered by, an `Event` represents something happening on the page such as:
 - "On Click" - A component being clicked on
 - "On Mount" - A component first being loaded onto the page
