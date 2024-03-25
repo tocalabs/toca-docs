@@ -15,3 +15,28 @@ This is useful for a number of reasons:
 6. You can set up two App Gateways and deploy your App(s) to both of them and use a load balancer to set up a "Blue-green deployment" - you can find out more about this ![here](https://en.wikipedia.org/wiki/Blue%E2%80%93green_deployment).
 
 > SSL provisioning and renewal will be handled internally by an App Gateway so you do not need to worry about configuring SSL certificates. However, if you wish to use a private SSL certificate provider please raise a ticket via <support@toca.io>.
+
+## Configuration
+
+**Prerequisites**
+
+Before you can link an App Gateway with your platform you must do the following:
+- Configure and stand up a server to install the App Gateway onto
+- Configure a DNS A record for the App Gateway which points to the IP address of the server it will be installed on
+    - An example might be <https://external-gateway.{platform-url}>
+
+**Installation**
+
+When an App Gateway is installed you will get get an `App Gateway API Token` and an `App Gateway JWT Secret`. These are very important as these are what allows the App Gateway to securely communicate with the main platform. These can be provided on request when a new App Gateway is installed.
+
+**Linking to the Toca Platform**
+
+Once an App Gateway is installed then to link it to the main platform you will require the following details:
+- A Name - This should be a descriptive name that represents  the use for this particular App Gateway (e.g. Live Gateway or Staging Gateway)
+- App Gateway URL - This is the admin URL which was set up in the prerequisite steps
+- App Gateway IP - The IP address of the server the App Gateway was installed on
+- App Gateway Port - This should always be `2020`
+- App Gateway JWT Secret - This can be requested from the party responsible for installing your App Gateway
+- App Gateway API Token - This can be requested from the party responsible for installing your App Gateway
+
+Once you have entered all this information, the new App Gateway will be available as a new Deployment Target inside any App on the platform. _Don't forget_ that if you wish to deploy an App onto a custom URL on the App Gateway then you must set up that DNS A record to point to the App Gateway server first.
