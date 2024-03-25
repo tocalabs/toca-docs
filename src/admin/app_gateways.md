@@ -12,7 +12,7 @@ This is useful for a number of reasons:
 3. You can independently scale your App Gateway server to adapt to increases and decreases in traffic
 4. You can have the main platform located behind a firewall but can make an App Gateway public facing so your Apps can be accessed publicly without compromising the security of your main platform
 5. You can deploy different versions of the App to the Gateway and Default gateway so you can deploy the draft version on the default gateway for testing and you can deploy your published version of the App to your App Gateway for your app users.
-6. You can set up two App Gateways and deploy your App(s) to both of them and use a load balancer to set up a "Blue-green deployment" - you can find out more about this ![here](https://en.wikipedia.org/wiki/Blue%E2%80%93green_deployment).
+6. You can set up two App Gateways and deploy your App(s) to both of them and use a load balancer to set up a "Blue-green deployment" - you can find out more about this [here](https://en.wikipedia.org/wiki/Blue%E2%80%93green_deployment).
 
 > SSL provisioning and renewal will be handled internally by an App Gateway so you do not need to worry about configuring SSL certificates. However, if you wish to use a private SSL certificate provider please raise a ticket via <support@toca.io>.
 
