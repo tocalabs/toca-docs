@@ -1,6 +1,6 @@
 # Schedules
 
-A schedule allows you to run a _published_ :docs-link[workflow]{id="projects/automation/workflow"} on a routine basis or as a one-off at a future date.
+A schedule allows you to run a _published_ :docs-link[workflow]{id="projects/automation/workflows/workflow"} on a routine basis or as a one-off at a future date.
 
 This is useful for automation processes that need to run on a regular basis e.g. weekly or daily.
 
