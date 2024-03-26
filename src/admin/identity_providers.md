@@ -2,9 +2,9 @@
 
 [Identity providers](https://en.wikipedia.org/wiki/Identity_provider) allow you to link identity providers from other platforms such as Active Directory from Microsoft or Google with your Toca platform. Toca can link to any OAuth2.0 or OpenID Connect compatible provider.
 This opens the doors to the following features:
-1. Platform SSO - Allowing platform users to sign into your :docs-link[Toca platform]{id="admin/maintenance_and_security} with Single-Sign-On (e.g. Log in with Microsoft, Log in with Google)
-2. App SSO - Configuring your :docs-link[App Authentication]{id="projects/app/authentication"} to leverage the Identity Providers to allow users to log into an App with their other accounts 
-3. :docs-link[Datastore Identities]{id="projects/automation/datastores/identity} - Allow you to perform automation actions on behalf of a user such as Send an Email from your Microsoft Account, Upload a file to Google Drive from your Google account
+1. Platform SSO - Allowing platform users to sign into your :docs-link[Toca platform]{id="admin/maintenance_and_security"} with Single-Sign-On (e.g. Log in with Microsoft, Log in with Google)
+2. App SSO - Configuring your :docs-link[App Authentication]{id="projects/apps/authentication"} to leverage the Identity Providers to allow users to log into an App with their other accounts 
+3. :docs-link[Datastore Identities]{id="projects/automation/datastores/identity"} - Allow you to perform automation actions on behalf of a user such as Send an Email from your Microsoft Account, Upload a file to Google Drive from your Google account
 
 This works because an Identity Provider acts a bridge that links the Identity Provider with the Toca platform, allowing a secure and authenticated way of leveraging other software from delegated accounts.
 

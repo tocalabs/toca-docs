@@ -16,4 +16,4 @@ You can also use the Trigger node to make a simple generic POST API call by fill
 - URL 
 - Body
 
-You cannot provide headers so for more complicated API calls it is better to use the API caller action in an :docs-link[Activity]{id="projects/automation/activity"}. It is also worth noting that a Trigger node does not return any usable output so if you require the API response then use an API caller action.
+You cannot provide headers so for more complicated API calls it is better to use the API caller action in an :docs-link[Activity]{id="projects/automation/activities/activity"}. It is also worth noting that a Trigger node does not return any usable output so if you require the API response then use an API caller action.

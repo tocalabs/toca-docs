@@ -1,6 +1,6 @@
 # App Gateways
 
-An App Gateway represents a server for you to deploy your Apps to, where they will be served and hosted from. A Toca platform will always come with a Default App Gateway, this is built into the platform so your Apps will be deployed and hosted from the same server as the rest of the platform but this allows you to define other deploy targets.
+An App Gateway represents a server for you to :docs-link[deploy your Apps]{id="projects/apps/deployment"} to, where they will be served and hosted from. A Toca platform will always come with a Default App Gateway, this is built into the platform so your Apps will be deployed and hosted from the same server as the rest of the platform but this allows you to define other deploy targets.
 
 An App Gateway is useful when you want to serve and host your App(s) from somewhere other than the default location. One App Gateway can have many apps deployed to it and you can put your App Gateway wherever you want provided it can communicate to the core server via HTTPS.
 

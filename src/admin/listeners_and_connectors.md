@@ -1,6 +1,6 @@
 # Listeners & Connectors
 
-This page in the Admin section of the platform allows you to view all the :docs-link[Listeners]{id="projects/automation/workflows/listeners"} and :docs-link[Connectors]{id="projects/automation/workflows/connectors"} that are live across the platform.
+This page in the Admin section of the platform allows you to view all the :docs-link[Listeners]{id="projects/automation/workflows/listener"} and :docs-link[Connectors]{id="projects/automation/workflows/connectors"} that are live across the platform.
 
 From here, you can identify which workflows have Listeners and Connectors attached to them and therefore which workflows can be triggered externally.
 
