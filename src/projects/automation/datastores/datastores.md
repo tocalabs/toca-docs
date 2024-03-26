@@ -6,7 +6,7 @@ Datastore parameters are case-sensitive. Datastore parameters refer to variables
 
 ### Data from a Datastore
 
-- **Variables** - Store a named value with an associated type such as text, number, coordinates, image, etc. 
+- :docs-link[**Variables**]{id="projects/automation/activities/variables"} - Store a named value with an associated type such as text, number, coordinates, image, etc. 
 - **Passwords** - Securely store a password, this value is encrypted and won't be logged anywhere. Recommended for credentials or sensitive information
 - **Files** - Persistely store a file so that it can be accessed by automation or apps
 - :docs-link[**Identities**]{id="projects/automation/datastores/identity"} - Link a digital identity so that you can use automation actions on behalf of a user such as sending an email from your Outlook account or uploading a file to your Google Drive
