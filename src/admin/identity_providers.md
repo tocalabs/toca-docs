@@ -50,7 +50,7 @@ Key information to know:
 10. Add an icon if you wish and then submit the form
 
 
-_* With some Microsoft Application Registrations, they may give you custom Token and Authorisation endpoints which are unique to this specific Application registration. To get these URLs you can select the Endpoints link on the Overview page of your Application Registration in the Azure Portal
+_* With some Microsoft Application Registrations, they may give you custom Token and Authorisation endpoints which are unique to this specific Application registration. To get these URLs you can select the Endpoints link on the Overview page of your Application Registration in the Azure Portal_
 
 ### Google
 
