@@ -1,1 +1,1 @@
-# Bots
+../admin/bots.md
