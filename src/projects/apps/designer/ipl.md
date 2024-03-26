@@ -26,11 +26,11 @@ Each action in IPL can return a result, these results can then be used in the IP
 
 ### In Page Values (IPV)
 
-In Page Values are like variables for your App, they are stored in the memory of your browser tab that you have the App open in and can have different lifetimes based on what you select. These In Page Values are available both within IPL actions as inputs but they are also available as a datasource for any App Component property that allows you to select a datachip.
+In Page Values are like variables for your App, they are stored in the memory of your browser that you have the App open in and can have different lifetimes based on what you select. These In Page Values are available both within IPL actions as inputs but they are also available as a datasource for any App Component property that allows you to select a datachip.
 
 Behind the scenes, these In Page Values are stored in [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB), an in-browser database that can actually be viewed by opening the browser dev tools, heading to the Application tab and locating the IndexedDB section. There will be a database under this section labelled IndexDB and this is the one which IPV's from Toca Apps are stored.
 
 When you set each In Page Value, you get a choice about how long you would like the IPV value to last and there are three different options:
 - Persistent - This will live in your browser forever or until you clear your browser cache, this will likely outlive the browser tab that contains the App but this fact should not be relied on in your design
-- Session - The value will live until the user logs out or until they close the browser tab, whichever of those two comes first
+- Session - The value will live until the user closes the browser tab, the "session" here is the lifetime of the browser tab  
 - Temporary - The value will be destroyed once you navigate away from the page the value was set on

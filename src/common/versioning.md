@@ -30,10 +30,7 @@ If your workflow contains activities which are set to their draft versions, then
 
 App versions similarly adhere to the three tiered model as described above.
 
-An entire app can be versioned and as such you can choose to deploy the individual app states should you wish to.
-
-App pages can also have versions and work in much the same way. If you publish an app as a whole, all app pages will be published. You will be warned that this will happen.
-
+An entire app is versioned by default and as such you can choose to deploy the individual app states should you wish to. An App is versioned as a whole rather than versioning individual pages as this would become very complicated to keep track of. Instead, pages of a `Draft` app are always in `Draft` and pages in a `Published` app are always `Published`. When you publish the your App, it will simultaneously publish all of the pages as well.
 
 **Listeners & Connectors**
 

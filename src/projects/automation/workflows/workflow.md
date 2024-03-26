@@ -7,17 +7,8 @@ Nodes can be dragged onto your workflow canvas.
 - Start - Denotes the start point of your workflow. Can only be used once.
 - Exclusive - Defines a decision point in the workflow
 - Trigger - Allows you to start another workflow
-- label - A simple text label with customisable font options.
+- Label - A simple text label with customisable font options.
 - Stop - Denotes the point at which the automation should stop. A workflow can have multiple stop nodes.
-
-**Error handling**
-
-Fail on Error: All actions include a checkbox labelled "Fail on error?" If checked, it marks the action as Failed when an error occurs during its execution, indicating an irrecoverable issue. By default, this option is checked for all actions.
-
-Timeout: Certain actions, such as those in the Vision, OCR, or Flow Control categories, feature a timeout property. This property, measured in milliseconds, specifies how long the action can run before it stops itself. Notably, a timeout can be set to -1, indicating that the action should disregard the timeout entirely.
-
-Error on Timeout: Actions with the Timeout property also include an Error on Timeout setting. This setting determines whether a timeout should be treated as an error. Sometimes, a timeout may not signify an error. For example, with an image search action looking for an occasional pop-up, it should continue if the pop-up doesn't appear but handle it if it does.
-
 
 **Inputs, outputs and context (including AppUserId)**
 
@@ -31,15 +22,15 @@ An example would be: If you were to create an App User in 'Activity A', using th
 
 **Exclusives / Making a decision point** - 
 
-Decision-making in a workflow involves using the Exclusive node. This node allows connections to multiple activities or nodes, each with its own condition. If a condition is met, the workflow follows that specific path.
+Decision-making in a workflow involves using the :docs-link[Exclusive]{id="projects/automation/workflows/exclusive"} node. This node allows connections to multiple activities or nodes, each with its own condition. If a condition is met, the workflow follows that specific path.
 
 The data which forms part of the exclusive expression will frequently be an output from an activity somewhere earlier in the workflow. Clicking the variable button and clicking on an activity will show all available outputs. This will include the 'activityFailed' output which has the type: boolean. An example of this being used in an exclusive may look like:
 
 If 
-'activityfailed' == true - then follow the path to the stop node
+:datachip-action[activityfailed]{type="Boolean"} == `true` - then follow the path to the stop node
 
 Or
-'activityfailed' == false - then continue to the next activity node.
+:datachip-action[activityfailed]{type="Boolean"} == `false` - then continue to the next activity node.
 
 When you have an exclusive node highlighted and have pressed the variable button, you can also click the tab on the left hand side labelled 'datastores' which will show you all datastores and their variables. You can use these datachips as part of expressions in the exact same way that you would an output from an activity.
 
@@ -62,7 +53,7 @@ To edit a workflow's configuration, click on the cog icon in the top right of an
 
 **Reporting Levels** - 
 
-The reporting level of a workflow designates how much information is returned when it is run. There are circumstances where you may want to decrease your reporting level due to large amounts of data which can build up unnecessarily.
+The reporting level of a workflow designates how much information is returned when it is run, this is the information that can be found on the :docs-link[reporting page]{id="reporting/reporting"}. There are circumstances where you may want to decrease your reporting level due to large amounts of data which can build up unnecessarily.
 
 To change the reporting level of a job, enter the workflow designer and access the workflow settings by pressing the cog icon. There are 4 reporting levels which are presented in descending order:
 

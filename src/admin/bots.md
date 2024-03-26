@@ -1,6 +1,6 @@
 # Bots
 
-A Bot represents a digital worker that will perform the activities that you have set up in your automation projects. Bots can interepret the instructions and actions that have been placed in an activity and run through them in the order defined within the activity.
+A Bot represents a digital worker that will perform the activities that you have set up in your automation projects. Bots can interepret the actions that have been placed in an activity and run through them in the order defined within the activity.
 
 There are two different types of Bots:
 - GUI - This represents a digital worker with access to a desktop environment, this is best used for desktop based automation where you need to automate a browser or application

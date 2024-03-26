@@ -1,6 +1,5 @@
 # Automation
 
-
 An Automation Project is a place to create, store and manage your automated processes. They contain:
 
 * :docs-link[Activities]{id="projects/automation/activities/activity"} - Individual automation tasks such as "Open a browser and log in to web app" or "Process data and add it to a table". These are your basic building blocks of automation.

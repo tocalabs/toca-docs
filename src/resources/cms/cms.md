@@ -4,7 +4,7 @@ CMS, or content management system, is a different way of storing data which is s
 
 CMS' can be found primarily via the resources tab of your Toca platform but can also be accessed via your app once they have been linked.
 
-**Files** - Within your CMS you will find a dedicated file storage area. This is where you will select files from when you add content to your CMS later. Once uploaded, files can be previewed by clicking on them.
+**Files** - Within your CMS you will find a dedicated file storage area. This is where you will select files from when you add content to your CMS later. Once uploaded, files can be previewed by clicking on them. These files can also be used by App Components and App Actions which handle files when you link a CMS with your App.
 
 **Type**: A type is an overarching category of data within a CMS. Each CMS can have many types. For example, a restaurant may have a type 'lunch menu' and a type 'dinner menu'.
 
