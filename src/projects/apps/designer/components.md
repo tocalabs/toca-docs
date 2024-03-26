@@ -13,4 +13,4 @@ Here are some common types of components you can use to build your app:
 
 You can add your favourite components in the Favourites group by holding ALT and clicking on a component.
 
-![Components in an App](/src/assets/component.png)
+![Components in an App](/src/assets/components.png)
