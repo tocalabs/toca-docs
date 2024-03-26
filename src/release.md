@@ -3,16 +3,13 @@ __Thursday 28th March 2024__
 
 ### What's New
 
-"Subscribe to changes" in apps 
-
-
-- Documentation
+- "Subscribe to changes" in apps 
+- Documentation across the platform
+- New option to export a datastore without including the data within tables
 
 ### Bug Fixes
 
-- Bug 1
-- Bug 2
-
+- Contact <support@toca.io> for a full list of bug fixes included within this release.
 
 
 ### Deprecated
