@@ -20,4 +20,4 @@ Nodes are what also allow you to define flow control such as loops and error han
 
 There are some basic limitations that apply to the nodes above.
 1. A Start node can only point to one other node
-2. An End node can only be pointed to by one other node
+2. A Stop node can only be pointed to by one other node
