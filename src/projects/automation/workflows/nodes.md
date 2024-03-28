@@ -13,11 +13,11 @@ Nodes are what also allow you to define flow control such as loops and error han
  | Node | Description |
  | --- | --- |
  | Start | Defines the start point of your workflow. _Can only be used once_ |
- | End | Defines the finishing point of your workflow. _Can be used multiple times_ |
- | Exclusive | Defines a decision point in the workflow |
+ | Exclusive | Defines a decision point in the workflow | 
  | Trigger | Allows you to start another workflow |
  | Label | Does not affect behaviour of workflow but allows you to add comments to your workflow |
+ | Stop | Defines the finishing point of your workflow. _Can be used multiple times_ |
 
 There are some basic limitations that apply to the nodes above.
 1. A Start node can only point to one other node
-2. An End node can only be pointed to by one other node
+2. A Stop node can only be pointed to by one other node
