@@ -28,8 +28,20 @@ Image files should be uploaded to this repository and relatively linked. You can
 ## Linking to other docs
 You can link to other docs using the `docs-link` entity. You need to provide an `id` and and optional `type` (if not provided it will assume you want platform documention). For platform documentation the `id` is the filename. For TDK entities the id will be the `definitionId` or `actionId`.
 
-Available types are: `platform` (eg files found in this repo), `action`, `connector`, `appaction`, `appcomponent`.
+Available types are: `Platform` (eg files found in this repo), `Action`, `Connector`, `AppAction`, `AppComponent`.
 
 Link to a platform doc: `:docs-link[Link text]{id="example"}`
 
-Link to a tdk entity doc: `docs-link[Link text]{id="666f4b43-efeb-40da-8f72-05f0d50334bd" type="appcomponent"}`
+### Linking to TDK Entities
+To link to a TDK entity you need to provide as the `id` the shared ID property for that type. Below is a list of which property to use.
+
+| Type | Property to use |
+| - | - |
+| Action | `key` |
+| Connector | `connectorId` |
+| AppAction | `originId` |
+| AppComponent | `originId` |
+
+Linking to the latest version of a TDK action: `:docs-link[Link text]{id="ExecutePython" type="Action"}`
+
+Linking to the latest version of an App action: `docs-link[Link text]{id="666f4b43-efeb-40da-8f72-05f0d50334bd" type="AppAction"}`
