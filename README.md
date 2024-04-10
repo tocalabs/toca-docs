@@ -26,7 +26,7 @@ Image files should be uploaded to this repository and relatively linked. You can
 * Directive `:img{src="/src/images/someimage.jpg" alt="Alt text" width="320px" height="240px"}`
 
 ## Linking to other docs
-You can link to other docs using the `docs-link` entity. You need to provide an `id` and and optional `type` (if not provided it will assume you want platform documention). For platform documentation the `id` is the filename. For TDK entities the id will be the `definitionId` or `actionId`.
+You can link to other docs using the `docs-link` entity. You need to provide an `id` and and optional `type` (if not provided it will assume you want platform documention). For platform documentation the `id` is the filename. See below for which property to use to TDK entities.
 
 Available types are: `Platform` (eg files found in this repo), `Action`, `Connector`, `AppAction`, `AppComponent`.
 
