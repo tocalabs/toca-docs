@@ -12,11 +12,11 @@ Nodes can be dragged onto your workflow canvas.
 
 **Inputs, outputs and context (including AppUserId)**
 
-By adding inputs to an activity, you are telling the activity to expect to be started with some variables. More on [inputs]
+By adding :docs-link[Inputs]{id="projects/automation/activities/inputs"} to an activity, you are telling the activity to expect to be started with some variables. 
 
-To output a value is to say that you want to use that value somewhere outside of that activity. More on [outputs]
+To :docs-link[Output]{id="projects/automation/activities/outputs"} a value is to say that you want to use that value somewhere outside of that activity. More on [outputs]
 
-These concepts are very important when working with workflows as they are one of the easiest ways to use contextual data across multiple activities. Simply output a datachip from one activity and then configure one or more activities further down the line to expect it as an input.
+These concepts are very important when working with workflows as they are one of the easiest ways to use contextual data across multiple activities. Simply output a :docs-link[Variable]{id="projects/automation/activities/variable"} from one activity and then configure one or more activities further down the line to expect it as an input.
 
 An example would be: If you were to create an App User in 'Activity A', using the 'create app user' action, you could then output the subsequent 'AppUserId'. Then, further along the workflow, you could tell 'Activity B' to expect 'AppUserId' as an input. 'Activity B' could then, for example, manage the permissions of that App User, or add them to a certain group based on other contextual data.
 

@@ -19,6 +19,14 @@ Once you have been able to identify who a user is, you can control what they are
 - Each resource your app links to (Datastores and Listeners)
 - Content within your pages
 
+### App Users in Automation
+
+You can also carry out administrative tasks such as creating App users or deleting App users from your Automation by using the App actions. You can also access information about an App User from your automation, this is useful when you want to do something like modify an App User, an App Group or an App Role dynamically rather than manually. 
+To identify which App User ran a workflow, it will add an input called "AppUserId", more information about this can be found on the Inputs, Outputs and Context section of the :docs-link[Workflow]{id="projects/automation/workflows/workflow"} page. You can then use this "AppUserId" input with the :docs-link[Get App User]{id="GetAppUser" type="Action"} action to get more information about the current App User.
+
+You can also use this information to control what access an App user has to table data by leveraging :docs-link[Row Level Permissions]{id="projects/automation/datastores/tables/row_level_permissions"}.
+
+### More Reading
 For more info about authentication and authorization see:
 - :docs-link[Authentication]{id="projects/apps/auth/authentication"}
 - :docs-link[Authorization]{id="projects/apps/auth/authorization"}

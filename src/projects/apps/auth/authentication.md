@@ -24,6 +24,8 @@ In Apps, you can use any :docs-link[Identity Provider]{id="admin/identity_provid
 The main difference between OAuth2 and OpenID in Apps is that OpenID guarantees certain information can be retrieved for the user that has logged in such as username, name, date of birth, address, email and more.
 This is why when your App only uses OAuth2 there is no username in your App Users table as the platform cannot guarantee that it is provided that information.
 
+> If you are using an OpenID Identity Provider, then you _must_ populate the `User Info Endpoint` section of the Identity Provider as this is used to get data about the current user.
+
 #### Scopes & Required Fields
 
 In both OAuth2 and OpenID authenticated apps you need to provide the ProfileURL (can also be known as the User Info endpoint) as this is used to fetch the user ID from the authentication provider you are using.
