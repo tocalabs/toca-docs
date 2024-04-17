@@ -18,7 +18,7 @@ You can then define the flow of logic from the Event and can drag actions onto y
 
 ![IPL Diagram](/src/assets/ipl_diagram.png)
 
-IPL also has an Exclusive node, similar to the :docs-link[one found]{id="projects/automation/workflows/exclusive} in automation Workflows, which allows you to branch your IPL flow off based on conditions.
+IPL also has an Exclusive node, similar to the :docs-link[one found]{id="projects/automation/workflows/exclusive"} in automation Workflows, which allows you to branch your IPL flow off based on conditions.
 
 However, unlike automation workflows, IPL flows can branch off in parallel to allow for parallel execution, you can achieve this by just dragging multiple paths from one node in the IPL flow to two or more others. Do be aware though that once you do this, you cannot join several paths back into one.
 
