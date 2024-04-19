@@ -25,7 +25,7 @@ This also applies to when you are creating new entities within the Toca Developm
 
 The platform documentation is also hosted in [GitHub](https://github.com/tocalabs/toca-docs) and this is a public repository so you are welcome to browse the documentation from there and even contribute if you wish to.
 
-Keep your eyes peeled the info icon that signifies documentation!
+Keep your eyes peeled for the info icon that signifies documentation!
 
 ![Documentation Example](/src/assets/docs_example.png)
 
