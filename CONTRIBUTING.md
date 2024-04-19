@@ -4,7 +4,7 @@ Thank you for your interest in contributing to the Toca Platform docs, we'd love
 
 There are a few ways of helping with the docs: critiquing the docs, editing the docs, fixing incorrect information, adding examples and images, and documenting new or otherwise undocumented features in Toca.
 
-We recommend you checkout the ./README.md to read about what format the documentation is written in and the custom directives that are used.
+We recommend you checkout the [README](./README.md) to read about what format the documentation is written in and the custom directives that are used.
 
 If you are contributing through a Pull Request then please create a branch from latest `main` and then create a Pull Request to merge your new branch into `main`.
 
