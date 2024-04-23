@@ -45,3 +45,10 @@ To link to a TDK entity you need to provide as the `id` the shared ID property f
 Linking to the latest version of a TDK action: `:docs-link[Link text]{id="ExecutePython" type="Action"}`
 
 Linking to the latest version of an App action: `:docs-link[Link text]{id="666f4b43-efeb-40da-8f72-05f0d50334bd" type="AppAction"}`
+
+## Videos
+You can embed videos into docs using the below syntax. The videos are handled natively, and no conversion or compression is performed so make sure your video files are in a sensible and widely used format (mpeg, webm etc.) and aren't overly large.
+
+```markdown
+:video{src="/src/assets/video.mpeg"}
+```
