@@ -7,4 +7,4 @@
 In web development, this is referred to as the "Box Model", you can learn more about this [here](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model). 
 
 ## CSS
-This option allows you to provide any [valid CSS value](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units). For example `12px`, `1.5em`, `calc(100vw - 50px)` etc. Numeric values will be treated as pixels.
+This option allows you to provide any [valid CSS value](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units). For example `12px`, `1.5em`, `calc(100vw - 50px)` etc. Numerical values will be treated as pixels.
