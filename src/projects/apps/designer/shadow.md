@@ -7,6 +7,8 @@ From the properties of the component you can select:
 - **X**: Horizontal offset value, a positive value puts the shadow to the right of the of the component, a negative value puts the shadow to the left of the component.
 - **Y**: Vertical offset value, a positive value puts the shadow below the component, a negative value puts the shadow above the component.
 - **Blur**: Add a Blur Effect to the shadow, the higher the number, the more blurred the shadow will be
-- **Spread**: Set the Spread Radius of the shadow, this refers to how "big" the shadow is
+- **Spread**: Set the Spread Radius of the shadow, this refers to how "big" the shadow is.
+
+> `X`, `Y`, `Blur` and `Spread` all accept a [valid  CSS value](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units). Numerical values will be treated as pixels.
 
 ![Shadow Examples](/src/assets/shadow.png)
