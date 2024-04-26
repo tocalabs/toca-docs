@@ -4,7 +4,7 @@ Apps have the ability to interact with other areas of the Toca platform.
 
 #### Datastores
 
-A :docs-link[datastore]{id="projects/automation/datastores/datastore"} can store data in a wide array of formats. This data can then be utilised throughout an app to drive static and dynamic content. Examples include:
+A :docs-link[datastore]{id="projects/automation/datastores/datastores"} can store data in a wide array of formats. This data can then be utilised throughout an app to drive static and dynamic content. Examples include:
 - Using a table inside a datastore to fill a dynamic page with content.
 - Displaying data from a datastore with a chart component.
 
