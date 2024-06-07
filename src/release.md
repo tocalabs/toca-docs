@@ -1,21 +1,36 @@
-# 7.5 - Release Notes
-__Thursday 28th March 2024__
+# 7.6 - Release Notes
 
-### What's New
+## What's New
 
-#### "Subscribe to changes" in apps
+### Apps
 
-_Subscribe to changes_ is a new feature in Apps that replaces polling. Previously, if you wanted data to update on your app page you would set a polling interval so that the data was refreshed at a frequent interval. This had limitations such as only being able to set a minimum interval of 1 second and also it could result in your App doing a lot more work than it had to.
-This new feature means that your App page will now be notified when data has been updated or workflow results have been returned. This allows your App to update automatically as soon as the data has updated and means that your app users see the data update in real time and also your App will be more efficient as it is only making updates when it needs to. 
-This will work with the following data sources:
-1. Any datastore variable, including tables
-2. Results from workflows that have been run via an App
+#### Deploy an App to multiple targets
 
-> You will not need to make any changes to start using this feature, App components which previously had configured polling will now automatically Subscribe to changes.
+You are now able to deploy an App to multiple different app slugs/deploy targets at once, this also includes the ability to deploy multiple different versions of your App simultaneously. Previously, it was only possible to deploy either the `Draft` or `Published` version of an App at once, but now with this feature you can have both versions deployed at the same time on different `URL's`. 
 
-Look out for this feature when adding a datasource to an App component!
+![Multiple App Deploy Targets](/src/assets/new-deploy-targets.png)
 
-![Subscribe to changes](/src/assets/subscribe_to_changes.png)
+#### Custom CSS to App Component Properties
+
+Within the properties of App Components, you can now use custom CSS for the following:
+- Size
+- Width
+- Height
+- Minimum Height
+- Margin
+- Padding
+
+Now that these fields accept CSS properties, this allows you to set a property to use any valid CSS value and unit (e.g. `1.5rem`) rather than having to use the settings available.
+
+
+![CSS App Component Properties](/src/assets/css-property.png)
+
+#### Test App Authentication within Preview Mode
+
+Within the App Designer, you now have the option to enter "Preview Mode" as an App User. This allows you to simulate using the App on behalf of an App User which means you can test that your login is working as expected as well as testing that your permissions are working correctly. You can pick from any existing App User, even if they have completely different Groups and Roles. This is also useful for debugging issues that your App Users might be facing when something is not working as expected, as now you can go through the App as that user.
+
+
+![App User Preview](/src/assets/app-user-preview.png)
 
 #### Documentation across the platform
 
