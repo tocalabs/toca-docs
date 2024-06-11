@@ -21,20 +21,20 @@ A variable will have an associated type such as:
 - JSON 
 - Table
 
-All the variables will be pink and visible in the Variables palette from the Action Panel (in the same section as the Actions and Input/Output). Variables will always be pink whereas action results are green and datastore datachips are blue.
+All the `Activity Variable` datachips will be pink and visible in the Variables palette from the `Action Panel` (in the same section as the `Actions` and `Input/Output` tabs). `Activity Variable` datachips will always be pink whereas `Action Result` datachips are green and `Datastore Variable` datachips are blue.
 
-So a variable looks like this :datachip-variable[userData]{type="JSON"}.
+So an `Activity Variable` datachip looks like this :datachip-variable[userData]{type="JSON"}.
 
-An action result looks like this :datachip-action[userData]{type="JSON"}.
+An `Action Result` datachip looks like this :datachip-action[userData]{type="JSON"}.
 
-A datastore variable looks like this :datachip-datastore[userData]{type="JSON"}.
+A `Datastore Variable` datachip looks like this :datachip-datastore[userData]{type="JSON"}.
 
 
-Variables, unlike action results, are changeable and can have their values updated throughout an activity.
+Variables, unlike `Action Results`, are changeable and can have their values updated throughout an `Activity`.
 
-Variables are often created via Set Variable action but any action result can be used to create and set a variable (bottom of the action menu). Their notation is `$$ExampleText$$`. Once they are created you can hover over them to see the data.
+Variables are often created via the `Set Variable` Action but any Action Result can be used to create and set a variable (bottom of the `Action` menu). Their notation is `$$ExampleText$$`. Once they are created you can hover over their datachip to see the data.
 
-Datachips can be renamed (they will still work in actions, datachips will be updated everywhere).
+Datachips can be renamed (they will still work in `Actions`, datachips will be updated everywhere).
 
-To delete a variable, either click on the icon 'x' corresponding to the variable or remove the action that created the variable.
+To delete a variable, either click on the icon 'x' corresponding to the variable or remove the Action that created the variable.
 
