@@ -21,7 +21,7 @@ A variable will have an associated type such as:
 - JSON 
 - Table
 
-All the `Activity Variable` datachips will be pink and visible in the Variables palette from the `Action Panel` (in the same section as the `Actions` and `Input/Output` tabs). `Activity Variable` datachips will always be pink whereas `Action Result` datachips are green and `Datastore Variable` datachips are blue.
+All the `Activity Variable` datachips will be pink and visible in the `Variables` palette from the `Action Panel` (in the same section as the `Actions` and `Input/Output` tabs). `Activity Variable` datachips will always be pink whereas `Action Result` datachips are green and `Datastore Variable` datachips are blue.
 
 So an `Activity Variable` datachip looks like this :datachip-variable[userData]{type="JSON"}.
 
