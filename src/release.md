@@ -29,48 +29,62 @@ Now that these fields accept CSS properties, this allows you to set a property t
 
 Within the App Designer, you now have the option to enter "Preview Mode" as an App User. This allows you to simulate using the App on behalf of an App User which means you can test that your login is working as expected as well as testing that your permissions are working correctly. You can pick from any existing App User, even if they have completely different Groups and Roles. This is also useful for debugging issues that your App Users might be facing when something is not working as expected, as now you can go through the App as that user.
 
-
 ![App User Preview](/src/assets/app-user-preview.png)
 
-#### Documentation across the platform
+### Export & Import
 
-The platform now comes with built in documentation so you can learn about features and functionality without ever having to leave the application. This includes documentation within the platform itself, usually available by selecting the little `( i )` information icon next to entities. It also includes documentation for actions, app components, app actions and connectors.
+#### Wizard Improvements
 
-This also applies to when you are creating new entities within the Toca Development Kit, you are now required to add documentation before submitting your component for review. This ensures that all entities will continue to be documented.
+We have addressed feedback regarding the import and export wizards which have previously led to confusion and misinterpretation. The new wizard steps users through the actions which they need to go take when performing an export or import as well as providing more feedback about what changes have happened.
 
-The platform documentation is also hosted in [GitHub](https://github.com/tocalabs/toca-docs) and this is a public repository so you are welcome to browse the documentation from there and even contribute if you wish to.
+![Import Wizard](/src/assets/import_wizard.png)
 
-Keep your eyes peeled for the info icon that signifies documentation!
+#### App Components & App Actions now Synced
+
+If you perform an export of an App project and the App contains App Components or App Actions that are not published to a Hub, then the Export wizard will warn you which App actions or App components are not published. Then, when you attempt to import this project onto a different Toca platform, it will automatically install any app components and app actions required in the App from the :docs-link[Pack Manager]{id="packs/packs"}. If it cannot install any, it will warn you that this is the case.
+
+#### Improved Handling of Large Tables
+
+There have been significant improvements and efficiency gains made to the process of exporting and importing large tables. The mechanism behind the scenes has been changed to handle data in chunks rather than all at once so it may be slower in some cases to perform an Export and an Import but this means it can now handle much more data. There should be no issues exporting tables which contain > 100,000 rows.
+
+### Platform
+
+#### Documentation improvements 
+
+The documentation panels now allow you to zoom in on images to view them more clearly and they also include improved forwarded and links to their corresponding GitHub location.
 
 ![Documentation Example](/src/assets/docs_example.png)
 
-#### Export datastore tables without the data
+### Packs
 
-A quality of life improvement to the Export feature, you can now choose to export the tables without any rows in them, this will still export the table definition so that the column definitions will be maintained but will not export any of the rows within the tables. This is useful if the tables contain data that is only going to be overwritten anyway or if your tables contain sensitive data.
+#### New pack type: Release Packs
 
-The new option will appear at the end of the Export options.
+There is now a new type of pack which allows you to bundle any other pack type (e.g. actions, app components, layouts and app actions) into a single pack. This is useful for situations in which you might have created a new app component and automation action for a project and you want to bundle these TDK entities up within a single container for when you import your project to another Toca platform.
 
-![Export No Data option](/src/assets/export_no_data.png)
+#### Minimum Platform Version
 
-#### Transfer table data
+When publishing a TDK entity to a Hub, you can now specify a minimum platform version which the entity will work on. This will help prevent situations where incompatible Packs have been installed by mistake.
 
-There is now a tool available within the datastore view that will allow you  to transfer data from one table in a datastore to another table in a datastore. This is useful when you are migrating data between projects or copying data. This will also work across different datastores, so no need for your tables to be within the same datastore. 
+### Admin
 
-> You can also use this tool to quickly clear a table by setting the target and source table as the same and ticking the option to wipe the table before migrating the data!
+#### Migrate User Resources on Deletion
 
-![Data Transfer tool](/src/assets/data_transfer.png)
+If you ever need to delete a user from your Toca platform, you are now taken through a wizard which will allow you to migrate that users projects and resources to other users on the platform, making sure that the work is not lost and is still accessible.
 
+![Migrate User Resources](/src/assets/migrate_user_resources.png)
 
-### Bug Fixes
+#### Download Bot Logs
+
+You can now download error logs from the Bot and it's associated services through the Admin/Bots page.
+
+## Bug Fixes
 
 Bug fixes mainly covered the following themes:
 - Import & Export
-- Performance
-- Running workflows
+- Bot and Core platform communication
 
 > Contact <support@toca.io> for a full list of bug fixes included within this release.
 
+## Deprecated
 
-### Deprecated
-
-- The option to set up polling within Apps when retrieving data from datastores has been removed as this has been superseded by the new "Subscribe to changes" feature. App components that used this option have been migrated to use the "Subscribe to changes" feature as part of this version.
+No functionality has been deprecated in this release.
