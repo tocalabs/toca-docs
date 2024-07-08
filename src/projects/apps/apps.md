@@ -13,4 +13,4 @@ An App project contains:
 
 Apps can be used to create a wide variety of web applications, ranging from simple single page forms or dashboards, to glossy and polished websites all the way to complex, richly interactive applications.
 
-> Did you know that our website, [Toca.io](https://toca.io) is built and deployed using Apps?
+> Did you know that our website, [Toca.io](https://toca.io), is built and deployed using Apps?
