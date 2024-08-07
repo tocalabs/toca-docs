@@ -26,7 +26,7 @@ This release of Toca includes an upgrade to the .NET framework from .NET 7 to .N
 
 #### Table Component
 
-The latest version of the Table component (v1.0.4) is a dramatic overhaul of the existing table component that was available in Apps.
+The latest version of the Table component (v1.0.3) is a dramatic overhaul of the existing table component that was available in Apps.
 This new version now natively understands table relationships as well as local tables that have been set as an In Page Values. It also includes a host of new styling options, allowing you to customise your table to look exactly as you want it.
 You can now also configure the table component so that users can directly manipulate datastore tables via the App or In Page Value tables.
 
