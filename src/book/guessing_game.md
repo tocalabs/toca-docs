@@ -22,4 +22,12 @@ Let's get started by creating an Activity, and we'll assign the activity to a St
 
 :video{src="/src/assets/book/create_activity.webm"}
 
-Let's place down some Actions within our Activity to define our flow of logic.
+> #### Action Groups
+>
+> If this is the first time you've opened an Activity, you'll need to add some Action Groups to your Activity Designer. This allows you to customise which Actions you have at your finger tips within the Designer.
+>
+> :video{src="/src/assets/book/add_action_groups.webm"}
+
+Let's place down some Actions within our Activity to define our flow of logic. We'll need an action that generates a random number between 1 and 100 first. Fortunately, there is an Action that does _just that_ called `Random` which we can find in the `Numeric` Action Group!
+
+:video{src="/src/assets/book/random_action.webm"}
