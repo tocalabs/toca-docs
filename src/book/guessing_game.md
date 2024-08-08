@@ -31,3 +31,9 @@ Let's get started by creating an Activity, and we'll assign the activity to a St
 Let's place down some Actions within our Activity to define our flow of logic. We'll need an action that generates a random number between 1 and 100 first. Fortunately, there is an Action that does _just that_ called `Random` which we can find in the `Numeric` Action Group!
 
 :video{src="/src/assets/book/random_action.webm"}
+
+Now that we have generated our random number, we need to place down an Action that will store this value so we can reference it later. For this, we need to write this number to a **Datastore**, this is sort of like a database and will let us store values persistently.
+
+To add our random number to a datastore, we can use the `Set Datastore Variable` action which can be found in the `Variable` Action Group.
+
+:video{src="/src/assets/book/set_datastore_variable.webm"}
