@@ -14,7 +14,10 @@
 - :docs-link[Using Tables to Structure Related Data]{id="book/structure_related_data"}
   - :docs-link[Creating Tables]{id="book/defining_table_schemas"}
   - :docs-link[Linking Data]{id="book/linking_data"}
+  - :docs-link[Using Related Data]{id="book/structure_related_data/using_linked_data"}
 - :docs-link[Testing]{id="book/testing"}
+  - :docs-link[Testing Automation]{id="book/testing/testing_automation"}
+  - :docs-link[Testing Apps]{id="book/testing/testing_apps"}
 - :docs-link[Managing Growing Projects]{id="book/manage_growing_projects"}
   - :docs-link[Triggers and Listeners]{id="book/triggers_and_listeners"}
   - :docs-link[Layouts and Blocks]{id="book/layouts_and_blocks"}
