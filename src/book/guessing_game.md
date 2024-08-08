@@ -71,6 +71,24 @@ Now that we have defined our Input to the Activity, we need to construct the log
 
 We can use the `If Then` Action to perform the checks and we can use the `Set Variable` Action to create and update the message throughout the Activity. Lastly, we'll return the message as an Output of the Activity.
 
-:video{src="/src/assets/book/check_guess_activity"}
+:video{src="/src/assets/book/check_guess_activity.webm"}
 
 > In the video above, we used the "Duplicate Action" button on the actions to place our logic down a bit more quickly.
+
+We've now finished developing the automation logic for our game, let's quickly test it works before we move onto building the user interface. To test it, we're going to run our new activity from start to finish and inject a guess as an input to check all three decision points. We also want to check that the `message` Variable is being updated with the correct text.
+
+:video{src="/src/assets/book/testing_guess_logic.webm"}
+
+By "watching" the `message` Variable, we've been able to verify that it's value is correct for each case that we have programmed into our activity.
+
+Now we've verified our logic, the last thing we need to do on the Automation side is create a Workflow for each Activity. A Workflow allows us to string together multiple Activities into a single automated flow. You can also link Workflow's to Apps so that a user on an App can trigger some automation.
+
+Creating a Workflow is similar to creating an Activity except you don't need to assign any Bots, you just need to give it a useful name and description. Once you find yourself in the Workflow Designer, you just link the steps in the order you want them to run. In this case, we'll have two Workflow's (one for each Activity we created), and the Activity will be preceded by a Start node and followed by an End node.
+
+:video{src="/src/assets/book/create_workflow.webm"}
+
+We also need to create the equivalent Workflow for our "Check user's guess" Activity.
+
+In order for a Workflow to be able to be run via an App, we need to add a Listener to the start node of our Workflows. To do this, click on the Start node of your Workflow and create a Listener via the Properties panel. A Listener turns the Workflow into a callable API endpoint and it can recognise Activity Inputs and Outputs.
+
+:video{src="/src/assets/book/add_listener.webm"}
