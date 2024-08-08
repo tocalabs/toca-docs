@@ -34,6 +34,8 @@ Let's place down some Actions within our Activity to define our flow of logic. W
 
 Now that we have generated our random number, we need to place down an Action that will store this value so we can reference it later. For this, we need to write this number to a **Datastore**, this is sort of like a database and will let us store values persistently.
 
-To add our random number to a datastore, we can use the `Set Datastore Variable` action which can be found in the `Variable` Action Group.
+To add our random number to a datastore, we can use the `Set Datastore Variable` action which can be found in the `Variable` Action Group. We'll need to grab the result from the `Random` Action and use it as the Datastore variable's value.
 
 :video{src="/src/assets/book/set_datastore_variable.webm"}
+
+You'll notice a few things from the clip above. Firstly, we created a new Datastore from the Action, this is a convnenience function which means you don't have to explicitly create the Datastore from the Project's homepage. Secondly, to select another Action's result as an input to this Action, we selected a green datachip: :datachip-action[equationResult]{type="Number"}. This method of selecting results via their Datachips is common across the whole Toca platform. We'll discuss this more in the :docs-link[Datachips and Variables]{id="book/programming_concepts/datachips_and_variables"} chapter.
