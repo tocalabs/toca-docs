@@ -92,3 +92,28 @@ We also need to create the equivalent Workflow for our "Check user's guess" Acti
 In order for a Workflow to be able to be run via an App, we need to add a Listener to the start node of our Workflows. To do this, click on the Start node of your Workflow and create a Listener via the Properties panel. A Listener turns the Workflow into a callable API endpoint and it can recognise Activity Inputs and Outputs.
 
 :video{src="/src/assets/book/add_listener.webm"}
+
+Well done! We've now successfully finished the Automation for our guessing game. Now, let's turn our attention to building the user interface with an App.
+
+### Apps
+
+The interface for our guessing game is going to be a web application that people can visit in their browser. Our application will be made up of a single page which will need to do the following:
+- Allow a user to generate a random number to start the game
+- Have a number input that a user can use to submit their guess
+- Print a message back to the user indicating how close their guess was
+
+Let's start by creating a new App project, we'll give a name and we need to give it a URL Slug, this will dictate the URL that a user must go to in their browser to access the App. During the creation of the App, we also need to link the App to the two Workflow Listeners that we have already created, this will allow us to hook the Workflow's up to a button in the App.
+
+:video{src="/src/assets/book/create_app.webm"}
+
+Our App does not require any authentication at this point, we want anyone to be able to play the game without having to log in and create an account. We also added a favicon to our app, this is the little icon that appears in your browser tab, adding a favicon is not necessary but just makes your App feel a bit more polished.
+
+When you create an App, by default it will auto generate an empty Home page, this is the page that we'll design up to act as our game's interface. We'll keep our design quite simple, we'll have a welcome message and some instructions on how to play the game and below that we'll have a form with a single number input where a user can submit their guess.
+
+Before we can place any content down on our App page, we need to place down a Layout component. Layout components are usually invisible components that allow us to dictate a structure and placement for any content we place inside them. We'll use a basic layout component called a `Flex Layout`.
+
+:video{src="/src/assets/book/flex_layout.webm"}
+
+When you drag any component onto your page, you can see it will show it's Properties panel on the right which we can use to configure the settings of the component. For our `Flex Layout` this might be setting the justification or alignment of any content we place inside the layout or maybe defining whether content inside the layout flows horizontally or vertically. We want out content to flow vertically and we want it to be justified and aligned in the centre of the page, we also want there to be a little bit of space between any content we place down so it doesn't look cluttered.
+
+:video{src="/src/assets/book/configure_flex.webm"}
