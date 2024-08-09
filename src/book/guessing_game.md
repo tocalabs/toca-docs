@@ -4,7 +4,7 @@ We're going to jump straight into building and deploying an application in Toca 
 
 We're going to implement a classic beginner project: a guessing game. Here are the rules: the program will generate a random number between 1 and 100 and the user will attempt to guess the number. If the guess is too low or high, the application will indicate as much. If the guess is correct, it will report back with a congratulatory message and give you the option to start a new game.
 
-## Setting Up a New Project
+## Creating our Project
 
 This project will require both an Automation project and an App project, the automation will keep track of the user's guesses and the App will act as the interface that the user interacts with.
 
@@ -158,3 +158,36 @@ We have designed our interface, we now need to just check it looks nice and work
 Nice! Our App looks like we would expect and the form for guessing works exactly as expected.
 
 Now, the last thing we need to do is build a mechanism into our App to regenerate the random number when a user wants it.
+The best experience for the user would be if the number was generated automatically when the user first opens the page. Fortunately, using In Page Logic (IPL) we can trigger the automation to run when the page first loads in the browser.
+
+To do this, we'll use a Page Event and hook into the "Page Mounted" event and then run the "Generate Random Number" Workflow. We'll also add a Spinner to the page to indicate that something is happening behind the scenes and we'll toggle the Spinner once the Workflow has completed. We can use the `Toggle Loading` action and the `Execute Listener` action to achieve this.
+
+:video{src="/src/assets/book/add_ipl.webm"}
+
+IPL is a way that we can add behind the scenes logic to our App, this lets us create interactive Apps based on events that happen on the page such as a button being clicked, a value being changed or something loading on the page. In this case, we've used IPL to place a spinner on the page, run the workflow and then when the workflow has completed, turn the spinner off.
+
+You can head back into "Preview Mode" of the App to check that this logic works.
+
+Now that we've designed and tested our App, we're ready to deploy it so that other people can access it. We can use the Deploy button in the App project to build, deploy and host our web app.
+
+> Make sure you save your changes before deploying your App!
+
+:video{src="/src/assets/books/deploy_app.webm"}
+
+It will take a few seconds for the App to complete it's deployment, once it has completed, you can follow the URL to access your game. If you want to play the game again, you just have to refresh your browser tab!
+
+Now you can share this URL with other people and they can play too!
+
+> #### Tip 👀
+>
+> If you want to verify your automation Workflows are running as expected, then check the Reporting page. You can access it from the main navbar.
+
+### Extending this Project
+
+You might have realised that because we're only ever keeping track of _one_ random number, if there are lots of users accessing the App at once, they'll all be trying to guess the _same_ number and every time one user loads the App it will regenerate the number for all the other users.
+
+How would you improve this project so that each user get's their own random number to guess?
+
+> #### Tip 👀
+>
+> When designing an App for multiple users, it's usually good practice to store any user specfic state on the App rather than Automation
