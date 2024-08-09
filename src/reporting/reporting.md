@@ -20,6 +20,7 @@ Many of the columns in the jobs page can be sorted by clicking on the column hea
 - Open workflow - Opens the workflow designer in a separate tab.
 - Open project - Opens the project that the workflow belongs to in a separate tab.
 - Rerun job - This will rerun the job with the exact same inputs etc as it was previously run.
+- Open rerun - This will open the report of a job's rerun. (Hidden by default - Show by using the 'Show rerun info' found in the ⋮ menu at the top right of the page)
 
 **Queries** -  The jobs which appear in the jobs page are those which adhere to the current query. This query can be seen by pressing the query button in the top right hand corner. The query fields are as such:
 - Field - A selection of categories to filter on, many of which are represented via the columns in the jobs page.
@@ -40,6 +41,11 @@ The jobs list will only be updated once the 'update query' button has been press
 **Deleting Job Data** - Jobs can be deleted individually by selecting the checkboxes and pressing 'delete selected'. Jobs selected in this way will not be permanently deleted and may still appear as greyed out in your jobs list if 'show deleted jobs' is set to true.
 
 Greyed out jobs will be shown as 'awaiting deletion' and will only be permanently deleted once the schedule you have set is executed.
+
+**Notes On Multiple Selection** - Deleting, re-running and cancelling jobs via the checkboxes are enabled/disabled based on the jobs selected, however for ease of use we allow mixed selection and only execute the request on selected jobs if it makes sense. As an example, Only a Running or Queued job may be cancelled, so if you select a running job and a completed job, pressing 'Cancel jobs' will only submit the running job to be cancelled.
+
+Re-running multiple jobs will queue with a slight delay between each job, and in the order they were selected. 
+If the 'all items' checkbox was used to select all jobs on the page, the jobs will be queued from order of top to bottom.
 
 **Downloading Job Report Data** - Pressing the 'Download report' button will download a CSV to the users machine which will contain the data of every job which adheres to the current query.
   
