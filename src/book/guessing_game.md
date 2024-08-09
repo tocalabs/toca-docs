@@ -117,3 +117,44 @@ Before we can place any content down on our App page, we need to place down a La
 When you drag any component onto your page, you can see it will show it's Properties panel on the right which we can use to configure the settings of the component. For our `Flex Layout` this might be setting the justification or alignment of any content we place inside the layout or maybe defining whether content inside the layout flows horizontally or vertically. We want out content to flow vertically and we want it to be justified and aligned in the centre of the page, we also want there to be a little bit of space between any content we place down so it doesn't look cluttered.
 
 :video{src="/src/assets/book/configure_flex.webm"}
+
+Now that we have configured our `Flex Layout` we can add our greeting and instructions inside the Flex using the `Text` component.
+Our greeting will say: `Welcome to the Guessing Game`
+The instructions will read:
+```
+A random number has been generated between 1 and 100.
+
+Using the form below, submit your guess until you get it correct!
+```
+
+:video{src="/src/assets/book/add_text.webm"}
+
+The `Text` component provides controls over how the text looks so we can configure the greeting to be large and the instructions to be a more regular size.
+
+Now that we have greeted our user and informed them on how to play the game, we can add our form which will allow them to submit their guess. We must configure the form to do four things:
+1. Link the form to our "Check Guess Flow" Automation Workflow using the Listener
+2. Add a number input that is linked to the `guess` input defined on the Activity
+3. Add a submit button once the user is happy with their guess
+4. Display the message that is returned by our automation
+
+Whenever you are designing a form in an App, you can use the `Form Layout` as a sort of wrapper for anything you want to link to that form as the `Form Layout` can be linked to a Listener and natively understands the Inputs required for the form. With that in mind, we'll start by placing down a `Form Layout` and link it to the `check_guess_flow` Listener, then place a number slider (`Range` component) down, followed by a `Submit Button`.
+
+:video{src="/src/assets/book/add_form.webm"}
+
+> #### Explorer Tab
+>
+> You may have noticed that instead of dragging components directly onto the page, this time we used the Explorer tab to place our components.
+> This is because sometimes our page can get cluttered and it is difficult to be precise with where you place your component, so if this is the case, you can use the Explorer tab to place your components on the page instead.
+
+
+The user can now submit their guess, so now we need to display the message that the automation returns once it has checked their guess. We can use the `Text` component for this once again, we just need to use the form result as the input to our `Text` component so that it displays the correct thing. Fortunately, if we want to use the result of a form, we don't need to place our component inside the form layout, our App already understands how to fetch the result for any form on the current page.
+
+:video{src="/src/assets/book/add_form_result.webm"}
+
+We have designed our interface, we now need to just check it looks nice and works! So far we've been doing everything in our App in "Design Mode" but we can swtich to "Preview Mode" to simulate what the App will look like once deployed.
+
+:video{src="/src/assets/book/preview_app.webm"}
+
+Nice! Our App looks like we would expect and the form for guessing works exactly as expected.
+
+Now, the last thing we need to do is build a mechanism into our App to regenerate the random number when a user wants it.
