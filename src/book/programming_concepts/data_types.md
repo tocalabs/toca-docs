@@ -36,6 +36,10 @@ Probably the most common type that you'll deal with in Toca, a `String` type rep
 
 A value of type `String` in Toca is a variable-length piece of text that can range from a single letter all the way to thousands of words and it can contain any valid ![UTF-8](https://en.wikipedia.org/wiki/UTF-8) characters.
 
+> #### Warning ⚠️
+>
+> `String` type values cannot contain 2 or more instances of `$$` as these are reserved characters used behind the scenes to denote variables and datachips.
+
 #### Casting
 
 `Strings` are fairly unique in that almost all other types can be converted to a `String` as you may want to view a number as text or convert a `List` to a comma delimited list of text.
@@ -46,7 +50,7 @@ A value of type `String` in Toca is a variable-length piece of text that can ran
 
 `String` interpolation and concatenation. (Examples with explanation)
 
-#### Operators and Expressions
+#### Operators
 
 When you need to compare `Strings` then they are only able to be compared in two ways, they are either equal to each other or not.
 
@@ -54,11 +58,6 @@ When you need to compare `Strings` then they are only able to be compared in two
 | :--- | :--- |
 | `LHS == RHS` | True when Left Hand Side (LHS) is the same as the Right Hand Side (RHS) |
 | `LHS != RHS` | True when LHS is **NOT** the same as RHS |
-
-
-> #### Warning ⚠️
->
-> `String` type values cannot contain 2 or more instances of `$$` as these are reserved characters used behind the scenes to denote variables and datachips.
 
 
 ### Number
@@ -100,6 +99,20 @@ When using `Number` values, you are typically using them to obtain the result of
 
 ### Boolean
 
+A `Boolean` type represents only two possible values: `true` and `false`. This type is most useful for representing states which can only be either true or false, on or off, enabled or disabled. `Boolean` values are usually used as a way to configure a conditional flow of logic. For example: "If `{boolean}` is true, then perform actions."
+
+#### Operators
+
+| Operator | Description |
+| :--- | :--- |
+| `LHS == RHS` | True when Left Hand Side (LHS) is the same as the Right Hand Side (RHS) |
+| `LHS != RHS` | True when LHS is **NOT** the same as RHS |
+| `!LHS` | **NOT** LHS, this returns the opposite value to LHS, so if LHS is `true` this would return `false` |
+
+### Date Time
+
+A `DateTime` type represents an instant in time, typically expressed as a date and a time of day. Dates and time are difficult as there are many factors to take into account in how a date and time is measured and formatted, such as what calendar is the date represented by and what format should it be displayed in? Month first? Day first? Year first? The `Datetime` type aims at being an agnostic way of storing a static point in time which can then be formatted down to the users preference in the future.
+
 
 
 ## Collections
@@ -109,6 +122,11 @@ When using `Number` values, you are typically using them to obtain the result of
 - Grid
 - JSON
 - Table
+
+
+## Null
+
+
 
 ## Casting and Converting
 
