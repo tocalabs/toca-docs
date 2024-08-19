@@ -57,7 +57,7 @@ The `Number` type can represent any sort of number, whether it is an integer, a 
 
 A `Number` type allows for the following range:
 - Max: 1.79x10^308^
-- Min: -1.79x10^308^
+- Min: -1.79x10<sup>308</sup>
 
 It has a precision of approximately 15-17 digits.
 
