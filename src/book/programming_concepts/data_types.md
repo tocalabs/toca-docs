@@ -27,6 +27,7 @@ Within Toca there are two main Types:
 - Number
 - Boolean
 - Date Time
+- Password
 - Image
 - File
 
@@ -112,6 +113,11 @@ A `Boolean` type represents only two possible values: `true` and `false`. This t
 ### Date Time
 
 A `DateTime` type represents an instant in time, typically expressed as a date and a time of day. Dates and time are difficult as there are many factors to take into account in how a date and time is measured and formatted, such as what calendar is the date represented by and what format should it be displayed in? Month first? Day first? Year first? The `Datetime` type aims at being an agnostic way of storing a static point in time which can then be formatted down to the users preference in the future.
+
+In general, dates and time are stored throughout the system in the format of `yyyy-MM-ddTHH:mm:ssZ`, this adheres to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) formatting.
+So this means that 9AM on the 5th September 2018 would be stored as:
+`2018-09-05T09:00:00Z`
+
 
 
 

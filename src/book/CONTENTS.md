@@ -9,7 +9,7 @@
 - :docs-link[Programming a Guessing game]{id="book/guessing_game"}
 - :docs-link[Common Programming Concepts]{id="book/programming_concepts"}
   - :docs-link[Datachips and Variables]{id="book/variables"}
-  - :docs-link[Data Types]{id="book/data_types"}
+  - :docs-link[Data Types]{id="book/programming_concepts/data_types"}
   - :docs-link[Control Flow]{id="book/control_flow"}
 - :docs-link[Using Tables to Structure Related Data]{id="book/structure_related_data"}
   - :docs-link[Creating Tables]{id="book/defining_table_schemas"}
