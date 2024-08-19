@@ -4,11 +4,11 @@ We're going to jump straight into building and deploying an application in Toca 
 
 We're going to implement a classic beginner project: a guessing game. Here are the rules: the program will generate a random number between 1 and 100 and the user will attempt to guess the number. If the guess is too low or high, the application will indicate as much. If the guess is correct, it will report back with a congratulatory message and give you the option to start a new game.
 
-## Creating our Project
+## Automation
 
 This project will require both an Automation project and an App project, the automation will keep track of the user's guesses and the App will act as the interface that the user interacts with.
 
-### Automation
+### Creating our project
 
 Head on over to the projects page and create a new Automation project, give it an appropriate name so you can easily find it in the future.
 
@@ -28,6 +28,8 @@ Let's get started by creating an Activity, and we'll assign the activity to a St
 >
 > :video{src="/src/assets/book/add_action_groups.webm"}
 
+### Building an Activity
+
 Let's place down some Actions within our Activity to define our flow of logic. We'll need an action that generates a random number between 1 and 100 first. Fortunately, there is an Action that does _just that_ called `Random` which we can find in the `Numeric` Action Group!
 
 :video{src="/src/assets/book/random_action.webm"}
@@ -45,6 +47,8 @@ We can now save the Activity and press Start Activity to test the Actions run as
 :video{src="/src/assets/book/run_activity.webm"}
 
 Great! We have built our first automation that generates and stores a random number!
+
+### Checking a Guess
 
 Now, onto the next step, building an activity that will take a users guess as an input and tell us if it is correct or not.
 
@@ -73,13 +77,19 @@ We can use the `If Then` Action to perform the checks and we can use the `Set Va
 
 :video{src="/src/assets/book/check_guess_activity.webm"}
 
+> #### Tip 👀
+>
 > In the video above, we used the "Duplicate Action" button on the actions to place our logic down a bit more quickly.
+
+### Testing Our Logic
 
 We've now finished developing the automation logic for our game, let's quickly test it works before we move onto building the user interface. To test it, we're going to run our new activity from start to finish and inject a guess as an input to check all three decision points. We also want to check that the `message` Variable is being updated with the correct text.
 
 :video{src="/src/assets/book/testing_guess_logic.webm"}
 
 By "watching" the `message` Variable, we've been able to verify that it's value is correct for each case that we have programmed into our activity.
+
+### Hooking the Automation Together
 
 Now we've verified our logic, the last thing we need to do on the Automation side is create a Workflow for each Activity. A Workflow allows us to string together multiple Activities into a single automated flow. You can also link Workflow's to Apps so that a user on an App can trigger some automation.
 
@@ -95,7 +105,9 @@ In order for a Workflow to be able to be run via an App, we need to add a Listen
 
 Well done! We've now successfully finished the Automation for our guessing game. Now, let's turn our attention to building the user interface with an App.
 
-### Apps
+## Apps
+
+### Creating our App
 
 The interface for our guessing game is going to be a web application that people can visit in their browser. Our application will be made up of a single page which will need to do the following:
 - Allow a user to generate a random number to start the game
@@ -109,6 +121,8 @@ Let's start by creating a new App project, we'll give a name and we need to give
 Our App does not require any authentication at this point, we want anyone to be able to play the game without having to log in and create an account. We also added a favicon to our app, this is the little icon that appears in your browser tab, adding a favicon is not necessary but just makes your App feel a bit more polished.
 
 When you create an App, by default it will auto generate an empty Home page, this is the page that we'll design up to act as our game's interface. We'll keep our design quite simple, we'll have a welcome message and some instructions on how to play the game and below that we'll have a form with a single number input where a user can submit their guess.
+
+### Designing the game interface
 
 Before we can place any content down on our App page, we need to place down a Layout component. Layout components are usually invisible components that allow us to dictate a structure and placement for any content we place inside them. We'll use a basic layout component called a `Flex Layout`.
 
@@ -131,6 +145,8 @@ Using the form below, submit your guess until you get it correct!
 
 The `Text` component provides controls over how the text looks so we can configure the greeting to be large and the instructions to be a more regular size.
 
+### Connecting to our Automation
+
 Now that we have greeted our user and informed them on how to play the game, we can add our form which will allow them to submit their guess. We must configure the form to do four things:
 1. Link the form to our "Check Guess Flow" Automation Workflow using the Listener
 2. Add a number input that is linked to the `guess` input defined on the Activity
@@ -151,11 +167,15 @@ The user can now submit their guess, so now we need to display the message that 
 
 :video{src="/src/assets/book/add_form_result.webm"}
 
+### Testing our App
+
 We have designed our interface, we now need to just check it looks nice and works! So far we've been doing everything in our App in "Design Mode" but we can swtich to "Preview Mode" to simulate what the App will look like once deployed.
 
 :video{src="/src/assets/book/preview_app.webm"}
 
 Nice! Our App looks like we would expect and the form for guessing works exactly as expected.
+
+### Finishing touches
 
 Now, the last thing we need to do is build a mechanism into our App to regenerate the random number when a user wants it.
 The best experience for the user would be if the number was generated automatically when the user first opens the page. Fortunately, using In Page Logic (IPL) we can trigger the automation to run when the page first loads in the browser.
@@ -167,6 +187,8 @@ To do this, we'll use a Page Event and hook into the "Page Mounted" event and th
 IPL is a way that we can add behind the scenes logic to our App, this lets us create interactive Apps based on events that happen on the page such as a button being clicked, a value being changed or something loading on the page. In this case, we've used IPL to place a spinner on the page, run the workflow and then when the workflow has completed, turn the spinner off.
 
 You can head back into "Preview Mode" of the App to check that this logic works.
+
+### Deploying our App
 
 Now that we've designed and tested our App, we're ready to deploy it so that other people can access it. We can use the Deploy button in the App project to build, deploy and host our web app.
 
@@ -182,7 +204,7 @@ Now you can share this URL with other people and they can play too!
 >
 > If you want to verify your automation Workflows are running as expected, then check the Reporting page. You can access it from the main navbar.
 
-### Extending this Project
+## Extending this Project
 
 You might have realised that because we're only ever keeping track of _one_ random number, if there are lots of users accessing the App at once, they'll all be trying to guess the _same_ number and every time one user loads the App it will regenerate the number for all the other users.
 
