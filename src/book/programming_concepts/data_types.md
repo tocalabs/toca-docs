@@ -1,8 +1,6 @@
 # Data Types
 
-- Behind Toca there sits a Type System
-- What is a Type system?
-- Why is useful?
+## What are Types?
 
 Every value that you come across in Toca has three properties:
 - The key - This is the identifier that is used to "name" the value
@@ -22,14 +20,6 @@ Within Toca there are two main Types:
 2. Collections - More complex types that can store many values
 
 ## Base Types
-
-- String
-- Number
-- Boolean
-- Date Time
-- Password
-- Image
-- File
 
 ### String
 
@@ -66,8 +56,8 @@ When you need to compare `Strings` then they are only able to be compared in two
 The `Number` type can represent any sort of number, whether it is an integer, a negative number or decimal number. Behind the scenes, the value is always stored as a decimal number, even if that means specifying an additional `.0` on the value. By storing all number values consistently behind the scenes it means they can all be treated in the exact same way and you don't have to worry about conversion between different number types like you might have to do when coding.
 
 A `Number` type allows for the following range:
-- Max: 1.7976931348623157E+308
-- Min: -1.7976931348623157E+308
+- Max: 1.79x10^308^
+- Min: -1.79x10^308^
 
 It has a precision of approximately 15-17 digits.
 
