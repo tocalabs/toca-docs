@@ -15,9 +15,9 @@ For example, if the value is a `Number` we know we can use that for mathematical
 Types also help us to make our software safer and more robust as it allows us to make guarantees about our programme such as "I can only add a `Number` to a `Number`" or "I can only iterate over values in a `List`".
 This is a good way of preventing errors which could occur whilst our Application is running such as what might happen if you attempted to make a `Table` uppercase instead of some text!
 
-Within Toca there are two main Types:
-1. Base Types - Simple types that hold a single value
-2. Collections - More complex types that can store many values
+Within Toca there are two categories of types:
+1. Base Types - Types that hold a single value
+2. Collection Types - Types that store multiple values
 
 ## Base Types
 
@@ -25,7 +25,12 @@ Within Toca there are two main Types:
 
 Probably the most common type that you'll deal with in Toca, a `String` type represents text content. It may seem odd to refer to text as a `String` but this is a term that is used very commonly in computing, it is supposedly due to text being referred to as a "string of characters" where a character represents a letter.
 
-A value of type `String` in Toca is a variable-length piece of text that can range from a single letter all the way to thousands of words and it can contain any valid ![UTF-8](https://en.wikipedia.org/wiki/UTF-8) characters.
+A value of type `String` in Toca is a variable-length piece of text that can range from a single letter all the way to thousands of words and it can contain any valid [UTF-8](https://en.wikipedia.org/wiki/UTF-8) characters. They also support escape characters to enable formatting such as:
+- `\n` - newline character
+- `\t` - tab character
+- `\r` - carriage return character
+
+There is no real upper limit on how many letters can be stored within a single `String` type but once you start getting to the 100,000's of characters, you might notice some performance issues when trying to view the value.
 
 > #### Warning ⚠️
 >
@@ -34,12 +39,6 @@ A value of type `String` in Toca is a variable-length piece of text that can ran
 #### Casting
 
 `Strings` are fairly unique in that almost all other types can be converted to a `String` as you may want to view a number as text or convert a `List` to a comma delimited list of text.
-
-`Strings` are _truthy_. Empty `Strings` are _falsey_.
-
-`Strings` can be multiline, they also support escape characters such as `\n` or `\t`.
-
-`String` interpolation and concatenation. (Examples with explanation)
 
 #### Operators
 

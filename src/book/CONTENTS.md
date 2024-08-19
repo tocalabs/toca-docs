@@ -8,12 +8,12 @@
   - :docs-link[Hello, TDK!]{id="book/hello_tdk"}
 - :docs-link[Programming a Guessing game]{id="book/guessing_game"}
 - :docs-link[Common Programming Concepts]{id="book/programming_concepts"}
-  - :docs-link[Datachips and Variables]{id="book/variables"}
+  - :docs-link[Datachips and Variables]{id="book/programming_concepts/variables"}
   - :docs-link[Data Types]{id="book/programming_concepts/data_types"}
-  - :docs-link[Control Flow]{id="book/control_flow"}
+  - :docs-link[Control Flow]{id="book/programming_concepts/control_flow"}
 - :docs-link[Using Tables to Structure Related Data]{id="book/structure_related_data"}
-  - :docs-link[Creating Tables]{id="book/defining_table_schemas"}
-  - :docs-link[Linking Data]{id="book/linking_data"}
+  - :docs-link[Creating Tables]{id="book/structure_related_data/creating_tables"}
+  - :docs-link[Linking Data]{id="book/structure_related_data/linking_data"}
   - :docs-link[Using Related Data]{id="book/structure_related_data/using_linked_data"}
 - :docs-link[Testing]{id="book/testing"}
   - :docs-link[Testing Automation]{id="book/testing/testing_automation"}
