@@ -56,8 +56,8 @@ When you need to compare `Strings` then they are only able to be compared in two
 The `Number` type can represent any sort of number, whether it is an integer, a negative number or decimal number. Behind the scenes, the value is always stored as a decimal number, even if that means specifying an additional `.0` on the value. By storing all number values consistently behind the scenes it means they can all be treated in the exact same way and you don't have to worry about conversion between different number types like you might have to do when coding.
 
 A `Number` type allows for the following range:
-- Max: 1.79x10^308^
-- Min: -1.79x10<sup>308</sup>
+- Max: 1.79x10³⁰⁸
+- Min: -1.79x10³⁰⁸
 
 It has a precision of approximately 15-17 digits.
 
