@@ -279,7 +279,7 @@ Due to a Grid's complexity, you cannot get the individual boxes within the Grid.
 ### Casting Matrix
 
 | Type | String | Number | Boolean | Date Time | JSON |
-| | | | | | |
+|:-- |:-- | :-- | :-- | :--| :-- |
 | String | - | X | | X | X |
 | Number | X | - | | | |
 | Boolean | X | | - | | |
