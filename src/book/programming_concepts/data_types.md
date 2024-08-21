@@ -194,6 +194,8 @@ You can cast other types such as a table row or a table column to a `List`.
 
 A `Coordinates` type is composed of two `Numbers` that represent an `X` and `Y` position. The `Coordinates` type is often used in conjunction with Desktop automation actions such as Mouse Click or Image Click. It is used to define a single point on the screen that is being automated where the top left hand corner represents (0, 0) and the bottom right hand corner represents (1920, 1080) on a full HD screen.
 
+![Coordinates](src/assets/book/coords.png)
+
 Below is an example of how a Coordinate value is represented behind the scenes:
 ```javascript
 {
