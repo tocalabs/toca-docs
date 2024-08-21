@@ -278,10 +278,18 @@ Due to a Grid's complexity, you cannot get the individual boxes within the Grid.
 
 ### Casting Matrix
 
-| Type | String | Number | Boolean | Date Time | JSON |
-|:-- | --- | --- | --- | ---| --- |
+| _Type_ | String | Number | Boolean | Date Time | JSON |
+|:-- | :---: | :---: | :---: | :---: | :---: |
 | **String** | - | ✅ | | ✅ | ✅ |
 | **Number** | ✅ | - | | | |
 | **Boolean** | ✅ | | - | | |
 | **DateTime** | ✅ | | | - | |
-| **JSON** | ✅ | | | | - |
+| **Password** |  | | | | - |
+| **File** |  | | | | - |
+| **Image** |  | | | | - |
+| **Identity** |  | | | | - |
+| **List** | ✅ | | | | - |
+| **Coordinates** |  | | | | - |
+| **Bounding Box** |  | | | | - |
+| **Grid** |  | | | | - |
+| **Table** |  | | | | - |
