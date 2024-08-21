@@ -177,11 +177,11 @@ list_2 = ["apple","banana", "cherry", "apple", "cherry"]
 
 A `List` is a very useful way of tracking a collection of values that need to stay together.
 
-A `List` is also indexed, this means that you can extract an item out of a list by providing it's position in the list.
+Individual items in a List can be accessed by their position, this is also known as their "index".
 
 > #### Note 🔎
 >
-> List indexing starts at 0, so the first item in a list is at position 0, this means the last item in a List will be at position of (list length - 1).
+> List indexing starts at 0, so the first item in a list is at position 0, this means the last item in a List will be at position of `list length - 1`.
 
 #### Casting
 
@@ -192,9 +192,37 @@ You can cast other types such as a table row or a table column to a `List`.
 
 ### Coordinates
 
+A `Coordinates` type is composed of two `Numbers` that represent an `X` and `Y` position. The `Coordinates` type is often used in conjunction with Desktop automation actions such as Mouse Click or Image Click. It is used to define a single point on the screen that is being automated where the top left hand corner represents (0, 0) and the bottom right hand corner represents (1920, 1080) on a full HD screen.
+
+Below is an example of how a Coordinate value is represented behind the scenes:
+```javascript
+{
+  X: 50,
+  Y: 125
+}
+```
+
+You can access the individual `X` and `Y` components to extract out the individual `Numbers` that make up the `Coordinates`.
 
 ### Bounding Box
 
+A `Bounding Box` contains four `Numbers` which are used to represent the `X`, `Y`, `Width` and `Height` of a rectangle, with the `X` and `Y` being the top left hand corner of the Box. Similar to the `Coordinates` type, this is often used within Desktop automation to represent an area of the screen.
+
+Below is an example of how a Bounding Box value is represented behind the scenes:
+```javascript
+{
+  X: 50,
+  Y: 125,
+  Width: 100,
+  Height: 200
+}
+```
+
+You can access the individual `X`, `Y`, `Width` and `Height` components if you need to extract out the individual `Numbers`.
+
+> #### Note 📝
+>
+> You can only represent a square or rectangular shape with a `Bounding Box`, where the alternate sides _must_ be equal. There is no way of expressing a more complex shape in Toca types.
 
 ### Grid
 
