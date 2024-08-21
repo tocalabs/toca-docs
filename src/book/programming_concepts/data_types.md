@@ -23,7 +23,7 @@ Within Toca there are two categories of types:
 
 ### String
 
-Probably the most common type that you'll deal with in Toca, a `String` type represents text content. It may seem odd to refer to text as a `String` but this is a term that is used very commonly in computing, it is supposedly due to text being referred to as a "string of characters" where a character represents a letter.
+A `String` type represents text content and is probably the most common type that you'll deal with in Toca. It may seem odd to refer to text as a `String` but this is a term that is used very commonly in computing, it is supposedly due to text being referred to as a "string of characters" where a character represents a letter.
 
 A value of type `String` in Toca is a variable-length piece of text that can range from a single letter all the way to thousands of words and it can contain any valid [UTF-8](https://en.wikipedia.org/wiki/UTF-8) characters. They also support escape characters to enable formatting such as:
 - `\n` - newline character
@@ -73,7 +73,6 @@ For example:
 
 This is because when treating a whole number as text, it is seldom desired to include `".0"`.
 
-
 #### Operators
 
 When using `Number` values, you are typically using them to obtain the result of a mathematical equation or using them in some sort of comparison such as "Filter data where `{number}` is greater than 100". When you are performing these comparisons, it is good to know what operators are available to you.
@@ -89,7 +88,9 @@ When using `Number` values, you are typically using them to obtain the result of
 
 ### Boolean
 
-A `Boolean` type represents only two possible values: `true` and `false`. This type is most useful for representing states which can only be either true or false, on or off, enabled or disabled. `Boolean` values are usually used as a way to configure a conditional flow of logic. For example: "If `{boolean}` is true, then perform actions."
+A `Boolean` type represents only two possible values: `true` and `false`. This type is most useful for representing states which can only be either true or false, on or off, enabled or disabled.
+
+`Boolean` values are usually used as a way to configure a conditional flow of logic. For example: "If `{boolean}` is true, then perform actions."
 
 #### Operators
 
@@ -105,8 +106,19 @@ A `DateTime` type represents an instant in time, typically expressed as a date a
 
 In general, dates and time are stored throughout the system in the format of `yyyy-MM-ddTHH:mm:ssZ`, this adheres to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) formatting.
 So this means that 9AM on the 5th September 2018 would be stored as:
+
 `2018-09-05T09:00:00Z`
 
+When you wish to format a date into a particular format there are automation actions and app components which will allow you to do this so you can represent your date in the exact way you want. You can take a look at:
+- :docs-link[Format / Convert Date]{id="FormatDate" type="Action"}
+- :docs-link[ISO Date Parser]{id="6a6c986-ce3d-4d22-b18a-16d3d704db10" type="AppComponent"}
+
+
+#### Casting
+
+`DateTime` values can only be cast to text via explicit actions such as Format / Convert Date as otherwise Toca doesn't know what format to store the date and time in.
+
+### Password
 
 
 
