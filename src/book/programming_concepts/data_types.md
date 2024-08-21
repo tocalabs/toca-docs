@@ -231,13 +231,43 @@ You can access the individual `X`, `Y`, `Width` and `Height` components if you n
 
 ### Grid
 
-A `Grid` is used to represent a cluster of rectangles on the screen which are placed together to form a Grid. This is only used in the Grid actions in the Automation part of the platform, it allows you to define a grid of bounding boxes on the screen which can then be iterated over.
+A `Grid` is used to represent a cluster of rectangles on the screen which are placed together to form a Grid. This is only used in the Grid actions in the Automation part of the platform, it allows you to define a grid of bounding boxes on the screen which can then be iterated over. When you iterate over a Grid using an action like Image Grid or OCR Grid, it will iterate over it from left to right, top to bottom, so it will start at the top left box and move to the top right box and then move down to the next row and so on.
 
 ![Grid](src/assets/book/grid.png)
 
 Due to a Grid's complexity, you cannot get the individual boxes within the Grid.
 
 ### JSON
+
+The `JSON` types are for storing JSON (JavaScript Object Notation) data. This is similar to storing data as a `String` but it includes JSON validation as well as maintaining formatting. One of the most useful features of a `JSON` type is that you can use [JSONPath](https://en.wikipedia.org/wiki/JSONPath) to query and select values within the `JSON`.
+
+```json
+{
+  "name": "Toca",
+  "age": 6,
+  "industry": "Technology",
+  "UK-based": true,
+  "available_jobs": [
+    {
+      "title": "Application Builder",
+      "salary": "Lots of 🍭's"
+      "type": "Temporary"
+    }
+  ]
+}
+```
+
+If I wanted to get the industry value out of the above example, I can query it with JSONPath using `$.industry`, if I wanted the title of the first available job I can use `$.available_jobs[0].title`.
+
+> #### Note 📝
+>
+> Like a `List` type, lists in JSON are also indexed from 0, so the first item is at position 0
+
+#### Casting
+
+You can convert between `JSON` and a `String`, the two types are seen as interchangeable even if it results in invalid JSON.
+
+You can also convert from a individual JSON property to a `String`, `Number` or `Boolean` if the values are valid.
 
 
 ### Table
