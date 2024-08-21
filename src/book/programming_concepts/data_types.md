@@ -119,6 +119,39 @@ When you wish to format a date into a particular format there are automation act
 
 `DateTime` values can only be cast to text via explicit actions such as Format / Convert Date as otherwise Toca doesn't know what format to store the date and time in.
 
+### JSON
+
+The `JSON` types are for storing JSON (JavaScript Object Notation) data. This is similar to storing data as a `String` but it includes JSON validation as well as maintaining formatting. One of the most useful features of a `JSON` type is that you can use [JSONPath](https://en.wikipedia.org/wiki/JSONPath) to query and select values within the `JSON`.
+
+```json
+{
+  "name": "Toca",
+  "website": "https://toca.io",
+  "age": 6,
+  "industry": "Technology",
+  "UK-based": true,
+  "available_jobs": [
+    {
+      "title": "Application Builder",
+      "salary": "Many 🍭's"
+      "type": "Temporary"
+    }
+  ]
+}
+```
+
+If I wanted to get the industry value out of the above example, I can query it with JSONPath using `$.industry`, if I wanted the title of the first available job I can use `$.available_jobs[0].title`.
+
+> #### Note 📝
+>
+> Like a `List` type, lists in JSON are also indexed from 0, so the first item is at position 0
+
+#### Casting
+
+You can convert between `JSON` and a `String`, the two types are seen as interchangeable even if it results in invalid JSON.
+
+You can also convert from a individual JSON property to a `String`, `Number` or `Boolean` if the values are valid.
+
 ### Password
 
 `Password` represents a text value that has been encrypted and will only be decrypted at the point of use. A `Password` type value can only be used in certain places as anywhere that uses it must understand how to decrypt the value. It is typically used in conjunction with the :docs-link[Paste Password]{id="PastePassword" type="Action"} action in scenarios where you need to securely paste a password in some desktop automation.
@@ -237,44 +270,12 @@ A `Grid` is used to represent a cluster of rectangles on the screen which are pl
 
 Due to a Grid's complexity, you cannot get the individual boxes within the Grid.
 
-### JSON
-
-The `JSON` types are for storing JSON (JavaScript Object Notation) data. This is similar to storing data as a `String` but it includes JSON validation as well as maintaining formatting. One of the most useful features of a `JSON` type is that you can use [JSONPath](https://en.wikipedia.org/wiki/JSONPath) to query and select values within the `JSON`.
-
-```json
-{
-  "name": "Toca",
-  "age": 6,
-  "industry": "Technology",
-  "UK-based": true,
-  "available_jobs": [
-    {
-      "title": "Application Builder",
-      "salary": "Lots of 🍭's"
-      "type": "Temporary"
-    }
-  ]
-}
-```
-
-If I wanted to get the industry value out of the above example, I can query it with JSONPath using `$.industry`, if I wanted the title of the first available job I can use `$.available_jobs[0].title`.
-
-> #### Note 📝
->
-> Like a `List` type, lists in JSON are also indexed from 0, so the first item is at position 0
-
-#### Casting
-
-You can convert between `JSON` and a `String`, the two types are seen as interchangeable even if it results in invalid JSON.
-
-You can also convert from a individual JSON property to a `String`, `Number` or `Boolean` if the values are valid.
-
 
 ### Table
 
 ## Null
 
-
+# Big Title
 
 ## Casting and Converting
 
