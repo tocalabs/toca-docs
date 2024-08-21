@@ -153,7 +153,7 @@ For really advanced use cases, you can actually get an image as it's raw Data UR
 
 An `Identity` is a value that represents a digital account that is linked to a different identity provider, this could be a Microsoft account, GitHub account or Google account for example.
 
-An `Identity` allows you to link any [Oauth2.0](https://oauth.net/2/) compatible account with Toca so that you can use automation actions such as `Outlook Send Email` or `Upload to Google Drive` on behalf of a user. These identities store both an Authorization token and a Refresh token behind the scenes so that they can always be authenticated without having to ask you to log back in to authenticate these linked accounts.
+An `Identity` allows you to link any [Oauth2.0](https://oauth.net/2/) compatible account with Toca so that you can use automation actions such as `Outlook Send Email` or `Upload to Google Drive` on behalf of a user. These identities store both an Authorization token and a Refresh token behind the scenes so that they can always be authenticated without having to ask you to log back in to authorize these linked accounts.
 
 An `Identity` can only be used in certain places such as Microsoft and Google actions, this is because an `Identity` is a type that is designed for very specific use cases so it's usage is limited.
 
@@ -166,6 +166,28 @@ An `Identity` can only be used in certain places such as Microsoft and Google ac
 - Table
 
 ### List
+
+A `List` stores a collection of other values, you can have 0 or more values inside a List. A List is ordered, so that means a List will maintain it's order of items unless explicitly changed. A List can also contain duplicate values, you can repeat duplicate values as many times as you need to in a List. Lastly, a List can contain items which are made up of _many_ different types.
+
+For example, you could have a List that looks similar to this:
+```python
+list_1 = ["james", 28, false, "Toca.io"]
+list_2 = ["apple","banana", "cherry", "apple", "cherry"]
+```
+
+A `List` is a very useful way of tracking a collection of values that need to stay together.
+
+A `List` is also indexed, this means that you can extract an item out of a list by providing it's position in the list.
+
+> #### Note 🔎
+>
+> List indexing starts at 0, so the first item in a list is at position 0, this means the last item in a List will be at position of (list length - 1).
+
+#### Casting
+
+You cannot cast a List to any other type without using actions to join all items of a list into a single `String` type, by joining the items with a delimeter.
+
+You can cast other types such as a table row or a table column to a `List`.
 
 
 ### Coordinates
