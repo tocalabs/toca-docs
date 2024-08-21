@@ -131,13 +131,26 @@ A `File` type can be used to represent any sort of File being used throughout th
 
 The `File` type will store information about the file such as the name, extension, size and the [MIME type](https://en.wikipedia.org/wiki/Media_type).
 
-> N.B. 🔎
+> #### Note 🔎
 >
 > The `File` type is different from providing a file path to a file or folder on a Bot. The `File` type is exclusively used for when you are moving a file around the Toca platform such as between an App input, a Datastore and your Activity.
 
 ### Image
 
+An `Image` type allows you to store any type of image (PNG, JPEG, BMP, etc.) in an agnostic way that is understood by the whole platform. These `Image` values can then be used in automation actions such as "Image Search" or they can be stored in a Datastore so that you can reference them from an App to display a logo or background image.
 
+Behind the scenes, these values are stored as a [Data URI](https://en.wikipedia.org/wiki/Data_URI_scheme) with the content being a Base64 representation of the image. Below shows an example of how an `Image` might be stored behind the scenes.
+
+```
+data:image/png;base64,iVBORw0KGgoAAA
+ANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4
+//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU
+5ErkJggg==
+```
+
+#### Casting
+
+For really advanced use cases, you can actually get an image as it's raw Data URI. To do this you simply need to use a `Set Variable` action in an Automation project to cast an Image to it's text equivalent. This is only recommended if you understand what you are doing as the raw Data URI is no longer usable as an `Image` type.
 
 ### Identity
 
