@@ -131,7 +131,7 @@ A `File` type can be used to represent any sort of File being used throughout th
 
 The `File` type will store information about the file such as the name, extension, size and the [MIME type](https://en.wikipedia.org/wiki/Media_type).
 
-> #### Note 🔎
+> #### Note 📝
 >
 > The `File` type is different from providing a file path to a file or folder on a Bot. The `File` type is exclusively used for when you are moving a file around the Toca platform such as between an App input, a Datastore and your Activity.
 
@@ -179,7 +179,7 @@ A `List` is a very useful way of tracking a collection of values that need to st
 
 Individual items in a List can be accessed by their position, this is also known as their "index".
 
-> #### Note 🔎
+> #### Note 📝
 >
 > List indexing starts at 0, so the first item in a list is at position 0, this means the last item in a List will be at position of `list length - 1`.
 
@@ -208,6 +208,8 @@ You can access the individual `X` and `Y` components to extract out the individu
 
 A `Bounding Box` contains four `Numbers` which are used to represent the `X`, `Y`, `Width` and `Height` of a rectangle, with the `X` and `Y` being the top left hand corner of the Box. Similar to the `Coordinates` type, this is often used within Desktop automation to represent an area of the screen.
 
+![Bounding Box](src/assets/book/bbox.png)
+
 Below is an example of how a Bounding Box value is represented behind the scenes:
 ```javascript
 {
@@ -217,6 +219,7 @@ Below is an example of how a Bounding Box value is represented behind the scenes
   Height: 200
 }
 ```
+
 
 You can access the individual `X`, `Y`, `Width` and `Height` components if you need to extract out the individual `Numbers`.
 
