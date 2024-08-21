@@ -61,6 +61,7 @@ A `Number` type allows for the following range:
 It has a precision of approximately 15-17 digits.
 
 A `Number` type can contain only digits, it does not support constants such as `π`, `e` or `τ`. In some places, it does support scientific E notation so for example you can set a `Number` variable of 2E10 and this will result in 20,000,000,000.
+
 ![E Notation Example](/src/assets/book/e_notation.png)
 
 #### Casting
@@ -120,6 +121,11 @@ When you wish to format a date into a particular format there are automation act
 
 ### Password
 
+### File
+
+### Image
+
+### Identity
 
 
 ## Collections
@@ -130,6 +136,22 @@ When you wish to format a date into a particular format there are automation act
 - JSON
 - Table
 
+### List
+
+
+### Coordinates
+
+
+### Bounding Box
+
+
+### Grid
+
+
+### JSON
+
+
+### Table
 
 ## Null
 
