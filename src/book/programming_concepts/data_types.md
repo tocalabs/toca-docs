@@ -121,9 +121,23 @@ When you wish to format a date into a particular format there are automation act
 
 ### Password
 
+`Password` represents a text value that has been encrypted and will only be decrypted at the point of use. A `Password` type value can only be used in certain places as anywhere that uses it must understand how to decrypt the value. It is typically used in conjunction with the :docs-link[Paste Password]{id="PastePassword" type="Action"} action in scenarios where you need to securely paste a password in some desktop automation.
+
+The `Password` type will not log it's true value anywhere, obsficating it where possible or logging only the encrypted value. It is best to use this type for storing and using passwords, security keys or API tokens securely.
+
 ### File
 
+A `File` type can be used to represent any sort of File being used throughout the platform. This is useful if you design an App that has a File Upload form input and you want to download that File onto a Bot to perform some processing on the file or you wish to upload a file to a row in a Table.
+
+The `File` type will store information about the file such as the name, extension, size and the [MIME type](https://en.wikipedia.org/wiki/Media_type).
+
+> N.B. 🔎
+>
+> The `File` type is different from providing a file path to a file or folder on a Bot. The `File` type is exclusively used for when you are moving a file around the Toca platform such as between an App input, a Datastore and your Activity.
+
 ### Image
+
+
 
 ### Identity
 
