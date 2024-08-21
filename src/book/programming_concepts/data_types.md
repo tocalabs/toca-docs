@@ -177,7 +177,7 @@ list_2 = ["apple","banana", "cherry", "apple", "cherry"]
 
 A `List` is a very useful way of tracking a collection of values that need to stay together.
 
-Individual items in a List can be accessed by their position, this is also known as their "index".
+Individual items in a List can be accessed by their position, this is also known as their "index". A List can also be iterated over to get each item within the List in turn.
 
 > #### Note 📝
 >
@@ -231,6 +231,11 @@ You can access the individual `X`, `Y`, `Width` and `Height` components if you n
 
 ### Grid
 
+A `Grid` is used to represent a cluster of rectangles on the screen which are placed together to form a Grid. This is only used in the Grid actions in the Automation part of the platform, it allows you to define a grid of bounding boxes on the screen which can then be iterated over.
+
+![Grid](src/assets/book/grid.png)
+
+Due to a Grid's complexity, you cannot get the individual boxes within the Grid.
 
 ### JSON
 
