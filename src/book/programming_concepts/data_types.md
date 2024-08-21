@@ -191,12 +191,7 @@ An `Identity` allows you to link any [Oauth2.0](https://oauth.net/2/) compatible
 An `Identity` can only be used in certain places such as Microsoft and Google actions, this is because an `Identity` is a type that is designed for very specific use cases so it's usage is limited.
 
 ## Collections
-- List
-- Coordinates
-- Bounding Box
-- Grid
-- JSON
-- Table
+
 
 ### List
 
@@ -275,9 +270,18 @@ Due to a Grid's complexity, you cannot get the individual boxes within the Grid.
 
 ## Null
 
-# Big Title
 
 ## Casting and Converting
 
 - Rules
 - Matrix of Types vs Types
+
+### Casting Matrix
+
+| Type | String | Number | Boolean | Date Time | JSON |
+| | | | | | |
+| String | - | X | | X | X |
+| Number | X | - | | | |
+| Boolean | X | | - | | |
+| DateTime | X | | | - | |
+| JSON | X | | | | - |
