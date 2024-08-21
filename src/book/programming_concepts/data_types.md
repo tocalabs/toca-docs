@@ -139,13 +139,10 @@ The `File` type will store information about the file such as the name, extensio
 
 An `Image` type allows you to store any type of image (PNG, JPEG, BMP, etc.) in an agnostic way that is understood by the whole platform. These `Image` values can then be used in automation actions such as "Image Search" or they can be stored in a Datastore so that you can reference them from an App to display a logo or background image.
 
-Behind the scenes, these values are stored as a [Data URI](https://en.wikipedia.org/wiki/Data_URI_scheme) with the content being a Base64 representation of the image. Below shows an example of how an `Image` might be stored behind the scenes.
+Behind the scenes, these values are stored as a [Data URI](https://en.wikipedia.org/wiki/Data_URI_scheme) with the content being a Base64 representation of the image. Below shows an example of how an `Image` might be stored behind the scenes:
 
 ```
-data:image/png;base64,iVBORw0KGgoAAA
-ANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4
-//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU
-5ErkJggg==
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==
 ```
 
 #### Casting
@@ -154,6 +151,11 @@ For really advanced use cases, you can actually get an image as it's raw Data UR
 
 ### Identity
 
+An `Identity` is a value that represents a digital account that is linked to a different identity provider, this could be a Microsoft account, GitHub account or Google account for example.
+
+An `Identity` allows you to link any [Oauth2.0](https://oauth.net/2/) compatible account with Toca so that you can use automation actions such as `Outlook Send Email` or `Upload to Google Drive` on behalf of a user. These identities store both an Authorization token and a Refresh token behind the scenes so that they can always be authenticated without having to ask you to log back in to authenticate these linked accounts.
+
+An `Identity` can only be used in certain places such as Microsoft and Google actions, this is because an `Identity` is a type that is designed for very specific use cases so it's usage is limited.
 
 ## Collections
 - List
