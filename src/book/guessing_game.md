@@ -194,7 +194,7 @@ Now that we've designed and tested our App, we're ready to deploy it so that oth
 
 > Make sure you save your changes before deploying your App!
 
-:video{src="/src/assets/books/deploy_app.webm"}
+:video{src="/src/assets/book/deploy_app.webm"}
 
 It will take a few seconds for the App to complete it's deployment, once it has completed, you can follow the URL to access your game. If you want to play the game again, you just have to refresh your browser tab!
 

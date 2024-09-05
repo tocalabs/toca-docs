@@ -188,7 +188,7 @@ For really advanced use cases, you can actually get an image as it's raw Data UR
 
 ### Identity
 
-An `Identity` is a value that represents a digital account that is linked to a different :docs-link[identity provider]{id="src/admin/identity_providers"}, this could be a Microsoft account, GitHub account or Google account for example.
+An `Identity` is a value that represents a digital account that is linked to a different :docs-link[identity provider]{id="admin/identity_providers"}, this could be a Microsoft account, GitHub account or Google account for example.
 
 An `Identity` allows you to link any [Oauth2.0](https://oauth.net/2/) compatible account with Toca so that you can use automation actions such as `Outlook Send Email` or `Upload to Google Drive` on behalf of a user. These identities store both an Authorization token and a Refresh token behind the scenes so that they can always be authenticated without having to ask you to log back in to authorize these linked accounts.
 
@@ -272,7 +272,7 @@ Due to a Grid's complexity, you cannot get the individual boxes within the Grid.
 
 ### Table
 
-A Table is a 2-dimensional type that stores columns of data. Each column can have it's own type and this type is useful for storing any sort of tabular data. Tables are by far the most complicated type in Toca and have their own dedicated documentation which you can find :docs-link[here]{id="src/projects/automation/datastores/tables"}.
+A Table is a 2-dimensional type that stores columns of data. Each column can have it's own type and this type is useful for storing any sort of tabular data. Tables are by far the most complicated type in Toca and have their own dedicated documentation which you can find :docs-link[here]{id="projects/automation/datastores/tables"}.
 
 Tables have a load of useful features that make them very versatile:
 - Tables can be queried using a variety of search criteria
