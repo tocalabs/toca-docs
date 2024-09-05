@@ -5,7 +5,7 @@ When building out the logic in your application, there are two main building blo
 
 ## Making Decisions
 
-![Making a Decision](src/assets/book/conditional.png)
+![Making a Decision](/src/assets/book/conditional.png)
 
 ### Conditional Automation
 
@@ -17,7 +17,7 @@ When building out the logic in your application, there are two main building blo
 
 ## Looping
 
-![Looping Diagram](src/assets/book/looping.png)
+![Looping Diagram](/src/assets/book/looping.png)
 
 ### Count Controlled Loops
 
