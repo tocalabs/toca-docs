@@ -315,19 +315,13 @@ You can't cast a table as a whole to anything else but you can cast parts of a t
 > There are some types in Tables which don't have a regular corresponding type such as `UUID` or `Time`, in these cases you can always just cast them to a `String`.
 
 
-## Casting and Converting
 
-- Rules
-- Matrix of Types vs Types
-
-### Casting Matrix
+## Casting Matrix
 
 Below is a table which shows which types can be coerced / converted into different types. Some types have been deliberately ommitted as they cannot be cast to any other type (e.g. the Identity type).
 
-Across the top of the table you have the list of types and each row represents which other types it can be converted to.
+Across the top of the table you have the list of types and each row represents the other types it can be converted to.
 
-X Axis: From Type
-Y Axis: To Type
 
 | _Type_ | String | Number | Boolean | Date Time | JSON | Image | List | Coordinates | Bounding Box | Table |
 |:-- | :---: | :---: | :---: | :---: | :---: |  :---: | :---: | :---: | :---: | :---: |
