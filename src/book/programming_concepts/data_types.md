@@ -342,4 +342,4 @@ Y Axis: To Type
 | **Bounding Box** | | | | |  | | | | - | |
 | **Table** | | | | |  |  | ✅| | | - |
 
-* Any type with an asterisk against it means that it can be converted but only through subchips. You can learn more about subchips {here}.
+\* Any type with an asterisk against it means that it can be converted but only through subchips. You can learn more about subchips {here}.
