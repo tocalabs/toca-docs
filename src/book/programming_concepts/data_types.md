@@ -326,15 +326,20 @@ Below is a table which shows which types can be coerced / converted into differe
 
 Across the top of the table you have the list of types and each row represents which other types it can be converted to.
 
+X Axis: From Type
+Y Axis: To Type
+
 | _Type_ | String | Number | Boolean | Date Time | JSON | Image | List | Coordinates | Bounding Box | Table |
 |:-- | :---: | :---: | :---: | :---: | :---: |  :---: | :---: | :---: | :---: | :---: |
-| **String** | - | ✅ | | ✅ | ✅ | | | | | |
+| **String** | - | ✅ | ✅ | ✅ | ✅ | ✅ | | | | |
 | **Number** | ✅ | - | | | | | | | | |
-| **Boolean** | ✅ | | - | | | | | | | |
+| **Boolean** | | | - | | | | | | | |
 | **DateTime** | ✅ | | | - | | | | | | |
 | **JSON** | ✅ | | | | - | | | | | |
-| **Image** |  | | | |  | - | | | | |
+| **Image** | | | | |  | - | | | | |
 | **List** | ✅ | | | |  | | - | | | |
-| **Coordinates** |  | | | |  | | | - | | |
-| **Bounding Box** |  | | | |  | | | | - | |
-| **Table** |  | | | |  | | | | | - |
+| **Coordinates** | | | | |  | | | - | | |
+| **Bounding Box** | | | | |  | | | | - | |
+| **Table** | | | | |  | | | | | - |
+
+* Any type with an asterisk against it means that it can be converted but only through subchips. You can learn more about subchips {here}.
