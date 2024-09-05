@@ -331,15 +331,15 @@ Y Axis: To Type
 
 | _Type_ | String | Number | Boolean | Date Time | JSON | Image | List | Coordinates | Bounding Box | Table |
 |:-- | :---: | :---: | :---: | :---: | :---: |  :---: | :---: | :---: | :---: | :---: |
-| **String** | - | ✅ | ✅ | ✅ | ✅ | ✅ | | | | |
-| **Number** | ✅ | - | | | | | | | | |
-| **Boolean** | | | - | | | | | | | |
-| **DateTime** | ✅ | | | - | | | | | | |
-| **JSON** | ✅ | | | | - | | | | | |
-| **Image** | | | | |  | - | | | | |
-| **List** | ✅ | | | |  | | - | | | |
+| **String** | - | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | ✅*|
+| **Number** | ✅ | - | | | ✅* | | | ✅* | ✅* | ✅*|
+| **Boolean** | | | - | | ✅*| | | | | ✅*|
+| **DateTime** | ✅ | | | - | | | | | | ✅*|
+| **JSON** | ✅ | | | | - | | | | | ✅*|
+| **Image** | | | | |  | - | | | | ✅*|
+| **List** | ✅ | | | |  | | - | | | ✅*|
 | **Coordinates** | | | | |  | | | - | | |
 | **Bounding Box** | | | | |  | | | | - | |
-| **Table** | | | | |  | | | | | - |
+| **Table** | | | | |  | ✅ | | | | - |
 
 * Any type with an asterisk against it means that it can be converted but only through subchips. You can learn more about subchips {here}.
