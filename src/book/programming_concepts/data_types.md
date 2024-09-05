@@ -4,7 +4,7 @@
 
 A type is a way of classifying an object so we know how the object behaves and what we can do with the object!
 
-Think of a big bowl of fruit, you need to understand what each fruit is before eating it as each fruit might be eaten differently. For example, if you come across an orange, you know you need to peel it before eating it, but if you come across a grape you know you don't have to peel it before eating it but you might remove the seeds as they're all bitter. The type of fruit defines how you treat it, and this is the same for types in Toca!
+Think of a big bowl of fruit, you need to understand what each fruit is before eating it as each fruit might be eaten differently. For example, if you come across an orange, you know you need to peel it before eating it, but if you come across a grape you know you don't have to peel it before eating it but you might remove the seeds as they don't taste very good. The type of fruit defines how you treat it, and this is the same for types in Toca!
 
 ![Type Diagram](/src/assets/book/type_diagram.png)
 
@@ -322,18 +322,19 @@ You can't cast a table as a whole to anything else but you can cast parts of a t
 
 ### Casting Matrix
 
-| _Type_ | String | Number | Boolean | Date Time | JSON |
-|:-- | :---: | :---: | :---: | :---: | :---: |
-| **String** | - | ✅ | | ✅ | ✅ |
-| **Number** | ✅ | - | | | |
-| **Boolean** | ✅ | | - | | |
-| **DateTime** | ✅ | | | - | |
-| **Password** |  | | | | - |
-| **File** |  | | | | - |
-| **Image** |  | | | | - |
-| **Identity** |  | | | | - |
-| **List** | ✅ | | | | - |
-| **Coordinates** |  | | | | - |
-| **Bounding Box** |  | | | | - |
-| **Grid** |  | | | | - |
-| **Table** |  | | | | - |
+Below is a table which shows which types can be coerced / converted into different types. Some types have been deliberately ommitted as they cannot be cast to any other type (e.g. the Identity type).
+
+Across the top of the table you have the list of types and each row represents which other types it can be converted to.
+
+| _Type_ | String | Number | Boolean | Date Time | JSON | Image | List | Coordinates | Bounding Box | Table |
+|:-- | :---: | :---: | :---: | :---: | :---: |  :---: | :---: | :---: | :---: | :---: |
+| **String** | - | ✅ | | ✅ | ✅ | | | | | |
+| **Number** | ✅ | - | | | | | | | | |
+| **Boolean** | ✅ | | - | | | | | | | |
+| **DateTime** | ✅ | | | - | | | | | | |
+| **JSON** | ✅ | | | | - | | | | | |
+| **Image** |  | | | | - | | | | | |
+| **List** | ✅ | | | | - | | - | | | |
+| **Coordinates** |  | | | | - | | | - | | |
+| **Bounding Box** |  | | | | - | | | | - | |
+| **Table** |  | | | | - | | | | | - |
