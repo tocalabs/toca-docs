@@ -2,6 +2,10 @@
 
 ## What are Types?
 
+A type is a way of classifying an object so we know how the object behaves and what we can do with the object!
+
+Think of a big bowl of fruit, you need to understand what each fruit is before eating it as each fruit might be eaten differently. For example, if you come across an orange, you know you need to peel it before eating it, but if you come across a grape you know you don't have to peel it before eating it but you might remove the seeds as they're all bitter. The type of fruit defines how you treat it, and this is the same for types in Toca!
+
 Every value that you come across in Toca has three properties:
 - The key - This is the identifier that is used to "name" the value
 - The type - This is the classifier that tells Toca how this value is intended to be used
@@ -16,10 +20,10 @@ Types also help us to make our software safer and more robust as it allows us to
 This is a good way of preventing errors which could occur whilst our Application is running such as what might happen if you attempted to make a `Table` uppercase instead of some text!
 
 Within Toca there are two categories of types:
-1. Base Types - Types that hold a single value
+1. Scalar Types - Types that hold a single value
 2. Collection Types - Types that store multiple values
 
-## Base Types
+## Scalar Types
 
 ### String
 
@@ -30,7 +34,7 @@ A value of type `String` in Toca is a variable-length piece of text that can ran
 - `\t` - tab character
 - `\r` - carriage return character
 
-There is no real upper limit on how many letters can be stored within a single `String` type but once you start getting to the 100,000's of characters, you might notice some performance issues when trying to view the value.
+There is no real upper limit on how many letters can be stored within a single `String` type but once you start getting to the 10,000's of characters, you might notice some performance issues when trying to view the value.
 
 > #### Warning ⚠️
 >
@@ -54,7 +58,7 @@ When you need to compare `Strings` then they are only able to be compared in two
 
 The `Number` type can represent any sort of number, whether it is an integer, a negative number or decimal number. Behind the scenes, the value is always stored as a decimal number, even if that means specifying an additional `.0` on the value. By storing all number values consistently behind the scenes it means they can all be treated in the exact same way and you don't have to worry about conversion between different number types like you might have to do when coding.
 
-A `Number` type allows for the following range:
+A `Number` type allows for the following approximate range:
 - Max: 1.79x10³⁰⁸
 - Min: -1.79x10³⁰⁸
 
@@ -140,7 +144,7 @@ The `JSON` types are for storing JSON (JavaScript Object Notation) data. This is
 }
 ```
 
-If I wanted to get the industry value out of the above example, I can query it with JSONPath using `$.industry`, if I wanted the title of the first available job I can use `$.available_jobs[0].title`.
+If you wanted to get the industry value out of the above example, you can query it with JSONPath using `$.industry`, if you wanted the title of the first available job you can use `$.available_jobs[0].title`.
 
 > #### Note 📝
 >
@@ -184,7 +188,7 @@ For really advanced use cases, you can actually get an image as it's raw Data UR
 
 ### Identity
 
-An `Identity` is a value that represents a digital account that is linked to a different identity provider, this could be a Microsoft account, GitHub account or Google account for example.
+An `Identity` is a value that represents a digital account that is linked to a different :docs-link[identity provider]{id="src/admin/identity_providers"}, this could be a Microsoft account, GitHub account or Google account for example.
 
 An `Identity` allows you to link any [Oauth2.0](https://oauth.net/2/) compatible account with Toca so that you can use automation actions such as `Outlook Send Email` or `Upload to Google Drive` on behalf of a user. These identities store both an Authorization token and a Refresh token behind the scenes so that they can always be authenticated without having to ask you to log back in to authorize these linked accounts.
 
@@ -199,7 +203,7 @@ A `List` stores a collection of other values, you can have 0 or more values insi
 
 For example, you could have a List that looks similar to this:
 ```python
-list_1 = ["james", 28, false, "Toca.io"]
+list_1 = ["james", 28, False, "Toca.io"]
 list_2 = ["apple","banana", "cherry", "apple", "cherry"]
 ```
 
@@ -268,7 +272,45 @@ Due to a Grid's complexity, you cannot get the individual boxes within the Grid.
 
 ### Table
 
-## Null
+A Table is a 2-dimensional type that stores columns of data. Each column can have it's own type and this type is useful for storing any sort of tabular data. Tables are by far the most complicated type in Toca and have their own dedicated documentation which you can find :docs-link[here]{id="src/projects/automation/datastores/tables"}.
+
+Tables have a load of useful features that make them very versatile:
+- Tables can be queried using a variety of search criteria
+- Different types in every column
+- Default values
+- Auto generated values on Creation or Update of a row
+- Create relationships to other tables
+- Permissions on each row to make rows of data private to individual users
+
+A table might look like the following:
+
+| _id_ | Name | Age | Fellowship Member |
+|:-- | :---: | :---: | :---: |
+| 1 | Legolas | 2931 | ✅ |
+| 2 | Aragorn | 87 | ✅ |
+| 3 | Frodo | 33 | ✅ |
+| 4 | Gollum | 589 | 🚫|
+| 5 | Saruman | 2001 | 🚫|
+
+In the table above we have a unique identifier with the _id_ column and then we have a String column for the name, a Number column for age and lastly a boolean column to denote if the character is a member of the fellowship.
+
+> **Note** 📝
+>
+> All tables must have an ID column which has type of `UUID` as this ensures that the ID of each row is a universally unique identifier. The machinery behind the scenes is also expecting any ID column to be in the format of a UUID. This will almost always be generated for you and you shouldn't have to worry about this except in very advanced cases.
+
+Behind the scenes, Tables which are defined in a Datastore are stored as a [SQL table](https://en.wikipedia.org/wiki/SQL) so it will scale well even with thousands of rows and tens of columns.
+
+> **Warning** ⚠️
+>
+> If you are fetching a particularly large table, just be aware that whilst storing a large table is no problem, moving lots of data around the platform can lead to performance issues. To ensure you're optimising your applications, make sure you're only ever pulling back the data you need in terms of both rows and columns. As well as this, make sure you're leveraging pagination in an App so that you're only pulling back a handful of data at a time.
+
+#### Casting
+
+You can't cast a table as a whole to anything else but you can cast parts of a table to other types. You can cast both a table row and column to a `List` type, where each cell in the table row/column will become a new item in the list. You can also access individual cells of a table and cast them to their specified type such as a `String` or `Number`.
+
+> **Note** 📝
+>
+> There are some types in Tables which don't have a regular corresponding type such as `UUID` or `Time`, in these cases you can always just cast them to a `String`.
 
 
 ## Casting and Converting
