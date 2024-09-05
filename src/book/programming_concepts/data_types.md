@@ -334,12 +334,12 @@ Y Axis: To Type
 | **String** | - | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | ✅*|
 | **Number** | ✅ | - | | | ✅* | | | ✅* | ✅* | ✅*|
 | **Boolean** | | | - | | ✅*| | | | | ✅*|
-| **DateTime** | ✅ | | | - | | | | | | ✅*|
+| **DateTime** | ✅ | | | - | ✅* | | | | | ✅*|
 | **JSON** | ✅ | | | | - | | | | | ✅*|
 | **Image** | | | | |  | - | | | | ✅*|
-| **List** | ✅ | | | |  | | - | | | ✅*|
+| **List** | ✅ | | | | ✅| | - | | | ✅*|
 | **Coordinates** | | | | |  | | | - | | |
 | **Bounding Box** | | | | |  | | | | - | |
-| **Table** | | | | |  | ✅ | | | | - |
+| **Table** | | | | |  |  | ✅| | | - |
 
 * Any type with an asterisk against it means that it can be converted but only through subchips. You can learn more about subchips {here}.
