@@ -6,6 +6,8 @@ A type is a way of classifying an object so we know how the object behaves and w
 
 Think of a big bowl of fruit, you need to understand what each fruit is before eating it as each fruit might be eaten differently. For example, if you come across an orange, you know you need to peel it before eating it, but if you come across a grape you know you don't have to peel it before eating it but you might remove the seeds as they're all bitter. The type of fruit defines how you treat it, and this is the same for types in Toca!
 
+![Type Diagram](/src/assets/book/type_diagram.png)
+
 Every value that you come across in Toca has three properties:
 - The key - This is the identifier that is used to "name" the value
 - The type - This is the classifier that tells Toca how this value is intended to be used
