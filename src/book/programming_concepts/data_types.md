@@ -333,8 +333,8 @@ Across the top of the table you have the list of types and each row represents w
 | **Boolean** | ✅ | | - | | | | | | | |
 | **DateTime** | ✅ | | | - | | | | | | |
 | **JSON** | ✅ | | | | - | | | | | |
-| **Image** |  | | | | - | | | | | |
-| **List** | ✅ | | | | - | | - | | | |
-| **Coordinates** |  | | | | - | | | - | | |
-| **Bounding Box** |  | | | | - | | | | - | |
-| **Table** |  | | | | - | | | | | - |
+| **Image** |  | | | |  | - | | | | |
+| **List** | ✅ | | | |  | | - | | | |
+| **Coordinates** |  | | | |  | | | - | | |
+| **Bounding Box** |  | | | |  | | | | - | |
+| **Table** |  | | | |  | | | | | - |
