@@ -34,6 +34,15 @@ The :docs-link[If Then]{id="IfThen" type="Action"} is the most common way to int
 
 :video{src="/src/assets/book/ifthen_conditional.webm"}
 
+In the clip above, we can see that we create a number variable equal to 25, and we then add an If Then action to check whether our number is greater than 25. We then placed a Stop Activity action down and importantly we nested this action underneath the If Then. This means that it will only run the Stop Activity action if the condition is evaluated to true.
+
+The first time we run it, it does not run the Stop Activity action and we can see the result of the If Then is false. Once we change the value of our number variable to 26, this means the condition now evaluates to true and the Stop Activity action runs as expected.
+
+> **Note** 📝
+>
+> It can be useful to perform the some conditional logic if a condition is _not_ true, this is usually referred to as an `else` statement, i.e. if condition is true do this, else do this other thing. Whilst there is no specific Else action, there is a way you can achieve the same effect using the result of an `If Then` action.
+> :video{src="/src/assets/book/ifthen_else_conditional.webm"}
+
 #### Workflows
 
 ### Conditional App Behaviour
