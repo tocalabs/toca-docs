@@ -22,9 +22,13 @@ if "cunning" in student.traits:
     house = "Slytherin"
 ```
 
-
+In Apps, this is useful because you might want to hide or obscure parts of your application based on a condition. For example, you might only want to make a button clickable if a user has previously ticked the option to accept the Terms & Conditions of your application.
 
 ### Conditional Automation
+
+We've actually already seen how you can implement conditional logic in Automation when we built our :docs-link[Guessing Game]{id="book/guessing_game"}. In that example, we used conditional logic to check a user's guess to see whether it was higher, lower or equal to the number they had to guess so that we could return a useful message to the user. Let's quickly revisit that and dive into the `If Then` action.
+
+The :docs-link[If Then]{id="IfThen" type="Action"} is the most common way to introduce decisions into your automation activities. It allows you to specify a condition and then nest actions underneath it which will only be run if the condition is true.
 
 ### Conditional App Behaviour
 
