@@ -45,6 +45,10 @@ The first time we run it, it does not run the Stop Activity action and we can se
 
 #### Workflows
 
+You can also introduce decisions to your Workflows, this allows your workflow to travel down different paths of execution and run different activities. In a Workflow, you will usually be checking the output of an activity to make that decision. To add conditional logic to your workflow you need to add an :docs-link[Exclusive node]{id="projects/automation/workflows/exclusive"} and then connect the exclusive up to two or more outcome paths. This will allow you to provide a condition for each path of execution.
+
+:video{src="/src/assets/book/ifthen_workflow.webm"}
+
 ### Conditional App Behaviour
 
 #### App Components
