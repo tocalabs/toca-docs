@@ -1,12 +1,12 @@
 # Views
 
-A View is a virtual read-only table which is created by a query, which can include columns from one or more tables in a datastore. This is very useful for scenarios where you are using a common query to display a subset of data on a page of your App or you need to create a single table which encapsulates data from multiple tables so you can query it.
+A View is a virtual read-only table which is created by a query, which can include columns from one or more tables in a datastore. This is very useful for scenarios where you are using a common query to display a subset of data on a page of your App or you need to create a single table which encapsulates data from multiple tables so you can query it. The rows in a View will automatically update whenever the original data that the View is created from updates so you never have to worry about data in your View going stale.
 
 ![View Diagram](/src/assets/view.png)
 
 ### Features of a View
 
-Every View starts from a base table, this is the table that forms the foundation of your View. Once you have selected this base table, you can
+Every View starts from a base table, this is the table that forms the foundation of your View. Once you have selected this base table, you can bring in data from other tables and define queries to define how your View looks.
 
 #### Joins
 

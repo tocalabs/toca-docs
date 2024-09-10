@@ -27,11 +27,13 @@ The query builder contains many different operators. They are as follows
 | "<"      | Less than                | 4 < 5 returns TRUE   |
 | ">="     |Greater than or equal to | 4 >= 5 returns FALSE |
 |"<=" |Less than or equal to |4 <= 5 returns TRUE |
-|"<=" |Not less than |4 !< 5 returns FALSE |
+|"!<" |Not less than |4 !< 5 returns FALSE |
 |"!>" |Not greater than |4 !> 5 returns TRUE |
+|"<=>" |NULL safe equals to | 4 <=> 5 returns FALSE |
 |"LIKE" |TRUE if the operand matches a pattern specially with wildcard.(%) | |
 |"In" |TRUE if the operand is equal to one of a list of expressions. | |
 |"Not in" |True if the operand is not equal to one of a list of expressions. | |
+|"REGEXP" | True if the values in the column match the regular expression | |
 
 The 'value' field is where you insert what values to query for / against. Depending on which data type you have specified in the field box, the way you input the value will change. E.g A column type of 'date' will provide a data picker whereas 'string' will let you type text. The value field can have case sensitivity toggled on or off via the button on the right hand side.
 
@@ -45,4 +47,3 @@ By clicking the variable button in a field and choosing a datachip you could eve
 **Apps**
 
 Queries can also be used within app components e.g Repeating layout. The option to do so will appear when you choose your datasource by clicking the variable button. The query can be edited by clicking the variable button again.
-
