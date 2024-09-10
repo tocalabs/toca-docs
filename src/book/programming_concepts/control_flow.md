@@ -49,6 +49,10 @@ You can also introduce decisions to your Workflows, this allows your workflow to
 
 :video{src="/src/assets/book/ifthen_workflow.webm"}
 
+> **Warning** ⚠️
+>
+> If more than 1 condition evaluates to true in an exclusive, it will only execute the first condition that it evaluates to true, so don't rely on this behaviour. You can avoid this by always making sure that all of your conditions are _exclusive_!
+
 ### Conditional App Behaviour
 
 #### App Components
