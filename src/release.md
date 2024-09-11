@@ -1,62 +1,68 @@
-# 7.7 - Release Notes
+# 7.8 - Release Notes
 
 ## What's New
 
 ### General
 
-#### Datastore Interface
+#### Table Interface
 
-The Datastore view has had a significant overhaul in terms of it's look and design, this is mainly to allow user to more easily filter on the values within a Datastore based on name, type, last modified or last created.
-The preview of types has also been improved so that more data can be viewed at once and the tools available for each type of value are clear.
+Further to the Datastore design changes introduced in the :docs-link[7.6]{id="releases/7_6"} release, Tables themselves have had some extra redesign work. You can now edit rows and cells in place as well as editing multiple rows in one go. The way relational data is displayed has also been significantly improved so that you can directly view related data without having to navigate away from your existing table.
 
-![Datastore UI Changes](/src/assets/datastore_ui_changes.png)
+![Table Redesign](/src/assets/table_redesign.png)
 
-#### Cancelled Jobs UI change
+#### Reporting Improvements
 
-Jobs which have been cancelled are now marked with a grey icon instead of a red icon, this is to help visually distinguish jobs which have been cancelled from jobs which have failed.
-![Cancelled Jobs](/src/assets/cancelled_jobs.png)
+An improvement has been made to the queries you can perform in Reports, you can now filter your reports by looking for certain inputs and outputs to a workflow. This is especially useful if you are trying to find all workflows that ran with an input of a particular value. You can now also query for any workflows that contain a failed activity, this can be useful when trying to identify failures that might otherwise be obscured.
 
-### TDK
+Additionally, you can now re-run and cancel multiple jobs at once.
 
-#### .NET 8 Update
+![Report Query Improvements](/src/assets/reporting_query_changes.png)
 
-This release of Toca includes an upgrade to the .NET framework from .NET 7 to .NET 8. This includes and update from C# 10 to C# 12, this means you can use the latest features of .NET and C# when writing Actions, Action Helpers and Connectors within the TDK.
+#### Views
+
+You can now create Views within a Datastore, a View allows you to build a read-only table based on a static query, where you can also include columns from other tables. Head over to the Datastore to create your first View and read more about them there.
+
+![Creating a View](/src/assets/views_release.png)
+
+
+#### The Handbook
+
+The Handbook is a new documentation resource built into the platform that guides you through common concepts, examples and advanced topics. Whether you're a newcomer to Toca or a veteran of the low-code arts, the Handbook will almost certainly contain something useful to you!
+
+![Handbook Documentation](/src/assets/handbook_release.png)
+
+### Automation
+
+#### Recovery Workflows
+
+You can now set up workflows that will automatically trigger if a Workflow fails. This will run immediately after the Workflow runs (even if other Workflows are queued up) and can be designed to either recover from the failure or log any errors. The recovery workflow will also have some default inputs injected into it such as the Error Message for why the original Workflow failed as well as the name of the failed Workflow. These values can be useful for logging any errors that are encountered. Head over to the settings of a Workflow to configure your first Recovery Workflow.
+
+This new feature includes two additional actions which are :docs-link[Re-Run Jobs]{id="ReRunJobs" type="Action"} which allows you to pass in a JobId (which is automatically injected as an input into the a Recovery Workflow) and rerun a job. There is also a new :docs-link[Run Workflow]{id="RunWorkflow" type="Action"} action which allows you to trigger a Workflow from an action, as well as providing the inputs for the Workflow.
+
+![Recovery Workflow](/src/assets/recovery_workflow.png)
 
 ### Apps
 
-#### Table Component
+#### Map Components
 
-The latest version of the Table component (v1.0.4) is a dramatic overhaul of the existing table component that was available in Apps.
-This new version now natively understands table relationships as well as local tables that have been set as an In Page Values. It also includes a host of new styling options, allowing you to customise your table to look exactly as you want it.
-You can now also configure the table component so that users can directly manipulate datastore tables via the App or In Page Value tables.
+There have been several improvements made to the existing :docs-link[Open Street Map]{id="d6aff036-ccf6-4105-ae13-b76f8c003b55" type="AppComponent"} App Component. You can now lassoo a series of map markers as well as driving the map markers on the component from a table.
 
-![Table Component](/src/assets/table_component.png)
+We have also released the first version of a :docs-link[Google Maps]{id="6dae6856-0d25-456a-910c-c9707d22b4d5" type ="AppComponent"} App Component which is an integration of Google Maps. It behaves similarly to Open Street Maps but has a few additional options but you cannot do things such as lassoo an area of markers.
 
-#### Table IPL Actions
-
-We have added a host of new In Page Logic actions which allow you to directly manipulate datastore tables and local In Page Value (IPV) tables directly from IPL.
-This means that you no longer need to build automation to simply add a row to a table or update an existing row. You can also create and manipulate local In Page Value tables using these new IPL actions.
-The new actions are as follows and can be found in the new Table group in your IPL editor:
-- Create IPV Table
-- Add IPV Table Column
-- Update IPV Table Column
-- Delete IPV Table Column
-- Get Table Data with Query - _works on IPV Tables and Datastore tables_
-- Update Table Row(s) by Query - _works on IPV Tables and Datastore tables_
-- Delete Table Row(s) by Query - _works on IPV Tables and Datastore tables_
-- Add Row to Table - _works on IPV Tables and Datastore tables_
-- Get Table Information - _works on IPV Tables and Datastore tables_
-
-![Table IPL Actions](/src/assets/table_ipl_actions.png)
+![Map Components](/src/assets/map_components_release.png)
 
 ## Bug Fixes
 
-Bug fixes mainly covered the following themes:
-- Import & Export
-- Datastore Table stability and performance when retrieving or manipulating data
+A number of bug fixes were included in this release across the platform.
 
 > Contact <support@toca.io> for a full list of bug fixes included within this release.
 
 ## Deprecated
 
 No functionality has been deprecated in this release.
+
+## Previous Releases
+
+- :docs-link[7.7]{id="releases/7_7"}
+- :docs-link[7.6]{id="releases/7_6"}
+- :docs-link[7.5]{id="releases/7_5"}

@@ -13,6 +13,11 @@ Reporting is a Toca user's hub for anything related to the jobs which are being 
 - Triggered by - the method via which the job was triggered e.g via schedule, listener, app user etc.
 - Publish state - The version of the job which was run. This could be either: draft, published or previous.
 - Bots - Hovering over either the monitor or cloud icons will show you which bot the job ran on and the corresponding bot version. This is useful for debugging.
+- Job Input Names - This allows you to search for particular variables being used as an input to a Job
+- Job Input Values - Allows you to search for particular values being used as an input for a Job
+- Job Output Names - Filter jobs based on the name of the output variables returned
+- Job Output Values - Filter jobs based on the values of the output variables returned
+- Failed Activities - Return jobs which contain failed activities, useful for identifying jobs which may have failed but continued
 
 Many of the columns in the jobs page can be sorted by clicking on the column header.
 
@@ -44,11 +49,11 @@ Greyed out jobs will be shown as 'awaiting deletion' and will only be permanentl
 
 **Notes On Multiple Selection** - Deleting, re-running and cancelling jobs via the checkboxes are enabled/disabled based on the jobs selected, however for ease of use we allow mixed selection and only execute the request on selected jobs if it makes sense. As an example, Only a Running or Queued job may be cancelled, so if you select a running job and a completed job, pressing 'Cancel jobs' will only submit the running job to be cancelled.
 
-Re-running multiple jobs will queue with a slight delay between each job, and in the order they were selected. 
+Re-running multiple jobs will queue with a slight delay between each job, and in the order they were selected.
 If the 'all items' checkbox was used to select all jobs on the page, the jobs will be queued from order of top to bottom.
 
 **Downloading Job Report Data** - Pressing the 'Download report' button will download a CSV to the users machine which will contain the data of every job which adheres to the current query.
-  
+
 **Reporting levels** - There are circumstances where you may want to decrease your reporting level due to large amounts of data which can build up unnecessarily.
 
 To change the reporting level of a job, enter the workflow designer and access the workflow settings by pressing the cog icon. There are 4 reporting levels which are presented in descending order:
