@@ -43,9 +43,9 @@ This new feature includes two additional actions which are :docs-link[Re-Run Job
 
 #### Map Components
 
-There have been several improvements made to the existing :docs-link[Open Street Map]{id="f856a8c1-58fb-41c4-9be1-0217f5a9e358" type="AppComponent"} App Component. You can now lassoo a series of map markers as well as driving the map markers on the component from a table.
+There have been several improvements made to the existing :docs-link[Open Street Map]{id="d6aff036-ccf6-4105-ae13-b76f8c003b55" type="AppComponent"} App Component. You can now lassoo a series of map markers as well as driving the map markers on the component from a table.
 
-We have also released the first version of a :docs-link[Google Maps]{id="1fce83e5-9417-4c89-b1e2-a5691958a410" type ="AppComponent"} App Component which is an integration of Google Maps. It behaves similarly to Open Street Maps but has a few additional options but you cannot do things such as lassoo an area of markers.
+We have also released the first version of a :docs-link[Google Maps]{id="6dae6856-0d25-456a-910c-c9707d22b4d5" type ="AppComponent"} App Component which is an integration of Google Maps. It behaves similarly to Open Street Maps but has a few additional options but you cannot do things such as lassoo an area of markers.
 
 ![Map Components](/src/assets/map_components_release.png)
 
