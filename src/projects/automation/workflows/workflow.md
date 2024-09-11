@@ -12,15 +12,21 @@ Nodes can be dragged onto your workflow canvas.
 
 ## Inputs, outputs and context (including AppUserId)
 
+### Inputs
+
 By adding :docs-link[Inputs]{id="projects/automation/activities/inputs"} to an activity, you are telling the activity to expect to be started with some variables.
 
+### Outputs
+
 To :docs-link[Output]{id="projects/automation/activities/outputs"} a value is to say that you want to use that value somewhere outside of that activity. More on [outputs]
+
+### Workflow Context
 
 These concepts are very important when working with workflows as they are one of the easiest ways to use contextual data across multiple activities. Simply output a :docs-link[Variable]{id="projects/automation/activities/variable"} from one activity and then configure one or more activities further down the line to expect it as an input.
 
 An example would be: If you were to create an App User in 'Activity A', using the 'create app user' action, you could then output the subsequent 'AppUserId'. Then, further along the workflow, you could tell 'Activity B' to expect 'AppUserId' as an input. 'Activity B' could then, for example, manage the permissions of that App User, or add them to a certain group based on other contextual data.
 
-## Exclusives
+## Flow Control
 
 ### Making a Decision
 
@@ -66,10 +72,23 @@ To change the reporting level of a job, enter the workflow designer and access t
 
 ### On Fail/Error
 
+These settings allow you to control what the Workflow should do if it fails.
+
+#### Screenshot on Fail
+
 Save a screenshot - this functionality is reserved for GUI bots and will take a screenshot of the bot screen if an error is encountered.
+
+#### Send Email on Fail
 
 Receive email notification - An email will be sent to the email address of the current user if an error is encountered.
 
-**Activity Nodes**
+#### Run Workflow
+
+Run another Workflow immediately after this one if it fails, this will jump ahead of any other Workflows which are currently queued. This feature is designed to allow you to build recovery logic which can recover the situation if anything goes wrong in your original Workflow. This might include setting a desktop environment back to a clean slate if you are doing some GUI automation or it might include rolling back some data so a data upload process can start from scratch again.
+
+Any Workflow that you choose to run if the current Workflow fails will have some default values injected such as the error message, the name of the Workflow and the Job ID in case you want to log this information. Additionally, you can use the Job ID in conjunction with the Re-Run Jobs action to rerun your failed job with the exact same outputs.
+
+## Activity Nodes
+
 - Disable - This activity will become greyed out and will be passed over as 'disabled' when the workflow is run.
 - Duplicate - This will create a duplicate node of the activity which is not linked to any other nodes.
