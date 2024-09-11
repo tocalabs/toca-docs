@@ -51,19 +51,49 @@ You can also introduce decisions to your Workflows, this allows your workflow to
 
 > **Warning** ⚠️
 >
-> If more than 1 condition evaluates to true in an exclusive, it will only execute the first condition that it evaluates to true, so don't rely on this behaviour. You can avoid this by always making sure that all of your conditions are _exclusive_!
+> If more than 1 condition evaluates to true in an exclusive, it will only execute the first condition that it evaluates to true, so don't rely on this behaviour. You can avoid this by always making sure that all of your conditions are _exclusive_! Additionally, if none of your conditions evaluate to true, the Workflow will stop there and error.
+
+You can also have your Workflow travel down a default path of execution if none of the conditions evaluate to true. To do this, you simply need to use the `else` keyword in your exclusive condition.
+
+![Else Exclusive Workflow](/src/assets/book/else_workflow.png)
+
+The above example would travel down the `else` branch if :datachip-variable[my_number]{type="Number"} is 25 or less.
 
 ### Conditional App Behaviour
 
+You can add conditional behaviour to your Apps as well, this is particularly powerful if you want to conditionally show and hide components on a page. You can implement conditional logic in Apps at both a component level and within In Page Logic (IPL).
+
 #### App Components
 
-#### In Page Logic
+The most common way of conditionally showing / hiding content on your App page is to use the :docs-link[Conditional content]{id="55d766c9-5879-418f-83b0-853436362769" type="AppComponent"} component. This component will only display the components that you nest inside it if the condition that you set is true.
+Let's see this in action with some basic conditions:
+
+:video{src="/src/assets/book/conditional_content.webm"}
+
+In this simple example, we are using the Conditional Content component to control whether we display some text content or not, we are then previewing the App with different conditions to check that it is working.
+
+The Conditional Content component becomes really powerful when you start to use datachips in your condition so you can drive the condition dynamically.
+
+#### In Page Logic (IPL)
+
+If you have got some IPL on your App page and you need to introduce a decision point to your logic then the IPL mechanism for this is an _exclusive_ node, just like a Workflow in Automation! The exclusive node in IPL works very similarly to the one in a Workflow in that you link it up to 2 or more possible execution paths and you place a condition on each execution path, and whichever ones evaluate to true will be travelled down.
+Let's take a look at how that might work with a basic example where we'll generate a random number and then update the text on a button depending on if the random number is higher or lower than a threshold value.
+
+:video{src="/src/assets/book/ipl_exclusive.webm"}
+
+As we can see from the above video clip, after clicking on the button a number of times, we get different labels.
 
 ## Looping
 
 ![Looping Diagram](/src/assets/book/looping.png)
 
+Being able to repeat some logic for a set number of times can be very useful. Imagine you need to multiply every number in a table column by 100 to turn it into a readable percentage, to do that you would need to loop over each row in the table, mutliply the existing cell and update it once multiplied. The logic to multiply the number and update the table cell will be the same for every row in the table, so it would be great if we could repeat that logic for every row in a table without having to duplicate our logic. Fortunately, that is exactly what loops allow us to do!
+
+Ultimately, all loops will repeat until a particular condition is met but as you'll find, there are many ways of configuring that condition.
+
 ### Count Controlled Loops
+
+The easiest type of loop to understand is a count controlled loop, this is a loop that will repeat {x} times. The most obvious example of this is the :docs-link[Repeat]{id="Repeat" type="Action"} action which allows you to specify a repeat number and any actions nested underneath the Repeat action will be repeated that many times. This can be useful in scenarios where you know you need to do something a definitive number of times.
 
 ### Condition Controlled Loops
 
