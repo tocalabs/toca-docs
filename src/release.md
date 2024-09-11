@@ -14,6 +14,8 @@ Further to the Datastore design changes introduced in the :docs-link[7.6]{id="re
 
 An improvement has been made to the queries you can perform in Reports, you can now filter your reports by looking for certain inputs and outputs to a workflow. This is especially useful if you are trying to find all workflows that ran with an input of a particular value. You can now also query for any workflows that contain a failed activity, this can be useful when trying to identify failures that might otherwise be obscured.
 
+Additionally, you can now re-run and cancel multiple jobs at once.
+
 ![Report Query Improvements](/src/assets/reporting_query_changes.png)
 
 #### Views

@@ -29,7 +29,7 @@ The query builder contains many different operators. They are as follows
 |"<=" |Less than or equal to |4 <= 5 returns TRUE |
 |"!<" |Not less than |4 !< 5 returns FALSE |
 |"!>" |Not greater than |4 !> 5 returns TRUE |
-|"<=>" |NULL safe equals to | 4 <=> 5 returns FALSE |
+|"<=>" |NULL safe equals to | 'a' <=> NULL returns FALSE |
 |"LIKE" |TRUE if the operand matches a pattern specially with wildcard.(%) | |
 |"In" |TRUE if the operand is equal to one of a list of expressions. | |
 |"Not in" |True if the operand is not equal to one of a list of expressions. | |

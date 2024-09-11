@@ -53,7 +53,7 @@ You can perform a query on any of the columns from any of the tables you are usi
 
 #### Aliases
 
-Whilst Joins are great for displaying related data it can lead to duplicate column names as you might be adding a Created date column from your base table and a Created date from your external table. This could lead to some serious confusion as you then end up with a View which has two columns named the same! That's where Aliases come in to save the day. An alias allows you to give each column in your View a unique name so you can avoid this confusion.
+Whilst Joins are great for displaying related data it can lead to duplicate column names as you might be adding a Created date column from your base table and a Created date from your external table. This could lead to some serious confusion as you then end up with a View which has two columns named the same! That's where Aliases come in. An alias allows you to give each column in your View a unique name so you can avoid this confusion.
 
 ### Where you can use a View
 

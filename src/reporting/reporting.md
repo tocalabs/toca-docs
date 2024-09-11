@@ -14,7 +14,7 @@ Reporting is a Toca user's hub for anything related to the jobs which are being 
 - Publish state - The version of the job which was run. This could be either: draft, published or previous.
 - Bots - Hovering over either the monitor or cloud icons will show you which bot the job ran on and the corresponding bot version. This is useful for debugging.
 - Job Input Names - This allows you to search for particular variables being used as an input to a Job
-- Job Input Values - Allows you to search for partivular values being used as an input for a Job
+- Job Input Values - Allows you to search for particular values being used as an input for a Job
 - Job Output Names - Filter jobs based on the name of the output variables returned
 - Job Output Values - Filter jobs based on the values of the output variables returned
 - Failed Activities - Return jobs which contain failed activities, useful for identifying jobs which may have failed but continued
