@@ -1,6 +1,41 @@
 # Summary
 
 
+- :docs-link[Introduction]{id="book/intro"}
+- :docs-link[Getting Started]{id="book/getting_started"}
+  - :docs-link[Profile]{id="book/getting_started/profile"}
+  - :docs-link[Hello, Toca!]{id="book/getting_started/hello_toca"}
+  - :docs-link[Hello, TDK!]{id="book/getting_started/hello_tdk"}
 - :docs-link[Programming a Guessing game]{id="book/guessing_game"}
 - :docs-link[Common Programming Concepts]{id="book/programming_concepts"}
+  - :docs-link[Datachips and Variables]{id="book/programming_concepts/variables"}
   - :docs-link[Data Types]{id="book/programming_concepts/data_types"}
+  - :docs-link[Control Flow]{id="book/programming_concepts/control_flow"}
+- :docs-link[Using Tables to Structure Related Data]{id="book/structure_related_data"}
+  - :docs-link[Creating Tables]{id="book/structure_related_data/creating_tables"}
+  - :docs-link[Linking Data]{id="book/structure_related_data/linking_data"}
+  - :docs-link[Using Related Data]{id="book/structure_related_data/using_linked_data"}
+- :docs-link[Testing]{id="book/testing"}
+  - :docs-link[Testing Automation]{id="book/testing/testing_automation"}
+  - :docs-link[Testing Apps]{id="book/testing/testing_apps"}
+- :docs-link[Managing Growing Projects]{id="book/manage_growing_projects"}
+  - :docs-link[Triggers and Listeners]{id="book/growing_projects/triggers_and_listeners"}
+  - :docs-link[Layouts and Blocks]{id="book/growing_projects/layouts_and_blocks"}
+- :docs-link[Intermediate Project]{id="book/intermediate_project"}
+- :docs-link[Error Handling]{id="book/error_handling"}
+  - :docs-link[Unrecoverable Errors]{id="book/error_handling/unrecoverable_errors"}
+  - :docs-link[Recoverable Errors]{id="book/error_handling/recoverable_errors"}
+  - :docs-link[To fail or not to fail?]{id="book/error_handling/fail_or_not"}
+- :docs-link[TDK: Extending the Platform]{id="book/tdk"}
+  - :docs-link[Building]{id="book/tdk/building"}
+  - :docs-link[Deploying]{id="book/tdk/deploying"}
+  - :docs-link[Publishing]{id="book/tdk/publishing"}
+- :docs-link[Advanced Features]{id="book/advanced_features"}
+  - :docs-link[Permissions]{id="book/advanced_features/permissions"}
+  - :docs-link[GUI vs Stateless Automation]{id="book/advanced_features/gui_vs_stateless"}
+  - :docs-link[Hubs and Packs]{id="book/advanced_features/hubs_and_packs"}
+  - :docs-link[Migrating Projects]{id="book/advanced_features/import_export"}
+- :docs-link[Final Project: A Task Application]{id="book/final_project"}
+  - :docs-link[Defining Data Structures]{id="book/final_project/defining_data_structures"}
+  - :docs-link[Building the Backend]{id="book/final_project/building_backend"}
+  - :docs-link[Building the Frontend]{id="book/final_project/building_frontend"}
