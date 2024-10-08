@@ -93,10 +93,29 @@ Ultimately, all loops will repeat until a particular condition is met but as you
 
 ### Count Controlled Loops
 
-The easiest type of loop to understand is a count controlled loop, this is a loop that will repeat {x} times. The most obvious example of this is the :docs-link[Repeat]{id="Repeat" type="Action"} action which allows you to specify a repeat number and any actions nested underneath the Repeat action will be repeated that many times. This can be useful in scenarios where you know you need to do something a definitive number of times.
+The easiest type of loop to understand is a count controlled loop, this is a loop that will repeat _x_ number of times. The most obvious example of this is the :docs-link[Repeat]{id="Repeat" type="Action"} action which allows you to specify a repeat number and any actions nested underneath the Repeat action will be repeated that many times. This can be useful in scenarios where you know you need to do something a definitive number of times.
+
+:video{src="/src/assets/book/repeat_action.webm"}
 
 ### Condition Controlled Loops
 
+Another kind of loop that you will come across is the condition controlled loop, this is a very versatile type of loop as you can come up with the condition yourself. If the condition is true, it would perform another iteration of the loop, if the condition is false, it will not perform another iteration and it will move on to the next task.
+
+With a condition controlled loop, you can say "Repeat this logic until something changes" and that is a very common pattern across the platform. You can use a condition controlled loop in an automation Activity and Workflow as well as in IPL. Let's take a look at how each of those scenarios might work.
+
+First up, a condition controlled loop in an Activity, we'll use the :docs-link[While]{id="While" type="Action"} action to construct this loop.
+
+
 ### Collection Controlled Loops
 
+The last type of loop, but arguably the most common, is a collection controller loop and this is a loop that iterates over a collection of data such as a list of values or a table of rows, yielding each value or row as it loops. Once the loop has yielded all values from a collection, it will complete the loop and move on.
+
+The common name for an action that iterates over a collection is a "For Each" action, i.e. for each item in this collection, do something! There are three For Each actions within the automation side of the platform and these are:
+- :docs-link[For Each]{id="ForEach" type="Action"} - Iterates over a `List` of values
+- :docs-link[For Each Row]{id="ForEachRow" type="Action"} - Iterates over a table, yielding each row
+- :docs-link[For Each JSON Object]{id="ForEachJSONObject" type="Action"} - Iterates over a JSON array, returning each inner JSON value
+
 ### Early Exit from Loops
+
+There are times when you wish to exit early from a loop, i.e. you might be searching for something in each row of a table and once you have found it you no longer need to search.
+This is usually only necessary for collection and count controlled loops as with condition controlled loops you can just change the condition yourself so it stops iterating. For these instances, there is a handy action called :docs-link[Exit Loop]{id="ExitLoop" type="Action"} which takes the `Action ID` of the looping action you wish to, this is how the exit loop action knows which looping action you want to exit from.
