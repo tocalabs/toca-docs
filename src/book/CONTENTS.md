@@ -8,7 +8,7 @@
   - :docs-link[Hello, TDK!]{id="book/getting_started/hello_tdk"}
 - :docs-link[Programming a Guessing game]{id="book/guessing_game"}
 - :docs-link[Common Programming Concepts]{id="book/programming_concepts"}
-  - :docs-link[Datachips and Variables]{id="book/programming_concepts/variables"}
+  - :docs-link[Datachips and Variables]{id="book/programming_concepts/datachips_and_variables"}
   - :docs-link[Data Types]{id="book/programming_concepts/data_types"}
   - :docs-link[Control Flow]{id="book/programming_concepts/control_flow"}
 - :docs-link[Using Tables to Structure Related Data]{id="book/structure_related_data"}
