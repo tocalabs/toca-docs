@@ -52,3 +52,5 @@ You can embed videos into docs using the below syntax. The videos are handled na
 ```markdown
 :video{src="/src/assets/video.mpeg"}
 ```
+
+🚀
