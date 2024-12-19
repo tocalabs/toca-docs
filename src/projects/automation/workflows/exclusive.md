@@ -23,11 +23,13 @@ There are several key operators you can use to create your conditions:
 
 Additionally, brackets `( )` can be used to group conditions together.
 
+> Any string/text values that are used in an Exclusive condition must be wrapped in double quotes, even if it is a datachip representing a string.
+
 ## Examples
 
 The example below checks if a datachip is equal to "failed".
 
-:datachip-variable[Status]{type="String"} == "failed"
+":datachip-variable[Status]{type="String"}" == "failed"
 
 The example below checks if a datachip is less than 10.
 
@@ -39,4 +41,4 @@ The example below checks if a datachip is less than 10 and the activity did not 
 
 The example below checks if a datachip is either equal to "JSON" or if the datachip is equal to "HTML".
 
-:datachip-variable[ContentType]{type="String"} == "JSON" || :datachip-variable[ContentType]{type="String"} == "HTML"
+":datachip-variable[ContentType]{type="String"}" == "JSON" || ":datachip-variable[ContentType]{type="String"}" == "HTML"
