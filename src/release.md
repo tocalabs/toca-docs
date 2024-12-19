@@ -1,68 +1,51 @@
-# 7.8 - Release Notes
+# 7.9 - Release Notes
+
+This is a small incremental release on top of the 7.8 release with a focus on bug fixes, improved error messages and performance.
 
 ## What's New
 
 ### General
 
-#### Table Interface
+#### Job Queues Explained
 
-Further to the Datastore design changes introduced in the :docs-link[7.6]{id="releases/7_6"} release, Tables themselves have had some extra redesign work. You can now edit rows and cells in place as well as editing multiple rows in one go. The way relational data is displayed has also been significantly improved so that you can directly view related data without having to navigate away from your existing table.
+If you run a Workflow and your job is in the "Queued" state, you can now hover over the spinning queued icon and you will receive an explanation of why your job is queued.
 
-![Table Redesign](/src/assets/table_redesign.png)
+![Job Queue Explanation](/src/assets/releases/queued_job.png)
 
-#### Reporting Improvements
+#### App Error Levels
 
-An improvement has been made to the queries you can perform in Reports, you can now filter your reports by looking for certain inputs and outputs to a workflow. This is especially useful if you are trying to find all workflows that ran with an input of a particular value. You can now also query for any workflows that contain a failed activity, this can be useful when trying to identify failures that might otherwise be obscured.
+Once an app is deployed, there is always the possibility of errors being thrown when you attempt to fetch data from datachips. This could be because the permissions have changed and a user no longer has access to see the data or maybe the table being referenced in a Repeating Layout has been deleted. Previous to the 7.9 release, the App user would get a generic error message but now you can control how granular the error messages are for the end user. This new option can be found in App -> Settings -> Misc .
 
-Additionally, you can now re-run and cancel multiple jobs at once.
+![App Error Levels](/src/assets/releases/app_error_levels.png)
 
-![Report Query Improvements](/src/assets/reporting_query_changes.png)
+#### Error Messaging
 
-#### Views
-
-You can now create Views within a Datastore, a View allows you to build a read-only table based on a static query, where you can also include columns from other tables. Head over to the Datastore to create your first View and read more about them there.
-
-![Creating a View](/src/assets/views_release.png)
-
-
-#### The Handbook
-
-The Handbook is a new documentation resource built into the platform that guides you through common concepts, examples and advanced topics. Whether you're a newcomer to Toca or a veteran of the low-code arts, the Handbook will almost certainly contain something useful to you!
-
-![Handbook Documentation](/src/assets/handbook_release.png)
-
-### Automation
-
-#### Recovery Workflows
-
-You can now set up workflows that will automatically trigger if a Workflow fails. This will run immediately after the Workflow runs (even if other Workflows are queued up) and can be designed to either recover from the failure or log any errors. The recovery workflow will also have some default inputs injected into it such as the Error Message for why the original Workflow failed as well as the name of the failed Workflow. These values can be useful for logging any errors that are encountered. Head over to the settings of a Workflow to configure your first Recovery Workflow.
-
-This new feature includes two additional actions which are :docs-link[Re-Run Jobs]{id="ReRunJobs" type="Action"} which allows you to pass in a JobId (which is automatically injected as an input into the a Recovery Workflow) and rerun a job. There is also a new :docs-link[Run Workflow]{id="RunWorkflow" type="Action"} action which allows you to trigger a Workflow from an action, as well as providing the inputs for the Workflow.
-
-![Recovery Workflow](/src/assets/recovery_workflow.png)
-
-### Apps
-
-#### Map Components
-
-There have been several improvements made to the existing :docs-link[Open Street Map]{id="d6aff036-ccf6-4105-ae13-b76f8c003b55" type="AppComponent"} App Component. You can now lassoo a series of map markers as well as driving the map markers on the component from a table.
-
-We have also released the first version of a :docs-link[Google Maps]{id="6dae6856-0d25-456a-910c-c9707d22b4d5" type ="AppComponent"} App Component which is an integration of Google Maps. It behaves similarly to Open Street Maps but has a few additional options but you cannot do things such as lassoo an area of markers.
-
-![Map Components](/src/assets/map_components_release.png)
+The error messages returned from particular areas of the platform have been improved to be more clear and more instructive on how to resolve the issue encountered.
+The two areas which have been focussed on for this has been in the App Designer and then when adding Identities. We recognise these as two places where you are most likely to come across an issue so these have been our starting point for improving the error messages across the platform.
 
 ## Bug Fixes
 
 A number of bug fixes were included in this release across the platform.
+There was a particular focus on addressing bugs relating to perceived quality of the product.
+
+Some noteworthy fixes include:
+- Deprecated Identity Providers can now be reenabled
+- New versions of TDK Components can now be created from any previous version, not just the latest version
+- Updating default Activity input values no longer requires a refresh of your page
+- App Slugs can now be reused after an app with the slug has been undeployed
+- You can now rename Datastores
+- You can now query job reports based on the new trigger type of _Recovery Workflow_
 
 > Contact <support@toca.io> for a full list of bug fixes included within this release.
 
 ## Deprecated
 
-No functionality has been deprecated in this release.
+- The Dynamic Services feature has been sunsetted and therefore removed from the Admin section of the platform.
+- You can no longer download the activity console as a CSV
 
 ## Previous Releases
 
+- :docs-link[7.8]{id="releases/7_8"}
 - :docs-link[7.7]{id="releases/7_7"}
 - :docs-link[7.6]{id="releases/7_6"}
 - :docs-link[7.5]{id="releases/7_5"}
