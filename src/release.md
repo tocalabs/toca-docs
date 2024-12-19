@@ -1,61 +1,51 @@
-# 7.5 - Release Notes
-__Thursday 28th March 2024__
+# 7.9 - Release Notes
 
-### What's New
+This is a small incremental release on top of the 7.8 release with a focus on bug fixes, improved error messages and performance.
 
-#### "Subscribe to changes" in apps
+## What's New
 
-_Subscribe to changes_ is a new feature in Apps that replaces polling. Previously, if you wanted data to update on your app page you would set a polling interval so that the data was refreshed at a frequent interval. This had limitations such as only being able to set a minimum interval of 1 second and also it could result in your App doing a lot more work than it had to.
-This new feature means that your App page will now be notified when data has been updated or workflow results have been returned. This allows your App to update automatically as soon as the data has updated and means that your app users see the data update in real time and also your App will be more efficient as it is only making updates when it needs to. 
-This will work with the following data sources:
-1. Any datastore variable, including tables
-2. Results from workflows that have been run via an App
+### General
 
-> You will not need to make any changes to start using this feature, App components which previously had configured polling will now automatically Subscribe to changes.
+#### Job Queues Explained
 
-Look out for this feature when adding a datasource to an App component!
+If you run a Workflow and your job is in the "Queued" state, you can now hover over the spinning queued icon and you will receive an explanation of why your job is queued.
 
-![Subscribe to changes](/src/assets/subscribe_to_changes.png)
+![Job Queue Explanation](/src/assets/releases/queued_job.png)
 
-#### Documentation across the platform
+#### App Error Levels
 
-The platform now comes with built in documentation so you can learn about features and functionality without ever having to leave the application. This includes documentation within the platform itself, usually available by selecting the little `( i )` information icon next to entities. It also includes documentation for actions, app components, app actions and connectors.
+Once an app is deployed, there is always the possibility of errors being thrown when you attempt to fetch data from datachips. This could be because the permissions have changed and a user no longer has access to see the data or maybe the table being referenced in a Repeating Layout has been deleted. Previous to the 7.9 release, the App user would get a generic error message but now you can control how granular the error messages are for the end user. This new option can be found in App -> Settings -> Misc .
 
-This also applies to when you are creating new entities within the Toca Development Kit, you are now required to add documentation before submitting your component for review. This ensures that all entities will continue to be documented.
+![App Error Levels](/src/assets/releases/app_error_levels.png)
 
-The platform documentation is also hosted in [GitHub](https://github.com/tocalabs/toca-docs) and this is a public repository so you are welcome to browse the documentation from there and even contribute if you wish to.
+#### Error Messaging
 
-Keep your eyes peeled for the info icon that signifies documentation!
+The error messages returned from particular areas of the platform have been improved to be more clear and more instructive on how to resolve the issue encountered.
+The two areas which have been focussed on for this has been in the App Designer and then when adding Identities. We recognise these as two places where you are most likely to come across an issue so these have been our starting point for improving the error messages across the platform.
 
-![Documentation Example](/src/assets/docs_example.png)
+## Bug Fixes
 
-#### Export datastore tables without the data
+A number of bug fixes were included in this release across the platform.
+There was a particular focus on addressing bugs relating to perceived quality of the product.
 
-A quality of life improvement to the Export feature, you can now choose to export the tables without any rows in them, this will still export the table definition so that the column definitions will be maintained but will not export any of the rows within the tables. This is useful if the tables contain data that is only going to be overwritten anyway or if your tables contain sensitive data.
-
-The new option will appear at the end of the Export options.
-
-![Export No Data option](/src/assets/export_no_data.png)
-
-#### Transfer table data
-
-There is now a tool available within the datastore view that will allow you  to transfer data from one table in a datastore to another table in a datastore. This is useful when you are migrating data between projects or copying data. This will also work across different datastores, so no need for your tables to be within the same datastore. 
-
-> You can also use this tool to quickly clear a table by setting the target and source table as the same and ticking the option to wipe the table before migrating the data!
-
-![Data Transfer tool](/src/assets/data_transfer.png)
-
-
-### Bug Fixes
-
-Bug fixes mainly covered the following themes:
-- Import & Export
-- Performance
-- Running workflows
+Some noteworthy fixes include:
+- Deprecated Identity Providers can now be reenabled
+- New versions of TDK Components can now be created from any previous version, not just the latest version
+- Updating default Activity input values no longer requires a refresh of your page
+- App Slugs can now be reused after an app with the slug has been undeployed
+- You can now rename Datastores
+- You can now query job reports based on the new trigger type of _Recovery Workflow_
 
 > Contact <support@toca.io> for a full list of bug fixes included within this release.
 
+## Deprecated
 
-### Deprecated
+- The Dynamic Services feature has been sunsetted and therefore removed from the Admin section of the platform.
+- You can no longer download the activity console as a CSV
 
-- The option to set up polling within Apps when retrieving data from datastores has been removed as this has been superseded by the new "Subscribe to changes" feature. App components that used this option have been migrated to use the "Subscribe to changes" feature as part of this version.
+## Previous Releases
+
+- :docs-link[7.8]{id="releases/7_8"}
+- :docs-link[7.7]{id="releases/7_7"}
+- :docs-link[7.6]{id="releases/7_6"}
+- :docs-link[7.5]{id="releases/7_5"}
