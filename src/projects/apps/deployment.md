@@ -2,7 +2,7 @@
 
 App deployment is the process of taking your app pages and their designs and building them into a single web application that a user can visit in their browser.
 
-Your app will be built and then hosted for you either on the current platform (this is known as the "Default Gateway") or on an additional :docs-link[App Gateway]{id="admin/app_gateway"}. This will include setting up all the necessary routing between pages and authentication if appropriate.
+Your app will be built and then hosted for you either on the current platform (this is known as the "Default Gateway") or on an additional :docs-link[App Gateway]{id="admin/app_gateways"}. This will include setting up all the necessary routing between pages and authentication if appropriate.
 
 You can deploy any version of your Application and you can customise the `slug` your App is hosted on, you can deploy an App to multiple slugs. If you have an App Gateway connected to your platform then you can deploy the same App multiple times under different URLs.
 
