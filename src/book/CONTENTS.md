@@ -26,6 +26,9 @@
   - :docs-link[Unrecoverable Errors]{id="book/error_handling/unrecoverable_errors"}
   - :docs-link[Recoverable Errors]{id="book/error_handling/recoverable_errors"}
   - :docs-link[To fail or not to fail?]{id="book/error_handling/fail_or_not"}
+- :docs-link[Auditing your Automation with Reporting]{id="book/auditing_automation"}
+  - :docs-link[Building Reports]{id="book/reporting/building_reports"}
+  - :docs-link[Reporting Dashboards]{id="book/reporting/reporting_dashboards"}
 - :docs-link[TDK: Extending the Platform]{id="book/tdk"}
   - :docs-link[Building]{id="book/tdk/building"}
   - :docs-link[Deploying]{id="book/tdk/deploying"}
