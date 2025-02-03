@@ -45,7 +45,7 @@ You can import a `po` file (see below for a description of this type of file) or
 When importing a file new translations will be added by key, existing translations will be overwritten. You will be prompted to confirm where existing translations are being modified.
 
 ## Exporting `pot`, `po` and `csv` files
-`pot` and `po` files are a [standard way of handling translations in applications](https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html"). `csv` is a basic format for tabular data.
+`pot` and `po` files are a [standard way of handling translations in applications](https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html). `csv` is a basic format for tabular data.
 * A `po` file (Portable Object) contains 1 or more strings for a single language (when exporting you will need to pick a language). The file will contain all the strings for that language from the selected tables.
 * A `pot` file (Portable Object Template) is a template, containing all the strings from the selected tables with the text from your default language, and is intended to be used by a translation service to produce `po` files (which you can them import).
 * A `csv` file (Comma Separated Values) is a simple table data format. This `csv` will contain a column for the `key`, each of the selected languages, and the `id` of the translation table. It will contain a row for for every translation in the selected tables.
