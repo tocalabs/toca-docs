@@ -5,7 +5,7 @@ Apps can be translated into multiple languages, automatically picking the text t
 ## Multilingual in a nutshell
 * Translations are stored in translation tables. Your app may have 1 or many tables - if you use the wizard then translation tables will be associated with specific pages or block (otherwise they're just associated with the app).
 * Each translation has a unique key (within the table) and a separate text field for each configured language.
-* Translations are applied in your app using translation datachips in your app components (or IPL). For example, if you have a `Card` component you would replace the text in the title with a datachip eg :datachip-variable[my_key]{type="String"}.
+* Translations are applied in your app using translation datachips in your app components (or IPL). For example, if you have a :docs-link[Card component]{id="56974164-6da1-4aea-af7b-25a56a8076b3" type="AppComponent"} you would replace the text in the title with a datachip eg :datachip-variable[my_key]{type="String"}.
 * Once deployed the app will attempt to identify the user's language (the user's browser will be configured with one). If the language is supported we will automatically serve the correct text. If we don't support that language, we will instead use the app's default language.
 
 ## Getting started
@@ -45,7 +45,7 @@ You can import a `po` file (see below for a description of this type of file) or
 When importing a file new translations will be added by key, existing translations will be overwritten. You will be prompted to confirm where existing translations are being modified.
 
 ## Exporting `pot`, `po` and `csv` files
-`pot` and `po` files are a standard way of handling translations in applications. `csv` is a basic format for tabular data.
+`pot` and `po` files are a [standard way of handling translations in applications](https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html"). `csv` is a basic format for tabular data.
 * A `po` file (Portable Object) contains 1 or more strings for a single language (when exporting you will need to pick a language). The file will contain all the strings for that language from the selected tables.
 * A `pot` file (Portable Object Template) is a template, containing all the strings from the selected tables with the text from your default language, and is intended to be used by a translation service to produce `po` files (which you can them import).
 * A `csv` file (Comma Separated Values) is a simple table data format. This `csv` will contain a column for the `key`, each of the selected languages, and the `id` of the translation table. It will contain a row for for every translation in the selected tables.
