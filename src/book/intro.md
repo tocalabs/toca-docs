@@ -29,3 +29,8 @@ By the end of this book, you'll be able to:
 ## How to use this book
 
 This book is designed to be a hands-on learning experience.  Each chapter will introduce new concepts and provide practical examples.  We encourage you to follow along with the examples and experiment with Toca's features as you learn.
+
+# Contributing
+This book is open source!  If you find any errors or have suggestions for improvements, please feel free to [contribute](https://github.com/tocalabs/toca-docs).
+
+Let's embark on this exciting journey of building amazing applications with Toca!
