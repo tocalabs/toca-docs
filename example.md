@@ -1,4 +1,7 @@
-This is an example of a page of documentation. Start with a paragraph explaining general description of the feature/concept. You don't need to include a title - this will be handled in the UI. You can use all standard markdown:
+# Title
+
+This is an example of a page of documentation. Start with a paragraph explaining general description of the feature/concept. Your filename should be representative of the subject, with underscores instead of spaces (eg. "How to use" -> "how_to_use.md"). 
+All standard markdown is available:
 
 ## Heading (h2)
 ### Subheading (h3)
