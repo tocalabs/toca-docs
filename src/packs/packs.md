@@ -16,7 +16,7 @@ The distribution of packs are conducted via Hubs. Once connected to a Hub, a Toc
 
 A Toca platform can connect to one or more Hubs, allowing you to connect to the default Global Hub as well as private Hubs which might contain packs which have been built internally. A connection to a Hub is referred to as a :docs-link[Feed]{id="admin/feeds"}, which can be configured by a platform Admin user.
 
-![Possible Hub Configuration](/src/assets/hub_arrangements.md)
+![Possible Hub Configuration](/src/assets/hub_arrangements.png)
 
 A Hub can be thought of as a remote repository which your Toca platform connects to, if you are familiar with programming then this is similar to the `pip` package manager in Python, `NPM` in JavaScript or `NuGet` in .NET.
 
