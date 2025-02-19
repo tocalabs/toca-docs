@@ -7,7 +7,11 @@ Imagine you want to store some data about your users, we want to store:
 - Email address
 - Profile picture
 - Date of Birth
--
+
+We need to create a table with a column for each of these properties and we can leverage proper data types for each one.
+So for a name and email address we can use the `Text` type in those columns, then for storing the profile picture we'll use an `Image` type and lastly for the date of birth, we can leverage the `Date` type. This allows us to store our data for each user in it's most usable form and means we don't have to go and convert any data to store it in the table.
+
+So, our table will then look like the following:
 
 | Id | Name | Email address | Profile picture | Date of birth |
 |:-- | :-- | :-- | :-- | :-- |
