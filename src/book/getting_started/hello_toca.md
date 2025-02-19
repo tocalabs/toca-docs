@@ -14,3 +14,5 @@ You can make your way around Toca through the Navbar that is always on the left 
 - Admin: _If you are an Admin user, you can manage and configure your Toca platform from here_
 
 Typically you'll spend most of your time in the Projects and Resources sections when you are developing new projects. Once you move on to testing or maintaing your projects, you'll find yourself spending more time in the Reports section as you'll be checking your Workflows are all running through as expected.
+
+![A screenshot of the Toca platform](/src/assets/book/hello_toca.png)
