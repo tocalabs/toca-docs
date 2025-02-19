@@ -19,4 +19,11 @@ So, our table will then look like the following:
 | 2 | Tim Berners-Lee | tim@worldwideweb.com | 🌐 | `1955-06-08` |
 | 3 | Linus Torvalds | linus@linux.net | 🐧 | `1969-12-28` |
 
-All tables in Toca contain an `Id` column of type `UUID`, this means that there will always be a column containing unique values.
+> **Note** 📝
+> All tables in Toca contain an `Id` column of type `UUID`, this means that there will always be a column containing unique values.
+
+This is great, but in a real world application, the different data we store tends to be related. Think of our table of users, we might also want to store their address, their contact information and their previous orders.
+
+We _could_ create one table that contains all of this data, but that could end up being an incredibly big table which becomes very difficult to manage and maintain over time. Also, how would we represent many previous orders against a single user if it all lived in one table? It would result in an unwiedly table.
+
+It would be _much_ better if we could store the data about our users, their addresses, their previous orders and their contact information in separate tables and then just link them to each other.
