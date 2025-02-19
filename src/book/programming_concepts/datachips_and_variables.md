@@ -16,7 +16,7 @@ A datachip can represent either a static result or a variable and we'll learn th
 
 ### Where you can use them
 
-You can use a datachip in the platform anywhere you see a `{ x }` in an input field. Once clicked, you can then choose where to get your datachip from. You can typically use a datachip in any form of input field that you come across in both Automation and Apps.
+You can use a datachip in the platform anywhere you see a `{x}` in an input field. Once clicked, you can then choose where to get your datachip from. You can typically use a datachip in any form of input field that you come across in both Automation and Apps.
 
 Let's take a closer look at where you can use datachips and also where they can come from!
 
@@ -31,7 +31,9 @@ In automation activities, you can select a datachip from the following places:
 - Action results - Use an output from any Action which precedes the one you are selecting a datachip for
 
 In Workflows you can select datachips from the following places:
-- Datastores -
+- Datastores
+- Workflow Inputs
+- Activity Outputs
 
 #### Apps
 

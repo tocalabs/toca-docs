@@ -13,8 +13,10 @@
   - :docs-link[Control Flow]{id="book/programming_concepts/control_flow"}
 - :docs-link[Using Tables to Structure Related Data]{id="book/structure_related_data"}
   - :docs-link[Creating Tables]{id="book/structure_related_data/creating_tables"}
-  - :docs-link[Linking Data]{id="book/structure_related_data/linking_data"}
-  - :docs-link[Using Related Data]{id="book/structure_related_data/using_linked_data"}
+  - :docs-link[Linking Data]{id="book/structure_related_data/linking_data"}
+  - :docs-link[Querying Data]{id="book/structure_related_data/querying_data"}
+  - :docs-link[Views]{id="book/structure_related_data/views"}
+  - :docs-link[Using Related Data]{id="book/structure_related_data/using_linked_data"}
 - :docs-link[Testing]{id="book/testing"}
   - :docs-link[Testing Automation]{id="book/testing/testing_automation"}
   - :docs-link[Testing Apps]{id="book/testing/testing_apps"}
@@ -26,6 +28,7 @@
   - :docs-link[Unrecoverable Errors]{id="book/error_handling/unrecoverable_errors"}
   - :docs-link[Recoverable Errors]{id="book/error_handling/recoverable_errors"}
   - :docs-link[To fail or not to fail?]{id="book/error_handling/fail_or_not"}
+  - :docs-link[Handling Errors in Apps]{id="book/error_handling/app_errors"}
 - :docs-link[Auditing your Automation with Reporting]{id="book/auditing_automation"}
   - :docs-link[Building Reports]{id="book/reporting/building_reports"}
   - :docs-link[Reporting Dashboards]{id="book/reporting/reporting_dashboards"}
