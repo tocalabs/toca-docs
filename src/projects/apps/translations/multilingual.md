@@ -4,9 +4,9 @@ Apps can be translated into multiple languages, automatically picking the text t
 
 ## Multilingual in a nutshell
 * Translations are stored in translation tables. Your app may have 1 or many tables - if you use the wizard then translation tables will be associated with specific pages or block (otherwise they're just associated with the app).
-* Each translation has a unique key (within the table) and a separate text field for each configured language.
+* Each translation has a unique key (within the table) and a separate text field for each :docs-link[configured language]{id="projects/apps/translations/languages"}.
 * Translations are applied in your app using translation datachips in your app components (or IPL). For example, if you have a :docs-link[Card component]{id="56974164-6da1-4aea-af7b-25a56a8076b3" type="AppComponent"} you would replace the text in the title with a datachip eg :datachip-variable[my_key]{type="String"}.
-* Once deployed the app will attempt to identify the user's language (the user's browser will be configured with one). If the language is supported we will automatically serve the correct text. If we don't support that language, we will instead use the app's default language.
+* Once deployed the app will attempt to identify the user's :docs-link[language]{id="projects/apps/translations/languages"} (the user's browser will be configured with one). If the language is supported we will automatically serve the correct text. If we don't support that language, we will instead use the app's default language.
 
 ## Getting started
 
@@ -15,7 +15,7 @@ To enable multilingual functionality you can either:
 * Enable it via the app `Settings` panel
 
 When enabling this functionality you will be asked to configure the following options:
-* Pick the languages you want. **You don't have to provide a exhaustive list now, you can change it later** but you do need to pick at least 1 language.
+* Pick the :docs-link[languages]{id="projects/apps/translations/languages"} you want. **You don't have to provide a exhaustive list now, you can change it later** but you do need to pick at least 1 language.
 * Pick the default language for the app. This should be the language you have designed (or will design) your app pages in, and will be used as the fallback if we cannot resolve to another language.
 * A `translation table` name. Translation tables are where translations will be stored, and we will get you started by creating a table for general translations. Leave blank to skip creating a table.
 
