@@ -39,7 +39,6 @@ Your In Page Logic flows are now much easier to navigate with a minimap that can
 
 #### Data Processor Generative AI
 
-
 **Explain Flow**
 
 **Build Assistant Flow**
@@ -68,7 +67,7 @@ The :docs-link[Send Email]{id="SendEmail", type="Action"} (v2+ onwards) action n
 
 #### Pipeline Storage Improvements
 
-Pipeline/Reporting Data is now stored much more efficiently, leading to it taking up less disk space when it is stored and additionally taking less long to delete.
+Pipeline/Reporting Data is now stored much more efficiently, leading to it taking up less disk space when it is stored and additionally it should be much quicker to delete this data.
 
 ## Bug Fixes
 
