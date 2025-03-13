@@ -22,9 +22,12 @@ So, our table will then look like the following:
 > **Note** 📝
 > All tables in Toca contain an `Id` column of type `UUID`, this means that there will always be a column containing unique values. This is used behind the scenes for certain performance optimisations as well as providing a column that is guaranteed to be unique which is handy for identifying individual rows.
 
+## Tables in the real world
+
 This is great, but in a real world application, the different data we store tends to be related. Think of our table of users, we might also want to store their address, their contact information and their previous orders.
 
 We _could_ create one table that contains all of this data, but that could end up being an incredibly big table which becomes very difficult to manage and maintain over time. Also, how would we represent many previous orders against a single user if it all lived in one table? It would result in an unwiedly table.
+
 
 | Id | Name | Email address | Profile picture | Date of birth | Address Line 1 | Address Line 2 | City | PostCode / ZipCode | Order ID | Product | Category | Amount (GBP) |
 |:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -39,5 +42,7 @@ We _could_ create one table that contains all of this data, but that could end u
 
 
 We can see how storing all of our data for our project in a single table leads to duplicated data, a large table and it doesn't actually represent how we think about this data in real life.
+
+## Better ways of storing the data
 
 It would be _much_ better if we could store the data about our users, their addresses, their previous orders and their contact information in separate tables and then just link them to each other. Fortunately, this is where **Table Relationships** and **Views** come in handy! This features allow us to express our data in a way that actually makes sense and mirrors the real life representation of data as closely as possible. This means we don't have to perform data transforming gymnastics just to view our table data or to update it.
