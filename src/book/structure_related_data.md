@@ -56,14 +56,14 @@ Following the above diagram, our tables now look like this:
 
 **Users Table**
 | Id | Name | Email address | Profile picture | Date of birth | Associated Address |
-|:-- | :-- | :-- | :-- | :-- |
+| :-- | :-- | :-- | :-- | :-- | :-- |
 | 1 | Alan Turing | alan@computers.inc | 💻 | `1912-06-12` | 50 |
 | 2 | Tim Berners-Lee | tim@worldwideweb.com | 🌐 | `1955-06-08` | 42 |
 | 3 | Linus Torvalds | linus@linux.net | 🐧 | `1969-12-28` | 64 |
 
 **Address Table**
-| Id | | Address Line 1 | Address Line 2 | City | PostCode / ZipCode |
-|:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Id | Address Line 1 | Address Line 2 | City | PostCode / ZipCode |
+| :-- | :-- | :-- | :-- | :-- |
 | 50 | Bletchley Park | Milton Keynes | Buckinghamshire |  MK3 6EB |
 | 42 | CERN 1211 | Esplanade des Particules 1 | Geneva | 1217 |
 | 64 | University of Helsinki | Yliopistonkatu 4 | Helsinki | 00100 |
