@@ -45,4 +45,43 @@ We can see how storing all of our data for our project in a single table leads t
 
 ## Better ways of storing the data
 
-It would be _much_ better if we could store the data about our users, their addresses, their previous orders and their contact information in separate tables and then just link them to each other. Fortunately, this is where **Table Relationships** and **Views** come in handy! This features allow us to express our data in a way that actually makes sense and mirrors the real life representation of data as closely as possible. This means we don't have to perform data transforming gymnastics just to view our table data or to update it.
+It would be _much_ better if we could store the data about our users, their addresses, their previous orders and their contact information in separate tables and then just link them to each other. Fortunately, this is where **Table Relationships** and **Views** come in handy! These features allow us to express our data in a way that actually makes sense and mirrors the real life representation of data as closely as possible. This means we don't have to perform data transforming gymnastics just to view our table data or to update it.
+
+
+Let's remodel our data, but using separate tables to store information about our users, their addresses and their orders.
+
+![Remodelled Tables to use Table Relationships](/src/assets/book/remodelled_tables.png)
+
+Following the above diagram, our tables now look like this:
+
+**Users Table**
+| Id | Name | Email address | Profile picture | Date of birth | Associated Address |
+|:-- | :-- | :-- | :-- | :-- |
+| 1 | Alan Turing | alan@computers.inc | 💻 | `1912-06-12` | 50 |
+| 2 | Tim Berners-Lee | tim@worldwideweb.com | 🌐 | `1955-06-08` | 42 |
+| 3 | Linus Torvalds | linus@linux.net | 🐧 | `1969-12-28` | 64 |
+
+**Address Table**
+| Id | | Address Line 1 | Address Line 2 | City | PostCode / ZipCode |
+|:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| 50 | Bletchley Park | Milton Keynes | Buckinghamshire |  MK3 6EB |
+| 42 | CERN 1211 | Esplanade des Particules 1 | Geneva | 1217 |
+| 64 | University of Helsinki | Yliopistonkatu 4 | Helsinki | 00100 |
+
+**Orders Table**
+| Id |  Product | Category | Amount (GBP) | Associated User |
+|:-- | :-- | :-- | :-- | :-- |
+| 987 | Engima Cracking Kit | Electronics | 99.99 | 1 |
+| 988 | Turing Machine Parts | Electronics | 25.50 | 1 |
+| 546 | Guide to the Internet | Books | 74.99 | 2 |
+| 547 | How to build your first website | Books | 24.99 | 2 |
+| 548 | Server for website | Computing Hardware | 24.99 | 2 |
+| 321 | Guide to Microsoft Windows | Books | 0.99 | 3 |
+| 322 | Guide to MacOS | Books | 1.99 | 3 |
+| 322 | How to build an Operating System | Books | 5.99 | 3 |
+
+
+
+We can see that our data is much easier to work with, we don't have duplicate data appearing and the table structures are much more straight forward.
+
+In the next few pages we'll take a look at how we would actually implement something like the above in Toca!
