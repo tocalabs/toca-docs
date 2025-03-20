@@ -84,7 +84,7 @@ The Explain feature will analyse a data pipeline that has been built within the 
 
 **Build Assistant Flow**
 
-The build assistant allows you to give a prompt and insert datachips if you need to reference data coming from elsewhere and then the assistant will generate the pipeline for you, streaming each step one at a time. You can access this by opening
+The build assistant allows you to give a prompt and insert datachips if you need to reference data coming from elsewhere and then the assistant will generate the pipeline for you, streaming each step one at a time.
 
 ![Build flow example](/src/assets/releases/7_10/build_flow.gif)
 
