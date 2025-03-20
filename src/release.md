@@ -68,8 +68,6 @@ The Stepper component is a component designed for making forms with lots of part
 
 The calendar component has had a complete rework and now not only has better styling and configuration options but additionally now has many more IPL Events that you can hook into to customise the behaviour of the component.
 
----
-
 ### Automation
 
 #### Data Processor Generative AI
@@ -87,6 +85,8 @@ The Explain feature will analyse a data pipeline that has been built within the 
 **Build Assistant Flow**
 
 The build assistant allows you to give a prompt and insert datachips if you need to reference data coming from elsewhere and then the assistant will generate the pipeline for you, streaming each step one at a time. You can access this by opening
+
+![Build flow example](/src/assets/releases/7_10/build_flow.gif)
 
 > _This is an experimental feature_ 🧪
 >
