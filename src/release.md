@@ -52,6 +52,8 @@ We have released a series of new App Components in this release which can be use
 
 The carousel component allows you to build a slideshow for cycling through a series of content.
 
+![Carousel example](/src/assets/releases/7_10/carousel.gif)
+
 **Custom Button**
 
 The new Custom Button allows you to define a clickable area and then place anything inside that area, this could be text and an emoji or an image or anything else for that matter! This allows you to build completely bespoke interactive buttons into your App.
@@ -59,6 +61,8 @@ The new Custom Button allows you to define a clickable area and then place anyth
 **Stepper**
 
 The Stepper component is a component designed for making forms with lots of parts to them more intuitive and clear to the user. It allows you to design a form that guides your App user's through a form in the order that you want.
+
+![Stepper component example](/src/assets/releases/7_10/stepper_component.gif)
 
 **Calendar Component**
 
@@ -108,7 +112,7 @@ Well, now you no longer have to! There is a new button in the Workflow Designer 
 
 #### Email Action Enhancements
 
-The :docs-link[Send Email]{id="SendEmail", type="Action"} (v2+ onwards) action now allows you to send an email to multiple people, cc, bcc and add attachments. This is a big improvement as previously you could only use the email to send an email to a single inbox and it did not support attachments or cc'ing & bcc'ing people.
+The :docs-link[Send Email]{id="SendEmail" type="Action"} (v2+ onwards) action now allows you to send an email to multiple people, cc, bcc and add attachments. This is a big improvement as previously you could only use the email to send an email to a single inbox and it did not support attachments or cc'ing & bcc'ing people.
 
 #### Workflow Minimap
 
