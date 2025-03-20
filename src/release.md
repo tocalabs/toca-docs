@@ -9,6 +9,7 @@ The theme of this release is all around productivity! The release brings in a lo
 #### Translations
 
 Multilingual Apps are now natively supported in Toca! 🌍
+
 With this new feature, you can now add support for multiple different languages in your Apps by defining translation tables and then using Translation Datachips to represent the text to be translated in the app components.
 
 ![Translations Example](/src/assets/releases/7_10/translations.gif)
@@ -63,6 +64,8 @@ The Stepper component is a component designed for making forms with lots of part
 
 The calendar component has had a complete rework and now not only has better styling and configuration options but additionally now has many more IPL Events that you can hook into to customise the behaviour of the component.
 
+---
+
 ### Automation
 
 #### Data Processor Generative AI
@@ -73,7 +76,7 @@ We are continuing to investigate Generative AI as a tool which can enhance produ
 
 **Explain Flow**
 
-The Explain feature will analyse a data pipeline that has been built within the data processor action and will return a human readable summary of what the pipeline is doing. You can access it by opening a Data Processor action that already contains steps and opening the AI panel and
+The Explain feature will analyse a data pipeline that has been built within the data processor action and will return a human readable summary of what the pipeline is doing. You can access it by opening a Data Processor action that already contains steps and selecting the "Summarise Flow" button on the right hand side. It will work best if you have run the subsequent automation that drives any inputs to hte data processor, this gives it more context to work with!
 
 ![Explain Flow Generative AI](/src/assets/releases/7_10/explain_flow.gif)
 
@@ -82,6 +85,7 @@ The Explain feature will analyse a data pipeline that has been built within the 
 The build assistant allows you to give a prompt and insert datachips if you need to reference data coming from elsewhere and then the assistant will generate the pipeline for you, streaming each step one at a time. You can access this by opening
 
 > _This is an experimental feature_ 🧪
+>
 > This feature is turned off by default but you can request this feature be turned on by reaching out to <support@toca.io>
 > The output generated here is not guaranteed to be accurate but will improve over time
 
@@ -90,7 +94,7 @@ The build assistant allows you to give a prompt and insert datachips if you need
 
 Whenever you create a Table in a Datastore, you most likely also need some automation to go along with it that will add data, update data, fetch data and delete data in your table. This pattern of automation is found in almost every automation project which contains a Datastore with tables. This feature aims to speed up the development of this Create, Read, Update and Delete (CRUD) automation.
 
-The wizard will take you through several steps, allowing you to specify what behaviour you'd like to automatically generate the automation for
+The wizard will take you through several steps, allowing you to specify what behaviour you'd like to automatically generate the automation for adding to a table, updating a table, deleting data from a table and lastly reading data from a table. It will automatically generate not only the the activities and workflows required, but also the listeners and connectors if required.
 
 ![Table CRUD Wizard](/src/assets/releases/7_10/crud_wizard.gif)
 
@@ -108,11 +112,15 @@ The :docs-link[Send Email]{id="SendEmail", type="Action"} (v2+ onwards) action n
 
 #### Workflow Minimap
 
+Much like the IPL Minimap, the Workflow Designer screen now has a minimap in the bottom right hand corner of the designer which allows you to quickly and easily zoom and move around the canvas.
+
 ### General
 
 #### Global Documentation Search
 
 Have you ever needed the documentation for something in the platform, but you're currently in the wrong part of the platform to access it? Well, this will no longer be the case! You can now search the platform's documentation from anywhere by pressing `Cmd/Ctrl + K` and this will bring up a search bar allowing you to search through all the documentation. You can additionally open the resulting documentation in a pop out window, allowing you to drag the documentation to wherever you want it and still focus on the main platform! You can also open the documentation search by hitting the 🔎 Search icon towards the bottom of the main navbar.
+
+![Global Search example](/src/assets/releases/7_10/global_search.gif)
 
 #### Pipeline Storage Improvements
 
