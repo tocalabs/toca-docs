@@ -14,7 +14,7 @@ With this new feature, you can now add support for multiple different languages 
 
 ![Translations Example](/src/assets/releases/7_10/translations.gif)
 
-An App with Translations enabled will automatically select the translation based on the locale of the browser. You can also specify a default language which is what the App will fall back to if there is no translation available for the brwoser's current locale. If you want users to be able to select their language then you can use either the Language Selector App Component or you can use the Set Language IPL Action.
+An App with Translations enabled will wutomatically select the translation based on the locale of the browser. You can also specify a default language which is what the App will fall back to if there is no translation available for the browser's current locale. If you want users to be able to select their language then you can use either the Language Selector App Component or you can use the Set Language IPL Action.
 
 Translations are bundled and built into your App, so there is no performance penalty for enabling them! 🚀
 
@@ -78,7 +78,7 @@ We are continuing to investigate Generative AI as a tool which can enhance produ
 
 **Explain Flow**
 
-The Explain feature will analyse a data pipeline that has been built within the data processor action and will return a human readable summary of what the pipeline is doing. You can access it by opening a Data Processor action that already contains steps and selecting the "Summarise Flow" button on the right hand side. It will work best if you have run the subsequent automation that drives any inputs to hte data processor, this gives it more context to work with!
+The Explain feature will analyse a data pipeline that has been built within the data processor action and will return a human readable summary of what the pipeline is doing. You can access it by opening a Data Processor action that already contains steps and selecting the "Summarise Flow" button on the right hand side. It will work best if you have run the subsequent automation that drives any inputs to the data processor, this gives it more context to work with!
 
 ![Explain Flow Generative AI](/src/assets/releases/7_10/explain_flow.gif)
 
@@ -106,7 +106,7 @@ The wizard will take you through several steps, allowing you to specify what beh
 
 Tired of rearranging your Workflow so that it looks neat and the lines are all aligned correctly?
 
-Well, now you no longer have to! There is a new button in the Workflow Designer that will automtically tidy your Workflow up for you.
+Well, now you no longer have to! There is a new button in the Workflow Designer that will automatically tidy your Workflow up for you.
 
 ![Workflow Auto Sort](/src/assets/releases/7_10/workflow_sort.gif)
 
