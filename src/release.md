@@ -14,7 +14,7 @@ With this new feature, you can now add support for multiple different languages 
 
 ![Translations Example](/src/assets/releases/7_10/translations.gif)
 
-An App with Translations enabled will wutomatically select the translation based on the locale of the browser. You can also specify a default language which is what the App will fall back to if there is no translation available for the browser's current locale. If you want users to be able to select their language then you can use either the Language Selector App Component or you can use the Set Language IPL Action.
+An App with Translations enabled will automatically select the translation based on the locale of the browser. You can also specify a default language which is what the App will fall back to if there is no translation available for the browser's current locale. If you want users to be able to select their language then you can use either the Language Selector App Component or you can use the Set Language IPL Action.
 
 Translations are bundled and built into your App, so there is no performance penalty for enabling them! 🚀
 
