@@ -25,5 +25,7 @@ The following types are available:
 You can "cast" columns from one type to another by changing the column type, however there can be some incompatibilities between types.
 For example, if you cast a timestamp to a date, you will lose all the time information that was previously saved.
 
+For `String` data types, you are able to specify the underlying :docs-link[Database Data Type]{id="resources/datastores/tables/database_data_types.md"}.
+
 Most datatypes support default values, read on for more information:
 - :docs-link[Default Values]{id="projects/automation/datastores/tables/default_values"}
