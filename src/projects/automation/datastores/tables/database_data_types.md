@@ -2,7 +2,7 @@
 Datatype customizations are available for `String` columns. A user is able to specify the database data type for a given `String` column.
 
 The data types are found and selected in the `Update Column` modal in the Datastore edit screen.
-![data_type](/src/assets/releases/8_0/datatype.png)
+![data_type](/src/assets/database_datatype.png)
 
 If a database data type supports `(n)` length, a numeric field will appear allowing the set length to be set.
 

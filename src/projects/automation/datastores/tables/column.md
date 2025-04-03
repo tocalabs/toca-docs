@@ -1,4 +1,7 @@
 # Columns
+A column is a vertical entity within a table that stores data of a specific type. Each column has a name, a data type, and optionally, constraints.
+
+Column types are specified to ensure only data of a specific type (`String`, `Number`, ...) can be inserted into the cell.
 
 ## General
 
@@ -6,7 +9,7 @@
 The text users will see as the header of the column.
 
 ### Name
-Autopopulated by default by the sanitized string in `Label`. The name cannot have spaces or special characters (replaced with underscores) and must start with a lowercase letter.
+Autopopulated by default by the sanitized string in `Label`. The name cannot have spaces or special characters (replaced with underscores) and must start with a lowercase letter or underscore.
 
 Names are the values used in queries, not the lables, so it's essential these names make sense.
 
@@ -21,7 +24,7 @@ Whether the text field is allowed to display newlines and dictates whether the `
 ### Default Value
 > Excluding `Table` types.
 
-The `Set Default Value` flag can be set to allow a default value if one is not provided.
+The `Set Default Value` flag can be set to allow a :docs-link[Default Value]{id="projects/automation/datastores/tables/default_values"} if one is not provided.
 
 It is not recommended both enabling default values and specifying `Cannot be NULL` at the same time as this may cause data entry issues due to validation.
 
@@ -36,6 +39,19 @@ The underlying :docs-link[Database Data Type]{id="projects/automation/datastores
 
 Getting the Database Data Type correct for querable/joining columns is essential for an efficient automation.
 
+### Auto Increment
+> `Number` only.
+
+Enabling this flag will increment the number for each new row inserted. The incremental number is taken from the highest value inserted so far.
+
+Example:
+
+Three records are added. The values of this column for each row would be 1, 2, 3 respectively.
+
+If a user adds another row, manually setting the value to 20, subsequent additions would start from the increment of 21.
+
+![Auto Increment](/src/assets/auto_increment.gif)
+
 ### Unique
 > Excluding `TEXT` and `LONGTEXT`.
 
@@ -48,13 +64,7 @@ It is not recommended both enabling default values and specifying a `Default Val
 
 > Note that an empty string is not the same as `NULL` and will still be valid in this condition.
 
-### Auto Increment
-> `Number` only.
+### On Delete Operation
+> `Table Relation` only.
 
-Enabling this flag will increment the number for each new row inserted. The incremental number is taken from the highest value inserted so far.
-
-Example:
-
-Three records are added. The values of this column for each row would be 1,2,3 respectively.
-
-If a user adds another row, manually setting the value to 20, subsequent additions would start from the increment of 21.
+The :docs-link[Delete Operation]{id="projects/automation/datastores/tables/delete_operation"} to take place when a row is deleted for the values of this column.
