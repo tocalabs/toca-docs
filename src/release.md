@@ -12,7 +12,8 @@ We have taken your feedback and enhanced the customizations available for use in
 #### Database Data Types
 Datatype customizations have been added for `String` columns. You are now able to specify the database data type you wish to use per column.
 You can find these data types in the `Update Column` modal in the Datastore edit screen.
-![data_type](/src/assets/releases/8_0/datatype.png)
+
+![data_type](/src/assets/database_datatype.png)
 
 ##### VARCHAR(n)
 Variable-length string with a maximum length of n (1 to 65,535 characters, depending on row size and storage).
@@ -29,26 +30,13 @@ Best for fixed-size values like codes or abbreviations.
 **LONGTEXT** – Up to 4,294,967,295 characters (4-byte length indicator).
 
 ### Table Indexes
-Indexes in MariaDB improve query performance by allowing the database engine to find data more efficiently, much like an index in a book. Instead of scanning an entire table, the database can quickly locate relevant rows. MariaDB supports multiple index types, including:
+![Add Index Example](/src/assets/add_index.gif)
 
-- Unique Indexes – Prevent duplicate values in a column.
-
-- **Hash Indexes** - Hash indexes can only be used for equality comparisons, so those using the `=` or `<=>` operators. They cannot be used for ordering, and provide no information to the optimizer on how many rows exist between two values. Hash indexes do not permit leftmost prefixing - only the whole index can be used.
-
-- **B-Tree Indexes** – B-tree indexes are used for column	comparisons using the `>`, `<=`, `=`, `>=`, <ode><</ode> or `BETWEEN` operators, as well as for `LIKE` comparisons that begin with a constant. B-tree indexes also permit leftmost prefixing or searching of rows. If the number or rows doesn't change, hash indexes occupy a fixed amount of memory, which is lower than the memory occupied by `BTREE` indexes. 
-
-- **Full-Text Indexes** – A full-text index in our database architecture is an index of type `FULLTEXT`, and it allows more options when searching for portions of text from a field.
-
-- **Composite Indexes** - Composite indexes, which involve multiple columns, can be extremely powerful when used correctly.
-    - Order Matters: In a composite index, the order of the columns matters. Place the most selective column (the one that filters out the most rows) first.
-    - Covering Indexes: A composite index that includes all the columns needed by a query is known as a covering index. Using a covering index can eliminate the
-need for the database to access the table data at all, further speeding up queries.
-
-##### Unique constraint
-Indexes support the `UNIQUE` constraint flag. This is extremely powerful when handling data that must only appear once. For example, a customer number. If, for some unforseen reason, a customer is being inserted into a database with the same customer number then this will be prevented and an exception thrown.
+Indexes improve query performance by allowing the database engine to find data more efficiently, much like an index in a book. Instead of scanning an entire table, the database can quickly locate relevant rows.
 
 You can observe and interact with indexes via the new `Index` tab in the table editor.
-![Add Index Example](/src/assets/releases/8_0/add_index.gif)
+
+Read up more on :docs-link[Indexes]{id="projects/automation/datastores/tables/index"}.
 
 ### Apps
 
