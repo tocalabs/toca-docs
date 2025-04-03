@@ -57,6 +57,8 @@ If a user adds another row, manually setting the value to 20, subsequent additio
 
 Enabling this flag will ensure that data in any row for this column can only be present once. Attempting to enter the same value into another row for this column will result in an error being thrown.
 
+An :docs-link[Index]{id="projects/automation/datastores/tables/index"} is created behind the scenes to allow for this functionality. The created index cannot be deleted from the `Indexes` tab, it must be removed by unchecking this flag in the `Update Column` modal.
+
 ### Cannot be NULL
 Enabling this flag will ensure there must be a value present upon insertion/updating.
 

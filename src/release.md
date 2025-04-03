@@ -1,11 +1,13 @@
 # 8.0 - Release Notes
 
-The theme of this release is all around productivity! The release brings in a lot of new functionality that enhances existing features within the platform, making it easier and faster to build things!
+The theme of this release is all around view ports and tables! The release brings in a lot of new functionality that enhances existing features within the platform, making it easier and faster to build things!
 
 ## What's New
 
 Tables have been given a massive production boost!
 We have taken your feedback and enhanced the customizations available for use in a user friendly, yet powerful way.
+
+---
 
 ### Table Columns
 
@@ -15,19 +17,21 @@ You can find these data types in the `Update Column` modal in the Datastore edit
 
 ![data_type](/src/assets/database_datatype.png)
 
-##### VARCHAR(n)
-Variable-length string with a maximum length of n (1 to 65,535 characters, depending on row size and storage).
-Stores only the actual length of the string, plus 1-2 bytes for length metadata.
-More efficient for short, frequently updated text fields.
+Read up more on :docs-link[Database Data Types]{id="projects/automation/datastores/tables/database_data_types"}.
 
-##### CHAR(n)
-Fixed-length string of n characters (1 to 255).
-Always occupies n bytes, padded with spaces if the string is shorter.
-Best for fixed-size values like codes or abbreviations.
+#### Delete Operations
+To help prevent orphaned data in certain situations there is the ability to include delete operations for `One-To-One` and `One-To-Many` table relationships.
+![delete_operation](/src/assets/delete_operation.png)
 
-##### TEXT Types (Used for large text storage, cannot have default values)
-**TEXT** – Up to 65,535 characters (2-byte length indicator).
-**LONGTEXT** – Up to 4,294,967,295 characters (4-byte length indicator).
+Read up more on :docs-link[Delete Operations]{id="projects/automation/datastores/tables/delete_operation"}.
+
+#### Auto Increment
+The ability to add auto-incrementing `Number` columns has been added.
+![Auto Increment](/src/assets/auto_increment.gif)
+
+Read up more on :docs-link[Columns]{id="projects/automation/datastores/tables/column"}.
+
+---
 
 ### Table Indexes
 ![Add Index Example](/src/assets/add_index.gif)
@@ -37,6 +41,8 @@ Indexes improve query performance by allowing the database engine to find data m
 You can observe and interact with indexes via the new `Index` tab in the table editor.
 
 Read up more on :docs-link[Indexes]{id="projects/automation/datastores/tables/index"}.
+
+---
 
 ### Apps
 
