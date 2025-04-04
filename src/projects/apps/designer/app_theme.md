@@ -12,6 +12,6 @@ You can customize your theme with various options
 
 **Colour Mode** - This is the general colour theme of the app. Setting Automatic will allow the browser to pick up the user's operating system theme and use that.
 
-:docs-link[**Viewport Breakpoints**]{id="projects/apps/viewport_breakpoints"} - Allows you to modify the breakpoints for when the viewport changes.
+:docs-link[**Viewport Breakpoints**]{id="projects/apps/designer/viewport_breakpoints"} - Allows you to modify the breakpoints for when the viewport changes.
 
 **Misc Options** - All other options go here, currently this only houses border radius, which is the level of rounding of elements (0px for right angled corners, with higher values providing more rounded corners)
