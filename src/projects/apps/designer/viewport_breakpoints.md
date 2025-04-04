@@ -1,6 +1,6 @@
 # Viewport Breakpoint Settings (Apps)
 
-Viewport breakpoints are used for customizing your app's responsive behaviour, together with :docs-link[Responsive Overrides]{id="projects/apps/designer/responsive"} you can ensure that your web app looks and functions well on a variety of screen sizes from mobile devices to 21:9 ultrawide displays.
+Viewport breakpoints are used for customizing your app's responsive behaviour, together with :docs-link[Responsive Overrides]{id="projects/apps/designer/responsive_apps"} you can ensure that your web app looks and functions well on a variety of screen sizes from mobile devices to 21:9 ultrawide displays.
 
 ## Breakpoint values
 
