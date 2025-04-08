@@ -4,8 +4,7 @@ Responsive web design is all about crafting websites that adapt to any screen si
 ## Getting Started
 Within the app designer we use 5 viewports, these are 'Mobile', 'Tablet', 'Laptop', 'Desktop' and 'Widescreen', these are based on default breakpoint options set within your app's theme. The size of a user's screen will determine what viewport they see, so within your app if you select the 'Mobile' viewport, you will be able to see an approximation of what your app will look like when viewed from a mobile.
 
-Many layouts which work well for a desktop computer will display poorly on a mobile phone, in a basic example, imagine a web element which has 3 square images side by side - on a standard laptop or desktop this will display fine, but on a narrow mobile phone these images could be small and hard to read.
-We could rectify this in our app by going into the mobile viewport, and then changing the behaviour so that instead of these 3 images being laid side by side, they instead show one on top of another, you would implement this using Responsive overrides.
+Desktop-centric layouts often stumble on mobile. Consider a row of three square images: perfectly viewable on a laptop but potentially too small on a narrow mobile display. Responsive overrides provide the solution. By navigating to the 'Mobile' viewport and utilizing *Responsive Overrides* you gain the power to modify the layout, transforming the side-by-side images into a stacked arrangement, thus optimizing the mobile user experience.
 
 ## Implementing Responsive Overrides or visibility
 Towards the top of properties panel of app components inside your app, you will see options relating to the visibility of the app component in the current viewport, as well as a button to enable 'Responsive overrides'.
