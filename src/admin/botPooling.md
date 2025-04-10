@@ -4,7 +4,9 @@
 
 Bot Pooling provides a mechanism to group, organize, and manage your bot resources effectively. By creating pools, you can logically segment bots based on their capabilities or intended use, streamlining assignment and utilization.
 
-Each Bot Pool is assigned a specific **Type**, which dictates the nature of the bots it can contain and influences how jobs are allocated to that pool.
+![Bot Pools](https://github.com/user-attachments/assets/98a88ded-f3f2-47f0-915b-45bebe93dcdd)
+
+Each Bot Pool is assigned a specific **Type**, which dictates the nature of the bots it can contain and influences how jobs are allocated to that pool. You can group your bots however makes sense for you, selecting all bots, or a sub-section, according to your needs.
 
 ## Key Concepts
 
