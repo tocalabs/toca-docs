@@ -4,7 +4,7 @@
 
 Bot Pooling provides a mechanism to group, organize, and manage your bot resources effectively. By creating pools, you can logically segment bots based on their capabilities or intended use, streamlining assignment and utilization.
 
-![Bot Pools](https://github.com/user-attachments/assets/98a88ded-f3f2-47f0-915b-45bebe93dcdd)
+![image](https://github.com/user-attachments/assets/107b6189-d0f2-4ed7-993d-9e314bf0148a)
 
 Each Bot Pool is assigned a specific **Type**, which dictates the nature of the bots it can contain and influences how jobs are allocated to that pool. You can group your bots however makes sense for you, selecting all bots, or a sub-section, according to your needs.
 
@@ -65,4 +65,41 @@ If a pool is no longer needed:
 
 1.  Select the Bot Pool you wish to delete.
 2.  Find the "Delete Pool" which uses the bin icon option.
-3.  Confirm the deletion. The pool will be permanently removed. Understand the consequences before confirming, **Important:** All activities utilising this pool will need re-assigning.
+3.  Confirm the deletion. The pool will be permanently removed. Please understand the consequences before confirming, **Important:** All activities utilising this pool will need re-assigning.
+
+# Selection of Pools
+
+The Bot Pooling feature introduces a new way to manage and allocate bots to activities within a workflow. Here's how it works:
+
+## Key Concepts
+
+- Bot Pools can now be assigned to activities.
+- The bot selected at queue time will remain assigned during the execution of that activity.
+- A single, consistent bot from each pool runs all tasks associated with that pool in a given job.
+
+![image](https://github.com/user-attachments/assets/78556f24-7dcd-41b7-8aa4-dc876ab2cf51)
+
+## Allocation and Execution Logic
+
+- Across all activities in a workflow, the system determines the minimum number of bots required to run the job.
+- If a bot is unavailable, the system will attempt alternative combinations of available bots that satisfy the required pools.
+- If no valid combinations remain, the job will be queued. We will then wait for bots to become available before attempting to lock the next job off the queue.
+
+## Dynamic Bot Management
+
+- Bots can be added or removed from pools while a job is queued.
+- These changes will be picked up the next time the job queue is processed.
+- Only the bots utilized during execution will be locked, allowing unused bots to remain available.
+
+## Visibility
+- The assigned pool and bot will be visible on the pipeline nodes.
+- Reports will reflect the bots used, as per standard reporting functionality.
+
+### Error Handling and Access
+- If a bot becomes unavailable, the job is not cancelled immediately.
+- If a user lacks access to a bot in the pool, that bot is simply skipped.
+- However, if all bots within a pool are inaccessible, the job will be cancelled.
+
+### Stateless Pools
+- Stateless-type pools allow for restricted sets of bots to be used for stateless jobs.
+- Bots in these pools are used in a round-robin fashion to ensure even load distribution.
