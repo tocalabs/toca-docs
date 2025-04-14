@@ -32,5 +32,15 @@ When we have an activity that takes inputs, it can be useful to feed the activit
 ### Debug group
 As activity inputs are used as variables within an activity, we can manually set them with a `Set Variable` action, and toggle this action on/off depending on whether we are testing. If we have multiple input variables to test, we can create multiple `Set Variable` actions and put them into a `Group`, which we can then enable when we are testing.
 
+While quick and simple to implement, this carries the disadvantage that the developer a developer may forget to disable the debug group after testing, potentially breaking dependent workflows if the activity is published in this test state.
 ### Test boolean
-Another way to implement tests is to add a boolean input to all activities we want to test, and we can call it `test` or similar. 
+
+![A test input defaulted to false](test-input.png)
+
+Another way to implement tests is to add a boolean input to all activities we want to test, and we can call it `test` or similar. We can set this input to default to `false`. Then, in our activity, we create an `If Then` blocks whether `test` is set to `true`.
+
+![An If Then action that checks whether test is set to true](if_test_then.png)
+
+This has the benefit that it is harder for the developer to accidentally use the test version of the activity when this is undesired.
+
+### Testing workflow inputs
