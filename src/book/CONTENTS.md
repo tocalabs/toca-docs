@@ -41,6 +41,7 @@
   - :docs-link[GUI vs Stateless Automation]{id="book/advanced_features/gui_vs_stateless"}
   - :docs-link[Hubs and Packs]{id="book/advanced_features/hubs_and_packs"}
   - :docs-link[Migrating Projects]{id="book/advanced_features/import_export"}
+  - :docs-link[Webhooks in Toca: Connectors]{id="book/advanced_features/connectors"}
 - :docs-link[Final Project: A Task Application]{id="book/final_project"}
   - :docs-link[Defining Data Structures]{id="book/final_project/defining_data_structures"}
   - :docs-link[Building the Backend]{id="book/final_project/building_backend"}

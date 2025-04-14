@@ -1,0 +1,2 @@
+# Webhooks in Toca: Connectors
+Connectors allow us to trigger a workflow when a specific URL is hit with a certain [HTTP method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods). This allows us to implement anything, from something as simple as a fileserver, to a full HTTP API.
