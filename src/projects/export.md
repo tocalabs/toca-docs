@@ -15,3 +15,9 @@ In the event that you would like to export a project but are concerned about sen
 ### Select Datastores to Export without Table Data
 
 There are occassions where you would just like to export the tables within a datastore without any rows of data inside them. This could be because they contain sensitive data or you could be moving your project to from a Development environment to a Production environment and you don't need to carry the data across. This is also a useful feature if you have lots of table data as that can really slow down the export process, so checking this option would allow you to expedite the process.
+
+## Environment Variables
+
+When exporting a project, you have the option mark `Text`, `Boolean`, `Number`, and `Password` Datastore Parameters as 'Environment Variables'.
+When this project is imported, users are given the option to either accept the current value of each Environment Variable or provide a new value.
+This allows you to configure environment-specific settings like **API keys** or **passwords**.
