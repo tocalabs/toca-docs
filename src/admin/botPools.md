@@ -1,6 +1,6 @@
 # Bot pools
 
-Bot pools group together multiple bots within a single pool object. Activities can use these pools instead of specific bots. Bot pools behave as load balancers, spreading the load between available bots even when multiple instances of the same workflow concurrently.
+Bot pools group together multiple bots within a single pool object. Activities can use these pools instead of specific bots. Bot pools behave as load balancers, spreading the load between available bots even when running multiple instances of the same workflow concurrently.
 
 You can control which bots are in which pools, allowing you to segment your bots in whatever ways you see fit.
 
