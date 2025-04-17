@@ -20,4 +20,4 @@ There are occassions where you would just like to export the tables within a dat
 
 When exporting a project, you have the option mark `Text`, `Boolean`, `Number`, and `Password` Datastore Parameters as 'Environment Variables'.
 When this project is imported, users are given the option to either accept the current value of each Environment Variable or provide a new value.
-This allows you to configure environment-specific settings like *API keys* or *passwords*.
+This allows you to configure environment-specific settings like **API keys** or **passwords**.

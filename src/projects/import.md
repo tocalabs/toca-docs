@@ -37,4 +37,4 @@ You will be given the option to reassign app teams if the app which you are tryi
 ### Environment Variables
 
 If any Datastore Parameters were marked as 'Environment Variables' during export, you'll be prompted to either accept their current values or provide new ones.
-This is useful for configuring environment-specific settings such as API keys or passwords.
+This is useful for configuring environment-specific settings such as **API keys** or **passwords**.
