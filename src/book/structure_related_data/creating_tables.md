@@ -1,6 +1,63 @@
 # Creating Tables
 
-Tables are where you can store your structured data, they are very similar to spreadsheets. They are structured using columns and rows where columns can be defined using particular data types and default values. An example table can be seen below with 4 columns (id, name, description, release_date) and 3 rows
+Let's first take a look at how we create tables in Toca. When we refer to Tables, we are almost always referring to tables that exist within Datastores. If you think of a Datastore as a database, then the tables are simply database tables! You can also create temporary tables within automation Activities and app IPL but for storing data persistently, we need to use tables created in a Datastore.
+
+![A drawing of a Datastore represented as a Database](/src/assets/book/datastore_database.png)
+
+These tables can be interacted with via both Automation through Actions in Activities such as "Get Table Data" or "Add Row to Table", as well as through Apps in either App Components such as a "Table Component" or with App Actions such as  "Get Table Data with Query". You can also browse and interact with the tables from the Datastore interface.
+
+## Table
+
+There are two main parts that make up a table, it's schema which is the technical term for it's structure and the data.
+
+Before we can add any data to our table, we must first define the structure of the table. The structure is predominantly defined by the columns and the data type of each column. A data type allows us to be more precise about what kind of data we are storing in each column. This helps as it means when we try and use the data from the table in our automation or apps, it understands how to interpret the data. It also means that when we insert data into the table, any values that don't adhere to the types for each column will be rejected, so the data integrity in our table is maintained.
+
+You can read more about data types in tables :docs-link[here]{id="projects/automation/datastores/tables/data_types.md"}.
+
+In the example below, the columns would have data types of:
+- UUID
+- String
+- String
+- Image
+- Date
+
+| Id | Name | Email address | Profile picture | Date of birth |
+|:-- | :-- | :-- | :-- | :-- |
+| 1 | Alan Turing | alan@computers.inc | 💻 | `1912-06-12` |
+| 2 | Tim Berners-Lee | tim@worldwideweb.com | 🌐 | `1955-06-08` |
+| 3 | Linus Torvalds | linus@linux.net | 🐧 | `1969-12-28` |
+
+This means that if someone tried to something other than a date in the `Date of birth` column, there would be an error. It also means that anything other than an image added in the `Profile picture` column would also error. This helps us to keep our data correct and valid!
+
+Let's have a go at creating the above example table in a Toca Datastore.
+
+### Defining a Schema
+
+Before creating a table, we must make sure we have a Datastore to create the table in, if you don't have an existing datastore then we can just create one.
+
+![A screen recording showing how to create a Datastore](/src/assets/book/create_datastore.webm)
+
+Now that we have out Datastore, let's create a table.
+
+When we create a table we need to give it a name so that we can reference the table by name in future and then we need to create the columns. Each column has a label and a name, the label is the human readable name of the column that will be displayed in almost all user interfaces that a table can appear in whereas the name is the technical name for the column that is used behind the scenes.
+
+![A screen recording showing the Users table being created with all of it's columns](/src/assets/book/create_users_table.webm)
+
+> **Note** 📝
+>
+> All tables start with 3 columns by default, an `ID` column which you cannot remove, a `Created` column which is a Datetime column which will auto populate with the current UTC date and time when a row is added to the table and finally an `Updated` column which will contain the UTC date and time from whenever the row was updated. The latter two columns can be deleted if they are not required, but don't worry, you can always add them back if you need them later on.
+
+Now that we have created the table, we can add our data.
+
+## Adding Data
+
+We can either add data manually via the Datastore interface or we can add it via some Automation. Let's explore how we can do both.
+
+### Via Datastore
+
+
+### Via Automation
+
 
 Tables in the platform draw a lot of inspiration from database tables so you are also able to link tables together by defining table relationships. You can also control access to your table by setting up row level permissions for granular levels of access control.
 
