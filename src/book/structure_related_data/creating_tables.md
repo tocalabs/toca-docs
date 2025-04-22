@@ -4,7 +4,7 @@ Let's first take a look at how we create tables in Toca. When we refer to Tables
 
 ![A drawing of a Datastore represented as a Database](/src/assets/book/datastore_database.png)
 
-These tables can be interacted with via both Automation through Actions in Activities such as "Get Table Data" or "Add Row to Table", as well as through Apps in either App Components such as a "Table Component" or with App Actions such as  "Get Table Data with Query". You can also browse and interact with the tables from the Datastore interface.
+These tables can be interacted with via both Automation through Actions in Activities such as "Get Table Data" or "Add Row to Table", as well as through Apps in either App Components such as a "Table Component" or with App Actions such as "Get Table Data with Query". You can also browse and interact with the tables from the Datastore interface.
 
 ## Table
 
@@ -15,17 +15,18 @@ Before we can add any data to our table, we must first define the structure of t
 You can read more about data types in tables :docs-link[here]{id="projects/automation/datastores/tables/data_types.md"}.
 
 In the example below, the columns would have data types of:
+
 - UUID
 - String
 - String
 - Image
 - Date
 
-| Id | Name | Email address | Profile picture | Date of birth |
-|:-- | :-- | :-- | :-- | :-- |
-| 1 | Alan Turing | alan@computers.inc | 💻 | `1912-06-12` |
-| 2 | Tim Berners-Lee | tim@worldwideweb.com | 🌐 | `1955-06-08` |
-| 3 | Linus Torvalds | linus@linux.net | 🐧 | `1969-12-28` |
+| Id  | Name            | Email address        | Profile picture | Date of birth |
+| :-- | :-------------- | :------------------- | :-------------- | :------------ |
+| 1   | Alan Turing     | alan@computers.inc   | 💻              | `1912-06-12`  |
+| 2   | Tim Berners-Lee | tim@worldwideweb.com | 🌐              | `1955-06-08`  |
+| 3   | Linus Torvalds  | linus@linux.net      | 🐧              | `1969-12-28`  |
 
 This means that if someone tried to something other than a date in the `Date of birth` column, there would be an error. It also means that anything other than an image added in the `Profile picture` column would also error. This helps us to keep our data correct and valid!
 
@@ -35,13 +36,13 @@ Let's have a go at creating the above example table in a Toca Datastore.
 
 Before creating a table, we must make sure we have a Datastore to create the table in, if you don't have an existing datastore then we can just create one.
 
-![A screen recording showing how to create a Datastore](/src/assets/book/create_datastore.webm)
+:vide{src="/src/assets/book/create_datastore.webm"}
 
 Now that we have out Datastore, let's create a table.
 
 When we create a table we need to give it a name so that we can reference the table by name in future and then we need to create the columns. Each column has a label and a name, the label is the human readable name of the column that will be displayed in almost all user interfaces that a table can appear in whereas the name is the technical name for the column that is used behind the scenes.
 
-![A screen recording showing the Users table being created with all of it's columns](/src/assets/book/create_users_table.webm)
+:video{src="/src/assets/book/create_users_table.webm"}
 
 > **Note** 📝
 >
@@ -55,9 +56,7 @@ We can either add data manually via the Datastore interface or we can add it via
 
 ### Via Datastore
 
-
 ### Via Automation
-
 
 Tables in the platform draw a lot of inspiration from database tables so you are also able to link tables together by defining table relationships. You can also control access to your table by setting up row level permissions for granular levels of access control.
 
