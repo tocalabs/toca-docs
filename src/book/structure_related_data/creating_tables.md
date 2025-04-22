@@ -36,7 +36,7 @@ Let's have a go at creating the above example table in a Toca Datastore.
 
 Before creating a table, we must make sure we have a Datastore to create the table in, if you don't have an existing datastore then we can just create one.
 
-:vide{src="/src/assets/book/create_datastore.webm"}
+:video{src="/src/assets/book/create_datastore.webm"}
 
 Now that we have out Datastore, let's create a table.
 
