@@ -8,4 +8,12 @@ If you hover over the app component, you will have the option to Update the comp
 
 You can Copy and paste the app components across pages and apps by selecting the app component, pressing the Ctrl + C from your clipboard, selecting the new parent and pressing Ctrl + V. 
 
-In the upper right corner of the tab is the *Highlight components with events* button. If you click on it, those app components that contain events will be highlighted.
+### Utilities
+In the upper right corner of the tab are some buttons to assist in locating components with specific properties:
+
+The **Highlight components with events** button will highlight components which have events (IPL) assigned to them.
+
+The **Highlight components with responsive overrides** button will highlight components which have Responsive overrides enabled.
+
+### Orphaned Components
+Occasionally, components might become disconnected from their parent due to moves or deletions. If the platform detects such orphaned components, they'll appear under the "Orphaned Components" banner. Here, you can either delete the now-invisible data or simply drag the component back into the main tree to restore its visibility.
