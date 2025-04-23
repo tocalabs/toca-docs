@@ -6,13 +6,13 @@ Let's first take a look at how we create tables in Toca. When we refer to Tables
 
 These tables can be interacted with via both Automation through Actions in Activities such as "Get Table Data" or "Add Row to Table", as well as through Apps in either App Components such as a "Table Component" or with App Actions such as "Get Table Data with Query". You can also browse and interact with the tables from the Datastore interface.
 
-## Table
+## Building Tables
 
 There are two main parts that make up a table, it's schema which is the technical term for it's structure and the data.
 
 Before we can add any data to our table, we must first define the structure of the table. The structure is predominantly defined by the columns and the data type of each column. A data type allows us to be more precise about what kind of data we are storing in each column. This helps as it means when we try and use the data from the table in our automation or apps, it understands how to interpret the data. It also means that when we insert data into the table, any values that don't adhere to the types for each column will be rejected, so the data integrity in our table is maintained.
 
-You can read more about data types in tables :docs-link[here]{id="projects/automation/datastores/tables/data_types.md"}.
+You can read more about data types in tables :docs-link[here]{id="projects/automation/datastores/tables/data_types"}.
 
 In the example below, the columns would have data types of:
 
@@ -50,11 +50,11 @@ When we create a table we need to give it a name so that we can reference the ta
 
 Now that we have created the table, we can add our data.
 
-## Adding Data
+### Adding Data
 
 We can either add data manually via the Datastore interface or we can add it via some Automation. Let's explore how we can do both.
 
-### Via Datastore
+#### Via Datastore
 
 When adding data to a table via the datastore interface, you are presented with a modal that let's you specify a value for each column. The input fields are aware what type each column represents so offers you the corresponding input type.
 
@@ -62,7 +62,7 @@ When adding data to a table via the datastore interface, you are presented with 
 
 Whilst practical for some occasions, in reality you won't find yourself adding data manually very often. In practice, you'll find almost all data that is added to tables is driven through automation either ingesting the data from elsewhere or using the inputs from a user submitting a form you've designed in an App.
 
-### Via Automation
+#### Via Automation
 
 To add data to a table from automation, we need to use an "Add Row to Table" action in an Activity.
 
@@ -80,7 +80,7 @@ Now, if we place the activity into a Workflow and attach a Listener to it or a C
 
 > **Tip** ✨
 >
-> You can imagine that building tables and then constructing the necessary automation required to add data, update data, delete data and read data is a pretty common (and potentially tedious) pattern. That's why you can now get all this automation generated automatically for you! Look out for the magic wand icon that can be found in the datastore interface when you've got a table selected!
+> You can imagine that building tables and then constructing the necessary automation required to add data, update data, delete data and read data is a pretty common (and tedious) pattern. That's why you can now get all this automation generated automatically for you! Look out for the magic wand icon that can be found in the datastore interface when you've got a table selected!
 > :video{src="/src/assets/book/table_generation_wizard.webm"}
 
 You have now created your Users table. In the next article we'll take a look at creating other related data and linking it to this table.

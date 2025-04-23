@@ -2,10 +2,10 @@
 
 Before we take a look at how we actually link data in Toca, let's first revisit why we might want to link table data.
 
-* **Avoid Redundancy:** Instead of repeating author information for every book, you just link them. If an author's details change, you update them once, and it reflects everywhere.
-* **Data Integrity:** Relationships help keep your data consistent and accurate.
-* **Powerful Queries:** You can easily find all books by a specific author or all authors who wrote a particular genre.
-* **Better Organization:** Relationships make your app's data structure clearer and easier to understand.
+* **Avoid Redundancy:** Instead of repeating user information for every order, you just link them. If a user's details change, you update them once, and it reflects everywhere.
+* **Data Integrity:** Relationships help keep your data consistent and accurate, maintaining the links between each row of data.
+* **Powerful Queries:** You can easily find all orders by a specific user or all users who ordered something from a specific category.
+* **Better Organization:** Relationships make your app's data structure clearer and easier to understand as it allows you to model the data more closely to the real world representation of the data.
 
 # Connecting Your Data: Relationships in Toca
 
