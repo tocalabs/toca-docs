@@ -41,4 +41,4 @@ Therefore our Addresses table should be modified to have a new column on it call
 | 42 | CERN 1211 | Esplanade des Particules 1 | Geneva | 1217 | 2 |
 | 64 | University of Helsinki | Yliopistonkatu 4 | Helsinki | 00100 | 3 |
 
-![How our entities are linked](/src/assets/boo/conceptual_links.png)
+![How our entities are linked](/src/assets/book/conceptual_links.png)
