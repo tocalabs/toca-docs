@@ -72,4 +72,5 @@ We'll take a look at how we can use our related data in the upcoming pages of th
 > |:-- | :-- | :-- | :-- |
 > | 987 | Engima Cracking Kit | Electronics | 99.99 |
 > | 988 | Turing Machine Parts | Electronics | 25.50 |
+>
 > ![How our entities are linked](/src/assets/book/conceptual_links.png)
