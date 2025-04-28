@@ -41,7 +41,7 @@ The first thing to do is think about the real world relationships in the data we
 
 Now if we want to see what address is linked to a user, we just need to follow the ID in the Associated Address column and search for it in the ID column of the Addresses table.
 
-### Creating Relationships in Toca
+### Creating Relationships
 
 Toca supports two different types of relationship, a 1 to 1 relationship and a 1 to Many relationship. The example above details a 1 to 1 relationship, so let's take a look at how we can define that in Toca.
 
@@ -62,4 +62,14 @@ We set up a relationship by using a special column type called a Table Relation,
 Now we have created the definition of the relationship, we can use this to improve the integrity of our data! If we go back to the Data tab of our Users table, you'll note a new column called "Associated addresses". You can then edit each row in your users table to link to an address.
 
 :video{src="/src/assets/book/linking_users_to_addresses.webm"}
-![How our entities are linked](/src/assets/book/conceptual_links.png)
+
+We'll take a look at how we can use our related data in the upcoming pages of this chapter.
+
+> **Tip** ✨
+>
+> We've just successfully created a 1 to 1 relationship, can you now create a one to many relationship between our Users table and a Orders table? Use the table structure below and the image as a guideline for how they relate!
+> | Id |  Product | Category | Amount (GBP) |
+> |:-- | :-- | :-- | :-- |
+> | 987 | Engima Cracking Kit | Electronics | 99.99 |
+> | 988 | Turing Machine Parts | Electronics | 25.50 |
+> ![How our entities are linked](/src/assets/book/conceptual_links.png)
