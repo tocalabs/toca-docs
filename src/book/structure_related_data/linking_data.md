@@ -13,7 +13,7 @@ Imagine you're building an eCommerce app where users can buy items and get their
 
 ## What are Relationships?
 
-The table relationships you find in Toca are heavily inspired by, but not _exactly_ the same as, relationships you find in Databases. A relationship is a link between a row of data in one table to another row of data in a different table. The link is represented by the ID of the row you are linking to. This will be easier to visualise with an example so let's build on our eCommerce use case!
+The table relationships you find in Toca are heavily inspired by, but not _exactly_ the same as, relationships you find in databases. A relationship is a link between a row of data in one table to another row of data in a different table. The link is represented by the ID of the row you are linking to. This will be easier to visualise with an example so let's build on our eCommerce use case!
 
 Here we have our Users table that we have already created:
 | Id  | Name            | Email address        | Profile picture | Date of birth |
@@ -31,14 +31,12 @@ Now, if we have a table of addresses below:
 
 How do we link the two tables together so that each user is associated with an address?
 
-Well, normally you should model your relationships as closely to real life, so in the context of our eCommerce project, our users will come first and then the addresses. So that means we should have a users row _before_ we have an addresses row, this means that our Addresses table should link to a user. You wouldn't have an address before having a user, would you? So if you think about the order the data is created in, first a user would sign up which would insert a new user into our Users table and then that user would configure their delivery address which would then insert a row into our Addresses table with the associated user ID.
+The first thing to do is think about the real world relationships in the data we are representing. In this case, it is most common for multiple people to be associated with a single address. So when we take that into account, it makes the most sense to add an "Associated Address" field to our User's table. It's also good to think about how you want to display your data. If you are building an App and you might have a Profile page which contains all the details about your user, the Address is something that you'd want listed on the Profile page so the User is the parent and the Address is the child.
 
-Therefore our Addresses table should be modified to have a new column on it called "Associated User" and the values in this will be the corresponding ID of the user that the address relates to! Let's make that change and see what our table now looks like:
-
-| Id | Address Line 1 | Address Line 2 | City | Area Code | Associated User |
-| :-- | :-- | :-- | :-- | :-- | :-- |
-| 50 | Bletchley Park | Milton Keynes | Buckinghamshire |  MK3 6EB | 1 |
-| 42 | CERN 1211 | Esplanade des Particules 1 | Geneva | 1217 | 2 |
-| 64 | University of Helsinki | Yliopistonkatu 4 | Helsinki | 00100 | 3 |
+| Id  | Name            | Email address        | Profile picture | Date of birth | Associated Address |
+| :-- | :-------------- | :------------------- | :-------------- | :------------ | :--- |
+| 1   | Alan Turing     | alan@computers.inc   | 💻              | `1912-06-12`  | 50 |
+| 2   | Tim Berners-Lee | tim@worldwideweb.com | 🌐              | `1955-06-08`  | 42 |
+| 3   | Linus Torvalds  | linus@linux.net      | 🐧              | `1969-12-28`  | 64 |
 
 ![How our entities are linked](/src/assets/book/conceptual_links.png)
