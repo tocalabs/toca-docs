@@ -65,9 +65,9 @@ Now we have created the definition of the relationship, we can use this to impro
 
 We'll take a look at how we can use our related data in the upcoming pages of this chapter.
 
-> **Tip** ✨
+> **Exercise** ✨
 >
-> We've just successfully created a 1 to 1 relationship, can you now create a one to many relationship between our Users table and a Orders table? Use the table structure below and the image as a guideline for how they relate!
+> We've just successfully created a 1 to 1 relationship, can you now create a one to many relationship between our Users table and an Orders table? Use the table structure below and the image as a guideline for the structure of the new table and how they relate!
 > | Id |  Product | Category | Amount (GBP) |
 > |:-- | :-- | :-- | :-- |
 > | 987 | Engima Cracking Kit | Electronics | 99.99 |
