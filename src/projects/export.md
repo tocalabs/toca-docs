@@ -10,7 +10,7 @@ A project can be exported individually or in relation to an app. It is highly li
 
 ### Datastore Sanitisation
 
-In the event that you would like to export a project but are concerned about sensitive data inside your datastores, you have the option to sanitise them. All datastore parameters i.e variables, tables, will have their data replaced with anonymised auto-generated data of the same type.
+In the event that you would like to export a project but are concerned about sensitive data inside your datastores, you have the option to sanitise them. All datastore variables i.e variables, tables, will have their data replaced with anonymised auto-generated data of the same type.
 
 ### Select Datastores to Export without Table Data
 
