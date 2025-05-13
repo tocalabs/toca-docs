@@ -18,7 +18,8 @@ The `actionStatus` chip can have one of the following values:
 - `SuccessWithTimeout`: The action timed out but [Error on Timeout](#error-on-timeout) is unchecked, meaning execution continues.
 - `Cancelled`: The action was cancelled by the user or in the action code.
 
-Since execution stops when an action fails, you'll most commonly want to use the `actionStatus` chip to check for `ContinuedWithErrors` or `SuccessWithTimeout` values (or the inverse: `actionStatus != "Success"`). These values indicate that the workflow continued but that something went wrong and may require corrective logic.
+An activity will stop executing if an action enters the `Failed` state and is not handled by a parent action.
+To prevent the activity execution stopping, a user is able to use a combination of `Fail on Error` and `Error on Timeout` flags in the actions, in addition to the `actionStatus` datachip, to handle situations in a case by case basis. By using this approach, a user is able to implement corrective logic, in conjunction with the value of the `actionStatus` datachip, or gracefully clean down the activity before finishing execution.
 
 For example, consider an `API Caller` action that retrieves data from a third-party service. If the service is temporarily unavailable, you may want to retry the request several times before erroring.
 The below example illustrates how `actionStatus` could be used in this scenario to retry an `API Caller` action up to 5 times until it succeeds, with a `Debug` action logging that the action was retried, each time it fails.
