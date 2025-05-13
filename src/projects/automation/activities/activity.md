@@ -16,7 +16,7 @@ The `actionStatus` chip can have one of the following values:
 - `Failed`: The action failed to complete and [Fail on Error](#fail-on-error) is checked, meaning execution stops.
 - `ContinuedWithErrors`: The action failed to complete, but [Fail on Error](#fail-on-error) is unchecked, meaning execution continues.
 - `SuccessWithTimeout`: The action timed out but [Error on Timeout](#error-on-timeout) is unchecked, meaning execution continues.
-- `Cancelled`: The action was cancelled by the user or in the action code.
+- `Cancelled`: The action was cancelled by the user or in the action code..
 
 Since execution stops when an action fails, you'll most commonly want to use the `actionStatus` chip to check for `ContinuedWithErrors` or `SuccessWithTimeout` values (or the inverse: `actionStatus != "Success"`). These values indicate that the workflow continued but that something went wrong and may require corrective logic.
 
