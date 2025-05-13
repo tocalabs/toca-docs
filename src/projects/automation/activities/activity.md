@@ -30,7 +30,7 @@ The following Action properties can be set to control how errors are handled:
 All actions include a checkbox labelled `Fail on error?` If checked, it marks the action as Failed when an error occurs during its execution, indicating an irrecoverable issue. By default, this option is checked for all actions.
 
 ### Timeout
-Certain actions, such as those in the Vision, OCR, or Flow Control categories, feature a `Timeout` property. This property, measured in milliseconds, specifies how long the action can run before it stops itself. Notably, a timeout can be set to -1, indicating that the action should disregard the timeout entirely.
+Certain actions, such as those in the Vision, OCR, or Flow Control categories, feature a `Timeout` property. This property, measured in milliseconds, specifies how long the action can run before it stops itself. Notably, a timeout can be set to `-1`, indicating that the action should disregard the timeout entirely.
 
 ### Error on Timeout
 Actions with the Timeout property also include an `Error on Timeout` setting. This setting determines whether a timeout should be treated as an error. Sometimes, a timeout may not signify an error. For example, with an image search action looking for an occasional pop-up, it should continue if the pop-up doesn't appear but handle it if it does.
