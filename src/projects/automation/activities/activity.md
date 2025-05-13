@@ -8,7 +8,23 @@ You can create activities assigned to the Stateless or a GUI :docs-link[Bot]{id=
 
 > If you have no Bots assigned to your user then you cannot create an Activity as you have no resources to run the activity on.
 
-**Error handling**
+## Error handling
+
+When any action runs, it outputs a chip called `actionStatus`, which indicates the outcome of the action. This chip can be used in conditions (like `If Then`) to drive automation logic based on the action's success or failure.
+The `actionStatus` chip can have one of the following values:
+- `Success`: The action completed successfully.
+- `Failed`: The action failed to complete and [Fail on Error](#fail-on-error) is checked, meaning execution stops.
+- `ContinuedWithErrors`: The action failed to complete, but [Fail on Error](#fail-on-error) is unchecked, meaning execution continues.
+- `Timeout`: The action timed out and [Error on Timeout](#error-on-timeout) is checked.
+- `ContinuedWithTimeout`: The action timed out but [Error on Timeout](#error-on-timeout) is unchecked, meaning execution continues.
+
+Since execution stops when an action fails, you'll most commonly want to use the `actionStatus` chip to check for `ContinuedWithErrors` or `ContinuedWithTimeout` values (or the inverse: `actionStatus != "Success"`). These values indicate that the workflow continued but that something went wrong and may require corrective logic.
+
+For example, let's say you have an `API Caller` action that retrieves data from a third-party service. If that service is temporarily unavailable, you might want to retry the call a few times before giving up.
+The below example illustrates how `actionStatus` could be used in this scenario to retry an `API Caller` action up to 5 times until it succeeds, with a `Debug` action logging that the action was retried, each time it fails.
+![Action Status Usage Example](/src/assets/action_status_usage_example.png)
+
+The following Action properties can be set to control how errors are handled:
 
 `Fail on Error`: All actions include a checkbox labelled "Fail on error?" If checked, it marks the action as Failed when an error occurs during its execution, indicating an irrecoverable issue. By default, this option is checked for all actions.
 
