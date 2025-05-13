@@ -15,10 +15,9 @@ The `actionStatus` chip can have one of the following values:
 - `Success`: The action completed successfully.
 - `Failed`: The action failed to complete and [Fail on Error](#fail-on-error) is checked, meaning execution stops.
 - `ContinuedWithErrors`: The action failed to complete, but [Fail on Error](#fail-on-error) is unchecked, meaning execution continues.
-- `Timeout`: The action timed out and [Error on Timeout](#error-on-timeout) is checked.
-- `ContinuedWithTimeout`: The action timed out but [Error on Timeout](#error-on-timeout) is unchecked, meaning execution continues.
+- `SuccessWithTimeout`: The action timed out but [Error on Timeout](#error-on-timeout) is unchecked, meaning execution continues.
 
-Since execution stops when an action fails, you'll most commonly want to use the `actionStatus` chip to check for `ContinuedWithErrors` or `ContinuedWithTimeout` values (or the inverse: `actionStatus != "Success"`). These values indicate that the workflow continued but that something went wrong and may require corrective logic.
+Since execution stops when an action fails, you'll most commonly want to use the `actionStatus` chip to check for `ContinuedWithErrors` or `SuccessWithTimeout` values (or the inverse: `actionStatus != "Success"`). These values indicate that the workflow continued but that something went wrong and may require corrective logic.
 
 For example, let's say you have an `API Caller` action that retrieves data from a third-party service. If that service is temporarily unavailable, you might want to retry the call a few times before giving up.
 The below example illustrates how `actionStatus` could be used in this scenario to retry an `API Caller` action up to 5 times until it succeeds, with a `Debug` action logging that the action was retried, each time it fails.
