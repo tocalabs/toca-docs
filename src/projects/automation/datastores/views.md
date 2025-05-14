@@ -47,9 +47,36 @@ WHERE genre = "Action"
 OR genre = "Adventure"
 ```
 
-this would create a View which would display Action and Adventure films.
+This would create a View which would display Action and Adventure films.
 
-You can perform a query on any of the columns from any of the tables you are using in your View, so this includes querying any tables you are using in joins.
+You can query any of the columns from any of the tables you are using in your View, so this includes querying any tables you are using in joins.
+
+#### Function Support
+You can now use SQL functions within views to transform, format, and compute new data columns.
+
+- Perform inline transformations (e.g., LOWER(), DATE_TRUNC(), ROUND()).
+- Create derived columns directly in views.
+- Reduce the need for post-query manipulation in automation or apps.
+
+#### GROUP BY Support
+Views now support the GROUP BY clause, allowing aggregation directly in your view definitions.
+
+- Pre-aggregate metrics at the view level.
+- Simplify complex reporting queries.
+
+#### HAVING Clause Support
+In addition to GROUP BY, you can filter grouped results using the HAVING clause.
+
+- Filter aggregates (e.g., filter users with more than 5 orders).
+- Keep logic concise by combining aggregation and filtering in one view.
+
+#### Use Cases
+
+| Feature   | Use Case Example                                 |
+| --------- | ------------------------------------------------ |
+| Functions | Normalise emails, format dates, calculate ratios |
+| GROUP BY  | Aggregate metrics by user, product, region       |
+| HAVING    | Filter for top customers, frequent users         |
 
 #### Aliases
 
