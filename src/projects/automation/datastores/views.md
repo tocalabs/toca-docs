@@ -49,7 +49,7 @@ OR genre = "Adventure"
 
 This would create a View which would display Action and Adventure films.
 
-You can query any of the columns from any of the tables you are using in your View, so this includes querying any tables you are using in joins.
+You can query any of the columns from any of the tables you are using in your View, including tables in joins.
 
 #### Function Support
 You can now use SQL functions within views to transform, format, and compute new data columns.
