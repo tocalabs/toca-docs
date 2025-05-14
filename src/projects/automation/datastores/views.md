@@ -58,7 +58,7 @@ You can now use SQL functions within views to transform, format, and compute new
 - Create derived columns directly in views.
 - Reduce the need for post-query manipulation in automation or apps.
 
-#### GROUP BY Support
+#### `GROUP BY` Support
 Views now support the GROUP BY clause, allowing aggregation directly in your view definitions.
 
 - Pre-aggregate metrics at the view level.
