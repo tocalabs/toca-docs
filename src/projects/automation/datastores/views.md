@@ -54,7 +54,7 @@ You can query any of the columns from any of the tables you are using in your Vi
 #### Function Support
 You can now use SQL functions within views to transform, format, and compute new data columns.
 
-- Perform inline transformations (e.g., LOWER(), DATE_TRUNC(), ROUND()).
+- Perform inline transformations (e.g., `LOWER()`, `DATE_TRUNC()`, `ROUND()`).
 - Create derived columns directly in views.
 - Reduce the need for post-query manipulation in automation or apps.
 
