@@ -52,3 +52,14 @@ You can embed videos into docs using the below syntax. The videos are handled na
 ```markdown
 :video{src="/src/assets/video.mpeg"}
 ```
+
+## Rules and Guidelines
+To keep our documentation clear, consistent, and easy to navigate, follow these rules and stylistic guidelines when writing. These apply in addition to any custom renderers or components described above.
+
+### Formatting Conventions
+- Use headings consistently (#, ##, ###) to structure your content logically.
+- Bold important terms or UI elements: e.g., Submit button.
+- Italicize for emphasis or variable elements (e.g., your-project-name).
+- Use backticks ` to highlight code elements, parameters, or file names.  (`PUBLISHED`, `API Caller`, `actionStatus`, `TEXT`, `BOOLEAN`, `NUMBER`, `LOWER()` etc)
+- Use code blocks (```) for multi-line code examples.
+- Add language identifiers to code blocks for syntax highlighting (e.g., ```sql or ```json).
