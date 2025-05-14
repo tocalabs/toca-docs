@@ -65,7 +65,7 @@ Views now support the GROUP BY clause, allowing aggregation directly in your vie
 - Simplify complex reporting queries.
 
 #### HAVING Clause Support
-In addition to GROUP BY, you can filter grouped results using the HAVING clause.
+In addition to `GROUP BY`, you can filter grouped results using the `HAVING` clause.
 
 - Filter aggregates (e.g., filter users with more than 5 orders).
 - Keep logic concise by combining aggregation and filtering in one view.
