@@ -2,62 +2,75 @@
 
 Before we take a look at how we actually link data in Toca, let's first revisit why we might want to link table data.
 
-* **Avoid Redundancy:** Instead of repeating author information for every book, you just link them. If an author's details change, you update them once, and it reflects everywhere.
-* **Data Integrity:** Relationships help keep your data consistent and accurate.
-* **Powerful Queries:** You can easily find all books by a specific author or all authors who wrote a particular genre.
-* **Better Organization:** Relationships make your app's data structure clearer and easier to understand.
+* **Avoid Redundancy:** Instead of repeating user information for every order, you just link them. If a user's details change, you update them once, and it reflects everywhere.
+* **Data Integrity:** Relationships help keep your data consistent and accurate, maintaining the links between each row of data.
+* **Powerful Queries:** You can easily find all orders by a specific user or all users who ordered something from a specific category.
+* **Better Organization:** Relationships make your app's data structure clearer and easier to understand as it allows you to model the data more closely to the real world representation of the data.
 
-# Connecting Your Data: Relationships in Toca
+## Connecting Your Data: Relationships in Toca
 
-Imagine you're building an app to manage a library. You'd have books, and you'd have authors. Each book has an author, and each author might have written many books. How do you represent this connection in Toca? That's where **relationships** come in!
+Imagine you're building an eCommerce app where users can buy items and get their orders delivered to them. You'd have products, you'd have users, their orders and their addresses. Each user has an address, and each user might have ordered multiple products. How do you represent this connection in Toca? That's where **relationships** come in!
 
-## What are Relationships?
+### What are Relationships?
 
-In Toca, relationships let you connect different tables together. Think of them as bridges between your data. They tell Toca how records in one table relate to records in another.
+The table relationships you find in Toca are heavily inspired by, but not _exactly_ the same as, relationships you find in databases. A relationship is a link between a row of data in one table to another row of data in a different table. The link is represented by the ID of the row you are linking to. This will be easier to visualise with an example so let's build on our eCommerce use case!
 
-Why are relationships important?
+Here we have our Users table that we have already created:
+| Id  | Name            | Email address        | Profile picture | Date of birth |
+| :-- | :-------------- | :------------------- | :-------------- | :------------ |
+| 1   | Alan Turing     | alan@computers.inc   | 💻              | `1912-06-12`  |
+| 2   | Tim Berners-Lee | tim@worldwideweb.com | 🌐              | `1955-06-08`  |
+| 3   | Linus Torvalds  | linus@linux.net      | 🐧              | `1969-12-28`  |
 
-* **Avoid Redundancy:** Instead of repeating author information for every book, you just link them. If an author's details change, you update them once, and it reflects everywhere.
-* **Data Integrity:** Relationships help keep your data consistent and accurate.
-* **Powerful Queries:** You can easily find all books by a specific author or all authors who wrote a particular genre.
-* **Better Organization:** Relationships make your app's data structure clearer and easier to understand.
+Now, if we have a table of addresses below:
+| Id | Address Line 1 | Address Line 2 | City | Area Code |
+| :-- | :-- | :-- | :-- | :-- |
+| 50 | Bletchley Park | Milton Keynes | Buckinghamshire |  MK3 6EB |
+| 42 | CERN 1211 | Esplanade des Particules 1 | Geneva | 1217 |
+| 64 | University of Helsinki | Yliopistonkatu 4 | Helsinki | 00100 |
 
-## Types of Relationships
+How do we link the two tables together so that each user is associated with an address?
 
-Toca primarily uses two common types of relationships:
+The first thing to do is think about the real world relationships in the data we are representing. In this case, it is most common for multiple people to be associated with a single address. So when we take that into account, it makes the most sense to add an "Associated Address" field to our User's table. It's also good to think about how you want to display your data. If you are building an App and you might have a Profile page which contains all the details about your user, the Address is something that you'd want listed on the Profile page so the User is the parent and the Address is the child.
 
-* **One-to-Many:** This is the most common type. One record in a table can be related to multiple records in another table.
+| Id  | Name            | Email address        | Profile picture | Date of birth | Associated Address |
+| :-- | :-------------- | :------------------- | :-------------- | :------------ | :--- |
+| 1   | Alan Turing     | alan@computers.inc   | 💻              | `1912-06-12`  | 50 |
+| 2   | Tim Berners-Lee | tim@worldwideweb.com | 🌐              | `1955-06-08`  | 42 |
+| 3   | Linus Torvalds  | linus@linux.net      | 🐧              | `1969-12-28`  | 64 |
 
-    * **Example:** One author can write many books. (Author table: 1 record, Book table: multiple records)
+Now if we want to see what address is linked to a user, we just need to follow the ID in the Associated Address column and search for it in the ID column of the Addresses table.
 
-* **Many-to-One:** This is just the reverse of one-to-many. Multiple records in one table can be related to one record in another table.
+### Creating Relationships
 
-    * **Example:** Many books can have one author (Book Table: many records, Author Table: 1 record)
+Toca supports two different types of relationship, a 1 to 1 relationship and a 1 to Many relationship. The example above details a 1 to 1 relationship, so let's take a look at how we can define that in Toca.
 
-    * **Note:** In Toca, many-to-one relationships are just one-to-many relationships viewed from the other side.
+First, we need to start with defining our Address table, if you're not sure how to do this, have a read of the previous page in the book!
 
-## How to Create Relationships in Toca
+:video{src="/src/assets/book/create_addresses_table.webm"}
 
-1.  **Identify Related Tables:** First, determine which tables need to be connected.
-2.  **Choose the Relationship Type:** Decide whether it's a one-to-many relationship.
-3.  **Create a Lookup Field (Foreign Key):** In the "many" side of the relationship (e.g., the Book table), add a special field called a "lookup field" or "foreign key". This field will store the ID of the related record in the "one" side (e.g., the Author table).
-4.  **Configure the Lookup Field:** In Toca's visual editor, configure the lookup field to point to the correct table and the related field (usually the primary key, like an ID).
-5.  **Use the Relationship:** Now, when you create a new record in the "many" side, you can select the related record from the "one" side using the lookup field.
+Now that we have created our table structure, we need to populate it with data. We'll do this manually for now.
 
-## Practical Example: Library App
+:video{src="/src/assets/book/adding_address.webm"}
 
-* **Tables:** `Authors` and `Books`
-* **Relationship:** One-to-Many (One author can write many books).
-* **Implementation:**
-    * In the `Books` table, add a lookup field called `author`.
-    * Configure `author` to look up records from the `Authors` table.
-    * When adding a new book, select the author from the dropdown in the `author` field.
+Let's now create the link between the two tables, Users and Addresses, so that our data is related. To do this, we want to edit the Users table so we have an additional column in it called "Associated addresses". Head to the Columns tab of your Users table and click the Add Column button. Normally, we'd configure the column name first but as you'll see, the column name will be configured for us automatically once we set up the table relationship.
 
-## Tips and Best Practices
+We set up a relationship by using a special column type called a Table Relation, this then lets you pick a table to link to and you can then configure the relationship as either a 1 to 1 or 1 to Many.
 
-* **Use Clear Names:** Give your tables and fields descriptive names.
-* **Primary Keys:** Make sure your tables have primary keys (unique identifiers).
-* **Visualize Your Data:** Use Toca's data visualization tools to see how your tables are connected.
-* **Test Your Relationships:** Create test data to ensure your relationships are working correctly.
+:video{src="/src/assets/book/adding_table_relationship.webm"}
 
-By using relationships, you can create powerful and efficient applications in Toca that accurately reflect the real-world connections between your data.
+Now we have created the definition of the relationship, we can use this to improve the integrity of our data! If we go back to the Data tab of our Users table, you'll note a new column called "Associated addresses". You can then edit each row in your users table to link to an address.
+
+:video{src="/src/assets/book/linking_users_to_addresses.webm"}
+
+We'll take a look at how we can use our related data in the upcoming pages of this chapter.
+
+> **Exercise** ✨
+>
+> We've just successfully created a 1 to 1 relationship, can you now create a one to many relationship between our Users table and an Orders table? Use the table structure below and the image as a guideline for the structure of the new table and how they relate!
+> | Id |  Product | Category | Amount (GBP) |
+> |:-- | :-- | :-- | :-- |
+> | 987 | Engima Cracking Kit | Electronics | 99.99 |
+> | 988 | Turing Machine Parts | Electronics | 25.50 |
+>
+> ![How our entities are linked](/src/assets/book/conceptual_links.png)
