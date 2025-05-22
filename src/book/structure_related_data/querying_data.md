@@ -69,11 +69,11 @@ There are fewer filtering options for strings as you cannot use the comparison o
 
 If I wanted to search for any "Category" beginning with "Bo" then my query value would be `Bo%` and it will match on anything that starts with "Bo"!
 
-:video{"/src/assets/book/querying_string_column.webm"}
+:video{src="/src/assets/book/querying_string_column.webm"}
 
 Maybe you need to return data for a certain list of categories? Well, in that case you can use the `IN` operator and define a comma separated list of values for it to filter on.
 
-:video{"/src/assets/book/querying_with_like.webm"}
+:video{src="/src/assets/book/querying_with_like.webm"}
 
 
 > **Tip ✨**
@@ -84,7 +84,7 @@ Maybe you need to return data for a certain list of categories? Well, in that ca
 
 When querying Boolean columns you really only have two options, either `=` or `!=`. The Query Interface is also context aware so will give you a checkbox to define your value, this is to avoid confusion as there are many ways of representing `true` or `false` such as 1 or 0 or "True" and "False".
 
-:video{"/src/assets/book/querying_bool_column.webm"}
+:video{src="/src/assets/book/querying_bool_column.webm"}
 
 #### Table Relationship Columns
 
