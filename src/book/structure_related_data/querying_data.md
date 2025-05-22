@@ -15,7 +15,12 @@ Imagine you have a table that looks something like the following:
 | 322 | How to build an Operating System | Books | 5.99 | 3 |
 
 If we wanted to find all products that were below £5, we would then write a Query that would represent the following:
-`FETCH ALL Data WHERE Amount (GBP) > 5.00`.
+`FETCH ALL Data WHERE Amount (GBP) < 5.00` which would return the following data:
+
+| Id |  Product | Category | Amount (GBP) | Associated User |
+|:-- | :-- | :-- | :-- | :-- |
+| 321 | Guide to Microsoft Windows | Books | 0.99 | 3 |
+| 322 | Guide to MacOS | Books | 1.99 | 3 |
 
 Let's take a deeper look into how we would do this.
 
@@ -31,6 +36,8 @@ There are five main places you can use a query to filter the data you return:
 - App IPL Actions
 
 All of these places share the same Query interface and give you the same options for filtering a Table or View. The Query interface gives you an option of the `Field` which defines _where_ you are filtering, the `Operator` which represents _how_ you are filtering and a `Value` which represents _what_ you are filtering by.
+
+![Query Interface](/src/assets/book/query_interface.png)
 
 Different types of columns in your Table / View can use different operators. For example, if you are filtering on a `Number` column, then you can use:
 - **=** - _Is equal to_
@@ -50,10 +57,34 @@ Let's look at some examples:
 
 #### Number Columns
 
+Filtering a Number field is straightforward, you can find rows where a number is the same, not the same, greater than or less than a number.
+
+In the below video clip we can see that we can apply a query to a number column, including specifying the decimal places.
+
+:video{src="/src/assets/book/querying_number_column.webm"}
+
 #### String Columns
+
+There are fewer filtering options for strings as you cannot use the comparison operators (e.g. Greater than, less than) but you can use the `LIKE` operator to come up with wildcard searches, so if you want to search for a word that starts with, contains or ends with, you can do so!
+
+If I wanted to search for any "Category" beginning with "Bo" then my query value would be `Bo%` and it will match on anything that starts with "Bo"!
+
+:video{"/src/assets/book/querying_string_column.webm"}
+
+Maybe you need to return data for a certain list of categories? Well, in that case you can use the `IN` operator and define a comma separated list of values for it to filter on.
+
+:video{"/src/assets/book/querying_with_like.webm"}
+
+
+> **Tip ✨**
+>
+> When using the `LIKE` operator, you can use as many instances of a wildcard (e.g. `%`) as you like. There is also another wildcard character which represents a single wildcard character: `_`. So if you wanted to search for `L%on` then that would match "London", "Leon" and "Lisbon" but if you did `L___on`, that would only match "Lisbon" and "London" and if you did `L_on` that would only return "Leon".
 
 #### Boolean Columns
 
+When querying Boolean columns you really only have two options, either `=` or `!=`. The Query Interface is also context aware so will give you a checkbox to define your value, this is to avoid confusion as there are many ways of representing `true` or `false` such as 1 or 0 or "True" and "False".
+
+:video{"/src/assets/book/querying_bool_column.webm"}
 
 #### Table Relationship Columns
 
