@@ -53,7 +53,9 @@ If you are filtering on a `String` column, then the `>`, `<`, `>=` and `<=` oper
 - **LIKE** - _Allows you to search for part of some text, using a `%` character to denote where non search text could be_
 - **REGEXP** - _Allows you to use [Regular expression](https://en.wikipedia.org/wiki/Regular_expression) to search for a pattern of characters in your text_
 
-Let's look at some examples:
+Let's look at some examples.
+
+### Defining a Condition
 
 #### Number Columns
 
@@ -88,14 +90,17 @@ When querying Boolean columns you really only have two options, either `=` or `!
 
 #### Table Relationship Columns
 
+You can also query data that is related to your current table! In our example, that means we can query the Users table to filter our Orders table.
+
+:video{src="/src/assets/book/querying_table_relationships.webm"}
+
+The same rules apply for filtering on table relationships as other column types.
 
 
 > **Note 📝**
 >
 > You cannot filter on File or Image columns.
 
-
-### Defining a Condition
 
 ## Combining Conditions
 
