@@ -33,7 +33,7 @@ The primary downside of this mode is potential wasted space on the sides of your
 *Using the 'full width' size option can allow a component to break out of the standard width constraints
 
 ### Fluid Width
-Fluid width will allow your content to span the entire width of the screen, 'Responsive overrides' and sizing options are more important in this mode as your content can end up excessively wide as a user's window width increases, however 
+Fluid width will allow your content to span the entire width of the screen, 'Responsive overrides' and sizing options are more important in this mode as your content can end up excessively wide as a user's window width increases, however in return you are given full control over how your app can display on screen.
 
 > Imagine you have a tablet breakpoint of 800, and a laptop breakpoint of 1200px, Your browser window is at a width of 1000px, You would see your app's contents at a width of 1000px, the same as your browser window width.
 

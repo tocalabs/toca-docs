@@ -34,3 +34,7 @@ This will happen when your import contains something which is currently not inst
 
 You will be given the option to reassign app teams if the app which you are trying to import has authentication enabled. If the target environment recognises the app teams in the export then it will automatically prepopulate them. If it does not then it will give you the option to reassign them.
 
+### Environment Variables
+
+If any Datastore Parameters were marked as 'Environment Variables' during export, you'll be prompted to either accept their current values or provide new ones.
+This is useful for configuring environment-specific settings such as **API keys** or **passwords**.
