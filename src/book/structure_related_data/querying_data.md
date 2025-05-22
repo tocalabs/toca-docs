@@ -42,7 +42,7 @@ Different types of columns in your Table / View can use different operators. For
 - **IN** - _Is in the following list of values (comma separated)_
 - **NOT IN** - _Is not in the following list of values (comma separated)_
 
-But if you are filtering on a `String` column, then the `>`, `<`, `>=` and `<=` operators do not make sense, as how can one piece of text be less than another piece of text? However, you can use the following other operators on String types:
+If you are filtering on a `String` column, then the `>`, `<`, `>=` and `<=` operators do not make sense, as how can one piece of text be less than another piece of text? However, you can use the following other operators on String types:
 - **LIKE** - _Allows you to search for part of some text, using a `%` character to denote where non search text could be_
 - **REGEXP** - _Allows you to use [Regular expression](https://en.wikipedia.org/wiki/Regular_expression) to search for a pattern of characters in your text_
 
