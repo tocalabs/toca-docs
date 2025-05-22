@@ -37,6 +37,7 @@
   - :docs-link[Deploying]{id="book/tdk/deploying"}
   - :docs-link[Publishing]{id="book/tdk/publishing"}
 - :docs-link[Advanced Features]{id="book/advanced_features"}
+  - :docs-link[Users and Groups]{id="book/advanced_features/users_and_groups"}
   - :docs-link[Permissions]{id="book/advanced_features/permissions"}
   - :docs-link[GUI vs Stateless Automation]{id="book/advanced_features/gui_vs_stateless"}
   - :docs-link[Hubs and Packs]{id="book/advanced_features/hubs_and_packs"}

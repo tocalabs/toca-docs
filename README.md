@@ -35,12 +35,12 @@ Link to a platform doc: `:docs-link[Link text]{id="example"}`
 ### Linking to TDK Entities
 To link to a TDK entity you need to provide as the `id` the shared ID property for that type. Below is a list of which property to use.
 
-| Type | Property to use |
-| - | - |
-| Action | `key` |
-| Connector | `connectorId` |
-| AppAction | `originId` |
-| AppComponent | `originId` |
+| Type         | Property to use |
+| ------------ | --------------- |
+| Action       | `key`           |
+| Connector    | `connectorId`   |
+| AppAction    | `originId`      |
+| AppComponent | `originId`      |
 
 Linking to the latest version of a TDK action: `:docs-link[Link text]{id="ExecutePython" type="Action"}`
 
