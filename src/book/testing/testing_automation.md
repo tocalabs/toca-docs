@@ -20,9 +20,7 @@ When we are satisfied with the changes we have made to the activity, we can pres
 
 Similar to activities, workflows also have draft and published states. Note that published versions of activities are also the versions of those activities which are used in published workflows. Draft workflows can use either draft or published activities, which can be selected in the sidebar after clicking on the activity node in the workflow designer.
 
-```
-Draft states' connector routes/endpoints will be suffixed with /draft.
-```
+> Draft states' connector routes/endpoints will be suffixed with /draft.
 
 ## Testing activity inputs
 
