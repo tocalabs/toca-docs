@@ -41,6 +41,8 @@ Toca connectors can only be called by their corresponding HTTP method - a GET re
 
 ## Putting it all together
 
+:video{src="/src/assets/book/connector_demo.webm"}
+
 It's very easy to create a basic connector which provides a response to the requester.
 1. Create a workflow with start and stop nodes.
 2. Drag a connector from the sidebar - the most commonly used one is the HTTP GET connector. This creates a handler.
@@ -50,5 +52,3 @@ It's very easy to create a basic connector which provides a response to the requ
 	1. You can specify the response body by clicking on the response node.
 5. Link your final activity to the response node.
 6. Link your response node to the stop node.
-
-:video{src="/src/assets/book/connector_demo.webm"}
