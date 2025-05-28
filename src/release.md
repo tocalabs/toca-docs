@@ -52,7 +52,7 @@ You can now add custom indexes to columns in your Tables, this is particularly u
 
 Tables in Toca are really an abstraction on top of SQL Database tables, a technology that has been around since the 1970's. For a long time we have purposefully hidden away some of the finer details of how they work but now as we are seeing more and more complex projects being built on Toca we are opening up the ability for more advanced users to specify what the underlying database type each table column should be. If left unselected, Toca will automatically apply a sensible default type but now if you have a use case to, you can specify the precise type. Picking the right database type for your column can not only help with the general performance and storage utilisation but can also act as a powerful constraint when used correctly. For example, if you want to restrict data which is more than 50 characters being entered into a `String` column, you can now specify that the column is a `VARCHAR` column of length `50` and this will then error if you try and enter data larger than 50 characters into that column!
 
-To learn more about this new feature, take a look at :docs-link[this article]{id="src/projects/automation/datastores/tables/database_data_types"}.
+To learn more about this new feature, take a look at :docs-link[this article]{id="projects/automation/datastores/tables/database_data_types"}.
 
 **Constraints**
 
@@ -66,7 +66,7 @@ There are now several things you can do to constrain what counts as a valid valu
 
 **Cascading Delete**
 
-You can now get data that is related to a row to be automatically deleted when you delete the parent row. This will work both for 1 to 1 and 1 to Many relationships in Tables. Imagine you have a customers table and an orders table and each row in your Customers table can link to many rows in the Orders table, when you delete a Customer, you also want to delete their Orders and this is where the "Cascade Delete" feature comes in useful! It can automatically do this cleanup for you. You can read more about this :docs-link[here]{id="src/projects/automation/datastores/tables/delete_operation"}.
+You can now get data that is related to a row to be automatically deleted when you delete the parent row. This will work both for 1 to 1 and 1 to Many relationships in Tables. Imagine you have a customers table and an orders table and each row in your Customers table can link to many rows in the Orders table, when you delete a Customer, you also want to delete their Orders and this is where the "Cascade Delete" feature comes in useful! It can automatically do this cleanup for you. You can read more about this :docs-link[here]{id="projects/automation/datastores/tables/delete_operation"}.
 
 **Auto Increment**
 
