@@ -21,12 +21,12 @@ There is a new toggle in the Theme section of your App to toggle how your App re
 - Snap to Viewport - This is how you will be used to it working and will restrict your page to only be as wide as the largest viewport that fits into the current device.
 - Fluid Width - This will tell your App to use all available width it has
 
-Checkout :docs-link[this article]{id="src/projects/apps/designer/viewport_breakpoints"} for more information about the different type of viewports.
+Checkout :docs-link[this article]{id="projects/apps/designer/viewport_breakpoints"} for more information about the different type of viewports.
 
 **Responsive Overrides**
 
 Each component that you drag onto your App page will now have a new property at the top of the Properties panel which allows you to configure whether the component is visible on the current viewport and whether it has responsive overrides enabled.
-If responsive overrides are enabled then that means that you can configure your component to behave differently in the current viewport than in the other viewports. If you have this setting disabled then your component will behave the same as you have configured it in your default viewport. Take a look at :docs-link[this article]{id="src/projects/apps/designer/responsive_apps"} to learn more.
+If responsive overrides are enabled then that means that you can configure your component to behave differently in the current viewport than in the other viewports. If you have this setting disabled then your component will behave the same as you have configured it in your default viewport. Take a look at :docs-link[this article]{id="projects/apps/designer/responsive_apps"} to learn more.
 
 **Interface Redesign**
 
@@ -46,7 +46,7 @@ Tables continue to be one of the most used and relied upon features in the Toca 
 
 **Indexes**
 
-You can now add custom indexes to columns in your Tables, this is particularly useful if you wish to improve performance when querying certain columns in a large table. This is also useful if you are joining two or more tables in a View but you are using a column other than the ID column to join on. There are several different types of index that you can apply to a Table column, each with their own purpose. You can read more about the indexes :docs-link[here]{id="src/projects/automation/datastores/tables/index"} to find out more.
+You can now add custom indexes to columns in your Tables, this is particularly useful if you wish to improve performance when querying certain columns in a large table. This is also useful if you are joining two or more tables in a View but you are using a column other than the ID column to join on. There are several different types of index that you can apply to a Table column, each with their own purpose. You can read more about the indexes :docs-link[here]{id="projects/automation/datastores/tables/index"} to find out more.
 
 **Database Data Types**
 
