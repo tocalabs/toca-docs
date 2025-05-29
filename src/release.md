@@ -93,10 +93,13 @@ You now have a wide array of SQL functions at your disposal so you can manipulat
 
 #### Bot Pooling
 
+Bot Pooling allows you to group together either GUI or Stateless Bots into pools and you can then assign an Activity to run against a particular pool. When the activity is run either in a Workflow or as a standalone Activity, it will then choose the best Bot at the time to run the activity on. This will be particularly useful for running high volume GUI automation! Head on over to the Admin -> Bots page to create your first pool and you'll then be able to select that pool when assigning a Bot to an Activity.
+
 ![Bot Pooling](/src/assets/releases/8_0/bot_pooling.gif)
 
-
 #### Action Status Result
+
+Every Action that you place down in an Activity now has a new result datachip called "actionStatus" which will return the status of that particular Action. This will be very useful for adding error handling logic inside your Activities.
 
 ### General
 
@@ -104,7 +107,7 @@ You now have a wide array of SQL functions at your disposal so you can manipulat
 
 #### Copy Action Results
 
-Pipeline/Reporting Data is now stored much more efficiently, leading to it taking up less disk space when it is stored and additionally it should be much quicker to delete this data.
+When viewing the results of running automation, either in the Activity Designer console or in the Reporting screen, there is now a button that allows you to copy the individual results of an Action simply and easily.
 
 ## Bug Fixes
 
@@ -114,7 +117,7 @@ A number of bug fixes were included in this release across the platform.
 
 ## Deprecated
 
-We have dropped support for having IPL differ per Viewport.
+We have dropped support for having IPL differ per viewport in App Pages. Historically, you could have had IPL run off the same event for the same component but behave differently in each viewport. This led to confusion as it was difficult to identify where this was the case and hard to debug. We have now dropped support for this and recommend using the new Responsive Overrides settings to get your components to behave differently per viewport.
 
 ## Previous Releases
 
