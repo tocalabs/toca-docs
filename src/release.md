@@ -23,6 +23,8 @@ There is a new toggle in the Theme section of your App to toggle how your App re
 - Snap to Viewport - This is how you will be used to it working and will restrict your page to only be as wide as the largest viewport that fits into the current device.
 - Fluid Width - This will tell your App to use all available width it has
 
+From the Theme section, you can also configure how wide each of these Viewports are so that if there are devices that sit between certain Viewports you can simply change the width to accomodate these devices.
+
 Checkout :docs-link[this article]{id="projects/apps/designer/viewport_breakpoints"} for more information about the different type of viewports.
 
 _Responsive Overrides_
@@ -67,7 +69,7 @@ There are now several things you can do to constrain what counts as a valid valu
 
 > Warning ⚠️
 >
-> If you try to insert data that violates contraints set on a column, the operation will error!
+> If you try to insert data that violates constraints set on a column, the operation will error!
 
 _Cascading Delete_
 
