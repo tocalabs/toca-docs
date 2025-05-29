@@ -101,13 +101,21 @@ Bot Pooling allows you to group together either GUI or Stateless Bots into pools
 
 Every Action that you place down in an Activity now has a new result datachip called "actionStatus" which will return the status of that particular Action. This will be very useful for adding error handling logic inside your Activities.
 
+![Action Status Result](/src/assets/releases/8_0/action_status_result.gif)
+
 ### General
 
 #### Environment Variables in Import/Export
 
+You can now set the values of Datastore Variables when you Import an Automation project. This is very useful for things like API URLs or API Keys and Credentials which may change between environments (e.g. Dev to Prod). You mark the variables as "Environment Variables" when you export the project and then the Import wizard will give you the option to remap the variables.
+
+![Environment Variables](/src/assets/releases/8_0/environment_variables.gif)
+
 #### Copy Action Results
 
 When viewing the results of running automation, either in the Activity Designer console or in the Reporting screen, there is now a button that allows you to copy the individual results of an Action simply and easily.
+
+![Copy Action Results](/src/assets/releases/8_0/copy_action_results.gif)
 
 ## Bug Fixes
 
