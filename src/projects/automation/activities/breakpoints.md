@@ -1,4 +1,4 @@
-# Breakpoints
+# Automation Breakpoints
 
 Breakpoints are markers which denote a point where an automation should pause. When an activity hits a breakpoint you should be able to either resume from that point or stop the automation entirely. Adding a breakpoint is as simple as clicking the hollow red dot which appears when hovering your cursor over an action. An active breakpoint will appear as a filled red dot.
 
