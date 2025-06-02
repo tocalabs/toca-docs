@@ -14,7 +14,7 @@ TODO!
 
 ### Actions
 
-If we deem an error to not require that its entire activity/workflow terminates, we can set the "Fail on error" boolean of an action to False (this defaults to True). The next action can use the :datachip-action[LastActionStatus]{type="Text"} action result to respond to the error.
+If we deem an error to not require that its entire activity/workflow terminates, we can set the "Fail on error" boolean of an action to False (this defaults to True). The next action can use the :datachip-action[LastActionStatus]{type="String"} action result to respond to the error.
 
 ### Activities
 
