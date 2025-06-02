@@ -10,7 +10,7 @@ In the current version, Toca Docs AI is trained on:
 - Platform documentation ( https://github.com/tocalabs/toca-docs/ )
 - TDK (Toca Development Kit) documentation
 
-The AI does **not** access the internet, so it can’t answer questions about unrelated topics. However, it has been trained on general technical concepts that are commonly used with Toca — such as JSONPath, regex, and CSS — and can provide helpful examples or explanations for those.
+The AI does **not** access the internet, so it can’t answer questions about unrelated topics. However, it has been trained on general technical concepts that are commonly used with Toca — such as **JSONPath**, **regex**, and **CSS** — and can provide helpful examples or explanations for those.
 
 ## How is my data used and processed
 All data you enter into the AI is processed locally on Toca servers, we do not send any data to third-party services.
