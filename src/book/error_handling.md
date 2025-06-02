@@ -1,10 +1,15 @@
-# Error handling
+``# Error handling
 
 When performing an automated task, sometimes things go wrong. As there often won't be a human around to handle this eventuality, it's important that we design our automation to handle error cases accordingly.
 
 ## Unrecoverable errors
 
 Often, it is the case that, when an error occurs, we simply want our automation to terminate. Toca assumes that by default, we want to do this after an error occurs in any action in an activity, and any activity in a workflow. 
+
+### Capturing the error
+When there is an error, it can be useful to capture information about the state the automation was in when the error took place. Helpfully, Toca provides a few ways to do this:
+
+#### 
 
 ## Recoverable errors
 
@@ -15,6 +20,9 @@ If we deem an error to not require that its entire activity/workflow terminates,
 ### Activities
 
 In the workflow designer, activities also have "Fail on error" booleans. 
+
+
+
   - :docs-link[Unrecoverable Errors]{id="book/error_handling/unrecoverable_errors"}
   - :docs-link[Recoverable Errors]{id="book/error_handling/recoverable_errors"}
   - :docs-link[To fail or not to fail?]{id="book/error_handling/fail_or_not"}
