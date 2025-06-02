@@ -8,12 +8,13 @@ Often, it is the case that, when an error occurs, we simply want our automation 
 
 ### Capturing the error
 When there is an error, it can be useful to capture information about the state the automation was in when the error took place. Helpfully, Toca provides a few ways to do this:
+TODO!
 
 ## Recoverable errors
 
 ### Actions
 
-If we deem an error to not require that its entire activity/workflow terminates, we can set the "Fail on error" boolean of an action to False (this defaults to True). The next action can use the $$LastActionStatus$$ action result to respond to the error.
+If we deem an error to not require that its entire activity/workflow terminates, we can set the "Fail on error" boolean of an action to False (this defaults to True). The next action can use the :datachip-action[LastActionStatus]{type="Text"} action result to respond to the error.
 
 ### Activities
 
