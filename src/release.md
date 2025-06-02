@@ -1,134 +1,123 @@
-# 7.10 - Release Notes
+# 8.0 - Release Notes
 
-The theme of this release is all around productivity! The release brings in a lot of new functionality that enhances existing features within the platform, making it easier and faster to build things!
+Version 8.0 continues the theme of productivity and usability - making it quicker and easier to build than ever before! This is our first major release in nearly two years and it is jam packed with exciting big new features as well as lots of smaller improvements and fixes!
 
 ## What's New
 
 ### Apps
 
-#### Translations
+#### Viewports Rework
 
-Multilingual Apps are now natively supported in Toca! 🌍
+Making your App look good and work well across a wide range of different devices can be very challenging. As this has become a more common occurrence, users have pushed the limits of the original viewport functionality in the App Designer and have inevitably found it difficult getting their App to look _exactly_ how you want it to across mobiles, tablets, desktops and widescreens.
 
-With this new feature, you can now add support for multiple different languages in your Apps by defining translation tables and then using Translation Datachips to represent the text to be translated in the app components.
+![New Viewports Interface](/src/assets/releases/8_0/viewports.gif)
 
-![Translations Example](/src/assets/releases/7_10/translations.gif)
+This rework of the viewports functionality makes designing your App pages for multiple devices clearer and easier than ever before. There are three key changes that have been made:
+1. _Viewport Modes_ - This allows you to toggle how your App should respond when viewed on different devices
+2. _Responsive Overrides_ - Gives you more granular control over how each component behaves in different viewports
+3. _Interface Redesign_ - It is now easier to toggle between different viewports and see how your App looks between them
 
-An App with Translations enabled will automatically select the translation based on the locale of the browser. You can also specify a default language which is what the App will fall back to if there is no translation available for the browser's current locale. If you want users to be able to select their language then you can use either the Language Selector App Component or you can use the Set Language IPL Action.
+_Snap to Viewport vs Fluid Width_
 
-Translations are bundled and built into your App, so there is no performance penalty for enabling them! 🚀
+There is a new toggle in the Theme section of your App to toggle how your App responds to different viewports, your App can either "Snap to Viewport" or respond via "Fluid Width".
+- Snap to Viewport - This is how you will be used to it working and will restrict your page to only be as wide as the largest viewport that fits into the current device.
+- Fluid Width - This will tell your App to use all available width it has
 
-#### Data Sidebar
+From the Theme section, you can also configure how wide each of these Viewports are so that if there are devices that sit between certain Viewports you can simply change the width to accomodate these devices.
 
-The App Designer now has a Data sidebar that allows you to drag datastore tables & views, as well as listeners, directly onto the page you're designing. This will then take you through a wizard which will attempt to automatically place the corresponding components down for you. For example, if you drag a listener onto the page from the Data sidebar and the listener has inputs with types text, datetime and file then the wizard will suggest a Text Field component, a Date and Time picker and a File Uploader.
+Checkout :docs-link[this article]{id="projects/apps/designer/viewport_breakpoints"} for more information about the different type of viewports.
 
-![Data Sidebar with Listener example](/src/assets/releases/7_10/data_sidebar.gif)
+_Responsive Overrides_
 
-This will help move quicker as instead of having to manually place down individual components to build forms or display tabular data, the data wizard will do all the heavy lifting for you!
+Each component that you drag onto your App page will now have a new property at the top of the Properties panel which allows you to configure whether the component is visible on the current viewport and whether it has responsive overrides enabled.
+If responsive overrides are enabled then that means that you can configure your component to behave differently in the current viewport than in the other viewports. If you have this setting disabled then your component will behave the same as you have configured it in your default viewport. Take a look at :docs-link[this article]{id="projects/apps/designer/responsive_apps"} to learn more.
 
-#### Layout Standard Library
+_Interface Redesign_
 
-Apps now ship with a library of Layouts which encapsulate common designs and UI widgets such as Login modals, Hero banners, Navbars, Footers and many more. This will help you build pages incredibly quickly as you can just lay down these templates and then tweak them for your specific use case. Check them out by heading to the Layouts panel in the App Designer and try them by simply dragging them onto the canvas.
+The App Designer now has a Viewports bar that goes across the top of your page and you can click on each distinct viewport to change the current view. You can also now drag the width of your app page across the different viewports in both design and preview mode to see how your page will behave and look across the different viewports. This makes it much more seamless to switch between viewports and allows for easier testing of how your page will look for different devices.
 
-![Layout Library example](/src/assets/releases/7_10/layouts.gif)
 
-You can also view these layouts in the TDK, clone them and develop your own layouts using these as a base template.
-
-#### App Login Redirect
-
-App users will now be automatically redirected to page of an App they were originally trying to access, even if they needed to log into the App. This means that you can send an App user a link to a specific page of the App and after they have logged into the App, they will be directed straight to the page the link pointed to.
-
-#### IPL Minimap
-
-Your In Page Logic flows are now much easier to navigate with a minimap that can be dragged or scrolled to move along your flow.
-
-![IPL Minimap](/src/assets/releases/7_10/ipl_minimap.gif)
-
-#### New Components
-
-We have released a series of new App Components in this release which can be used to enhance your Apps! ✨
-
-**Carousel**
-
-The carousel component allows you to build a slideshow for cycling through a series of content.
-
-![Carousel example](/src/assets/releases/7_10/carousel.gif)
-
-**Custom Button**
-
-The new Custom Button allows you to define a clickable area and then place anything inside that area, this could be text and an emoji or an image or anything else for that matter! This allows you to build completely bespoke interactive buttons into your App.
-
-**Stepper**
-
-The Stepper component is a component designed for making forms with lots of parts to them more intuitive and clear to the user. It allows you to design a form that guides your App user's through a form in the order that you want.
-
-![Stepper component example](/src/assets/releases/7_10/stepper_component.gif)
-
-**Calendar Component**
-
-The calendar component has had a complete rework and now not only has better styling and configuration options but additionally now has many more IPL Events that you can hook into to customise the behaviour of the component.
+> Note 📝
+>
+> When you visit Apps you have created pre version 8.0, you will be asked to migrate them. Behind the scenes this will migrate all your previous Viewport patches to the new way of working. This will not impact your deployed App but you will not be able to redeploy or edit your App until you complete the migration. This mandatory migration is the reason we've made this a **_major_** release. If you have no plans to redeploy or edit an App, there is no need for you to migrate it and it will continue to work as currently deployed.
 
 ### Automation
 
-#### Data Processor Generative AI
+#### Table Enhancements
 
-This marks Toca's first Generative AI feature and we have started with the Data Processor action, which can be found in Automation Activities. There are two main ways which we believe that Generative AI can assist in certain areas of the platform. Firstly, the ability to explain something that has been developed in Toca. This is especially useful if you are picking up a project from someone else or coming back to a project you did a while ago and you need to quickly understand what the Data Processor is doing. Secondly, a build assistant that takes a prompt from you describing what you want to do and then it will generate the necessary steps to achieve what you have described. This will help you move much quicker, providing an easy way to generate the boilerplace and basic outline of what you want, allowing you to further hone the steps yourself.
+Tables continue to be one of the most used and relied upon features in the Toca platform and in version 8.0 we have added a suite of new features which make Tables even more powerful and performant.
 
-We are continuing to investigate Generative AI as a tool which can enhance productivity in Toca so keep an eye out in the future release notes for new features in this space! 🔎
+![Enhanced Tables](/src/assets/releases/8_0/enhanced_tables.gif)
 
-**Explain Flow**
+_Indexes_
 
-The Explain feature will analyse a data pipeline that has been built within the data processor action and will return a human readable summary of what the pipeline is doing. You can access it by opening a Data Processor action that already contains steps and selecting the "Summarise Flow" button on the right hand side. It will work best if you have run the subsequent automation that drives any inputs to the data processor, this gives it more context to work with!
+You can now add custom indexes to columns in your Tables, this is particularly useful if you wish to improve performance when querying certain columns in a large table. This is also useful if you are joining two or more tables in a View but you are using a column other than the ID column to join on. There are several different types of index that you can apply to a Table column, each with their own purpose. You can read more about the indexes :docs-link[here]{id="projects/automation/datastores/tables/index"} to find out more.
 
-![Explain Flow Generative AI](/src/assets/releases/7_10/explain_flow.gif)
+_Database Data Types_
 
-**Build Assistant Flow**
+Tables in Toca are really an abstraction on top of SQL Database tables and for a long time we have purposefully hidden away some of the finer details of how they work. Now we are seeing more and more complex projects being built on Toca we are opening up the ability for more advanced users to specify what the underlying database type each table column should be. If left unselected, Toca will automatically apply a sensible default type but now if you have a use case to, you can specify the precise type. Picking the right database type for your column can not only help with the general performance and storage utilisation but can also act as a powerful constraint when used correctly.
 
-The build assistant allows you to give a prompt and insert datachips if you need to reference data coming from elsewhere and then the assistant will generate the pipeline for you, streaming each step one at a time.
+For example, if you want to restrict data which is more than 50 characters being entered into a `String` column, you can now specify that the column is a `VARCHAR` column of length `50` and this will then error if you try and enter data larger than 50 characters into that column!
 
-![Build flow example](/src/assets/releases/7_10/build_flow.png)
+To learn more about this new feature, take a look at :docs-link[this article]{id="projects/automation/datastores/tables/database_data_types"}.
 
-> _This is an experimental feature_ 🧪
+_Constraints_
+
+There are now several things you can do to constrain what counts as a valid value to enter into a table cell. These are as follows:
+- Cannot be Null - This means that you can not enter a blank value for this column, this ensures all cells in this column will have a value
+- Unique - This forces each value in the column to be unique
+
+> Warning ⚠️
 >
-> This feature is turned off by default but you can request this feature be turned on by reaching out to <support@toca.io>
-> The output generated here is not guaranteed to be accurate but will improve over time
+> If you try to insert data that violates constraints set on a column, the operation will error!
 
+_Cascading Delete_
 
-#### Table Automation Wizard
+You can now get data that is related to a row to be automatically deleted when you delete the parent row. This will work both for 1 to 1 and 1 to Many relationships in Tables. Imagine you have a customers table and an orders table and each row in your Customers table can link to many rows in the Orders table, when you delete a Customer, you also want to delete their Orders and this is where the "Cascade Delete" feature comes in useful! It can automatically do this cleanup for you. You can read more about this :docs-link[here]{id="projects/automation/datastores/tables/delete_operation"}.
 
-Whenever you create a Table in a Datastore, you most likely also need some automation to go along with it that will add data, update data, fetch data and delete data in your table. This pattern of automation is found in almost every automation project which contains a Datastore with tables. This feature aims to speed up the development of this Create, Read, Update and Delete (CRUD) automation.
+_Auto Increment_
 
-The wizard will take you through several steps, allowing you to specify what behaviour you'd like to automatically generate the automation for adding to a table, updating a table, deleting data from a table and lastly reading data from a table. It will automatically generate not only the the activities and workflows required, but also the listeners and connectors if required.
+For table columns which have a `Number` type, you can now specify that the column should automatically increment so that means that everytime you add a row, the value in this column will increase by +1 compared to the previously inserted row. This is very useful for preserving some sort of order but be aware that if you delete rows, the auto increment will resume from the last number in the sequence, not the last number that is currently in the table.
 
-![Table CRUD Wizard](/src/assets/releases/7_10/crud_wizard.gif)
+#### Advanced Views
 
-#### Workflow Auto Sort
+In version 7.8 we released Views, a way of joining tables and returning data against a persistent query. In version 8.0 we have supercharged the functionality and usefulness of Views as you can now apply functions to columns in your Views as well as group data together using the "Group By/Having" feature.
 
-Tired of rearranging your Workflow so that it looks neat and the lines are all aligned correctly?
+![Advanced Views](/src/assets/releases/8_0/advanced_views.gif)
 
-Well, now you no longer have to! There is a new button in the Workflow Designer that will automatically tidy your Workflow up for you.
+_Group By / Having_
 
-![Workflow Auto Sort](/src/assets/releases/7_10/workflow_sort.gif)
+The new Group By feature allows you to aggregate data directly in your view and then you can specify a "Having" clause to filter those aggregates. Imagine you have an Orders table and you want to sum the value of all orders per customer where the orders are over £50.00, you can now specify a View where you group by `Customer ID` and you would specify only rows having a value of over £50.00.
 
-#### Email Action Enhancements
+_SQL Functions_
 
-The :docs-link[Send Email]{id="SendEmail" type="Action"} (v2+ onwards) action now allows you to send an email to multiple people, cc, bcc and add attachments. This is a big improvement as previously you could only use the email to send an email to a single inbox and it did not support attachments or cc'ing & bcc'ing people.
+You now have a wide array of SQL functions at your disposal so you can manipulate data directly within your View rather than having to use Automation to do it for you. This functionality includes but is not limited to: counting, numerical analysis, text manipulation and date calculations - all directly from your View!
 
-#### Workflow Minimap
+#### Bot Pooling
 
-Much like the IPL Minimap, the Workflow Designer screen now has a minimap in the bottom right hand corner of the designer which allows you to quickly and easily zoom and move around the canvas.
+Bot Pooling allows you to group together either GUI or Stateless Bots into pools and you can then assign an Activity to run against a particular pool. When the activity is run either in a Workflow or as a standalone Activity, it will then choose the best Bot at the time to run the activity on. This will be particularly useful for running high volume GUI automation! Head on over to the Admin -> Bots page to create your first pool and you'll then be able to select that pool when assigning a Bot to an Activity.
+
+![Bot Pooling](/src/assets/releases/8_0/bot_pooling.gif)
+
+#### Action Status Result
+
+Every Action that you place down in an Activity now has a new result datachip called "actionStatus" which will return the status of that particular Action. This will be very useful for adding error handling logic inside your Activities.
+
+![Action Status Result](/src/assets/releases/8_0/action_status_result.gif)
 
 ### General
 
-#### Global Documentation Search
+#### Environment Variables in Import/Export
 
-Have you ever needed the documentation for something in the platform, but you're currently in the wrong part of the platform to access it? Well, this will no longer be the case! You can now search the platform's documentation from anywhere by pressing `Cmd/Ctrl + K` and this will bring up a search bar allowing you to search through all the documentation. You can additionally open the resulting documentation in a pop out window, allowing you to drag the documentation to wherever you want it and still focus on the main platform! You can also open the documentation search by hitting the 🔎 Search icon towards the bottom of the main navbar.
+You can now set the values of Datastore Variables when you Import an Automation project. This is very useful for things like API URLs or API Keys and Credentials which may change between environments (e.g. Dev to Prod). You mark the variables as "Environment Variables" when you export the project and then the Import wizard will give you the option to remap the variables.
 
-![Global Search example](/src/assets/releases/7_10/global_search.gif)
+![Environment Variables](/src/assets/releases/8_0/environment_variables.gif)
 
-#### Pipeline Storage Improvements
+#### Copy Action Results
 
-Pipeline/Reporting Data is now stored much more efficiently, leading to it taking up less disk space when it is stored and additionally it should be much quicker to delete this data.
+When viewing the results of running automation, either in the Activity Designer console or in the Reporting screen, there is now a button that allows you to copy the individual results of an Action simply and easily.
+
+![Copy Action Results](/src/assets/releases/8_0/copy_action_result.gif)
 
 ## Bug Fixes
 
@@ -138,10 +127,11 @@ A number of bug fixes were included in this release across the platform.
 
 ## Deprecated
 
-Nothing has been deprecated in this release.
+We have dropped support for having IPL differ per viewport in App Pages. Historically, you could have had IPL run off the same event for the same component but behave differently in each viewport. This led to confusion as it was difficult to identify where this was the case and hard to debug. We have now dropped support for this and recommend using the new Responsive Overrides settings to get your components to behave differently per viewport.
 
 ## Previous Releases
 
+- :docs-link[7.10]{id="releases/7_10"}
 - :docs-link[7.9]{id="releases/7_9"}
 - :docs-link[7.8]{id="releases/7_8"}
 - :docs-link[7.7]{id="releases/7_7"}
