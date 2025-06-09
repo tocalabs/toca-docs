@@ -1,6 +1,6 @@
 # .toca/tocabot
 
-This directory powers the Toca Docs AI Search functionality.
+This directory powers the [Toca Docs AI Search](../../src/common/documentation_ai.md) functionality.
 
 - `default_sources.json`: This file specifies which docs are provided to the AI for **every query**, regardless of the user's context. It should include broadly relevant documents that are useful to provide context for most queries.
 
