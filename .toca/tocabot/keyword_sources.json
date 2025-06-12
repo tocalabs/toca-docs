@@ -1,0 +1,9 @@
+[
+  {
+    "keywords": ["table", "tables"],
+    "sources": [
+      ":docs-link[Datastores]{id=\"projects/automation/datastores/datastores\"}",
+      ":docs-link[Get Table Information]{id=\"GetTableInfo\" type=\"Action\"}"
+    ]
+  }
+]
