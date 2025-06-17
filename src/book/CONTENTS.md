@@ -7,10 +7,11 @@
   - :docs-link[Hello, Toca!]{id="book/getting_started/hello_toca"}
   - :docs-link[Hello, TDK!]{id="book/getting_started/hello_tdk"}
 - :docs-link[Programming a Guessing game]{id="book/guessing_game"}
-- :docs-link[Common Programming Concepts]{id="book/programming_concepts"}
-  - :docs-link[Datachips and Variables]{id="book/programming_concepts/datachips_and_variables"}
-  - :docs-link[Data Types]{id="book/programming_concepts/data_types"}
-  - :docs-link[Control Flow]{id="book/programming_concepts/control_flow"}
+- :docs-link[General Concepts]{id="book/general_concepts"}
+  - :docs-link[The Toca Stack]{id="book/toca_as_a_stack"}
+  - :docs-link[Datachips and Variables]{id="book/general_concepts/datachips_and_variables"}
+  - :docs-link[Data Types]{id="book/general_concepts/data_types"}
+  - :docs-link[Control Flow]{id="book/general_concepts/control_flow"}
 - :docs-link[Using Tables to Structure Related Data]{id="book/structure_related_data"}
   - :docs-link[Creating Tables]{id="book/structure_related_data/creating_tables"}
   - :docs-link[Linking Data]{id="book/structure_related_data/linking_data"}
