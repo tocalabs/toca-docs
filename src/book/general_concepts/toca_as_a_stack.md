@@ -1,21 +1,8 @@
 # Toca as a Technology Stack
 
-When you develop and build a software application, you need to think about what technologies you are going to use to put the application together. If you liken building an application to putting together a meal, you need to decide what ingredients you're going to use and if you need to use any tools like a food processor to make it. The ingredients and methods you use represent the stack you've used to create your dish!
+Modern full-stack web applications involve many moving parts: a slick UI, responsive server-side logic, and robust, scalable data storage. Making all these layers work seamlessly together can be challenging.
 
-## What is a tech stack?
-
-A tech stack is typically defined as a combination of technologies such as databases, tools, libraries and frameworks that are used together to build and run a software application.
-
-A tech stack for a web application often consists of the following parts:
-1. A Programming Language - _What language are you going to use to define the logic in your application?_
-2. A Framework - _Are there any frameworks you can use which might speed up development?_
-3. Libraries - _Is there any logic you can reuse from elsewhere which reduces the amount of work you have to do?_
-4. Front-end Technologies - _What technology are you going to use to develop your user interface?_
-5. Back-end Technologies - _What technology are you going to use to develop your server-side logic?_
-6. Databases - _How and where your data is going to be stored?_
-7. Infrastructure - _Where your application is going to run from?_
-
-When you're building a web application, you often have to worry about all of the items above and it's not uncommon for you to use totally different technologies to develop your user interface (the front-end of your application) and to develop your server-side logic (the back-end of your application). This leads to added complexity and often means you need multiple people who understand all of the different parts of your stack.
+Toca aims to **simplify** and **unify** this process by providing an out-of-the-box solution that covers all aspects of the development lifecycle. From initial development, to monitoring automation processes, and scaling.
 
 With Toca, the technology is consistent across all elements of the stack so the complexity and overhead is greatly reduced. This being said, it still offers a great deal of flexibility and configurability so whilst it is simpler to build an application on Toca, you can still put together large and complex apps.
 

@@ -9,6 +9,7 @@
 - :docs-link[Programming a Guessing game]{id="book/guessing_game"}
 - :docs-link[General Concepts]{id="book/general_concepts"}
   - :docs-link[The Toca Stack]{id="book/general_concepts/toca_as_a_stack"}
+  - :docs-link[Moving Data Around]{id="book/general_concepts/data_movement"}
   - :docs-link[Datachips and Variables]{id="book/general_concepts/datachips_and_variables"}
   - :docs-link[Data Types]{id="book/general_concepts/data_types"}
   - :docs-link[Control Flow]{id="book/general_concepts/control_flow"}
