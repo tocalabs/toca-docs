@@ -129,6 +129,19 @@ A number of bug fixes were included in this release across the platform.
 
 We have dropped support for having IPL differ per viewport in App Pages. Historically, you could have had IPL run off the same event for the same component but behave differently in each viewport. This led to confusion as it was difficult to identify where this was the case and hard to debug. We have now dropped support for this and recommend using the new Responsive Overrides settings to get your components to behave differently per viewport.
 
+The following action versions are no longer supported and **will not** work in Version 8.0:
+
+| Action Name          | Unsupported Versions                        |
+|----------------------|---------------------------------------------|
+| `JSON Parser`        | `2.x.x`, `1.x.x`                            |
+| `Table to List`      | `2.x.x`, `1.x.x`                            |
+| `Concatenate Tables` | `2.0.0`, `2.0.1`                            |
+| `Delete Table Rows`  | `3.0.3`, `3.0.2`, `3.0.1`, `2.x.x`, `1.x.x` |
+
+These actions will be automatically upgraded to their latest supported versions when your Environment is updated to Version 8.0.
+
+If you note any issues with these actions after the upgrade, please contact <support@toca.io>.
+
 ## Previous Releases
 
 - :docs-link[7.10]{id="releases/7_10"}
