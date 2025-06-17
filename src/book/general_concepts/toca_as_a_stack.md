@@ -53,4 +53,4 @@ There are two main ways of storing persistent data in Toca and which one you use
 
 ![Composition of CMS and Datastores](/src/assets/book/datastore_cms_stack.png)
 
-You can then link your App and Automation to your data layer, allowing you to drive chart components in your app from the data in a datastore table and adding new rows to your datastore from your automation.
+You can then link your App and Automation to your data layer, allowing you to drive chart components in your app from the data in a datastore table or add new rows to your datastore from your automation.
