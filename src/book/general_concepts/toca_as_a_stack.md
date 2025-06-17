@@ -1,8 +1,8 @@
 # Toca as a Technology Stack
 
-## What is a tech stack?
-
 When you develop and build a software application, you need to think about what technologies you are going to use to put the application together. If you liken building an application to putting together a meal, you need to decide what ingredients you're going to use and if you need to use any tools like a food processor to make it. The ingredients and methods you use represent the stack you've used to create your dish!
+
+## What is a tech stack?
 
 A tech stack is typically defined as a combination of technologies such as databases, tools, libraries and frameworks that are used together to build and run a software application.
 
