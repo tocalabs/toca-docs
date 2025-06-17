@@ -25,9 +25,17 @@ Whilst there are many platforms out there which offer a low-code "Drag'N'Drop" i
 
 ![The Toca Stack](/src/assets/book/toca_stack.png)
 
-Apps in Toca cover just about all you need to design your user interfaces and define the interactivity on each page. Automation covers all the server-side logic, including interactivity with the database layer and running flows triggered by users on your App. Datastores cover your database needs by allowing you to build tables and views. Lastly, Toca will also host and run the application that you build on it so no need to worry about sorting out infrastructure for your project when it's ready for release!
+- Apps in Toca cover just about all you need to design your user interfaces and define the interactivity on each page.
+- Automation covers all the server-side logic, including interactivity with the database layer and running flows triggered by users on your App.
+- Datastores cover your database needs by allowing you to build tables and views.
+- Lastly, Toca will also host and run the application that you build on it so no need to worry about sorting out infrastructure for your project when it's ready for release!
 
 ### Automation
 
+Inside
+
 
 ### Apps
+
+
+### Data
