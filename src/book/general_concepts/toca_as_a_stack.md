@@ -2,7 +2,7 @@
 
 Modern full-stack web applications involve many moving parts: a slick UI, responsive server-side logic, and robust, scalable data storage. Making all these layers work seamlessly together can be challenging.
 
-Toca aims to **simplify** and **unify** this process by providing an out-of-the-box solution that covers all aspects of the development lifecycle. From initial development, to monitoring automation processes, and scaling.
+Toca aims to **simplify** and **unify** this process by providing an out-of-the-box solution that covers all aspects of the development lifecycle. From initial development, to monitoring automation processes, and hosting.
 
 With Toca, the technology is consistent across all elements of the stack so the complexity and overhead is greatly reduced. This being said, it still offers a great deal of flexibility and configurability so whilst it is simpler to build an application on Toca, you can still put together large and complex apps.
 

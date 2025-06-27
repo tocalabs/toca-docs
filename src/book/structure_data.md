@@ -1,4 +1,4 @@
-# Using Tables to Structure Related Data
+# Using Tables to Structure Data
 
 A table is a data structure that allows you to organize and manage information within your application. Think of it as a spreadsheet within your project, where data is arranged in rows and columns. Each row represents a record, and each column represents a specific attribute or field.
 
