@@ -20,7 +20,7 @@ To create a decision point in a workflow, drag an exclusive node onto the workfl
 
 > **Note 📝**
 >
-> If you have multiple conditions which are met in an exclusive then it will only go down the branch for one of them. Due to this, you probably shouldn't rely on this behaviour.
+> _If you have multiple conditions which are met in an exclusive then it will only go down the branch for one of them. Due to this, you probably shouldn't rely on this behaviour._
 
 ### Looping
 
@@ -30,9 +30,19 @@ To set up an exclusive in such a way that it should loop, you need to set up you
 
 > **Note 📝**
 >
-> _Looping at the Workflow level will perform each loop a bit slower than doing it at the activity level but provided you are not doing something time critical, in most scenarios this will still run fast enough to be practical.
+> _Looping at the Workflow level will perform each loop a bit slower than doing it at the activity level but provided you are not doing something time critical, in most scenarios this will still run fast enough to be practical._
 
 ## Run Workflow
 
+You may encounter scenarios when developing a new workflow where you need to reuse logic that you have already defined in a workflow. Instead of copying the old workflow, node for node, into your new workflow we can instead just run the old workflow from our new one. We can achieve this using the :docs-link[Run Workflow]{id="RunWorkflow" type="Action"} action, which allows you to run a workflow from an activity. You can think of this a bit like calling a function. The Run Workflow action allows you to select a Workflow to run, not just from the current automation project but any others that you have access to. Once the workflow is selected you are given the option to populate the inputs required by the workflow which you can do with static values or you can use datachips from your activity.
+
+This pattern can be particularly useful when you have workflows which do things like update audit databases or BI data sources and you need to run these workflows whenever other workflows run.
+
 
 ## Copy Activity to Project
+
+When you develop an activity that is useful for more than one project, you can actually copy just that activity to different projects using the "Copy to Project" tool. Whilst you could use the Run Workflow functionality in this scenario, if it's only one or two activities you're interesting in, this can be a more practical way of sharing that automation functionality across
+
+> **Note **
+>
+> _If your activity references datachips from a datastore, you must make sure that the project you are copying the activity to also has access to the same datastore._

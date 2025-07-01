@@ -20,3 +20,6 @@ If we deem an error to not require that its entire activity/workflow terminates,
 
 In the workflow designer, activities also have "Fail on error" booleans.
 
+### Workflows
+
+_Recovery Workflows_
