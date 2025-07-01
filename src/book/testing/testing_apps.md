@@ -7,7 +7,7 @@ Testing your App before you put it in the hands of your users is an essential pa
 
 When you are building your App in the App Designer, you are typically using "Design Mode". When you are in design mode, you can drag components onto the page, edit the properties of your components and define your In Page Logic (IPL). Design mode is aimed at making it as easy as possibly to build your app so while it can give you a rough idea of how your page will look there are certain limitations to how components can be rendered. Fortunately to solve this, the App Designer has another mode: preview mode.
 
-Preview mode solves this for you by taking away the distractions of the App Designer and showing you the App as your end users would see it. Your App, as shown in preview mode, will look exactly the same as it would once you have deployed it.
+Preview mode solves this for you by taking away the distractions of the App Designer and showing you the App as your end users would see it. Your App, as shown in preview mode, will look exactly the same as it would once you have deployed it. To switch to preview mode, click the preview icon in the top right of the designer bar. To get back to design mode, click the paintbrush icon in the top right of the designer bar.
 
 Whilst in preview mode, you can click on links to other pages and they will work as expected, your IPL will also work as expected.
 
@@ -19,7 +19,7 @@ Whilst in preview mode, you can click on links to other pages and they will work
 
 If your app is set up to to use :docs-link[authentication]{id="projects/apps/authentication"}, then you may well have designed your app so that users with different roles are allowed to see different data and perform different actions. This is typically done by setting up permissions on either your pages or the resources linked to your app. To test how your permissions work on your App, you can use the "Preview as User" feature, which allows you to enter preview mode as a particular user that has been set up on your app.
 
-This can be extremely useful for debugging issues that users might encounter as you can experience using the App exactly as they do.
+This can be extremely useful for debugging issues that users might encounter as you can experience using the App exactly as they do. To use the "Preview as User" functionality, you must have authentication enabled for your app and you must have at least one app user which has been assigned a group with a role. When this is the case, your top bar will have a little person icon on the right hand side, clicking this will offer you a drop down allowing you to select which user you would like to preview the app as. To leave this mode, you can click the paintbrush icon to go back to design mode or in the preview as user dropdown click the _Unselected_ option.
 
 ## Using Deploy States
 
