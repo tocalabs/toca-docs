@@ -8,9 +8,11 @@ There are several tools and features which help to deal with both of these thing
 
 ## Exclusives in Workflows
 
-Activities are not the only place in automation that you can add flow control logic, you can also add decision points and even implement loops within a Workflow. This means that if you are looping over a large list or table of data in your automation, you don't just have to put all of this logic inside a single looping action in an activity. You can extract this control flow to the workflow level, allowing you to break your activities up into smaller and more manageable pieces.
+Activities are not the only place in automation that you can add flow control logic, you can also add decision points and even implement loops within a Workflow. This means that if you are looping over a large list or table of data in your automation, you don't just have to put all of this logic inside a single looping action in an activity. You can extract this control flow to the workflow level, allowing you to break your activities up into smaller and more manageable pieces. This is why :docs-link[exclusive nodes]{id="projects/automation/workflows/exclusive"} in workflows are so powerful!
 
 ### Decision Points
+
+
 
 ### Looping
 
