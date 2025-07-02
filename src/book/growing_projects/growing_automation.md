@@ -43,6 +43,6 @@ This pattern can be particularly useful when you have workflows which do things 
 
 When you develop an activity that is useful for more than one project, you can actually copy just that activity to different projects using the "Copy to Project" tool. Whilst you could use the Run Workflow functionality in this scenario, if it's only one or two activities you're interesting in, this can be a more practical way of sharing that automation functionality across
 
-> **Note **
+> **Note 📝**
 >
 > _If your activity references datachips from a datastore, you must make sure that the project you are copying the activity to also has access to the same datastore._

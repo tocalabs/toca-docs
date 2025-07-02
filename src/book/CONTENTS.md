@@ -24,7 +24,7 @@
   - :docs-link[Testing Apps]{id="book/testing/testing_apps"}
 - :docs-link[Managing Growing Projects]{id="book/manage_growing_projects"}
   - :docs-link[Growing Automation]{id="book/growing_projects/growing_automation"}
-  - :docs-link[Layouts and Blocks]{id="book/growing_projects/layouts_and_blocks"}
+  - :docs-link[Growing Apps]{id="book/growing_projects/growing_apps"}
 - :docs-link[Intermediate Project]{id="book/intermediate_project"}
 - :docs-link[Error Handling]{id="book/error_handling"}
   - :docs-link[Unrecoverable Errors]{id="book/error_handling/unrecoverable_errors"}
