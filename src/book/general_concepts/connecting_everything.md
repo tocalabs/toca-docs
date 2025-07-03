@@ -1,4 +1,4 @@
-# Moving Data Around
+# How Everything Connects
 
 Understanding how data flows around Toca is key to designing an efficient and robust application. Having a good foundational knowledge will also help you understand what you should and shouldn't do when putting together the pieces of your app.
 

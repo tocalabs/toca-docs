@@ -9,7 +9,7 @@
 - :docs-link[Programming a Guessing game]{id="book/guessing_game"}
 - :docs-link[General Concepts]{id="book/general_concepts"}
   - :docs-link[The Toca Stack]{id="book/general_concepts/toca_as_a_stack"}
-  - :docs-link[Moving Data Around]{id="book/general_concepts/data_movement"}
+  - :docs-link[How Everything Connects]{id="book/general_concepts/connecting_everything"}
   - :docs-link[Datachips and Variables]{id="book/general_concepts/datachips_and_variables"}
   - :docs-link[Data Types]{id="book/general_concepts/data_types"}
   - :docs-link[Control Flow]{id="book/general_concepts/control_flow"}
@@ -44,7 +44,7 @@
   - :docs-link[GUI vs Stateless Automation]{id="book/advanced_features/gui_vs_stateless"}
   - :docs-link[Hubs and Packs]{id="book/advanced_features/hubs_and_packs"}
   - :docs-link[Migrating Projects]{id="book/advanced_features/import_export"}
-  - :docs-link[Webhooks in Toca: Connectors]{id="book/advanced_features/connectors"}
+  - :docs-link[Workflows as APIs]{id="book/advanced_features/workflows_as_apis"}
 - :docs-link[Final Project: A Task Application]{id="book/final_project"}
   - :docs-link[Defining Data Structures]{id="book/final_project/defining_data_structures"}
   - :docs-link[Building the Backend]{id="book/final_project/building_backend"}
