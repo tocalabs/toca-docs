@@ -8,10 +8,10 @@ In the TDK you can build:
 
 This means that you can bring in new functionality into the platform whenever you want.
 
-- _Need you connectors to accept XML rather than JSON? Just tweak the existing connectors._
-- _Need a new automation action that calculates the different between two pieces of text? Build a new Diff Text action in C#._
-- _Want a menu component that can have a tree structure? Build your perfect component using React._
-- _Have a use case for an IPL action that works out the time difference between two dates? Use TypeScript to define exactly how you want the difference outputted._
+- Need your connectors to accept XML rather than JSON? _Just tweak the existing connectors._
+- Need a new automation action that calculates the different between two pieces of text? _Build a new Diff Text action in C#._
+- Want a menu component that can have a tree structure? _Build your perfect component using React._
+- Have a use case for an IPL action that works out the time difference between two dates? _Use TypeScript to define exactly how you want the difference outputted._
 
 The TDK allows you to further the automation capabilities by writing C# and you can further the app capabilities by writing React and TypeScript. You can do this all from the Toca platform, you don't need to install any other technology, no dependencies or libraries, simply open the TDK and get building!
 
