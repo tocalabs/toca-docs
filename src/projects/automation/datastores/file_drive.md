@@ -1,6 +1,6 @@
 # File Drive
 
-Each datastore contains a File Drive – file storage hosted by the your Toca platform. File Drive is similar to a bot's file system but can be used by stateless automation, bot pools, and apps.
+Each datastore contains a File Drive – file storage hosted by your Toca platform. File Drive is similar to a bot's file system but can be used by stateless automation, bot pools, and apps.
 
 * File Drive can contain directories, sub directories etc. so you can organise files however you need to.
 * Files and directories can me manually added and deleted via the datastore.
