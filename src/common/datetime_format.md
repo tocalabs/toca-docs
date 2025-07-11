@@ -1,6 +1,6 @@
 # Custom DateTime Formats
 
-**Custom DateTime format strings** in allow you to define exactly how a `DateTime` value is represented as a string. They are composed of format specifiers that represent various parts of a date and time, such as year, month, day, hour, minute, and second.
+Custom DateTime format strings allow you to define exactly how a `DateTime` value is represented as a string. They are composed of format specifiers that represent various parts of a date and time, such as year, month, day, hour, minute, and second.
 
 Examples of commonly used format specifiers:
 
