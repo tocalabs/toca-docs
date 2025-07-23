@@ -3,7 +3,8 @@
     "keywords": ["table", "tables"],
     "sources": [
       ":docs-link[Datastores]{id=\"projects/automation/datastores/datastores\"}",
-      ":docs-link[Get Table Information]{id=\"GetTableInfo\" type=\"Action\"}"
+      ":docs-link[Get Table Information]{id=\"GetTableInfo\" type=\"Action\"}",
+      ":docs-link[Table Component]{id=\"e6909eed-aa24-48c1-8de7-bc02f23896d6\" type=\"AppComponent\"}"
     ]
   }
 ]
