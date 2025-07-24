@@ -1,18 +1,24 @@
 # Documentation AI
 
-Our documentation AI chatbot aims to consolidate all existing platform documentation in one place, helping you to understand and utilize the platform better.
+The Toca Documentation AI chatbot helps you navigate and understand the Toca platform more effectively by bringing together all existing Platform and TDK (Toca Development Kit) documentation in one place.
+You can ask it questions about the platform, or about how do use different **Actions**, **App Components**, **App Actions**, and **Connectors**.
 
-> All Toca AI features are experimental, we advise you carefully review any information it gives you. While the AI has been programmed not to 'guess' answers, blind spots in the documentation mean that the AI may not be aware of certain features or methods on the Toca Platform, this most often manifests as the AI informing that you cannot do something, when you can.
+>💡 Fun fact: The AI is multilingual, you can ask questions, and/or ask for responses in **English**, **German**, **French**, **Italian**, **Portuguese**, **Hindi**, **Spanish**, and **Thai**.
 
 ## What data does it have access to
-In the current iteration, Docs AI is trained on:
+In the current version, Toca Docs AI is trained on:
 - Platform documentation ( https://github.com/tocalabs/toca-docs/ )
+- TDK (Toca Development Kit) documentation
 
-As the AI does not call out to the internet, it cannot answer questions unrelated to Toca.
+The AI does **not** access the internet, so it can’t answer questions about unrelated topics. However, it has been trained on general technical concepts that are commonly used with Toca — such as **JSONPath**, **regex**, and **CSS** — and can provide helpful examples or explanations for those.
 
 ## How is my data used and processed
-All data you enter into the AI is local, we do not send your data outside of Toca servers.
+All data you enter into the AI is processed locally on Toca servers, we do not send any data to third-party services.
 
-Data is removed from cache after one hour.
+Messages you send are stored for up to one hour (to allow you to continue conversations with multiple messages), after which they are deleted. This is to ensure that the AI can provide context-aware responses during your session.
+Your messages:
+- Are **not** shared across Toca environments
+- Are **not** used to train the AI
 
-> Fun fact: The AI is multilingual, you can ask questions, and/or ask for responses in languages other than English
+
+> All Toca AI features are experimental, we advise you carefully review any information it gives you. While the AI has been programmed not to 'guess' answers, blind spots in the documentation mean that the AI may not be aware of certain features or methods on the Toca Platform, this most often manifests as the AI informing that you cannot do something, when you can.
