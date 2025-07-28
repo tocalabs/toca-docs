@@ -116,13 +116,13 @@ Queries are at their most powerful when you can combine them to really whittle d
 When you combine conditions using the `AND` conjunction operator, it will show you all data where both conditions are true.
 In the below video, we are combining the condition that the `amount` must be greater than 5.00 and the category is "Books".
 
-:video{src="/src/assets/book/querying_and_filter.webm"}
+:video{src="/src/assets/book/query_and_filter.webm"}
 
 ### OR
 
 When you combine conditions using the `OR` conjunction operator, it will show you all data where either condition 1 or condition 2 are true. In the below video we are finding orders which are either more than £5.00 or in the "Books" category.
 
-:video{src="/src/assets/book/querying_or_filter.webm"}
+:video{src="/src/assets/book/query_or_filter.webm"}
 
 ### Groups
 
