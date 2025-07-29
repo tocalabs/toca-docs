@@ -14,8 +14,6 @@ Here are some examples of what Datachips look like:
 
 A Datachip can represent either a static result or a variable. We'll explore the distinction between these two later in this article, along with how and where you can effectively use these chips throughout the Toca platform.
 
------
-
 ## Datachips
 
 ### Where You Can Use Them
@@ -69,18 +67,13 @@ Datachips are often used to represent the entire value for a particular field. H
 
 For example, imagine you are making a series of API calls. If you have the base URL stored as a variable like :datachip-variable[base_url]{type="String"}, you can then append the API route directly after this variable. The ability to interpolate a Datachip within text fields offers significant flexibility.
 
------
-
 ## Variables
 
 Datachips represent two types of values: static values, which remain constant, and variable values, which can change.
 
 In Automation, values that can change are called **Variables** and are denoted by a pink Datachip. In Apps, values that can change are called **In Page Values (IPVs)**. These variable values are incredibly useful as they allow you to update a value dynamically as a block of logic executes.
 
------
 
 ## Subchips
 
 *[It appears the "Subchips" section is empty. If you have content for this section, please provide it, and I will integrate it.]*
-
------
