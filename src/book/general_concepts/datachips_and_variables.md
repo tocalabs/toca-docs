@@ -1,69 +1,86 @@
 # Datachips and Variables
 
-Datachips are the mechanism in Toca for using a value that has come from elsewhere, be it from a Datastore or a previously run automation action. Datachips are visually represented by little chips (hence the name!) and they are colour coded and contain the corresponding :docs-link[data type]{src="book/general_concepts/datachips_and_variables"} as well as the name of datachip.
+Datachips are the core mechanism in Toca for utilizing values that originate from external sources, such as a Datastore or the output of a previously executed automation action. Visually, Datachips are represented by small, color-coded "chips" (hence the name\!). Each chip clearly displays its corresponding data type and name.
 
-Here are some examples of what they look like:
+For a deeper dive into data types, you can refer to the article on :docs-link[data types]{id="book/general_concepts/data_types"}.
 
-| Datachip Example                                      | Description                                                                                                 |
-| :---------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
-| :datachip-variable[my_number_variable]{type="Number"} | This pink datachip represents a variable which is a Number type and it is called `my_number_variable`.      |
-| :datachip-action[action_result]{type="Boolean"}       | This green datachip represents a result that is the output of an automation action which is a boolean type. |
-| :datachip-datastore[datastore_variable]{type="Table"} | Lastly, this blue datachip represents a value that is stored in a datastore which is a table.               |
+Here are some examples of what Datachips look like:
 
-A datachip can represent either a static result or a variable and we'll learn the difference between these two later on in this article. We'll also take a look at how and where you can use these chips throughout the platform.
+| Datachip Example | Description |
+| :--------------- | :---------- |
+| :datachip-variable[my_number_variable]{type="Number"} | This pink datachip represents a variable of type `Number`, named `my_number_variable`. |
+| :datachip-action[action_result]{type="Boolean"} | This green datachip represents a `Boolean` result from an automation action. |
+| :datachip-datastore[datastore_variable]{type="Table"} | This blue datachip represents a `Table` value stored in a Datastore. |
+
+A Datachip can represent either a static result or a variable. We'll explore the distinction between these two later in this article, along with how and where you can effectively use these chips throughout the Toca platform.
+
+-----
 
 ## Datachips
 
-### Where you can use them
+### Where You Can Use Them
 
-You can use a datachip in the platform anywhere you see a `{x}` in an input field. Once clicked, you can then choose where to get your datachip from. You can typically use a datachip in any form of input field that you come across in both Automation and Apps.
+You can use a Datachip in Toca wherever you see the `{X}` icon in an input field. Clicking this icon allows you to select the source of your Datachip. Datachips are typically usable in any input field you encounter within both Automation and Apps.
 
-Let's take a closer look at where you can use datachips and also where they can come from!
+Let's explore the specific contexts where you can use Datachips and their origins.
 
 #### Automation
 
-In Automation projects, there are two main places you can use datachips; these are as inputs to actions and also as inputs to both exclusive and trigger nodes in a workflow.
+Within Automation projects, Datachips are primarily used in two places: as inputs to actions and as inputs to both exclusive and trigger nodes in a workflow.
 
-In activities, you can select a datachip from the following places:
-- Datastores - Use a value that is stored in a Datastore which is linked to your Project
-- Activity Inputs - Any inputs which are injected into your Activity when it starts can be accessed by any action
-- Activity Variables - Use a Variable that has been created throughout your Activity
-- Action results - Use an output from any Action which precedes the one you are selecting a datachip for
+In **activities**, you can select a Datachip from the following sources:
 
-Let's have a look at how you go about this from the activity designer:
+  * **Datastores:** Use a value stored in a Datastore linked to your project.
+  * **Activity Inputs:** Access any inputs injected into your Activity when it starts.
+  * **Activity Variables:** Utilize a variable created throughout your Activity.
+  * **Action Results:** Use an output from any action that precedes the one you are configuring.
 
+Let's see how this works from the Activity Designer:
 
-In Workflows you can select datachips from the following places:
-- Datastores
-- Workflow Inputs
-- Activity Outputs
+*[Consider adding an image or GIF here demonstrating the selection process in the Activity Designer.]*
 
+In **Workflows**, you can select Datachips from these sources:
 
+  * Datastores
+  * Workflow Inputs
+  * Activity Outputs
 
 #### Apps
 
-In an app, there are two main places you can use datachips:
-- App Component properties
-- App Action inputs
+In Apps, Datachips are primarily used in two main areas:
 
-This allows you to drive the configuration for your app components, including their content and how they appear, from values which come from elsewhere in the platform. It also allows you to reference values such as datastore variables inside your app actions so you can build an IPL flow which might add a row directly to a datastore table.
+  * App Component properties
+  * App Action inputs
 
-In apps, the way you select a datachip is very similar to doing so in automation. Look out for any field which has a `{X}` button and when you select that, you will be presented with a small window that shows you all the places you can select a datachip from. These places are:
-- Datastore - _Use a datastore variable from any datastore that you have linked with your App_
-- User - _If app is authenticated, you can select datachips which represent information about the current user_
-- Form Result - _Use results returned from workflows triggered by listeners on the current page_
-- URL Query - _Any query parameters passed into the URL of the current page_
-- Context - _Shown if there is context available, usually from a dynamic page or data driven layout component_
-- In Page Value - _Any in page values defined in the IPL flows of the App_
+This capability allows you to dynamically configure your app components, including their content and appearance, using values sourced from elsewhere in the platform. It also enables you to reference values, such as Datastore variables, within your App actions, allowing you to build In-Page Logic (IPL) flows that might, for example, directly add a row to a Datastore table.
 
+Selecting a Datachip in Apps is very similar to Automation. Look for any field with a `{X}` button. When you click it, a small window will appear, displaying all available Datachip sources:
 
-### How you can use them
+  * **Datastore:** Use a Datastore variable from any Datastore linked to your App.
+  * **User:** If the app is authenticated, you can select Datachips representing information about the current user.
+  * **Form Result:** Use results returned from workflows triggered by listeners on the current page.
+  * **URL Query:** Any query parameters passed into the URL of the current page.
+  * **Context:** (Shown if context is available, typically from a dynamic page or data-driven layout component.)
+  * **In Page Value:** Any In-Page Values (IPVs) defined within the App's IPL flows.
 
-Datachips are often used to represent the whole value for a particular field but in some cases they can also be used inline along with text. This is often only applicable to text fields, but when possible it can be a powerful tool. Imagine you are making a series of API calls and you have the base URL as a variable :datachip-variable[base_url]{type="String"}, you then want to add the API route after the base URL variable. The ability to interpolate a datachip in text fields can be truly powerful.
+### How You Can Use Them
+
+Datachips are often used to represent the entire value for a particular field. However, in some cases, they can also be used inline with text. While typically applicable only to text fields, this can be a powerful tool.
+
+For example, imagine you are making a series of API calls. If you have the base URL stored as a variable like :datachip-variable[base_url]{type="String"}, you can then append the API route directly after this variable. The ability to interpolate a Datachip within text fields offers significant flexibility.
+
+-----
 
 ## Variables
 
-Datachips represent two types of value: a static value that will not change and a variable value, one that will change. In automation, values that can change are called Variables are denoted by a pink datachip. In apps, values that can change are called In Page Values. These variable values are extremely useful as it allows you to update a value as you run through a block of logic.
+Datachips represent two types of values: static values, which remain constant, and variable values, which can change.
 
+In Automation, values that can change are called **Variables** and are denoted by a pink Datachip. In Apps, values that can change are called **In Page Values (IPVs)**. These variable values are incredibly useful as they allow you to update a value dynamically as a block of logic executes.
+
+-----
 
 ## Subchips
+
+*[It appears the "Subchips" section is empty. If you have content for this section, please provide it, and I will integrate it.]*
+
+-----
