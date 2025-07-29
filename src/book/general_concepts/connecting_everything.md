@@ -113,6 +113,12 @@ There are certain :docs-link[layout components]{id="projects/apps/designer/compo
 
 With these layouts, any components that are placed inside them will get access to the context that they return. This includes any app actions in IPL defined on these components.
 
-
-
 ### Automation
+
+The only place you really need to be aware of context in automation is in a workflow. The context in a workflow relates to the:
+- Any inputs injected when executing the workflow
+- Any outputs from the activities within the workflow
+
+All workflow inputs and activity outputs have a name (also called a _key_), to reference these values you just need to reference the key that corresponds to the value. For example, if Activity A in your workflow has an output called `username` then you need to specify that Activity B has an input called `username` and the value will flow from Activity A to Activity B.
+
+Workflow inputs (which can originate from a listener, connector or you can manually specify the inputs when you run a workflow) are accessible from any nodes defined after the start node in a workflow. Activity outputs are only usable in nodes that follow activity they are returned from.
