@@ -115,7 +115,7 @@ With these layouts, any components that are placed inside them will get access t
 
 ### Automation
 
-The only place you really need to be aware of context in automation is in a workflow. The context in a workflow relates to the:
+The only place you really need to be aware of context in automation is in a workflow. The context in a workflow relates to:
 - Any inputs injected when executing the workflow
 - Any outputs from the activities within the workflow
 
