@@ -1,339 +1,298 @@
-# Data Types
+# A Guide to Data Types in Toca
+
+Ever wonder what goes on behind the scenes of your Toca applications? It all comes down to **Data Types**. Think of them as the building blocks of everything you create. This guide will help you understand what types are, why they're important, and how you can use them effectively.
 
 ## What are Types?
 
-A type is a way of classifying an object so we know how the object behaves and what we can do with the object!
+A type is like a label for a piece of data. It tells Toca what the data is and how it should behave.
 
-Think of a big bowl of fruit, you need to understand what each fruit is before eating it as each fruit might be eaten differently. For example, if you come across an orange, you know you need to peel it before eating it, but if you come across a grape you know you don't have to peel it before eating it but you might remove the seeds as they don't taste very good. The type of fruit defines how you treat it, and this is the same for types in Toca!
+Imagine a big bowl of fruit. Before you eat a piece, you need to know what kind of fruit it is. You'd peel an orange, but you wouldn't peel a grape. Knowing the fruit's "type" tells you how to handle it. In Toca, it's the same\! The data's type tells the platform how to use and interact with it.
 
-![Type Diagram](/src/assets/book/type_diagram.png)
+Every piece of data in Toca has three key parts:
 
-Every value that you come across in Toca has three properties:
-- The key - This is the identifier that is used to "name" the value
-- The type - This is the classifier that tells Toca how this value is intended to be used
-- The value - This is the actual value
+1.  **The Key:** This is the name you give your data (like `customerName` or `orderTotal`). It's how you identify it.
+2.  **The Type:** This is the label that tells Toca what kind of data it is (like a `String` or a `Number`).
+3.  **The Value:** This is the actual data itself (like `"John Smith"` or `123.45`).
 
-If you think of every value as a box, a box needs a label (the **key**) so that you can easily identify what is in the box, we also have a classifier that tells us what sort of thing to expect in the box (the **type**) and lastly you have the thing in the box (the **value**).
+Think of it like a neatly labeled box. The **key** is the label on the outside, telling you what's in there. The **type** is a quick description of what to expect, like "documents" or "toys." And the **value** is the actual stuff inside the box.
 
-Whilst the key is useful for identifying the value, the type is of equal importance as it tells us how we can use the value.
-For example, if the value is a `Number` we know we can use that for mathematical operations. If the value is a `File` we know that we can perform file system operations on the value.
+The type is super important because it ensures your application runs smoothly and safely. For example, Toca knows that you can only do math with a `Number` and that you can't try to change the font of a `Table`. This prevents common errors and makes your applications more reliable.
 
-Types also help us to make our software safer and more robust as it allows us to make guarantees about our programme such as "I can only add a `Number` to a `Number`" or "I can only iterate over values in a `List`".
-This is a good way of preventing errors which could occur whilst our Application is running such as what might happen if you attempted to make a `Table` uppercase instead of some text!
+Toca's types fall into two main categories:
 
-Within Toca there are two categories of types:
-1. Scalar Types - Types that hold a single value
-2. Collection Types - Types that store multiple values
+1.  **Scalar Types:** These hold a single value (like a single piece of text or a number).
+2.  **Collection Types:** These hold multiple values (like a list of names or a table of data).
+
+Let's dive into the specifics\!
 
 ## Scalar Types
 
+These are your fundamental building blocks, each holding a single piece of information.
+
 ### String
 
-A `String` type represents text content and is probably the most common type that you'll deal with in Toca. It may seem odd to refer to text as a `String` but this is a term that is used very commonly in computing, it is supposedly due to text being referred to as a "string of characters" where a character represents a letter.
+A `String` is simply a piece of text. It's one of the most common types you'll use. The name "string" comes from the idea of a "string of characters."
 
-A value of type `String` in Toca is a variable-length piece of text that can range from a single letter all the way to thousands of words and it can contain any valid [UTF-8](https://en.wikipedia.org/wiki/UTF-8) characters. They also support escape characters to enable formatting such as:
-- `\n` - newline character
-- `\t` - tab character
-- `\r` - carriage return character
+In Toca, a `String` can be anything from a single letter to a long article. It can contain any valid characters and supports special formatting like:
 
-There is no real upper limit on how many letters can be stored within a single `String` type but once you start getting to the 10,000's of characters, you might notice some performance issues when trying to view the value.
+  * `\n` for a new line
+  * `\t` for a tab
+  * `\r` for a carriage return
 
-> #### Warning ⚠️
+While there's no strict limit on length, very long strings (tens of thousands of characters) might cause minor performance slowdowns.
+
+> **Warning ⚠️**
 >
-> `String` type values cannot contain 2 or more instances of `$$` as these are reserved characters used behind the scenes to denote variables and datachips.
+> Don't use `$$` inside a `String`. Toca uses these characters behind the scenes to identify variables.
 
-#### Casting
+#### Converting to a String (Casting)
 
-`Strings` are fairly unique in that almost all other types can be converted to a `String` as you may want to view a number as text or convert a `List` to a comma delimited list of text.
+`Strings` are very flexible. You can convert almost any other type into a `String`, which is useful for displaying numbers as text or turning a `List` into a comma-separated sentence.
 
 #### Operators
 
-When you need to compare `Strings` then they are only able to be compared in two ways, they are either equal to each other or not.
+You can only compare `Strings` to see if they are identical.
 
-| Operator | Description |
-| :--- | :--- |
-| `LHS == RHS` | True when Left Hand Side (LHS) is the same as the Right Hand Side (RHS) |
-| `LHS != RHS` | True when LHS is **NOT** the same as RHS |
-
+  * `LHS == RHS`: Is the text on the left exactly the same as the text on the right?
+  * `LHS != RHS`: Is the text on the left **not** the same as the text on the right?
 
 ### Number
 
-The `Number` type can represent any sort of number, whether it is an integer, a negative number or decimal number. Behind the scenes, the value is always stored as a decimal number, even if that means specifying an additional `.0` on the value. By storing all number values consistently behind the scenes it means they can all be treated in the exact same way and you don't have to worry about conversion between different number types like you might have to do when coding.
+The `Number` type is for, you guessed it, numbers\! It can handle whole numbers (`100`), negative numbers (`-50`), and decimals (`3.14`).
 
-A `Number` type allows for the following approximate range:
-- Max: 1.79x10³⁰⁸
-- Min: -1.79x10³⁰⁸
+Toca stores all numbers in a consistent decimal format, so you don't have to worry about converting between different number types—it just works\!
 
-It has a precision of approximately 15-17 digits.
+`Numbers` have a huge range, from approximately `-1.79 x 10^308` to `1.79 x 10^308`, with a precision of about 15-17 digits.
 
-A `Number` type can contain only digits, it does not support constants such as `π`, `e` or `τ`. In some places, it does support scientific E notation so for example you can set a `Number` variable of 2E10 and this will result in 20,000,000,000.
+You can use scientific notation in some places. For example, `2E10` will be understood as `20,000,000,000`.
 
-![E Notation Example](/src/assets/book/e_notation.png)
+#### Converting to a Number (Casting)
 
-#### Casting
+When you convert a `Number` to a `String`, Toca is smart about it:
 
-It is worth noting that if you convert a value of type `Number` to a `String`, the behaviour will change slightly depending on if the underlying value is a whole number (integer) or a decimal. If the underlying value is a valid integer then it will not include any decimal points, if the value is a valid decimal then it will keep all relevant significant figures.
-
-For example:
-`4.5` will be converted to `"4.5"`
-`4.0` will be converted to `"4"`
-
-This is because when treating a whole number as text, it is seldom desired to include `".0"`.
+  * `4.5` becomes `"4.5"`
+  * `4.0` becomes `"4"` (Toca removes the unnecessary `.0`)
 
 #### Operators
 
-When using `Number` values, you are typically using them to obtain the result of a mathematical equation or using them in some sort of comparison such as "Filter data where `{number}` is greater than 100". When you are performing these comparisons, it is good to know what operators are available to you.
+`Number` values are perfect for mathematical equations and comparisons.
 
-| Operator | Description |
-| :--- | :--- |
-| `LHS == RHS` | True when Left Hand Side (LHS) is the same as the Right Hand Side (RHS) |
-| `LHS != RHS` | True when LHS is **NOT** the same as RHS |
-| `LHS > RHS` | True when LHS is greater than RHS |
-| `LHS >= RHS` | True when LHS is greater than or equal to RHS |
-| `LHS < RHS` | True when LHS is less than RHS |
-| `LHS <= RHS` | True when LHS is less than or equal to RHS |
+  * `LHS == RHS`: Is the left number equal to the right number?
+  * `LHS != RHS`: Is the left number **not** equal to the right number?
+  * `LHS > RHS`: Is the left number greater than the right number?
+  * `LHS >= RHS`: Is the left number greater than or equal to the right number?
+  * `LHS < RHS`: Is the left number less than the right number?
+  * `LHS <= RHS`: Is the left number less than or equal to the right number?
 
 ### Boolean
 
-A `Boolean` type represents only two possible values: `true` and `false`. This type is most useful for representing states which can only be either true or false, on or off, enabled or disabled.
+A `Boolean` can only hold one of two values: `true` or `false`. This type is ideal for switches and conditions, like "Is the light on?" or "Is the user logged in?"
 
-`Boolean` values are usually used as a way to configure a conditional flow of logic. For example: "If `{boolean}` is true, then perform actions."
+`Boolean` values are often used to control the flow of your application. For example: "If `{boolean}` is `true`, then run these actions."
 
 #### Operators
 
-| Operator | Description |
-| :--- | :--- |
-| `LHS == RHS` | True when Left Hand Side (LHS) is the same as the Right Hand Side (RHS) |
-| `LHS != RHS` | True when LHS is **NOT** the same as RHS |
-| `!LHS` | **NOT** LHS, this returns the opposite value to LHS, so if LHS is `true` this would return `false` |
+  * `LHS == RHS`: Are both values the same (`true` and `true`, or `false` and `false`)?
+  * `LHS != RHS`: Are the values different?
+  * `!LHS`: This gives you the opposite value. If `LHS` is `true`, `!LHS` is `false`.
 
 ### Date Time
 
-A `DateTime` type represents an instant in time, typically expressed as a date and a time of day. Dates and time are difficult as there are many factors to take into account in how a date and time is measured and formatted, such as what calendar is the date represented by and what format should it be displayed in? Month first? Day first? Year first? The `Datetime` type aims at being an agnostic way of storing a static point in time which can then be formatted down to the users preference in the future.
+A `DateTime` type represents a specific moment in time. Managing dates and times can be tricky due to different calendars and formats, but Toca's `DateTime` type handles all of this for you by storing a consistent, universal format.
 
-In general, dates and time are stored throughout the system in the format of `yyyy-MM-ddTHH:mm:ssZ`, this adheres to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) formatting.
-So this means that 9AM on the 5th September 2018 would be stored as:
+Dates and times are stored using the international standard **ISO 8601**. This means 9 AM on September 5th, 2018 is stored as: `2018-09-05T09:00:00Z`
 
-`2018-09-05T09:00:00Z`
+When you need to display a `DateTime`, you can use special automation actions or app components to format it exactly how you want. Check out the :docs-link[Format / Convert Date]{id="FormatDate" type="Action"} action for more details.
 
-When you wish to format a date into a particular format there are automation actions and app components which will allow you to do this so you can represent your date in the exact way you want. You can take a look at:
-- :docs-link[Format / Convert Date]{id="FormatDate" type="Action"}
-- :docs-link[ISO Date Parser]{id="6a6c986-ce3d-4d22-b18a-16d3d704db10" type="AppComponent"}
+#### Converting to a Date Time (Casting)
 
-
-#### Casting
-
-`DateTime` values can only be cast to text via explicit actions such as Format / Convert Date as otherwise Toca doesn't know what format to store the date and time in.
+You can only convert a `DateTime` to a `String` using specific actions. This is because Toca needs to know how you want the date and time to be formatted.
 
 ### JSON
 
-The `JSON` types are for storing JSON (JavaScript Object Notation) data. This is similar to storing data as a `String` but it includes JSON validation as well as maintaining formatting. One of the most useful features of a `JSON` type is that you can use [JSONPath](https://en.wikipedia.org/wiki/JSONPath) to query and select values within the `JSON`.
+The `JSON` type is for storing data in the JSON (JavaScript Object Notation) format. This is a great way to handle structured data, like settings or configuration.
+
+A `JSON` type is similar to a `String` but it enforces a valid format. One of its best features is that you can use a powerful tool called **JSONPath** to easily pull out specific pieces of information.
+
+For example, from the following data:
 
 ```json
 {
-  "name": "Toca",
-  "website": "https://toca.io",
-  "age": 6,
-  "industry": "Technology",
-  "UK-based": true,
-  "available_jobs": [
-    {
-      "title": "Application Builder",
-      "salary": "Many 🍭's"
-      "type": "Temporary"
-    }
-  ]
+  "name": "Toca",
+  "industry": "Technology",
+  "available_jobs": [
+    {
+      "title": "Application Builder"
+    }
+  ]
 }
 ```
 
-If you wanted to get the industry value out of the above example, you can query it with JSONPath using `$.industry`, if you wanted the title of the first available job you can use `$.available_jobs[0].title`.
+  * `$.industry` would get you `"Technology"`.
+  * `$.available_jobs[0].title` would get you `"Application Builder"`.
 
-> #### Note 📝
+> **Note 📝**
 >
-> Like a `List` type, lists in JSON are also indexed from 0, so the first item is at position 0
+> Like Toca's `List` type, the first item in a JSON list is always at position `0`.
 
-#### Casting
+#### Converting to a JSON (Casting)
 
-You can convert between `JSON` and a `String`, the two types are seen as interchangeable even if it results in invalid JSON.
-
-You can also convert from a individual JSON property to a `String`, `Number` or `Boolean` if the values are valid.
+You can easily convert between a `JSON` and a `String`. You can also extract individual JSON properties and convert them into a `String`, `Number`, or `Boolean` if the values are valid.
 
 ### Password
 
-`Password` represents a text value that has been encrypted and will only be decrypted at the point of use. A `Password` type value can only be used in certain places as anywhere that uses it must understand how to decrypt the value. It is typically used in conjunction with the :docs-link[Paste Password]{id="PastePassword" type="Action"} action in scenarios where you need to securely paste a password in some desktop automation.
+The `Password` type is for keeping sensitive information like passwords, API keys, and security tokens safe. It's a text value that's automatically encrypted and is only decrypted at the exact moment it's used.
 
-The `Password` type will not log it's true value anywhere, obsficating it where possible or logging only the encrypted value. It is best to use this type for storing and using passwords, security keys or API tokens securely.
+`Password` values will never be logged or displayed, making them perfect for secure automation tasks. You'll typically use this type with the :docs-link[Paste Password]{id="PastePassword" type="Action"} action in desktop automation.
 
 ### File
 
-A `File` type can be used to represent any sort of File being used throughout the platform. This is useful if you design an App that has a File Upload form input and you want to download that File onto a Bot to perform some processing on the file or you wish to upload a file to a row in a Table.
+The `File` type represents any kind of file within the Toca platform, from a PDF to a spreadsheet. It's useful for handling file uploads, downloads, and transfers between different parts of your application and bots.
 
-The `File` type will store information about the file such as the name, extension, size and the [MIME type](https://en.wikipedia.org/wiki/Media_type).
+The `File` type stores important information about the file, such as its name, size, and type.
 
-> #### Note 📝
+> **Note 📝**
 >
-> The `File` type is different from providing a file path to a file or folder on a Bot. The `File` type is exclusively used for when you are moving a file around the Toca platform such as between an App input, a Datastore and your Activity.
+> A `File` type is **not** the same as a file path on a bot's computer. It's a special type for moving files around the Toca platform.
 
 ### Image
 
-An `Image` type allows you to store any type of image (PNG, JPEG, BMP, etc.) in an agnostic way that is understood by the whole platform. These `Image` values can then be used in automation actions such as "Image Search" or they can be stored in a Datastore so that you can reference them from an App to display a logo or background image.
+The `Image` type is for storing images (like PNGs, JPEGs, etc.) in a universal format. You can use `Image` values in automation actions like "Image Search" or display them in an app.
 
-Behind the scenes, these values are stored as a [Data URI](https://en.wikipedia.org/wiki/Data_URI_scheme) with the content being a Base64 representation of the image. Below shows an example of how an `Image` might be stored behind the scenes:
+Behind the scenes, images are stored as a **Data URI**, which is a special text representation of the image data.
 
-```
-data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==
-```
+#### Converting to an Image (Casting)
 
-#### Casting
-
-For really advanced use cases, you can actually get an image as it's raw Data URI. To do this you simply need to use a `Set Variable` action in an Automation project to cast an Image to it's text equivalent. This is only recommended if you understand what you are doing as the raw Data URI is no longer usable as an `Image` type.
+For advanced uses, you can cast an `Image` to a `String` to get its raw Data URI. Be careful with this, as it's no longer a usable `Image` type afterward.
 
 ### Identity
 
-An `Identity` is a value that represents a digital account that is linked to a different :docs-link[identity provider]{id="admin/identity_providers"}, this could be a Microsoft account, GitHub account or Google account for example.
+An `Identity` represents a link to an external account, like a Microsoft, Google, or GitHub account. This is a special type used to securely authorize automation actions.
 
-An `Identity` allows you to link any [Oauth2.0](https://oauth.net/2/) compatible account with Toca so that you can use automation actions such as `Outlook Send Email` or `Upload to Google Drive` on behalf of a user. These identities store both an Authorization token and a Refresh token behind the scenes so that they can always be authenticated without having to ask you to log back in to authorize these linked accounts.
+For example, an `Identity` allows you to send an email via Outlook or upload a file to Google Drive on behalf of a user without needing them to log in every time. Because of its specific purpose, the `Identity` type can only be used with these kinds of actions.
 
-An `Identity` can only be used in certain places such as Microsoft and Google actions, this is because an `Identity` is a type that is designed for very specific use cases so it's usage is limited.
+## Collection Types
 
-## Collections
-
+These types are designed to store multiple values in a structured way.
 
 ### List
 
-A `List` stores a collection of other values, you can have 0 or more values inside a List. A List is ordered, so that means a List will maintain it's order of items unless explicitly changed. A List can also contain duplicate values, you can repeat duplicate values as many times as you need to in a List. Lastly, a List can contain items which are made up of _many_ different types.
+A `List` is an ordered collection of values. It's like a shopping list—the items stay in the order you put them in. A `List` can contain any number of items (even duplicates\!) and can even hold values of different types.
 
-For example, you could have a List that looks similar to this:
+For example:
+
 ```python
-list_1 = ["james", 28, False, "Toca.io"]
-list_2 = ["apple","banana", "cherry", "apple", "cherry"]
+my_list = ["james", 28, False, "Toca.io"]
 ```
 
-A `List` is a very useful way of tracking a collection of values that need to stay together.
+You can get an item from a `List` by its position, called its "index." You can also go through each item one by one.
 
-Individual items in a List can be accessed by their position, this is also known as their "index". A List can also be iterated over to get each item within the List in turn.
-
-> #### Note 📝
+> **Note 📝**
 >
-> List indexing starts at 0, so the first item in a list is at position 0, this means the last item in a List will be at position of `list length - 1`.
+> Toca lists start counting at `0`. So, the first item is at position `0`, and the last item is at position `list length - 1`.
 
-#### Casting
+#### Converting to a List (Casting)
 
-You cannot cast a List to any other type without using actions to join all items of a list into a single `String` type, by joining the items with a delimeter.
-
-You can cast other types such as a table row or a table column to a `List`.
-
+You can't convert a whole `List` to another type directly, but you can use actions to combine its items into a single `String`. You can also convert a table row or column into a `List`.
 
 ### Coordinates
 
-A `Coordinates` type is composed of two `Numbers` that represent an `X` and `Y` position. The `Coordinates` type is often used in conjunction with Desktop automation actions such as Mouse Click or Image Click. It is used to define a single point on the screen that is being automated where the top left hand corner represents (0, 0) and the bottom right hand corner represents (1920, 1080) on a full HD screen.
+A `Coordinates` type holds two `Number` values: an `X` position and a `Y` position. This is commonly used in desktop automation to specify a single point on a screen.
 
-![Coordinates](src/assets/book/coords.png)
+The `(0, 0)` coordinate is the top-left corner of the screen.
 
-Below is an example of how a Coordinate value is represented behind the scenes:
+Behind the scenes, a coordinate might look like this:
+
 ```javascript
 {
-  X: 50,
-  Y: 125
+  X: 50,
+  Y: 125
 }
 ```
 
-You can access the individual `X` and `Y` components to extract out the individual `Numbers` that make up the `Coordinates`.
+You can access the individual `X` and `Y` values to get their `Number` components.
 
 ### Bounding Box
 
-A `Bounding Box` contains four `Numbers` which are used to represent the `X`, `Y`, `Width` and `Height` of a rectangle, with the `X` and `Y` being the top left hand corner of the Box. Similar to the `Coordinates` type, this is often used within Desktop automation to represent an area of the screen.
+A `Bounding Box` defines a rectangle on the screen. It's made up of four `Number` values: `X` and `Y` for the top-left corner, and a `Width` and `Height`.
 
-![Bounding Box](src/assets/book/bbox.png)
+This type is often used in desktop automation to specify an area of the screen, like a window or a button.
 
-Below is an example of how a Bounding Box value is represented behind the scenes:
+A bounding box is represented like this:
+
 ```javascript
 {
-  X: 50,
-  Y: 125,
-  Width: 100,
-  Height: 200
+  X: 50,
+  Y: 125,
+  Width: 100,
+  Height: 200
 }
 ```
 
+You can access the individual `X`, `Y`, `Width`, and `Height` values if you need them.
 
-You can access the individual `X`, `Y`, `Width` and `Height` components if you need to extract out the individual `Numbers`.
-
-> #### Note 📝
+> **Note 📝**
 >
-> You can only represent a square or rectangular shape with a `Bounding Box`, where the alternate sides _must_ be equal. There is no way of expressing a more complex shape in Toca types.
+> A `Bounding Box` can only represent a perfect rectangle. It can't be used for more complex shapes.
 
 ### Grid
 
-A `Grid` is used to represent a cluster of rectangles on the screen which are placed together to form a Grid. This is only used in the Grid actions in the Automation part of the platform, it allows you to define a grid of bounding boxes on the screen which can then be iterated over. When you iterate over a Grid using an action like Image Grid or OCR Grid, it will iterate over it from left to right, top to bottom, so it will start at the top left box and move to the top right box and then move down to the next row and so on.
+A `Grid` is a collection of `Bounding Box` types, arranged in a grid pattern. It's used in specific automation actions to define a series of areas on the screen that a bot needs to interact with.
 
-![Grid](src/assets/book/grid.png)
+When a bot processes a `Grid`, it moves from the top-left box to the top-right, and then down to the next row, and so on.
 
-Due to a Grid's complexity, you cannot get the individual boxes within the Grid.
-
+Because of its complexity, you can't access the individual boxes within a `Grid` directly.
 
 ### Table
 
-A Table is a 2-dimensional type that stores columns of data. Each column can have it's own type and this type is useful for storing any sort of tabular data. Tables are by far the most complicated type in Toca and have their own dedicated documentation which you can find :docs-link[here]{id="projects/automation/datastores/tables"}.
+A `Table` is a powerful, two-dimensional type that stores data in columns and rows, much like a spreadsheet. Each column can have its own type, making tables perfect for storing any kind of structured data.
 
-Tables have a load of useful features that make them very versatile:
-- Tables can be queried using a variety of search criteria
-- Different types in every column
-- Default values
-- Auto generated values on Creation or Update of a row
-- Create relationships to other tables
-- Permissions on each row to make rows of data private to individual users
+Tables are so important they have their own dedicated documentation :docs-link[here]{id="projects/automation/datastores/tables"}.
 
-A table might look like the following:
+Some key features of tables include:
 
-| _id_ | Name | Age | Fellowship Member |
+  * Searching and filtering data.
+  * Default and auto-generated values.
+  * Creating relationships with other tables.
+  * Setting permissions for specific rows.
+
+Here’s an example:
+
+| *id* | Name | Age | Fellowship Member |
 |:-- | :---: | :---: | :---: |
 | 1 | Legolas | 2931 | ✅ |
 | 2 | Aragorn | 87 | ✅ |
 | 3 | Frodo | 33 | ✅ |
-| 4 | Gollum | 589 | 🚫|
-| 5 | Saruman | 2001 | 🚫|
 
-In the table above we have a unique identifier with the _id_ column and then we have a String column for the name, a Number column for age and lastly a boolean column to denote if the character is a member of the fellowship.
-
-> **Note** 📝
+> **Note 📝**
 >
-> All tables must have an ID column which has type of `UUID` as this ensures that the ID of each row is a universally unique identifier. The machinery behind the scenes is also expecting any ID column to be in the format of a UUID. This will almost always be generated for you and you shouldn't have to worry about this except in very advanced cases.
+> Every table row must have a unique ID, typically in a special format called a `UUID`. This ensures every row can be uniquely identified.
 
-Behind the scenes, Tables which are defined in a Datastore are stored as a [SQL table](https://en.wikipedia.org/wiki/SQL) so it will scale well even with thousands of rows and tens of columns.
+Tables are stored in a database, so they can handle thousands of rows with excellent performance.
 
-> **Warning** ⚠️
+> **Warning ⚠️**
 >
-> If you are fetching a particularly large table, just be aware that whilst storing a large table is no problem, moving lots of data around the platform can lead to performance issues. To ensure you're optimising your applications, make sure you're only ever pulling back the data you need in terms of both rows and columns. As well as this, make sure you're leveraging pagination in an App so that you're only pulling back a handful of data at a time.
+> While tables can be huge, moving very large amounts of data can slow things down. To keep your apps fast, only retrieve the data you absolutely need, and use pagination in apps to load data in smaller chunks.
 
-#### Casting
+#### Converting to a Table (Casting)
 
-You can't cast a table as a whole to anything else but you can cast parts of a table to other types. You can cast both a table row and column to a `List` type, where each cell in the table row/column will become a new item in the list. You can also access individual cells of a table and cast them to their specified type such as a `String` or `Number`.
+You can't convert an entire table to another type, but you can convert a single row or column into a `List`. You can also access individual cells and cast them to their specific type (like `String` or `Number`). For special types like `UUID` or `Time`, you can always convert them to a `String`.
 
-> **Note** 📝
->
-> There are some types in Tables which don't have a regular corresponding type such as `UUID` or `Time`, in these cases you can always just cast them to a `String`.
+## Conversion Chart (Casting Matrix)
 
+This chart shows which types can be easily converted into others. Some types, like `Identity`, are left out because they can't be converted.
 
+| Type | String | Number | Boolean | DateTime | JSON | Image | List | Coordinates | Bounding Box | Table |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **String** | - | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | ✅\*|
+| **Number** | ✅ | - | | | ✅\* | | | ✅\* | ✅\* | ✅\*|
+| **Boolean** | | | - | | ✅\*| | | | | ✅\*|
+| **DateTime** | ✅ | | | - | ✅\* | | | | | ✅\*|
+| **JSON** | ✅ | | | | - | | | | | ✅\*|
+| **Image** | | | | | | - | | | | ✅\*|
+| **List** | ✅ | | | | ✅ | | - | | | ✅\*|
+| **Coordinates** | | | | | | | | - | | |
+| **Bounding Box** | | | | | | | | | - | |
+| **Table** | | | | | | | ✅| | | - |
 
-## Casting Matrix
-
-Below is a table which shows which types can be coerced / converted into different types. Some types have been deliberately ommitted as they cannot be cast to any other type (e.g. the Identity type).
-
-Across the top of the table you have the list of types and each row represents the other types it can be converted to.
-
-
-| _Type_ | String | Number | Boolean | Date Time | JSON | Image | List | Coordinates | Bounding Box | Table |
-|:-- | :---: | :---: | :---: | :---: | :---: |  :---: | :---: | :---: | :---: | :---: |
-| **String** | - | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | ✅*|
-| **Number** | ✅ | - | | | ✅* | | | ✅* | ✅* | ✅*|
-| **Boolean** | | | - | | ✅*| | | | | ✅*|
-| **DateTime** | ✅ | | | - | ✅* | | | | | ✅*|
-| **JSON** | ✅ | | | | - | | | | | ✅*|
-| **Image** | | | | |  | - | | | | ✅*|
-| **List** | ✅ | | | | ✅| | - | | | ✅*|
-| **Coordinates** | | | | |  | | | - | | |
-| **Bounding Box** | | | | |  | | | | - | |
-| **Table** | | | | |  |  | ✅| | | - |
-
-\* Any type with an asterisk against it means that it can be converted but only through subchips. You can learn more about subchips {here}.
+\* An asterisk means you can convert the type, but you'll need to use special "subchips" to do it. You can learn more about subchips {here}.
