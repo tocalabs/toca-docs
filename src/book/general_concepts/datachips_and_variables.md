@@ -76,4 +76,18 @@ In Automation, values that can change are called **Variables** and are denoted b
 
 ## Subchips
 
-*[It appears the "Subchips" section is empty. If you have content for this section, please provide it, and I will integrate it.]*
+
+Subchips allow you to drill down into the value behind a datachip and extract a specific item within that value. This can be incredibly powerful when dealing with more complex data objects such as lists, JSON or tables. This allows you to do things such as get an individual item in a list or a cell from a table.
+
+When you pick a datachip, if it is a type that supports subchips then look out of the little chevron. Click on the chevron and it will open the subchip selector for that type, each type has it's own subchip selector so for a list you can choose what position in the list you want to fetch your item from, for a table you can select what column/row/cell you want and for JSON you can select which property you would like. Use the selector to specify what you want and this will then place down a datachip but the text inside the datachip will denote that you have opted to specify a subchip.
+
+You can use subchips in both automation and apps, this versatility means you can avoid having to add extra steps of logic to extract these inner values. Wherever you can select a datachip in the platform, you'll be able to take advantage of subchips.
+
+The main types that subchips are useful for are:
+* **Tables:** You can select an individual cell, a row or a column
+* **List:** You can select an individual item at a specific position in the list
+* **JSON:** Use [JSONPath](https://en.wikipedia.org/wiki/JSONPath) syntax to select a node in your JSON value
+
+You can also use subchips in the following other types but typically you'll come across this less unless you're doing a lot of desktop automation:
+* **Bounding Box:** Get the X, Y, Width or Height properties
+* **Coordinates:** Extract the X or the Y property
