@@ -84,7 +84,7 @@ When you pick a datachip, if it is a type that supports subchips then look out o
 You can use subchips in both automation and apps, this versatility means you can avoid having to add extra steps of logic to extract these inner values. Wherever you can select a datachip in the platform, you'll be able to take advantage of subchips.
 
 The main types that subchips are useful for are:
-* **Tables:** You can select an individual cell, a row or a column
+* **Tables:** You can select an individual cell, a row or a column. You can use rows or columns anywhere that expects a list as an input
 * **List:** You can select an individual item at a specific position in the list
 * **JSON:** Use [JSONPath](https://en.wikipedia.org/wiki/JSONPath) syntax to select a node in your JSON value
 
