@@ -7,7 +7,7 @@ An Automation Project is a place to create, store and manage your automated proc
 * :docs-link[Datastores]{id="projects/automation/datastores/datastores"} - Read and write to a persistent data layer from your activities
 * :docs-link[Schedules]{id="projects/automation/schedules"} - Run your workflows on a routine basis
 
-![Automation Hierachy](/src/assets/automation_project.png)
+![Automation Hierarchy](/src/assets/automation_project.png)
 
 Automation is a very broad term but in Toca, automation refers to the ability to perform parts of, or all of, a business process with no human involvement. Your Toca platform will come with 1 or more virtualized workers known as Bots and these Bots can autonomously perform tasks up to 24 hours a day.
 
