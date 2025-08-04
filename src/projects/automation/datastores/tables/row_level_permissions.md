@@ -32,7 +32,7 @@ The level of access to a particular row can be controlled by selecting any of th
 
 ### Setting Permissions
 
-If you do not explicity set any permissions on the rows within a table, then the rows will inherit their permissions from the table's permissions. However, when you want to set the permissions on rows explicitly you can do this in two different ways:
+If you do not explicitly set any permissions on the rows within a table, then the rows will inherit their permissions from the table's permissions. However, when you want to set the permissions on rows explicitly you can do this in two different ways:
 1. Manually update the row via the table viewer within the datastore
 2. Use the :docs-link[Manage Row Permissions]{id="ManageTableRowPermission" type="Action"} action to set the permission of a row from within an :docs-link[Activity]{id="projects/automation/activities/activity"}. This can also be used in conjunction with the :docs-link[Get App User]{id="GetAppUser" type="Action"} action to set a row level permission to a particular App role.
 
