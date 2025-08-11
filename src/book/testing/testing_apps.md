@@ -15,16 +15,24 @@ Whilst in preview mode, you can click on links to other pages and they will work
 >
 > _Preview mode allows you to see your App as your users would, but as you are still viewing the App within the Toca platform, it will perform a bit slower than your real deployed app, particularly if there is lots of IPL or data being rendered on the page._
 
+:video{src="/src/assets/book/book_preview_app.webm"}
+
 ### Previewing as a User
 
 If your app is set up to to use :docs-link[authentication]{id="projects/apps/authentication"}, then you may well have designed your app so that users with different roles are allowed to see different data and perform different actions. This is typically done by setting up permissions on either your pages or the resources linked to your app. To test how your permissions work on your App, you can use the "Preview as User" feature, which allows you to enter preview mode as a particular user that has been set up on your app.
 
 This can be extremely useful for debugging issues that users might encounter as you can experience using the App exactly as they do. To use the "Preview as User" functionality, you must have authentication enabled for your app and you must have at least one app user which has been assigned a group with a role. When this is the case, your top bar will have a little person icon on the right hand side, clicking this will offer you a drop down allowing you to select which user you would like to preview the app as. To leave this mode, you can click the paintbrush icon to go back to design mode or in the preview as user dropdown click the _Unselected_ option.
 
+:video{src="/src/assets/book/preview_as_user.webm"}
+
 ## Using Deploy States
 
 Just like with automation, your Apps are always :docs-link[versioned]{id="common/versioning"}, this means that you can develop your app in the _Draft_ state, whilst your _Published_ state app is the one that is deployed and in the hands of your users. You can have your draft state deployed on one URL and your published version deployed on another URL. This allows you to fully :docs-link[deploy your App]{id="projects/apps/deployment"} whilst developing it so you can see what the real experience will be like.
 
+:video{src="/src/assets/book/app_deploy_states.webm"}
+
 ## Using Deploy Targets
 
-In addition to the deploy states, you can also deploy your App to multiple different URL's. This means that you can make some changes to your App then deploy it to a new URL, this can allow you to perform [A/B Testing](https://en.wikipedia.org/wiki/A/B_testing). Fully deploying your App to test it can also give you a much better idea of how your app will be perform for users, as even though the preview mode in the App Designer is very practical for testing, nothing quite substitutes for real thing!
+In addition to the deploy states, you can also deploy your App to multiple different URL's. This means that you can make some changes to your App then deploy it to a new URL, this can allow you to perform [A/B Testing](https://en.wikipedia.org/wiki/A/B_testing). Fully deploying your App to test it can also give you a much better idea of how your app will be perform for users, as even though the preview mode in the App Designer is very practical for testing, nothing quite substitutes for the real thing!
+
+:video{src="/src/assets/book/app_deploy_targets.webm"}
