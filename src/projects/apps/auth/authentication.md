@@ -2,7 +2,7 @@
 
 ### App Teams
 
-App users exist within a container called an "App Team", and each App can have one App Team assigned to it. 
+App users exist within a container called an "App Team", and each App can have one App Team assigned to it.
 
 An App Team is automatically generated when you set up a new app with authentication but it also gives you the option to assign an existing App Team to your app. This allows you to share preexisting user accounts between Apps, foregoing the need to have users re-register when using the new App. You can change the App Teeam at any point after the Apps creation.
 This is particularly useful in scenarios where you are developing several different apps for the same audience, you can create a single App Team and then use it across every other App that has the same target audience.
@@ -31,7 +31,7 @@ This is why when your App only uses OAuth2 there is no username in your App User
 In both OAuth2 and OpenID authenticated apps you need to provide the ProfileURL (can also be known as the User Info endpoint) as this is used to fetch the user ID from the authentication provider you are using.
 For example for Google the profile URL is [https://www.googleapis.com/oauth2/v1/userinfo](https://www.googleapis.com/oauth2/v1/userinfo) and for Microsoft it is [https://graph.microsoft.com/oidc/userinfo](https://graph.microsoft.com/oidc/userinfo).
 
-You also need to provide the path to the ID field so if your reponse from the Profile API looks like this:
+You also need to provide the path to the ID field so if your response from the Profile API looks like this:
 ```json
 {
     "sub": "OLu859SGc2Sr9ZsqbkG-QbeLgJlb41KcdiPoLYNpSFA",

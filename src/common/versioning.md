@@ -2,7 +2,7 @@
 
 Versioning of Toca entities uses a three tiered system.
 
-**Draft** - By creating an entity for the first time you are creating a draft version. Everytime you edit an entity you are editing the draft version.
+**Draft** - By creating an entity for the first time you are creating a draft version. Every time you edit an entity you are editing the draft version.
 
 **Published** - A published version is created by publishing a draft version. Published versions of any entity cannot be modified. The published version is what typically represents your live or "production" version.
 

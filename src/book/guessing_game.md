@@ -169,7 +169,7 @@ The user can now submit their guess, so now we need to display the message that 
 
 ### Testing our App
 
-We have designed our interface, we now need to just check it looks nice and works! So far we've been doing everything in our App in "Design Mode" but we can swtich to "Preview Mode" to simulate what the App will look like once deployed.
+We have designed our interface, we now need to just check it looks nice and works! So far we've been doing everything in our App in "Design Mode" but we can switch to "Preview Mode" to simulate what the App will look like once deployed.
 
 :video{src="/src/assets/book/preview_app.webm"}
 
@@ -208,8 +208,8 @@ Now you can share this URL with other people and they can play too!
 
 You might have realised that because we're only ever keeping track of _one_ random number, if there are lots of users accessing the App at once, they'll all be trying to guess the _same_ number and every time one user loads the App it will regenerate the number for all the other users.
 
-How would you improve this project so that each user get's their own random number to guess?
+How would you improve this project so that each user gets their own random number to guess?
 
 > #### Tip 👀
 >
-> When designing an App for multiple users, it's usually good practice to store any user specfic state on the App rather than Automation
+> When designing an App for multiple users, it's usually good practice to store any user specific state on the App rather than Automation

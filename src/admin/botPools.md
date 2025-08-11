@@ -16,7 +16,7 @@ Bot pools can either be `GUI` or `Stateless` (they will behave similarly to sele
 
 ### Pool bots
 
-Bot pools contain as many or as few bots as you want. When creating and editing bot pools you can add/remove specific bots from the pool. When a workflow is run with a bot pool, the system will automatically pick one of these bots, **but only those avaialble to the executing user**.
+Bot pools contain as many or as few bots as you want. When creating and editing bot pools you can add/remove specific bots from the pool. When a workflow is run with a bot pool, the system will automatically pick one of these bots, **but only those available to the executing user**.
 
 ## How bot pools work
 
