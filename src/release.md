@@ -12,6 +12,8 @@ There aren't too many changes across the Apps layer in version 8.1, more focus w
 
 Ever wanted to copy a page you've designed in one App to another? Well, now you can! This new Copy App Page feature allows you to clone a page, dependencies and all, to another app. This allows you to share designs and functionality between apps easily.
 
+![Copy App Page to another App](/src/assets/releases/8_1/copy_app_page.gif)
+
 #### Usability Improvements
 
 Similar to automation, we have focused on adding some small usability improvements to the App designer in version 8.1. These should improve your experience building an app and developing in page logic.
@@ -42,6 +44,8 @@ This can be very powerful when used in combination with either Stateless bots or
 >
 > _Files that already existed in a datastore will still appear in the Variables section of your data store rather than the file drive section. This is because behind the scenes they are stored in different places but don't worry, these old files can still be used as before but any new files will be added to the file drive._
 
+![Datastore makeover with sections and new file drive tour](/src/assets/releases/8_1/file_drive.gif)
+
 #### Usability Improvements
 
 There are a few smaller improvements made to the automation side of the platform which should make using the activity designer much easier. These are as follows:
@@ -59,6 +63,7 @@ When searching our documentation, triggered by either the `Ctrl/Cmd + K` hotkey 
 
 This can be very useful as Tocabot can produce an answer that incorporates information from many pieces of documentation so rather than having to manually read and search multiple pieces of documentation to reach the answer you're looking for, Tocabot can give you a concise answer that contains all the information you need.
 
+![Tocabot AI Chatbot in action](/src/assets/releases/8_1/ai_search.gif)
 
 #### Platform Search
 
@@ -74,6 +79,8 @@ The search is typo-tolerant and will show you the results based on how close eit
 > _**Tip ✨**_
 >
 > _You can also access Platform Search from the documentation search toolbar by simply starting your search with a forward slash character `/`._
+
+![Platform Search](/src/assets/releases/8_1/platform_search.gif)
 
 #### Hotkeys
 
