@@ -25,9 +25,9 @@ This can be extremely useful for debugging issues that users might encounter as 
 
 :video{src="/src/assets/book/preview_as_user.webm"}
 
-## Using Deploy States
+## Using Versions
 
-Just like with automation, your Apps are always :docs-link[versioned]{id="common/versioning"}, this means that you can develop your app in the _Draft_ state, whilst your _Published_ state app is the one that is deployed and in the hands of your users. You can have your draft state deployed on one URL and your published version deployed on another URL. This allows you to fully :docs-link[deploy your App]{id="projects/apps/deployment"} whilst developing it so you can see what the real experience will be like.
+Just like with automation, your Apps are always :docs-link[versioned]{id="common/versioning"}, this means that you can develop your app in the _Draft_ version, whilst your _Published_ version app is the one that is deployed and in the hands of your users. You can have your draft version deployed on one URL and your published version deployed on another URL. This allows you to fully :docs-link[deploy your App]{id="projects/apps/deployment"} whilst developing it so you can see what the real experience will be like.
 
 :video{src="/src/assets/book/app_deploy_states.webm"}
 
