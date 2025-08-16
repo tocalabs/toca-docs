@@ -36,3 +36,8 @@ Just like with automation, your Apps are always :docs-link[versioned]{id="common
 In addition to the deploy states, you can also deploy your App to multiple different URL's. This means that you can make some changes to your App then deploy it to a new URL, this can allow you to perform [A/B Testing](https://en.wikipedia.org/wiki/A/B_testing). Fully deploying your App to test it can also give you a much better idea of how your app will be perform for users, as even though the preview mode in the App Designer is very practical for testing, nothing quite substitutes for the real thing!
 
 :video{src="/src/assets/book/app_deploy_targets.webm"}
+
+
+## Using Toca
+
+If you want to automate the testing of your app, then why not use the automation layer in Toca? There are many actions which will allow you to automate the browser so you can test the functionality of your app. Using Toca to test your app means you don't need to use other software to build automated test scripts, it is all built into the same platform. The browser actions are all built on top of the powerful and ever-popular browser testing framework Selenium already and there is also a Selenium action which allows you to write Python with access to the Selenium package for more advanced use cases and tests.
