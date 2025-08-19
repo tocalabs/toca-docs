@@ -121,11 +121,181 @@ These components can import [NPM](https://npm.js) packages if you provide them w
 > _Unlike automation actions, app components can have multiple files per component. Automation actions only have one file available to each action for you to define your logic._
 
 There are also a series of imports that you can bring in from the Toca ecosystem to help you bring your component to life. These are all documented in the docs panel that exists on the right of the code editor, but the most important are:
-- Theming
-- Datachip handling
--
+- _App_: Allows you to get and set properties about the app such as theming and url slug
+- _Datachip handling_: Get and parse inputs from datachips
+- _Components_: Use common widgets such as colour pickers, range input and icons
 
-We'll build a simple app component that does xyz.
+#### Example Component
+
+We'll build a simple app component that allows you to display a video, with controls.
+
+**Index.tsx**
+
+```ts
+import React, { useEffect } from 'react';
+import { PropertiesPanelPortal, AppComponentProps, useAppEvents } from '@tocabot/sdk';
+import OptionsForm, { Options } from './options';
+import { Alert, AlertTitle } from '@mui/material';
+
+export default function({
+	id,
+	options,
+	style,
+	classes,
+	inBuilder
+}: AppComponentProps<Options>) {
+	const { fireEvent, workerLoaded } = useAppEvents();
+	const {  url, autoplay, startSeconds, controls = true, ...props } = options;
+
+	useEffect(() => {
+		if (workerLoaded) {
+			fireEvent('onInit', id);
+		}
+		return () => {
+			fireEvent('onDestroy', id);
+		}
+	}, [workerLoaded]);
+
+	return (
+		<>
+		<div className={classes.root} style={{...style, overflow: 'hidden'}}>
+			{url && (
+				<video
+					src={!!startSeconds ? `${url}#t=${startSeconds}` : url}
+					autoPlay={inBuilder ? false : autoplay}
+					crossOrigin="anonymous"
+					className="h-full w-full"
+					controls={controls}
+					{...props}
+				/>
+			)}
+			</div>
+			{!url && inBuilder && (
+				<Alert severity="warning">
+					<AlertTitle>Incomplete settings</AlertTitle>
+					This component requires a url to display a video
+				</Alert>
+			)}
+			<PropertiesPanelPortal id={id}>
+				<OptionsForm id={id} options={options} />
+			</PropertiesPanelPortal>
+		</>
+	);
+}
+```
+
+**Options.tsx**
+
+```ts
+import { Accordion, AccordionDetails, AccordionSummary, FormControlLabel, FormHelperText, MenuItem, Switch, TextField, Typography } from '@mui/material';
+import React from 'react';
+import { Spacer, usePropertiesChange } from '@tocabot/sdk';
+import { Icon } from '@tocabot/components';
+
+export interface Options {
+	url: string;
+	autoplay: boolean;
+	loop: boolean;
+	controls: boolean;
+	muted: boolean;
+	startSeconds: number;
+}
+
+interface Props {
+	id: string;
+	options: Partial<Options>;
+}
+
+export default function({
+	id,
+	options: {
+		url,
+		autoplay,
+		loop,
+		controls = true,
+		muted,
+		startSeconds,
+	},
+}: Props) {
+	const onChange = usePropertiesChange(id);
+
+	return (
+		<div>
+			<TextField
+				label="Direct video URL"
+				value={url}
+				onChange={evt => onChange({ url: evt.target.value })}
+				margin="dense"
+				variant="outlined"
+				fullWidth
+			/>
+			<Spacer />
+			<Accordion defaultExpanded>
+				<AccordionSummary
+				expandIcon={<Icon>expand_more</Icon>}
+				aria-controls="panel1-content"
+				id="panel1-header"
+				>
+					<Typography component="span">Video player options</Typography>
+				</AccordionSummary>
+
+				<AccordionDetails>
+					<div style={{display: 'flex', flexDirection: 'column'}}>
+
+						<FormControlLabel
+							label="Autoplay"
+							control={
+								<Switch
+									checked={autoplay}
+									onChange={evt => onChange({ autoplay: evt.target.checked })}
+								/>
+							}
+						/>
+						<FormControlLabel
+							label="Loop"
+							control={
+								<Switch
+									checked={loop}
+									onChange={evt => onChange({ loop: evt.target.checked })}
+								/>
+							}
+						/>
+						<FormControlLabel
+							label="Show controls"
+							control={
+								<Switch
+									checked={controls}
+									onChange={evt => onChange({ controls: evt.target.checked })}
+								/>
+							}
+						/>
+						<FormControlLabel
+							label="Muted"
+							control={
+								<Switch
+									checked={muted}
+									onChange={evt => onChange({ muted: evt.target.checked })}
+								/>
+							}
+						/>
+					</div>
+				<TextField
+					label="Start from (seconds)"
+					value={startSeconds}
+					onChange={evt => onChange({ startSeconds: Number(evt.target.value) })}
+					type="number"
+					margin="dense"
+					variant="outlined"
+					size="small"
+					fullWidth
+				/>
+
+				</AccordionDetails>
+			</Accordion>
+		</div>
+	);
+}
+```
 
 ### Building an IPL Action
 

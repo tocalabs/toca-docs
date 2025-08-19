@@ -1,8 +1,6 @@
 # Advanced Features
 
-Welcome to the next level of Toca.io! This chapter is your guide to the powerful administrative and automation capabilities that transform Toca.io from a simple low-code tool into a robust business platform. While Views (as you've learned in the previous chapter) are about organizing data, the features we'll explore here are about controlling access, automating processes, and integrating Toca.io with the rest of your digital world.
-
-Here’s a summary of what you'll master in this section:
+This chapter is your guide to the administrative and advanced automation capabilities that transform Toca from a simple low-code tool into a robust enterprise platform. Here’s a summary of what you'll master in this section:
 
 ## Managing Your Toca Developers: Users and Groups
 
