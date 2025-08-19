@@ -8,7 +8,9 @@ At its heart, a View is a reflection of your data query. When building a view, y
 
 todo: insert video showing how to create a view
 
-### Joins: Connecting the Dots
+## Joins
+
+### Connecting Tables
 
 Real-world data is rarely confined to a single table. You might have customer information in one table, sales orders in another and product details in a third. The `Join` feature in views allows you to combine data from multiple tables, creating a unified and comprehensive dataset.
 
@@ -25,11 +27,27 @@ For more information about joins, the :docs-link[views documentation]{id="projec
 
 todo: insert video showing how to do a join
 
-### Column Alias
+## Column Alias
+
+After joining multiple tables together in a view, one thing that can become confusing is the column names. This is because you might have columns with the same name in the tables you are joining. Luckily, with Views, you can change how the names of a view appear through the aliases. This means that if you had a `Created` column in both your `SalesOrders` and `Customers` table, you can rename the column that comes from the `SalesOrders` table to `Sale_Created` and the one from the `Customers` table can be renamed to `Customer_Created`. This helps to avoid confusion and makes it much clearer what each column in your view represents.
+
+todo: insert video of editing column names
 
 ## Functions
 
-## Group By: Aggregating Data
+Views also give you access to SQL functions which you can apply to the columns returned by your view. This means that instead of running the data in your view through some transformation pipeline that you might have built inside an activity, your View can actually perform the data transformation directly on the data. The functions are split into the following categories:
+- **String functions**: performs text manipulation such as `TRIM()`, `LOWER()`, `SUBSTRING()` etc.
+- **Numeric functions**: lets you perform basic mathematical functions such as `+`, `-`, `*`, `/` as well as more advanced functions such as `LOG()`, `SIN()`, `COS()` and `TAN()`
+- **Datetime functions**: lets you manipulate and generate date times, particularly useful for getting dates to appear in exactly the format you want. Functions include `NOW()`, `ADDTIME()` and `DATE_FORMAT()`
+- **Advanced functions**: These functions cover more advanced use cases which don't necessarily fall into any of the above categories. This includes functions such as `IF()`, `GROUP_CONCAT()` and `ISNULL()`
+
+For more detailed information about any of the functions you have available to you, you can either ask Tocabot (`ctrl+k`) or you can search the web for "MariaDB {insert function name}".
+
+todo: insert video of adding sql functions
+
+## Group By
+
+### Aggregating Data
 
 Often, you don't need to see every single row of data. Instead, you're interested in summaries — the total sales per region, the average product rating, or the count of orders for each customer. This is where the Group By feature shines.
 
@@ -43,7 +61,9 @@ Group By aggregates rows that have the same value in a specified column. For exa
 Continuing with our `SalesOrders` example, to see the total sales for each product, you would Group By the `ProductID` and use the `SUM()` function on the `OrderTotal` column. The result is a concise View showing `ProductID` and `TotalSales`, eliminating the need to look at every individual sale.
 
 
-### Having: Filterting aggregated results
+## Having
+
+### Filterting aggregated results
 
 While the Group By statement lets you aggregate data, the Having statement takes it a step further by allowing you to filter those aggregated results. This is a crucial distinction: `WHERE` filters individual rows before they are grouped, while `HAVING` filters the groups after they have been created.
 
