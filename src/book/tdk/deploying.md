@@ -94,7 +94,7 @@ To add an app component to a group, head to the TDK homepage and either create a
 
 todo: insert video of adding a component to a group
 
-## App Action
+### App Action
 
 #### Build App Action
 
