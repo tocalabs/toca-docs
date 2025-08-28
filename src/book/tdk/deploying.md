@@ -41,6 +41,11 @@ Once your action build is complete, you need to load it onto the Bot. Like runni
 
 To load a new build onto a Bot, head to the Admin section and the Bots subsection. From here, click on each bot that you want to update. On the Summary tab for each bot, there is a Bot build ID and a Stateless build ID field, each of these fields will only be populated if you have the corresponding Bot service running (GUI and/or Stateless). If there is a new build available, you can press the refresh icon and this will load the latest action build onto the Bot.
 
+> **Note 📝**
+>
+> _In almost all cases you'll want to update all bots to the latest action builds, this is so that all your bots have the same actions available. This is especially prominent with Stateless bots as a stateless bot can be chosen at random to run automation so making sure that all stateless bots have the same actions is imperative to ensure your platform operates predictably._
+
+
 todo: insert video of updating Bot build
 
 ### Action Helpers
