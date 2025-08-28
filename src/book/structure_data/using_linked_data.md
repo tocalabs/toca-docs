@@ -111,12 +111,54 @@ Luckily, Apps are a bit smarter than that and they natively understand the relat
 
 As the data is returned like this, it allows us to do things like query the table by a value on one of the related tables, or have a repeating layout inside a repeating layout to display a list of customers and then a list of orders for each customer, all whilst only having to fetch the data once.
 
-### Dynamic Pages
+### Dynamic Pages and Repeating Layouts
 
-### Repeating Layouts
+One of the best places to take advantage of how related data is handled in Apps is :docs-link[dynamic pages]{id="projects/apps/pages"}. Imagine we're building out the admin side of an eCommerce application and we need to be able to see all customers and their details. You might:
+1. Construct an admin page which has a repeating layout which is driven by the Customers table
+2. For each item in your repeating layout, you'd have a Link Button that links to a dynamic page
+3. The dynamic page would also be driven by the Customers table
+4. The dynamic page could then have:
+  - A section for the personal information of the customer at the top of the page
+  - A section on the page for the address of the customer
+  - A repeating layout underneath the personal and address information which is driven from the list of Orders that has been returned alongside the customer information
+
+todo: insert video demonstrating the above set up
+
+
+### Other places you can use related data in Apps
+
+#### Dynamic Data Wrapper and Query Wrapper
+
+The Dynamic Data Wrapper and Query wrapper components are two components that return table data, the main difference between them being that the Dynamic Data Wrapper component only returns one row of data at a time as context and the Query wrapper component can return many rows of data as context. Both of these components, when they use a table that has related data, will return all the related data as well. This allows you to use components like repeating layouts and table components inside these wrapper components, all without having to request extra data.
+
+todo: example of the above set up
+
+#### Subchips
+
+When you are using a datachip that represents a table, you can drill down to a specific cell using subchips. This is especially powerful when the table you are using has related data as you can use subchips to drill down to a cell inside any of the related tables.
+
+todo: video showing the above
 
 ## Automation
 
+The way related data is handled in Automation differs to the way it is handled in Apps. In Apps, it makes perfect sense for related data to be represented as a nested JSON object as shown above, but in Automation it would be pretty weird if we used a Get Table Data action and instead of returning a table, it returned a JSON result.
+
+So, in Automation, tables are always represented by a 2D structure (columns and rows). This means that if you were to use a Get Table Data action on the Customers table where `Id = 1` then it would return the following data:
+
+| Id  | Name            | Email address        | Profile picture | Date of birth | Address | Orders     |
+| :-- | :-------------- | :------------------- | :-------------- | :------------ | :------ | :--------- |
+| 1   | Alan Turing     | alan@computers.inc   | 💻              | `1912-06-12`  | 50      | [987, 988] |
+
+This is much more akin to how a SQL database would behave and so aligns much closer to what users might expect when working on the backend logic. You can then go off and query the related tables further from here.
+
+There is only really one place in Automation where you can access the related data directly from the root table: **Querying**.
+
 ### Querying
 
-### Subchips
+Automation still understands the relationships between tables, and so when you are querying a table in an action such as Get Table Data, Update Table Rows or Delete Table Rows you can actually query the table by values inside the related tables. Imagine you want to fetch all get all customers where the city they come from is "Geneva". Related data allows you to do this by simply selecting the column in the related table and then defining your query as you normally would.
+
+todo: insert video showing how you do this
+
+### Referential Integrity
+
+There are other places where related data comes into it's own such as referential integrity. These relationships you define between your data will make sure that you can't do things like delete a customer that is associated to an address or several orders. You first have to delete the related data before you can delete the data at the root. When you link tables you can also take advantage of features such as :docs-link[cascade delete]{id="projects/automation/datastores/tables/delete_operation"} which means that when you delete a row, any rows from related tables associated with the row will also be deleted.
