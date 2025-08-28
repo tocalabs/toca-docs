@@ -118,9 +118,9 @@ One of the best places to take advantage of how related data is handled in Apps 
 2. For each item in your repeating layout, you'd have a Link Button that links to a dynamic page
 3. The dynamic page would also be driven by the Customers table
 4. The dynamic page could then have:
-  - A section for the personal information of the customer at the top of the page
-  - A section on the page for the address of the customer
-  - A repeating layout underneath the personal and address information which is driven from the list of Orders that has been returned alongside the customer information
+  1. A section for the personal information of the customer at the top of the page
+  2. A section on the page for the address of the customer
+  3. A repeating layout underneath the personal and address information which is driven from the list of Orders that has been returned alongside the customer information
 
 todo: insert video demonstrating the above set up
 
