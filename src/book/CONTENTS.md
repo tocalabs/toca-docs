@@ -32,5 +32,5 @@
 - :docs-link[Advanced Features]{id="book/advanced_features"}
   - :docs-link[Permissions]{id="book/advanced_features/permissions"}
   - :docs-link[Users and Groups]{id="book/advanced_features/users_and_groups"}
-  - :docs-link[GUI vs Stateless Automation vs Bot Pools]{id="book/advanced_features/gui_vs_stateless"}
+  - :docs-link[GUI vs Stateless Automation vs Bot Pools]{id="book/advanced_features/types_of_bots"}
   - :docs-link[Workflows as APIs]{id="book/advanced_features/workflows_as_apis"}
