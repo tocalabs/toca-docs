@@ -88,24 +88,38 @@ Let's write a simple connector that takes in a JSON payload from a POST HTTP met
 
 We'll start with the handler:
 ```csharp
+string content;
 
+using(StreamReader streamReader = new StreamReader(payload.Context.Request.Body, Encoding.UTF8))
+{
+    content = await streamReader.ReadToEndAsync();
+}
+
+AddResult("body", content, ActionTypes.String);
 ```
+
+This is a very simple handler which reads the body of the http request to a string and returns it from the handler so it can be used as an input to any workflow that uses this connector. In connector handlers, you will always have access to the `payload.Context` object which represents a [ASP.NET HTTP Context](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httpcontext?view=aspnetcore-9.0) object. This will allow you to fetch information about the request such as body, headers, query parameters and much more!
 
 We'll build a couple of responses which return different status codes so that users can branch their workflow to allow for returning different codes based on how the workflow progresses.
 
 A 200 OK response:
 ```csharp
-
+var statusCode = 200;
+var body = GetInput<string>("body");
+payload.Context.Response.ContentType = GetInput<string>("contentType");
+payload.Context.Response.StatusCode = statusCode;
+await payload.Context.Response.WriteAsync(body).ConfigureAwait(false);
 ```
+
+This response will take an input called "body" and "contentType" and add them to the response object. You also have access to the `payload.Context` (HttpContext) object in the responses for connectors so you can manipulate the `Response` property at will.
 
 A 500 Internal Server Error response:
 ```csharp
-
-```
-
-Lastly, a 400 Bad Request response:
-```csharp
-
+var statusCode = 500;
+var body = GetInput<string>("body");
+payload.Context.Response.ContentType = GetInput<string>("contentType");
+payload.Context.Response.StatusCode = statusCode;
+await payload.Context.Response.WriteAsync(body).ConfigureAwait(false);
 ```
 
 ## Extending Apps
@@ -131,7 +145,7 @@ We'll build a simple app component that allows you to display a video, with cont
 
 **Index.tsx**
 
-```ts
+```tsx
 import React, { useEffect } from 'react';
 import { PropertiesPanelPortal, AppComponentProps, useAppEvents } from '@tocabot/sdk';
 import OptionsForm, { Options } from './options';
@@ -186,7 +200,7 @@ export default function({
 
 **Options.tsx**
 
-```ts
+```tsx
 import { Accordion, AccordionDetails, AccordionSummary, FormControlLabel, FormHelperText, MenuItem, Switch, TextField, Typography } from '@mui/material';
 import React from 'react';
 import { Spacer, usePropertiesChange } from '@tocabot/sdk';
@@ -299,4 +313,59 @@ export default function({
 
 ### Building an IPL Action
 
-All IPL actions are developed using TypeScript.
+All IPL actions are developed using TypeScript. All IPL actions must have an `index.ts` file, this is the entry point to running the action. You can also have many other files if you want but the `index.ts` file is mandatory. Like App components, you can also import [NPM](https://npm.js) packages by including a `package.json` file at the root directory.
+
+Here's an example app component that performs some text manipulation. In this code, the `Props` object represents the inputs available to the user and then the `manipulateText` function handles the actual logic of the action. Finally, the `registerAppAction<T>` function at the bottom of the index.ts file is the entry point to adding the app action and running the logic.
+
+
+```ts
+import { registerAppAction } from '@tocabot/sdks/app-actions';
+
+interface Props {
+	text: string;
+	action: string;
+	replace: string;
+	text2: string;
+	padcount: number;
+	padchar: string;
+	index: number;
+	length: number;
+}
+
+function manipulateText({ text, ...props }: Props): string {
+	switch (props.action) {
+		case 'capitalise':
+			return `${text.slice(0, 1).toUpperCase()}${text.slice(1)}`;
+		case 'insert':
+			return `${text.slice(0, props.index)}${props.text2}${text.slice(props.index)}`;
+		case 'join':
+			return `${text}${props.text2}`;
+		case 'leftpad':
+			const length = Math.max(props.padcount - text.length, 0);
+			return `${Array.from({ length }).fill(props.padchar).join('')}${text}`;
+		case 'lowercase':
+			return text.toLowerCase();
+		case 'replace':
+			return text.replace(props.replace, props.text2);
+		case 'substring':
+			return text.slice(props.index, props.index + props.length);
+		case 'trim':
+			return text.trim();
+		case 'trimend':
+			return text.trimEnd();
+		case 'trimstart':
+			return text.trimStart();
+		case 'uppercase':
+			return text.toUpperCase();
+		default:
+			return text;
+	}
+}
+
+registerAppAction<Props>(
+	import.meta.appAction,
+	async ({ inputs }) => {
+		return { text: manipulateText(inputs) }
+	},
+);
+````
