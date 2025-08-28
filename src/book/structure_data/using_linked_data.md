@@ -41,37 +41,7 @@ Last, we have our table of Orders:
 
 Now, currently these tables are not linked, so to make this a varied example, we'll link the data as follows:
 
-```mermaid
-erDiagram
-    Customers ||--o{ Orders : "1 to many"
-    Customers ||--|| Addresses : "1 to 1"
-
-    Customers {
-        Uuid ID PK
-        string Name
-        string Email
-        image ProfilePicture
-        date DateOfBirth
-        Uuid AddressId FK
-        Uuid[] OrderIds FK
-
-    }
-
-    Orders {
-        Uuid ID PK
-        string Product
-        string Category
-        number Amount(GBP)
-    }
-
-    Addresses {
-        Uuid ID PK
-        string AddressLine1
-        string AddressLine2
-        string City
-        string AreaCode
-    }
-```
+![Related Data Diagram](/src/assets/book/mermaid_table_diagram.png)
 
 ## Apps
 
