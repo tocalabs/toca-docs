@@ -16,7 +16,9 @@ Exclusive nodes allow you to specify conditions on each branch that leaves the n
 
 The benefit of this is that it allows you to break up what might be a large activity with lots of If Then actions into lots of smaller activities where the conditional flow of execution is handled by the Workflow. Breaking up your activities into smaller units of automation can be beneficial as it gives you the option of reusing these smaller, less niche activities in other workflows.
 
-To create a decision point in a workflow, drag an exclusive node onto the workflow and draw all the possible paths of execution that could follow on from the exclusive node. When you click on the exclusive node, you'll then see in the properties panel on the right hand side a list of text boxes which allow you to define the conditions that need to be met for each branch. Define your conditions by righting an evaluation statement such as: Left Hand Side (LHS) == Right Hand Side (RHS).
+To create a decision point in a workflow, drag an exclusive node onto the workflow and draw all the possible paths of execution that could follow on from the exclusive node. When you click on the exclusive node, you'll then see in the properties panel on the right hand side a list of text boxes which allow you to define the conditions that need to be met for each branch. Define your conditions by righting an evaluation statement such as: Left Hand Side (LHS) == Right Hand Side (RHS). You can also use the `else` keyword, which means if none of the other conditions are met then the workflow will travel down the branch with has `else` defined on it.
+
+:video{src="/src/assets/book/exclusive_decision_in_workflow.webm"}
 
 > **Note 📝**
 >
@@ -28,6 +30,8 @@ You can also use exclusive nodes to define loops in your workflow by drawing one
 
 To set up an exclusive in such a way that it should loop, you need to set up your exclsuive as you would normally but one of your paths should point to a node that preceedes the exclsuive node and then you should have another path with a break condition on it, i.e. a condition that means the workflow will exit the loop. Think your conditions through and make sure that you haven't built a loop that will run forever!
 
+:video{src="/src/assets/book/exclusive_loop_in_workflow.webm"}
+
 > **Note 📝**
 >
 > _Looping at the Workflow level will perform each loop a bit slower than doing it at the activity level but provided you are not doing something time critical, in most scenarios this will still run fast enough to be practical._
@@ -38,10 +42,13 @@ You may encounter scenarios when developing a new workflow where you need to reu
 
 This pattern can be particularly useful when you have workflows which do things like update audit databases or BI data sources and you need to run these workflows whenever other workflows run.
 
+:video{src="/src/assets/book/run_workflow_action.webm"}
 
 ## Copy Activity to Project
 
 When you develop an activity that is useful for more than one project, you can actually copy just that activity to different projects using the "Copy to Project" tool. Whilst you could use the Run Workflow functionality in this scenario, if it's only one or two activities you're interesting in, this can be a more practical way of sharing that automation functionality across
+
+:video{src="/src/assets/book/copy_activity_to_project.webm"}
 
 > **Note 📝**
 >

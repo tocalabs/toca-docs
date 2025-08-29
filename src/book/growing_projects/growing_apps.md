@@ -9,7 +9,11 @@ Layouts act like templates, allowing you to define the structure and look of a s
 
 To create a layout, head over to the Toca Development Kit (TDK) and hit the Create App Layout button. This will take you to a lightweight App designer that allows you to place down your app components and IPL but you can't wire components up to datastores or listeners. This is intentional as layouts are meant to act as templates, allowing you to rapidly structure your page. Once you've developed your layout in the TDK, save it, set it for review and then once approved, you can add the layout to an existing group in the TDK or you can create a new group (groups just define how the layout appears when you're searching for it).
 
+:video{src="/src/assets/book/creating_layout.webm"}
+
 Once this is all done, you can see your new layout in the regular app designer in the layouts tab on the left hand side and you can drag it onto the app page.
+
+:video{src="/src/assets/book/dragging_layout_onto_app.webm"}
 
 
 ## Blocks
@@ -18,4 +22,8 @@ Blocks are a bit different from layouts, they are app specific (so you cannot sh
 
 Blocks behave like a single component, in that you drag them onto your screen and then configure inputs to them if they have any inputs defined, but under the hood they might contain many components. To create a block, you can select a component that you have dragged onto the page and you can turn it into a block by pressing the "Create Block" button on the component menu. This will take the component you have selected and everything inside that component and group them together into a single block. Once you have created your block, you can define inputs on it by going to the Inputs tab which appears on the right hand side of the designer.
 
+:video{src="/src/assets/book/create_block.webm"}
+
 To place a block down, head to the Blocks tab in the app designer when you are building a page, and then drag the block from the blocks tab onto the page. You can then define the values for any inputs which your block is expecting.
+
+:video{src="/src/assets/book/using_block.webm"}
