@@ -78,7 +78,7 @@ When you build lots of Actions, you'll find yourself in a situation where you ne
 
 ### Building a Connector
 
-Connectors allow you to turn your workflow into an API that anyone can use. However, before the data from the API request makes its way into the acitivities defined in your workflow, there is usually a bit of preprocessing that you want to do to the request. This might include checking an `Authorization` header or `API-Key` value, or parsing the query parameters or even just extracting specific values from the body to then pass through to the workflow. Connectors also allow you to define the response to the API request, including specific status codes, response body and headers.
+Connectors allow you to turn your workflow into an API that anyone can use. However, before the data from the API request makes its way into the activities defined in your workflow, there is usually a bit of preprocessing that you want to do to the request. This might include checking an `Authorization` header or `API-Key` value, or parsing the query parameters or even just extracting specific values from the body to then pass through to the workflow. Connectors also allow you to define the response to the API request, including specific status codes, response body and headers.
 
 A Connector is made up of:
 - A Handler - This is a single block of code that handles the request when it first comes in.

@@ -1,6 +1,6 @@
 # 8.1 - Release Notes
 
-Version 8.1 focuses on improving the navigation around the Toca platform, allowing you to move around the platform faster than ever before. 8.1 also introduces _Tocabot_, our knowledgable AI chatbot who can help you with any questions you might have about the platform!
+Version 8.1 focuses on improving the navigation around the Toca platform, allowing you to move around the platform faster than ever before. 8.1 also introduces _Tocabot_, our knowledgeable AI chatbot who can help you with any questions you might have about the platform!
 
 ## What's New
 

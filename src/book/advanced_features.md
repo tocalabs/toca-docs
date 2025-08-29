@@ -13,7 +13,7 @@ A key component of any successful platform is the ability to manage who can acce
 
 Automation is at the heart of Toca.io's functionality. You'll dive into the world of automation bots, which can perform repetitive tasks, from data entry to complex process flows.
 
-- **Desktop Automation vs. Stateless Automation:** We'll take a look at the difference betwen **GUI Bots**, which mimic a user's actions by interacting with the desktop environment, and **stateless bots**, which operate in the background without a visual interface, making it faster, more scalable, and ideal for server-side tasks.
+- **Desktop Automation vs. Stateless Automation:** We'll take a look at the difference between **GUI Bots**, which mimic a user's actions by interacting with the desktop environment, and **stateless bots**, which operate in the background without a visual interface, making it faster, more scalable, and ideal for server-side tasks.
 - **Bot Pools**: How these pools differ from both GUI and Stateless bots and when you should use them. This will also include how to create them
 
 ## Toca as a Service: Turning Workflows into APIs
