@@ -122,8 +122,7 @@ One of the best places to take advantage of how related data is handled in Apps 
   2. A section on the page for the address of the customer
   3. A repeating layout underneath the personal and address information which is driven from the list of Orders that has been returned alongside the customer information
 
-todo: insert video demonstrating the above set up
-
+:video{src="/src/assets/book/using_linked_data.webm"}
 
 ### Other places you can use related data in Apps
 
@@ -131,13 +130,11 @@ todo: insert video demonstrating the above set up
 
 The Dynamic Data Wrapper and Query wrapper components are two components that return table data, the main difference between them being that the Dynamic Data Wrapper component only returns one row of data at a time as context and the Query wrapper component can return many rows of data as context. Both of these components, when they use a table that has related data, will return all the related data as well. This allows you to use components like repeating layouts and table components inside these wrapper components, all without having to request extra data.
 
-todo: example of the above set up
-
 #### Subchips
 
 When you are using a datachip that represents a table, you can drill down to a specific cell using subchips. This is especially powerful when the table you are using has related data as you can use subchips to drill down to a cell inside any of the related tables.
 
-todo: video showing the above
+video{src="/src/assets/book/app_subchips.webm"}
 
 ## Automation
 
@@ -157,7 +154,7 @@ There is only really one place in Automation where you can access the related da
 
 Automation still understands the relationships between tables, and so when you are querying a table in an action such as Get Table Data, Update Table Rows or Delete Table Rows you can actually query the table by values inside the related tables. Imagine you want to fetch all get all customers where the city they come from is "Geneva". Related data allows you to do this by simply selecting the column in the related table and then defining your query as you normally would.
 
-todo: insert video showing how you do this
+:video{src="/src/assets/book/querying_by_relationship.webm"}
 
 ### Referential Integrity
 
