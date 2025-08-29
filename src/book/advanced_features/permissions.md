@@ -38,7 +38,7 @@ The other form of platform permissions is the ability to make someone an admin u
 
 To make someone an admin user, another admin user must go to the Admin -> Users & Groups section, identify the user they which to elevate and click on the cog next to the user before finally ticking the admin toggle and clicking `update`.
 
-todo: insert video
+:video{src="/src/assets/book/set_user_to_admin.webm"}
 
 > **Note 📝**
 >
@@ -54,7 +54,7 @@ On an authenticated app, you can control which roles a user has to have to acces
 
 To configure permissions on your app pages, head to the settings for an app page and tick the option to _Restrict access_. This will then give you a tickbox for each role defined in your app. Tick the roles which should have access to the page and make sure the roles which should not have access are unticked.
 
-todo: Insert video
+:video{src="/src/assets/book/adding_app_page_permissions.webm"}
 
 ### Workflow Permissions
 
@@ -62,7 +62,7 @@ If you have any :docs-link[listeners]{id="projects/automation/workflows/listener
 
 You can either do this during the app creation wizard if you link any listeners with the app when you first create it or you can do it at a later date. To configure these permissions, go to the settings of an app and head to the resources tab. The resources tab will contain both listeners and datastores, so find the listener section and from there you will see a list of listeners already linked with the app as well as a form to link new listeners with the app. When a listener is linked with the app, the roles defined in the app authentication section will appear below each listener. The roles will have two checkboxes next to them, one to allow the execute permission (allows users with that role to run the listener) and a read permission (allows users with this role to read the outputs of the underlying workflow). Typically you will always give a role both execute and read permissions on a listener.
 
-todo: insert video
+:video{src="/src/assets/book/adding_listener_permissions.webm"}
 
 ### Datastore Permissions
 
@@ -70,7 +70,7 @@ Similar to listeners, each datastore linked with an authenticated app will have 
 
 Like listeners you can either configure these permissions during the creation wizard for the app or you can set the permissions in the settings panel for the app. If you head to the settings panel, go to the app resources tab and find the datastores section. You will see all the datastores linked with the app as well as a form allowing you to link other datastores. Once you have linked your datastores, each datastore will appear with a list of all the app user roles below, each role with several checkboxes next it allowing you to define whether a role can read, write or delete from the datastore.
 
-todo: insert video
+:video{src="/src/assets/book/adding_datastore_permissions.webm"}
 
 This means that if a user goes to a page that has a table component which uses a datastore table that they don't have permission to view as the datasource then they will instead see an empty table.
 
@@ -88,4 +88,4 @@ Unlike the other app user permissions, this is not configured within the app, th
 4. When the user returns to the page displaying data from this table they will be able to see the new row but other users will not be able to
 
 
-todo: add video
+:video{src="/src/assets/book/adding_row_level_permissions.webm"}
