@@ -20,10 +20,14 @@ When you are viewing your current automation project, you'll see at the top of t
 
 To create a new datastore, make sure the New tab is highlighted in the wizard, give your datastore a meaningful name and description so you can easily find it later. Hit the `CREATE` button and you're good to go, you've just created a new datastores that is part of your automation project.
 
+:video{src="/src/assets/book/create_new_datastore.webm"}
+
 
 ### Link an Existing Datastore
 
 Datastores can be shared across multiple automation projects, this is useful for sharing data between projects such as credentials to third party systems for example. To link an existing datastore to your current automation project, head to the home page of your automation project and click the "Add Datastore" button at the top in the Datastore column. This will open a wizard which has two tabs: "New" and "Existing"; Click on the "Existing" tab and select a Datastore from the dropdown which contains a list of other projects and their datastores.
+
+:video{src="/src/assets/book/add_existing_datastore.webm"}
 
 ## Linking Apps to Datastores
 
@@ -33,6 +37,7 @@ If you want to display data from your Datastores inside an App, such as displayi
 
 When you load data into a component on your page, particularly data from a **table** or **view**, you should be mindful of how _much_ data you are loading in. For example, if you have a table which has 100,000 rows of data in it and you attempt to display all that data at once in a table component on your page, the performance of the page is likely to be pretty sluggish! Make sure you are always paginating your data where possible, all components which allow you to load tabular data will have options for pagination, allowing you to control how much data you load onto your page at once.
 
+:video{src="/src/assets/book/link_datastore_with_app.webm"}
 
 ## Linking Apps to Automation
 
@@ -59,6 +64,7 @@ If you want to connect a listener to a pre-existing app then:
 2. Click on the App Resources tab on the settings section
 3. Click in the Add Listener auto complete field and then follow on the steps laid out
 
+:video{src="/src/assets/book/link_listener_with_app.webm"}
 
 > **Note** 📝
 >
@@ -105,6 +111,8 @@ You can access the context object in Apps by clicking on the datachip button {X}
 
 A :docs-link[dynamic page]{id="projects/apps/pages"} will generate a page for each row of a table. This means that a dynamic page will have a context object available to all components and app actions defined on the page. The context provided by a dynamic page will allow you to select any value from the current row of the table that the dynamic page represents.
 
+:video{src="/src/assets/book/set_up_dynamic_page.webm"}
+
 **Data Driven Layouts**
 
 There are certain :docs-link[layout components]{id="projects/apps/designer/components"} which allow you to define a layout which is driven by data. The most common of these data driven layouts are the:
@@ -112,6 +120,8 @@ There are certain :docs-link[layout components]{id="projects/apps/designer/compo
 - :docs-link[Dynamic Data Wrapper]{id="3c1c6a76-c5bd-425b-9a28-d138f9d568d9" type="AppComponent"} - Returns a single row of data, the query for this is usually dynamic rather than static
 
 With these layouts, any components that are placed inside them will get access to the context that they return. This includes any app actions in IPL defined on these components.
+
+:video{src="/src/assets/book/using_repeating_layout.webm"}
 
 ### Automation
 
