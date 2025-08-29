@@ -48,7 +48,7 @@ To load a new build onto a Bot, head to the Admin section and the Bots subsectio
 > _In almost all cases you'll want to update all bots to the latest action builds, this is so that all your bots have the same actions available. This is especially prominent with Stateless bots as a stateless bot can be chosen at random to run automation so making sure that all stateless bots have the same actions is imperative to ensure your platform operates predictably._
 
 
-:video{src="/src/assets/book/updating_bot_build.web"}
+:video{src="/src/assets/book/updating_bot_build.webm"}
 
 ### Action Helpers
 
