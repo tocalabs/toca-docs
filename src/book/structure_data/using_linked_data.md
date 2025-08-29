@@ -134,7 +134,7 @@ The Dynamic Data Wrapper and Query wrapper components are two components that re
 
 When you are using a datachip that represents a table, you can drill down to a specific cell using subchips. This is especially powerful when the table you are using has related data as you can use subchips to drill down to a cell inside any of the related tables.
 
-video{src="/src/assets/book/app_subchips.webm"}
+:video{src="/src/assets/book/app_subchips.webm"}
 
 ## Automation
 
@@ -154,7 +154,7 @@ There is only really one place in Automation where you can access the related da
 
 Automation still understands the relationships between tables, and so when you are querying a table in an action such as Get Table Data, Update Table Rows or Delete Table Rows you can actually query the table by values inside the related tables. Imagine you want to fetch all get all customers where the city they come from is "Geneva". Related data allows you to do this by simply selecting the column in the related table and then defining your query as you normally would.
 
-:video{src="/src/assets/book/querying_by_relationship.webm"}
+:video{src="/src/assets/book/query_by_relationship.webm"}
 
 ### Referential Integrity
 
