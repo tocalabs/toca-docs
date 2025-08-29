@@ -35,13 +35,15 @@ In **activities**, you can select a Datachip from the following sources:
 
 Let's see how this works from the Activity Designer:
 
-*[Consider adding an image or GIF here demonstrating the selection process in the Activity Designer.]*
+:video{src="/src/assets/book/datachip_selection.webm"}
 
 In **Workflows**, you can select Datachips from these sources:
 
   * Datastores
   * Workflow Inputs
   * Activity Outputs
+
+:video{src="/src/assets/book/exclusive_decision_in_workflow.webm"}
 
 #### Apps
 
@@ -61,11 +63,15 @@ Selecting a Datachip in Apps is very similar to Automation. Look for any field w
   * **Context:** (Shown if context is available, typically from a dynamic page or data-driven layout component.)
   * **In Page Value:** Any In-Page Values (IPVs) defined within the App's IPL flows.
 
+:video{src="/src/assets/book/using_repeating_layout.webm"}
+
 ### How You Can Use Them
 
 Datachips are often used to represent the entire value for a particular field. However, in some cases, they can also be used inline with text. While typically applicable only to text fields, this can be a powerful tool.
 
 For example, imagine you are making a series of API calls. If you have the base URL stored as a variable like :datachip-variable[base_url]{type="String"}, you can then append the API route directly after this variable. The ability to interpolate a Datachip within text fields offers significant flexibility.
+
+:video{src="/src/assets/book/interpolated_datachips.webm"}
 
 ## Variables
 
@@ -91,3 +97,5 @@ The main types that subchips are useful for are:
 You can also use subchips in the following other types but typically you'll come across this less unless you're doing a lot of desktop automation:
 * **Bounding Box:** Get the X, Y, Width or Height properties
 * **Coordinates:** Extract the X or the Y property
+
+:video{src="/src/assets/book/table_subchips.webm"}
