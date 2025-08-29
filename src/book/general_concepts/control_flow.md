@@ -87,7 +87,7 @@ As we can see from the above video clip, after clicking on the button a number o
 
 ![Looping Diagram](/src/assets/book/looping.png)
 
-Being able to repeat some logic for a set number of times can be very useful. Imagine you need to multiply every number in a table column by 100 to turn it into a readable percentage, to do that you would need to loop over each row in the table, mutliply the existing cell and update it once multiplied. The logic to multiply the number and update the table cell will be the same for every row in the table, so it would be great if we could repeat that logic for every row in a table without having to duplicate our logic. Fortunately, that is exactly what loops allow us to do!
+Being able to repeat some logic for a set number of times can be very useful. Imagine you need to multiply every number in a table column by 100 to turn it into a readable percentage, to do that you would need to loop over each row in the table, multiply the existing cell and update it once multiplied. The logic to multiply the number and update the table cell will be the same for every row in the table, so it would be great if we could repeat that logic for every row in a table without having to duplicate our logic. Fortunately, that is exactly what loops allow us to do!
 
 Ultimately, all loops will repeat until a particular condition is met but as you'll find, there are many ways of configuring that condition.
 

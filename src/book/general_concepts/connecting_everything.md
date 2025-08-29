@@ -72,7 +72,7 @@ It is very common for the workflows that are triggered via Apps to have inputs a
 
 To accommodate this, workflows can have inputs and outputs defined on them, these are then accessible from your App so you can design text fields in your form layout to link with particular inputs of the workflow or you can display values from a form result, i.e. a workflow output.
 
-A workflow's inputs and outputs are an accummulation of the inputs and outputs defined on the activities that are placed in the Workflow. This means that any inputs from the activities in your workflow can be defined by input fields in your app, and any outputs returned from the activities in your workflow can be used as the data driving components.
+A workflow's inputs and outputs are an accumulation of the inputs and outputs defined on the activities that are placed in the Workflow. This means that any inputs from the activities in your workflow can be defined by input fields in your app, and any outputs returned from the activities in your workflow can be used as the data driving components.
 
 Common examples of how workflow outputs are used might be:
 - A table output used to drive:
