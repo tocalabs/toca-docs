@@ -34,6 +34,8 @@ In general, unless you need a desktop environment to perform desktop automation,
 
 Bot pools allow you to group together sets of GUI or Stateless bots, you can then assign one of these pools to an activity. When this activity runs it will then pick a bot from that pool to run the automation. This has different benefits depending on whether it is a stateless bot pool or a GUI bot pool. Below are some scenarios where bot pooling can come in useful for each type of bot.
 
+![Bot pools diagram](/src/assets/bot_pools.png)
+
 **Stateless Bot Pools**
 
 1. If you have some stateless bots deployed on Linux and some on Windows then you could create a Linux bot pool and a Windows bot pool
