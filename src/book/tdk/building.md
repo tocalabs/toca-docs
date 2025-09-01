@@ -368,4 +368,4 @@ registerAppAction<Props>(
 		return { text: manipulateText(inputs) }
 	},
 );
-````
+```

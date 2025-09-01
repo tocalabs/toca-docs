@@ -46,7 +46,7 @@ To make someone an admin user, another admin user must go to the Admin -> Users 
 
 ## App User Permissions
 
-When you can figure an app to be authenticated, you also have to set up :docs-link[app groups and roles]{id="projects/apps/auth/authorization"}, these roles can then be used to control what each app user has permission to do and access in the app. This includes what pages they can access, what data they have permission to see and what workflows they can trigger behind the scenes.
+When you decide an app needs authentication, you also have to set up :docs-link[app groups and roles]{id="projects/apps/auth/authorization"}, these roles can then be used to control what each app user has permission to do and access in the app. This includes what pages they can access, what data they have permission to see and what workflows they can trigger behind the scenes.
 
 ### Page Permissions
 
