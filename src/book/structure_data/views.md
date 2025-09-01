@@ -31,7 +31,7 @@ For more information about joins, the :docs-link[views documentation]{id="projec
 
 After joining multiple tables together in a view, one thing that can become confusing is the column names. This is because you might have columns with the same name in the tables you are joining. Luckily, with Views, you can change how the names of a view appear through the aliases. This means that if you had a `Name` column in both your `Users` and `Order` table, you can rename the column that comes from the `Orders` table to `Product_Name` and the one from the `Users` table can be renamed to `Username`. This helps to avoid confusion and makes it much clearer what each column in your view represents.
 
-:view{src="/src/assets/book/view_with_column_alias.webm"}
+:video{src="/src/assets/book/view_with_column_alias.webm"}
 
 ## Functions
 
