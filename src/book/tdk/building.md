@@ -1,0 +1,371 @@
+# Building in the Toca Development Kit (TDK)
+
+In the TDK you can build:
+- Automation Actions
+- Connectors
+- App Components
+- App Actions
+
+This means that you can bring in new functionality into the platform whenever you want.
+
+- Need your connectors to accept XML rather than JSON? _Just tweak the existing connectors._
+- Need a new automation action that calculates the different between two pieces of text? _Build a new Diff Text action in C#._
+- Want a menu component that can have a tree structure? _Build your perfect component using React._
+- Have a use case for an IPL action that works out the time difference between two dates? _Use TypeScript to define exactly how you want the difference outputted._
+
+The TDK allows you to further the automation capabilities by writing C# and you can further the app capabilities by writing React and TypeScript. You can do this all from the Toca platform, you don't need to install any other technology, no dependencies or libraries, simply open the TDK and get building!
+
+Once you have developed your new functionality in the TDK, you can then build and deploy it to the main platform so that anyone can use it, we'll look at this on the next page. Lastly, if you want to share this functionality across other Toca platforms, you can then bundle it into a pack and publish it to a :docs-link[hub]{id="packs/packs"}.
+
+
+## Extending Automation
+
+### Building an Action
+
+Let's take a look at building an automation action. There are three main components to an action:
+- Inputs - _What inputs will the action have and how is the user going to specify them_
+- Logic - _What is the action actually going to do_
+- Outputs - _What is the action going to return as a result_
+
+Let's build an action together to see how these three components interact, we'll build an action that takes a datetime and allows you to modify it by a unit of time. We shall call it: `Modify Datetime`!
+
+Let's start by thinking about the inputs we're going to need from the user for the action to work. We'll need them to specify a datetime, the unit of time they want to modify it by and then the quantity for that unit of time. For example, the user might specify `2025-01-01T00:00:00Z` as the datetime, `days` as the unit of time and `+30` as the quantity. With these inputs we'd expect the returned output to be `2025-01-31T00:00:00Z`.
+
+The inputs are specified by dragging the controls from the left hand panel onto the inputs panel. Once you have placed a control down you can configure it. One of the most important configuration values is the Parameters Value - this is the name given to the input that is injected into your action. Let's drag in our 3 controls and configure them.
+
+
+Now that we have configured our three main inputs, we'll also add a "Fail on Error" checkbox, which tells the action how to behave if something goes wrong.
+
+
+Now we have all of our inputs, lets focus on the code. Our C# code for this will be relatively simple:
+```csharp
+var date = DateTime.Parse(dateToModify);
+
+DateTime modifiedDate;
+
+switch (unit.ToLower())
+{
+    case "days":
+        modifiedDate = date.AddDays(valueToAdd);
+        break;
+    case "hours":
+        modifiedDate = date.AddHours(valueToAdd);
+        break;
+    case "minutes":
+        modifiedDate = date.AddMinutes(valueToAdd);
+        break;
+    case "seconds":
+        modifiedDate = date.AddSeconds(valueToAdd);
+        break;
+    default:
+        throw new Exception($"Invalid Unit given: {unit}");
+}
+
+AddResult("modifiedDate", modifiedDate, ActionTypes.DateTime);
+Action.Status = ActionStatus.Success;
+```
+
+The `AddResult` function is the mechanism by which the code can return an output for the action. To make sure that the result has a datachip which users can select, we can add an output to the outputs panel.
+
+
+Now we've built our action, let's quickly test it to check it is behaving how we want it to. First, select a Bot from the bot panel, this will be the Bot that we can run our testing on. Next, flip the inputs into preview mode and enter some example inputs, then press the play button in the top right hand panel and check the console output. This will return any code errors but also return the result if it runs successfully so we can validate that our logic is correct.
+
+Great, we've just built our first action! See the next page, Deploying from the TDK, to see how we get this action into the hands of the other Toca users.
+
+#### Building Libraries with Action Helpers
+
+When you build lots of Actions, you'll find yourself in a situation where you need to share functionality between actions, this is where helpers come in. You can think of a helper like a library, it is a C# class that you can define yourself and you can then import helpers into actions whereby you can instantiate the helper and call methods from it within your action.
+
+### Building a Connector
+
+Connectors allow you to turn your workflow into an API that anyone can use. However, before the data from the API request makes its way into the activities defined in your workflow, there is usually a bit of preprocessing that you want to do to the request. This might include checking an `Authorization` header or `API-Key` value, or parsing the query parameters or even just extracting specific values from the body to then pass through to the workflow. Connectors also allow you to define the response to the API request, including specific status codes, response body and headers.
+
+A Connector is made up of:
+- A Handler - This is a single block of code that handles the request when it first comes in.
+- Responses - Each connector can have one or many responses, these contain blocks of code which define how the connector should respond.
+
+Let's write a simple connector that takes in a JSON payload from a POST HTTP method and can return with a range of different status codes.
+
+We'll start with the handler:
+```csharp
+string content;
+
+using(StreamReader streamReader = new StreamReader(payload.Context.Request.Body, Encoding.UTF8))
+{
+    content = await streamReader.ReadToEndAsync();
+}
+
+AddResult("body", content, ActionTypes.String);
+```
+
+This is a very simple handler which reads the body of the http request to a string and returns it from the handler so it can be used as an input to any workflow that uses this connector. In connector handlers, you will always have access to the `payload.Context` object which represents a [ASP.NET HTTP Context](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httpcontext?view=aspnetcore-9.0) object. This will allow you to fetch information about the request such as body, headers, query parameters and much more!
+
+We'll build a couple of responses which return different status codes so that users can branch their workflow to allow for returning different codes based on how the workflow progresses.
+
+A 200 OK response:
+```csharp
+var statusCode = 200;
+var body = GetInput<string>("body");
+payload.Context.Response.ContentType = GetInput<string>("contentType");
+payload.Context.Response.StatusCode = statusCode;
+await payload.Context.Response.WriteAsync(body).ConfigureAwait(false);
+```
+
+This response will take an input called "body" and "contentType" and add them to the response object. You also have access to the `payload.Context` (HttpContext) object in the responses for connectors so you can manipulate the `Response` property at will.
+
+A 500 Internal Server Error response:
+```csharp
+var statusCode = 500;
+var body = GetInput<string>("body");
+payload.Context.Response.ContentType = GetInput<string>("contentType");
+payload.Context.Response.StatusCode = statusCode;
+await payload.Context.Response.WriteAsync(body).ConfigureAwait(false);
+```
+
+## Extending Apps
+
+### Building an App Component
+
+App components are written using React and TypeScript. There are two main points to each app component, the `index.tsx` file, which is the entry point for the component when it runs and the `options.tsx` file which is responsible for rendering and understanding the properties for each component.
+
+These components can import [NPM](https://npm.js) packages if you provide them with a `package.json` file at the root of your app component.
+
+> **Note 📝**
+>
+> _Unlike automation actions, app components can have multiple files per component. Automation actions only have one file available to each action for you to define your logic._
+
+There are also a series of imports that you can bring in from the Toca ecosystem to help you bring your component to life. These are all documented in the docs panel that exists on the right of the code editor, but the most important are:
+- _App_: Allows you to get and set properties about the app such as theming and url slug
+- _Datachip handling_: Get and parse inputs from datachips
+- _Components_: Use common widgets such as colour pickers, range input and icons
+
+#### Example Component
+
+We'll build a simple app component that allows you to display a video, with controls.
+
+**Index.tsx**
+
+```tsx
+import React, { useEffect } from 'react';
+import { PropertiesPanelPortal, AppComponentProps, useAppEvents } from '@tocabot/sdk';
+import OptionsForm, { Options } from './options';
+import { Alert, AlertTitle } from '@mui/material';
+
+export default function({
+	id,
+	options,
+	style,
+	classes,
+	inBuilder
+}: AppComponentProps<Options>) {
+	const { fireEvent, workerLoaded } = useAppEvents();
+	const {  url, autoplay, startSeconds, controls = true, ...props } = options;
+
+	useEffect(() => {
+		if (workerLoaded) {
+			fireEvent('onInit', id);
+		}
+		return () => {
+			fireEvent('onDestroy', id);
+		}
+	}, [workerLoaded]);
+
+	return (
+		<>
+		<div className={classes.root} style={{...style, overflow: 'hidden'}}>
+			{url && (
+				<video
+					src={!!startSeconds ? `${url}#t=${startSeconds}` : url}
+					autoPlay={inBuilder ? false : autoplay}
+					crossOrigin="anonymous"
+					className="h-full w-full"
+					controls={controls}
+					{...props}
+				/>
+			)}
+			</div>
+			{!url && inBuilder && (
+				<Alert severity="warning">
+					<AlertTitle>Incomplete settings</AlertTitle>
+					This component requires a url to display a video
+				</Alert>
+			)}
+			<PropertiesPanelPortal id={id}>
+				<OptionsForm id={id} options={options} />
+			</PropertiesPanelPortal>
+		</>
+	);
+}
+```
+
+**Options.tsx**
+
+```tsx
+import { Accordion, AccordionDetails, AccordionSummary, FormControlLabel, FormHelperText, MenuItem, Switch, TextField, Typography } from '@mui/material';
+import React from 'react';
+import { Spacer, usePropertiesChange } from '@tocabot/sdk';
+import { Icon } from '@tocabot/components';
+
+export interface Options {
+	url: string;
+	autoplay: boolean;
+	loop: boolean;
+	controls: boolean;
+	muted: boolean;
+	startSeconds: number;
+}
+
+interface Props {
+	id: string;
+	options: Partial<Options>;
+}
+
+export default function({
+	id,
+	options: {
+		url,
+		autoplay,
+		loop,
+		controls = true,
+		muted,
+		startSeconds,
+	},
+}: Props) {
+	const onChange = usePropertiesChange(id);
+
+	return (
+		<div>
+			<TextField
+				label="Direct video URL"
+				value={url}
+				onChange={evt => onChange({ url: evt.target.value })}
+				margin="dense"
+				variant="outlined"
+				fullWidth
+			/>
+			<Spacer />
+			<Accordion defaultExpanded>
+				<AccordionSummary
+				expandIcon={<Icon>expand_more</Icon>}
+				aria-controls="panel1-content"
+				id="panel1-header"
+				>
+					<Typography component="span">Video player options</Typography>
+				</AccordionSummary>
+
+				<AccordionDetails>
+					<div style={{display: 'flex', flexDirection: 'column'}}>
+
+						<FormControlLabel
+							label="Autoplay"
+							control={
+								<Switch
+									checked={autoplay}
+									onChange={evt => onChange({ autoplay: evt.target.checked })}
+								/>
+							}
+						/>
+						<FormControlLabel
+							label="Loop"
+							control={
+								<Switch
+									checked={loop}
+									onChange={evt => onChange({ loop: evt.target.checked })}
+								/>
+							}
+						/>
+						<FormControlLabel
+							label="Show controls"
+							control={
+								<Switch
+									checked={controls}
+									onChange={evt => onChange({ controls: evt.target.checked })}
+								/>
+							}
+						/>
+						<FormControlLabel
+							label="Muted"
+							control={
+								<Switch
+									checked={muted}
+									onChange={evt => onChange({ muted: evt.target.checked })}
+								/>
+							}
+						/>
+					</div>
+				<TextField
+					label="Start from (seconds)"
+					value={startSeconds}
+					onChange={evt => onChange({ startSeconds: Number(evt.target.value) })}
+					type="number"
+					margin="dense"
+					variant="outlined"
+					size="small"
+					fullWidth
+				/>
+
+				</AccordionDetails>
+			</Accordion>
+		</div>
+	);
+}
+```
+
+### Building an IPL Action
+
+All IPL actions are developed using TypeScript. All IPL actions must have an `index.ts` file, this is the entry point to running the action. You can also have many other files if you want but the `index.ts` file is mandatory. Like App components, you can also import [NPM](https://npm.js) packages by including a `package.json` file at the root directory.
+
+Here's an example app component that performs some text manipulation. In this code, the `Props` object represents the inputs available to the user and then the `manipulateText` function handles the actual logic of the action. Finally, the `registerAppAction<T>` function at the bottom of the index.ts file is the entry point to adding the app action and running the logic.
+
+
+```ts
+import { registerAppAction } from '@tocabot/sdks/app-actions';
+
+interface Props {
+	text: string;
+	action: string;
+	replace: string;
+	text2: string;
+	padcount: number;
+	padchar: string;
+	index: number;
+	length: number;
+}
+
+function manipulateText({ text, ...props }: Props): string {
+	switch (props.action) {
+		case 'capitalise':
+			return `${text.slice(0, 1).toUpperCase()}${text.slice(1)}`;
+		case 'insert':
+			return `${text.slice(0, props.index)}${props.text2}${text.slice(props.index)}`;
+		case 'join':
+			return `${text}${props.text2}`;
+		case 'leftpad':
+			const length = Math.max(props.padcount - text.length, 0);
+			return `${Array.from({ length }).fill(props.padchar).join('')}${text}`;
+		case 'lowercase':
+			return text.toLowerCase();
+		case 'replace':
+			return text.replace(props.replace, props.text2);
+		case 'substring':
+			return text.slice(props.index, props.index + props.length);
+		case 'trim':
+			return text.trim();
+		case 'trimend':
+			return text.trimEnd();
+		case 'trimstart':
+			return text.trimStart();
+		case 'uppercase':
+			return text.toUpperCase();
+		default:
+			return text;
+	}
+}
+
+registerAppAction<Props>(
+	import.meta.appAction,
+	async ({ inputs }) => {
+		return { text: manipulateText(inputs) }
+	},
+);
+```
