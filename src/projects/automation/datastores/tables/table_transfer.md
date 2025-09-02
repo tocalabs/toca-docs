@@ -10,4 +10,4 @@ There are 3 steps to the tool:
 
 > **Tip** ✨
 >
-> You can also use this tool to clear all data from a table. To do this, set the source and target table  to the same table and then make sure you have selected the option to "Tansfer data" and "Clear Target Table before transfer" and then click through the tool. Once completed, your target table will now contain no rows of data.
+> You can also use this tool to clear all data from a table. To do this, set the source and target table  to the same table and then make sure you have selected the option to "Transfer data" and "Clear Target Table before transfer" and then click through the tool. Once completed, your target table will now contain no rows of data.

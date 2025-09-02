@@ -26,16 +26,16 @@ It can be a good idea to have a Group specially designated for unauthenticated u
 
 ### Page Permissions
 
-If your app has authentication enabled, then you have the option to restrict access to every page in your appllication.
+If your app has authentication enabled, then you have the option to restrict access to every page in your application.
 The following permission is available on pages.
 
 | Resource | Permissions | Description |
 | --- | --- | --- |
 | Page | Read | **Read** allows the user to view the the page |
 
-You can assign specific Roles in your app to have the Read permission on each page, for example you might have a page that allows managers to approve annual leave and you only want users who have the `Manager` role to be able to view the page. 
+You can assign specific Roles in your app to have the Read permission on each page, for example you might have a page that allows managers to approve annual leave and you only want users who have the `Manager` role to be able to view the page.
 
-If a user does not have a role associated with their user that grants them Read access to the page then when they try to view it they will be directed to a `401 - Unauthorized` if they are logged in or the `Login` page if they aren't. 
+If a user does not have a role associated with their user that grants them Read access to the page then when they try to view it they will be directed to a `401 - Unauthorized` if they are logged in or the `Login` page if they aren't.
 
 > N.B. If your App contains a login page then make sure you have not restricted access to this page as otherwise unauthenticated users will never be able to access the login page!
 
@@ -50,7 +50,7 @@ The following permissions are available on each resource type:
 | Listener | Read | **Read** allows the user to view the outputs of the listener in the App |
 | Listener | Execute | **Execute** allows the logged in user to execute the listener to run a workflow |
 | Datastore | Read | **Read** allows the logged in user to view data from the datastore in the App |
-| Datastore | Write | **Write** allows the logged in user to directly write into the datastore | 
+| Datastore | Write | **Write** allows the logged in user to directly write into the datastore |
 
 By assigning Roles from your app the above permissions you can restrict the capabilities of each group of users. For example, this would be useful if you have a workflow that approves a pay rise and you want to restrict this to only be executed by users who have the `Manager` role.
 

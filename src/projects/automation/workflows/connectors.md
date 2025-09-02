@@ -2,7 +2,7 @@
 
 Connectors allow you to run the workflow via a HTTP Request, therefore allowing other software to connect to your workflow.
 
-There are two parts to a connector, the **handler** which takes in the request and the **reponse** which forms and generates the response.
+There are two parts to a connector, the **handler** which takes in the request and the **response** which forms and generates the response.
 You can have one handler per connector but there can be many response nodes, as you may want to return different responses based on what happens in your workflow.
 
 The handler defines how the request is received and parsed, allowing query parameters, headers and the request body to be parsed and formatted before being injected into the workflow. The response nodes can have inputs defined so you can return outputs from your activities and use them to form the response.

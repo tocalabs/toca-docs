@@ -6,11 +6,11 @@ Datastore variables are case-sensitive.
 
 ### Data from a Datastore
 
-- :docs-link[**Variables**]{id="projects/automation/activities/variables"} - Store a named value with an associated type such as text, number, coordinates, image, etc.
-- **Passwords** - Securely store a password, this value is encrypted and won't be logged anywhere. Recommended for credentials or sensitive information
-- **Files** - Persistely store a file so that it can be accessed by automation or apps
-- :docs-link[**Identities**]{id="projects/automation/datastores/identity"} - Link a digital identity so that you can use automation actions on behalf of a user such as sending an email from your Outlook account or uploading a file to your Google Drive
-- :docs-link[**Tables**]{id="projects/automation/datastores/tables"} - Store data in a structure of columns and rows, assigning data types per column and adding relationships between tables to maintain data integrity
+Datastores are organised into 4 categories:
 
+- **Database** containing :docs-link[tables]{id="projects/automation/datastores/tables"} and :docs-link[views]{id="projects/automation/datastores/views"} – structured data in columns and rows, with assigned types and relationships between tables to maintain data integrity.
+- :docs-link[**Variables**]{id="projects/automation/activities/variables"} containing simple values such as text, number, coordinates etc.
+- **Storage** containing :docs-link[File Drive]{id="projects/automation/datastores/file_drive"} for file storage.
+- **Auth** containing passwords (encrypted and not logged anywhere - recommended for credentials or sensitive information) and :docs-link[Identities]{id="projects/automation/datastores/identity"}.
 
- Automation and Apps can read from and write to datastore.
+Automation and Apps can read from and write to datastore.

@@ -1,123 +1,96 @@
-# 8.0 - Release Notes
+# 8.1 - Release Notes
 
-Version 8.0 continues the theme of productivity and usability - making it quicker and easier to build than ever before! This is our first major release in nearly two years and it is jam packed with exciting big new features as well as lots of smaller improvements and fixes!
+Version 8.1 focuses on improving the navigation around the Toca platform, allowing you to move around the platform faster than ever before. 8.1 also introduces _Tocabot_, our knowledgeable AI chatbot who can help you with any questions you might have about the platform!
 
 ## What's New
 
 ### Apps
 
-#### Viewports Rework
+There aren't too many changes across the Apps layer in version 8.1, more focus was placed on introducing small improvements across the existing functionality.
 
-Making your App look good and work well across a wide range of different devices can be very challenging. As this has become a more common occurrence, users have pushed the limits of the original viewport functionality in the App Designer and have inevitably found it difficult getting their App to look _exactly_ how you want it to across mobiles, tablets, desktops and widescreens.
+#### Copy App Page
 
-![New Viewports Interface](/src/assets/releases/8_0/viewports.gif)
+Ever wanted to copy a page you've designed in one App to another? Well, now you can! This new Copy App Page feature allows you to clone a page, dependencies and all, to another app. This allows you to share designs and functionality between apps easily.
 
-This rework of the viewports functionality makes designing your App pages for multiple devices clearer and easier than ever before. There are three key changes that have been made:
-1. _Viewport Modes_ - This allows you to toggle how your App should respond when viewed on different devices
-2. _Responsive Overrides_ - Gives you more granular control over how each component behaves in different viewports
-3. _Interface Redesign_ - It is now easier to toggle between different viewports and see how your App looks between them
+![Copy App Page to another App](/src/assets/releases/8_1/copy_app_page.gif)
 
-_Snap to Viewport vs Fluid Width_
+#### Usability Improvements
 
-There is a new toggle in the Theme section of your App to toggle how your App responds to different viewports, your App can either "Snap to Viewport" or respond via "Fluid Width".
-- Snap to Viewport - This is how you will be used to it working and will restrict your page to only be as wide as the largest viewport that fits into the current device.
-- Fluid Width - This will tell your App to use all available width it has
+Similar to automation, we have focused on adding some small usability improvements to the App designer in version 8.1. These should improve your experience building an app and developing in page logic.
 
-From the Theme section, you can also configure how wide each of these Viewports are so that if there are devices that sit between certain Viewports you can simply change the width to accomodate these devices.
-
-Checkout :docs-link[this article]{id="projects/apps/designer/viewport_breakpoints"} for more information about the different type of viewports.
-
-_Responsive Overrides_
-
-Each component that you drag onto your App page will now have a new property at the top of the Properties panel which allows you to configure whether the component is visible on the current viewport and whether it has responsive overrides enabled.
-If responsive overrides are enabled then that means that you can configure your component to behave differently in the current viewport than in the other viewports. If you have this setting disabled then your component will behave the same as you have configured it in your default viewport. Take a look at :docs-link[this article]{id="projects/apps/designer/responsive_apps"} to learn more.
-
-_Interface Redesign_
-
-The App Designer now has a Viewports bar that goes across the top of your page and you can click on each distinct viewport to change the current view. You can also now drag the width of your app page across the different viewports in both design and preview mode to see how your page will behave and look across the different viewports. This makes it much more seamless to switch between viewports and allows for easier testing of how your page will look for different devices.
-
-
-> Note 📝
->
-> When you visit Apps you have created pre version 8.0, you will be asked to migrate them. Behind the scenes this will migrate all your previous Viewport patches to the new way of working. This will not impact your deployed App but you will not be able to redeploy or edit your App until you complete the migration. This mandatory migration is the reason we've made this a **_major_** release. If you have no plans to redeploy or edit an App, there is no need for you to migrate it and it will continue to work as currently deployed.
+- **Drag Multiple IPL Nodes**: You can now highlight and drag multiple nodes in the IPL designer
+- **Resizeable App Sidebars**: The sidebards that appear in the app designer such as the components sidebar or the properties or explorer sidebar can now be dragged in and out allowing you to size them perfectly for the screen your working on
+- **Toggle titles in Modals**: On the page settings you now have the option to hide the title of the page if the page is going to be used as a modal. This gives you more control to define exactly how a modal looks
 
 ### Automation
 
-#### Table Enhancements
+The main change in the automation layer is the introduction of a new feature which allows you to add folders to a datastore, allowing you to treat a datastore as a shared file system. There are also some small improvements to existing functionality in the activity designer.
 
-Tables continue to be one of the most used and relied upon features in the Toca platform and in version 8.0 we have added a suite of new features which make Tables even more powerful and performant.
+#### Directories in Datastores
 
-![Enhanced Tables](/src/assets/releases/8_0/enhanced_tables.gif)
+Datastores have had a makeover in version 8.1, the biggest change you'll notice is that certain variable types have now got their own sections. These sections are:
+- Database - This will contain all of your table and views
+- Variables - This is where your simpler variables such as strings, numbers and booleans now live
+- Storage - This contains your files and, new in 8.1, directories
+- Credentials - This contains passwords and identities
 
-_Indexes_
+When you head on over to the Storage section of a Datastore, you'll notice that there is a new item inside called a `File Drive`. Each Datastore has it's own file drive and this is a container for files and directories, it actually allows you to build your own file system in each datastore! You can think of a file drive like a `C:/` drive, it's just a storage location for you to add folders and files to!
 
-You can now add custom indexes to columns in your Tables, this is particularly useful if you wish to improve performance when querying certain columns in a large table. This is also useful if you are joining two or more tables in a View but you are using a column other than the ID column to join on. There are several different types of index that you can apply to a Table column, each with their own purpose. You can read more about the indexes :docs-link[here]{id="projects/automation/datastores/tables/index"} to find out more.
+There are new major versions of almost all of the file and folder automation actions shipped in version 8.1 which allow you to directly use a file from a datastore's file drive.
 
-_Database Data Types_
+This can be very powerful when used in combination with either Stateless bots or Bot Pools when you are doing anything file related. Now you have the option to treat a datastore as shared file storage, usable by any Bot!
 
-Tables in Toca are really an abstraction on top of SQL Database tables and for a long time we have purposefully hidden away some of the finer details of how they work. Now we are seeing more and more complex projects being built on Toca we are opening up the ability for more advanced users to specify what the underlying database type each table column should be. If left unselected, Toca will automatically apply a sensible default type but now if you have a use case to, you can specify the precise type. Picking the right database type for your column can not only help with the general performance and storage utilisation but can also act as a powerful constraint when used correctly.
-
-For example, if you want to restrict data which is more than 50 characters being entered into a `String` column, you can now specify that the column is a `VARCHAR` column of length `50` and this will then error if you try and enter data larger than 50 characters into that column!
-
-To learn more about this new feature, take a look at :docs-link[this article]{id="projects/automation/datastores/tables/database_data_types"}.
-
-_Constraints_
-
-There are now several things you can do to constrain what counts as a valid value to enter into a table cell. These are as follows:
-- Cannot be Null - This means that you can not enter a blank value for this column, this ensures all cells in this column will have a value
-- Unique - This forces each value in the column to be unique
-
-> Warning ⚠️
+> _**Note📝**_
 >
-> If you try to insert data that violates constraints set on a column, the operation will error!
+> _Files that already existed in a datastore will still appear in the Variables section of your data store rather than the file drive section. This is because behind the scenes they are stored in different places but don't worry, these old files can still be used as before but any new files will be added to the file drive._
 
-_Cascading Delete_
+![Datastore makeover with sections and new file drive tour](/src/assets/releases/8_1/file_drive.gif)
 
-You can now get data that is related to a row to be automatically deleted when you delete the parent row. This will work both for 1 to 1 and 1 to Many relationships in Tables. Imagine you have a customers table and an orders table and each row in your Customers table can link to many rows in the Orders table, when you delete a Customer, you also want to delete their Orders and this is where the "Cascade Delete" feature comes in useful! It can automatically do this cleanup for you. You can read more about this :docs-link[here]{id="projects/automation/datastores/tables/delete_operation"}.
+#### Usability Improvements
 
-_Auto Increment_
+There are a few smaller improvements made to the automation side of the platform which should make using the activity designer much easier. These are as follows:
 
-For table columns which have a `Number` type, you can now specify that the column should automatically increment so that means that everytime you add a row, the value in this column will increase by +1 compared to the previously inserted row. This is very useful for preserving some sort of order but be aware that if you delete rows, the auto increment will resume from the last number in the sequence, not the last number that is currently in the table.
-
-#### Advanced Views
-
-In version 7.8 we released Views, a way of joining tables and returning data against a persistent query. In version 8.0 we have supercharged the functionality and usefulness of Views as you can now apply functions to columns in your Views as well as group data together using the "Group By/Having" feature.
-
-![Advanced Views](/src/assets/releases/8_0/advanced_views.gif)
-
-_Group By / Having_
-
-The new Group By feature allows you to aggregate data directly in your view and then you can specify a "Having" clause to filter those aggregates. Imagine you have an Orders table and you want to sum the value of all orders per customer where the orders are over £50.00, you can now specify a View where you group by `Customer ID` and you would specify only rows having a value of over £50.00.
-
-_SQL Functions_
-
-You now have a wide array of SQL functions at your disposal so you can manipulate data directly within your View rather than having to use Automation to do it for you. This functionality includes but is not limited to: counting, numerical analysis, text manipulation and date calculations - all directly from your View!
-
-#### Bot Pooling
-
-Bot Pooling allows you to group together either GUI or Stateless Bots into pools and you can then assign an Activity to run against a particular pool. When the activity is run either in a Workflow or as a standalone Activity, it will then choose the best Bot at the time to run the activity on. This will be particularly useful for running high volume GUI automation! Head on over to the Admin -> Bots page to create your first pool and you'll then be able to select that pool when assigning a Bot to an Activity.
-
-![Bot Pooling](/src/assets/releases/8_0/bot_pooling.gif)
-
-#### Action Status Result
-
-Every Action that you place down in an Activity now has a new result datachip called "actionStatus" which will return the status of that particular Action. This will be very useful for adding error handling logic inside your Activities.
-
-![Action Status Result](/src/assets/releases/8_0/action_status_result.gif)
+- **Additional Action Information**: If you have updated the description of an action you have placed down, you can now hover over the icon of the action to see the name of the action. You can also see the name of the action when you are editing the configuration of an action.
+- **View Details of Published Activities**: If you are viewing the Published version of an activity, you can now inspect the configuration of each action that has been placed down in an activity.
+- **Variable Panel Sort and Search**: The variables tab in the activity designer can now be sorted alphabetically and you can search for a variable by its name. This is especially useful if you have lots of variables defined in your activity!
+- **Drag multiple actions at once**: You can now select and drag multiple actions at once in the activity designer, allowing you to move blocks of actions at a time.
 
 ### General
 
-#### Environment Variables in Import/Export
+#### Ask Tocabot - AI Documentation Chatbot
 
-You can now set the values of Datastore Variables when you Import an Automation project. This is very useful for things like API URLs or API Keys and Credentials which may change between environments (e.g. Dev to Prod). You mark the variables as "Environment Variables" when you export the project and then the Import wizard will give you the option to remap the variables.
+When searching our documentation, triggered by either the `Ctrl/Cmd + K` hotkey or by clicking the search icon in the bottom, you can now ask Tocabot, our AI assistant, a question! Tocabot is trained on all of our documentation so it can draw on all of it's knowledge to find the answer you're looking for. Tocabot also has a lot of knowledge outside of Toca too, so if you need help building a regular expression or some assistance with writing a JSONPath query, just ask!
 
-![Environment Variables](/src/assets/releases/8_0/environment_variables.gif)
+This can be very useful as Tocabot can produce an answer that incorporates information from many pieces of documentation so rather than having to manually read and search multiple pieces of documentation to reach the answer you're looking for, Tocabot can give you a concise answer that contains all the information you need.
 
-#### Copy Action Results
+![Tocabot AI Chatbot in action](/src/assets/releases/8_1/ai_search.gif)
 
-When viewing the results of running automation, either in the Activity Designer console or in the Reporting screen, there is now a button that allows you to copy the individual results of an Action simply and easily.
+#### Platform Search
 
-![Copy Action Results](/src/assets/releases/8_0/copy_action_result.gif)
+There is a new platform search function that you can access from anywhere by either clicking on the Search button in the main navbar or by using the hotkey: `Ctrl/Cmd + Shift + K`. This allows you to search for an entity in the platform by name or description and jump straight to it, meaning you can move between your automation and apps without taking your hands off the keyboard! This new feature allows you to search for:
+- Automation projects
+- App projects
+- Datastores
+- Workflows
+- Activities
+
+The search is typo-tolerant and will show you the results based on how close either their name or description matches what you've searched for!
+
+> _**Tip ✨**_
+>
+> _You can also access Platform Search from the documentation search toolbar by simply starting your search with a forward slash character `/`._
+
+![Platform Search](/src/assets/releases/8_1/platform_search.gif)
+
+#### Hotkeys
+
+A number of hotkeys have been added throughout the platform, allowing you to run commands and navigate around the platform without touching your mouse. You can see a list of hotkeys on any particular page by pressing `?`, this will bring up a small window in the bottom right of the screen which will show you all of the hotkeys available on the current screen. This will allow you to do things such as navigate between open tabs of an automation project, open pages of an app, run an activity, switch between viewports and preview an app all without ever leaving the comfort of your keyboard. When used in conjunction with platform search, you can seamlessly move around the platform and the speed of thought!
+
+#### Handbook V1.0
+
+The first full version of the handbook has been released with the platform. Version 1.0 contains 10 chapters taking you through the fundamentals of the platform, all the way through to more advanced topics like using the Toca Development Kit and permissions. You can work through it chapter by chapter or you can dive in to specific articles to learn more about a particular topic. You can also search for these articles in the documentation searchbar or you can ask the Tocabot AI about content that appears in the handbook. Give it a read!
+
+![Handbook Screenshot](/src/assets/releases/8_1/handbook.png)
 
 ## Bug Fixes
 
@@ -127,7 +100,7 @@ A number of bug fixes were included in this release across the platform.
 
 ## Deprecated
 
-We have dropped support for having IPL differ per viewport in App Pages. Historically, you could have had IPL run off the same event for the same component but behave differently in each viewport. This led to confusion as it was difficult to identify where this was the case and hard to debug. We have now dropped support for this and recommend using the new Responsive Overrides settings to get your components to behave differently per viewport.
+Nothing has been deprecated in this release.
 
 The following action versions are no longer supported and **will not** work in Version 8.0:
 
@@ -144,6 +117,7 @@ If you note any issues with these actions after the upgrade, please contact <sup
 
 ## Previous Releases
 
+- :docs-link[8.0]{id="releases/8_0"}
 - :docs-link[7.10]{id="releases/7_10"}
 - :docs-link[7.9]{id="releases/7_9"}
 - :docs-link[7.8]{id="releases/7_8"}

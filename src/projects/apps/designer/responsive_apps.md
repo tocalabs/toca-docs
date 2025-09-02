@@ -12,12 +12,12 @@ Towards the top of properties panel of app components inside your app, you will 
 ![Responsive Overrides UI](/src/assets/responsive_overrides_ui.png)
 
 ### Visible on [viewport] Toggle
-This switch will determine whether or not the component (and it's children) are visible on the current viewport. This may be useful for scenarios where you want significantly different elements in different viewports. 
+This switch will determine whether or not the component (and it's children) are visible on the current viewport. This may be useful for scenarios where you want significantly different elements in different viewports.
 
-As an example, we could place an Icon Button and a larger button side by side, and have the Icon Button hidden in Laptop, Desktop and Widescreen, wheras the larger Button is hidden in Mobile and Tablet viewports. The result being a larger button which turns into an Icon if viewed on anything smaller than a Laptop.
+As an example, we could place an Icon Button and a larger button side by side, and have the Icon Button hidden in Laptop, Desktop and Widescreen, whereas the larger Button is hidden in Mobile and Tablet viewports. The result being a larger button which turns into an Icon if viewed on anything smaller than a Laptop.
 
 ### Responsive Overrides
-Enabling responsive overrides on a component allows you to specify different options per viewport, this opens the door for full restyling or content manipulation based on the current viewport. 
+Enabling responsive overrides on a component allows you to specify different options per viewport, this opens the door for full restyling or content manipulation based on the current viewport.
 
 Simply switch to the viewport which you want to change the behaviour on, enable responsive overrides (if it isn't already enabled) then make your changes in that viewport, any changes you make can be visualized by clicking the device icon at the top of the properties pane to show properties which have changed.
 

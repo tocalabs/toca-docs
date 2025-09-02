@@ -9,7 +9,7 @@ Column types are specified to ensure only data of a specific type (`String`, `Nu
 The text users will see as the header of the column.
 
 ### Name
-The value used for the column name stored in the database. This value is used for query operations. As this value is used in queries, not the lables, it is essential these names make sense.
+The value used for the column name stored in the database. This value is used for query operations. As this value is used in queries, not the labels, it is essential these names make sense.
 
 Autopopulated by default by the sanitized string in `Label`. The name cannot have spaces or special characters (replaced with underscores) and must start with a lowercase letter or underscore.
 

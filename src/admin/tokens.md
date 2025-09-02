@@ -9,7 +9,7 @@ There are two types of user a token can be assigned to:
 
 After creating a token and assigning it to the relevant user, external integrations will need to add the following header `X-Toca-Token` to their HTTP request along with the Token value. Alternatively, they can use this as a way of authenticating with the Core platform.
 
-For example, normally a platform user would authenticate with the platform by providing the following payload in the request to `/api/1/Authentcation/validate`:
+For example, normally a platform user would authenticate with the platform by providing the following payload in the request to `/api/1/Authentication/validate`:
 ```json
 {
   "username": "{user name}",
