@@ -1,6 +1,36 @@
 # Summary
 
 
+- :docs-link[Introduction]{id="book/intro"}
+- :docs-link[Getting Started]{id="book/getting_started"}
+  - :docs-link[Profile]{id="book/getting_started/profile"}
+  - :docs-link[Hello, Toca!]{id="book/getting_started/hello_toca"}
+  - :docs-link[Hello, TDK!]{id="book/getting_started/hello_tdk"}
 - :docs-link[Programming a Guessing game]{id="book/guessing_game"}
-- :docs-link[Common Programming Concepts]{id="book/programming_concepts"}
-  - :docs-link[Data Types]{id="book/programming_concepts/data_types"}
+- :docs-link[General Concepts]{id="book/general_concepts"}
+  - :docs-link[The Toca Stack]{id="book/general_concepts/toca_as_a_stack"}
+  - :docs-link[How Everything Connects]{id="book/general_concepts/connecting_everything"}
+  - :docs-link[Datachips and Variables]{id="book/general_concepts/datachips_and_variables"}
+  - :docs-link[Data Types]{id="book/general_concepts/data_types"}
+  - :docs-link[Control Flow]{id="book/general_concepts/control_flow"}
+- :docs-link[Using Tables to Structure Data]{id="book/structure_data"}
+  - :docs-link[Creating Tables]{id="book/structure_data/creating_tables"}
+  - :docs-link[Linking Data]{id="book/structure_data/linking_data"}
+  - :docs-link[Querying Data]{id="book/structure_data/querying_data"}
+  - :docs-link[Views]{id="book/structure_data/views"}
+  - :docs-link[Using Related Data]{id="book/structure_data/using_linked_data"}
+- :docs-link[Testing]{id="book/testing"}
+  - :docs-link[Testing Automation]{id="book/testing/testing_automation"}
+  - :docs-link[Testing Apps]{id="book/testing/testing_apps"}
+- :docs-link[Managing Growing Projects]{id="book/manage_growing_projects"}
+  - :docs-link[Growing Automation]{id="book/growing_projects/growing_automation"}
+  - :docs-link[Growing Apps]{id="book/growing_projects/growing_apps"}
+- :docs-link[Reporting: How to audit your automation]{id="book/auditing_automation"}
+- :docs-link[TDK: Extending the Platform]{id="book/tdk"}
+  - :docs-link[Building]{id="book/tdk/building"}
+  - :docs-link[Deploying]{id="book/tdk/deploying"}
+- :docs-link[Advanced Features]{id="book/advanced_features"}
+  - :docs-link[Permissions]{id="book/advanced_features/permissions"}
+  - :docs-link[Users and Groups]{id="book/advanced_features/users_and_groups"}
+  - :docs-link[GUI vs Stateless Automation vs Bot Pools]{id="book/advanced_features/types_of_bots"}
+  - :docs-link[Workflows as APIs]{id="book/advanced_features/workflows_as_apis"}

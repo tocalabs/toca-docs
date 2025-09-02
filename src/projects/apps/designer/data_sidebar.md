@@ -8,7 +8,7 @@ The data sidebar can be found on the left hand side of the designer. Here you wi
 
 ![Data sidebar showing items for all resources](/src/assets/datasidebar_open.png)
 
-Opening each of the resources will show the relavent data. To use any of the data inside of the app you can simply drag items onto the page. This will open up a wizard which will guide you into selecting a component to use. The items you can drag onto the page are:
+Opening each of the resources will show the relevant data. To use any of the data inside of the app you can simply drag items onto the page. This will open up a wizard which will guide you into selecting a component to use. The items you can drag onto the page are:
 - CMS fields
 - Datastore variables
 - Listener (by dragging the listener icon)

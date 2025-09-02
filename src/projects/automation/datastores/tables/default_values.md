@@ -19,7 +19,7 @@ Below is a list of types and their default value options:
 | DateTime |  - | Will insert the date and time when the row was created | Will insert the date and time whenever the row is updated |
 | File |  - | - | - |
 | Image |  - | - | - |
-| JSON | A harcoded piece of valid JSON e.g. `[ ]` or `{ }` | - | - |
+| JSON | A hardcoded piece of valid JSON e.g. `[ ]` or `{ }` | - | - |
 | UUID | - | Generate a random and unique ID when the row is created | - |
 | Table Relation | - | - | - |
 

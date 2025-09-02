@@ -16,7 +16,7 @@ Bot pools can either be `GUI` or `Stateless` (they will behave similarly to sele
 
 ### Pool bots
 
-Bot pools contain as many or as few bots as you want. When creating and editing bot pools you can add/remove specific bots from the pool. When a workflow is run with a bot pool, the system will automatically pick one of these bots, **but only those avaialble to the executing user**.
+Bot pools contain as many or as few bots as you want. When creating and editing bot pools you can add/remove specific bots from the pool. When a workflow is run with a bot pool, the system will automatically pick one of these bots, **but only those available to the executing user**.
 
 ## How bot pools work
 
@@ -30,4 +30,4 @@ Once a bot is assigned from the pool the job will continue to use that bot for a
 
 ![How bot pools work](/src/assets/bot_pool_workflow.png)
 
-> Each bot in a pool has it's own file storage, so you cannot rely on files being present on the bot every time you execute the workflow. We suggest you use datastore files or 3rd party file stores if you need to use files in activities that use bot pools.
+> Each bot in a pool has it's own file storage, so you cannot rely on files being present on the bot every time you execute the workflow. We suggest you use a datastore File Drive or 3rd party file stores if you need to use files in activities that use bot pools.

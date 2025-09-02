@@ -28,7 +28,7 @@ If enabled there will be an example of how to use the listener on the final scre
 
 ### Connector
 
-Connectors are used to trigger automations from external services such as webhooks. If enabled, you will need to provide a connector route (the wizard will automatially pick one), which forms part of the connectors URL. The wizard will automatically configure the connector, adding it to the workflow and configuring a response.
+Connectors are used to trigger automations from external services such as webhooks. If enabled, you will need to provide a connector route (the wizard will automatically pick one), which forms part of the connectors URL. The wizard will automatically configure the connector, adding it to the workflow and configuring a response.
 
 If enabled there will be an example of how to use the connector on the final screen of the wizard.
 
@@ -42,4 +42,4 @@ The wizard will then proceed with creating your automations. It will first check
 
 Once complete you will see a `How to use` section (if you selected any listeners or connectors), which will provide examples of how you can trigger your automation via `cURL`.
 
-Your automation will now have been created and accesible via the project screen.
+Your automation will now have been created and accessible via the project screen.

@@ -1,6 +1,6 @@
 # Users & Groups
 
-This area of the platform allows users with the Admin role to adminstrate other platform users. From here you can:
+This area of the platform allows users with the Admin role to administrate other platform users. From here you can:
 - Create new users
 - Update existing users
 - Change user permissions
@@ -36,7 +36,7 @@ Platform users can have their access to various parts of the platform controlled
 | Activity | Access to create, read and update automation activities |
 | Agent | Access to Bots, both GUI and Stateless |
 | Listener | Access to create Connectors |
-| Publish Dash | Acceess to deploy an App |
+| Publish Dash | Access to deploy an App |
 | Pipeline | Access to reporting and pipeline data |
 | Export | Ability to export an App or Automation project |
 | Tdk | Access to the Toca Development Kit |

@@ -213,7 +213,7 @@ Individual items in a List can be accessed by their position, this is also known
 
 #### Casting
 
-You cannot cast a List to any other type without using actions to join all items of a list into a single `String` type, by joining the items with a delimeter.
+You cannot cast a List to any other type without using actions to join all items of a list into a single `String` type, by joining the items with a delimiter.
 
 You can cast other types such as a table row or a table column to a `List`.
 

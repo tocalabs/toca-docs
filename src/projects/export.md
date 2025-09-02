@@ -14,7 +14,7 @@ In the event that you would like to export a project but are concerned about sen
 
 ### Select Datastores to Export without Table Data
 
-There are occassions where you would just like to export the tables within a datastore without any rows of data inside them. This could be because they contain sensitive data or you could be moving your project to from a Development environment to a Production environment and you don't need to carry the data across. This is also a useful feature if you have lots of table data as that can really slow down the export process, so checking this option would allow you to expedite the process.
+There are occasions where you would just like to export the tables within a datastore without any rows of data inside them. This could be because they contain sensitive data or you could be moving your project to from a Development environment to a Production environment and you don't need to carry the data across. This is also a useful feature if you have lots of table data as that can really slow down the export process, so checking this option would allow you to expedite the process.
 
 ## Environment Variables
 
