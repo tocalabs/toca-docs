@@ -86,6 +86,12 @@ The search is typo-tolerant and will show you the results based on how close eit
 
 A number of hotkeys have been added throughout the platform, allowing you to run commands and navigate around the platform without touching your mouse. You can see a list of hotkeys on any particular page by pressing `?`, this will bring up a small window in the bottom right of the screen which will show you all of the hotkeys available on the current screen. This will allow you to do things such as navigate between open tabs of an automation project, open pages of an app, run an activity, switch between viewports and preview an app all without ever leaving the comfort of your keyboard. When used in conjunction with platform search, you can seamlessly move around the platform and the speed of thought!
 
+#### Handbook V1.0
+
+The first full version of the handbook has been released with the platform. Version 1.0 contains 10 chapters taking you through the fundamentals of the platform, all the way through to more advanced topics like using the Toca Development Kit and permissions. You can work through it chapter by chapter or you can dive in to specific articles to learn more about a particular topic. You can also search for these articles in the documentation searchbar or you can ask the Tocabot AI about content that appears in the handbook. Give it a read!
+
+![Handbook Screenshot](/src/assets/releases/8_1/handbook.png)
+
 ## Bug Fixes
 
 A number of bug fixes were included in this release across the platform.
