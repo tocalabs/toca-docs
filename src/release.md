@@ -71,6 +71,8 @@ The Query Wrapper component is a new layout component that takes a datasource, u
 
 The Query Wrapper is very similar to a Dynamic Data Wrapper but where the latter returns only one row of data as context, the former can return many rows which are then available to all child components.
 
+![Query Wrapper Example](/src/assets/releases/8_2/query_wrapper.gif)
+
 #### Automated AI Translations
 
 In version 7.10, we released the translations feature, a utility that made it easy to turn your app multilingual but the initial release required users to manually upload the translations. You can now use the inbuilt AI to automate the generation of the translations, meaning all you have to do is check them over to make sure they look right. For a list of all the languages supported by this feature, please see the :docs-link[languages documentation]{id="projects/apps/translations/languages"}.
