@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 # 8.1 - Release Notes
 
 Version 8.1 focuses on improving the navigation around the Toca platform, allowing you to move around the platform faster than ever before. 8.1 also introduces _Tocabot_, our knowledgeable AI chatbot who can help you with any questions you might have about the platform!
+=======
+# 8.2 - Release Notes
+
+Version 8.2 is a small release which contains mostly app focused changes, with new components and improvements to the translations feature that originally launched in version :docs-link[7.10]{id="releases/7_10"}.
+>>>>>>> 3d7f66ae8c85f6f2ee57ba3f57e34ff005548ef8
 
 ## What's New
 
 ### Apps
 
+<<<<<<< HEAD
 There aren't too many changes across the Apps layer in version 8.1, more focus was placed on introducing small improvements across the existing functionality.
 
 #### Copy App Page
@@ -91,6 +98,88 @@ A number of hotkeys have been added throughout the platform, allowing you to run
 The first full version of the handbook has been released with the platform. Version 1.0 contains 10 chapters taking you through the fundamentals of the platform, all the way through to more advanced topics like using the Toca Development Kit and permissions. You can work through it chapter by chapter or you can dive in to specific articles to learn more about a particular topic. You can also search for these articles in the documentation searchbar or you can ask the Tocabot AI about content that appears in the handbook. Give it a read!
 
 ![Handbook Screenshot](/src/assets/releases/8_1/handbook.png)
+=======
+There are a series of new components released with 8.2 that should make building dashboards and charts much easier. There is also an improvement to the translations feature for multilingual apps, making it quicker than ever to make an app international!
+
+#### Material Chart Components
+
+Four new chart components have been added to compliment the existing chart components. These chart components are built on top of the [Material UI chart library](https://mui.com/x/react-charts/), and offer plenty of customisation so you can make the charts look exactly as you want.
+
+One of the key differences between these new Material charts and the existing Apex charts is the format the data is expected in. In the material charts it is expecting a column for each series:
+
+| Quarter | Company A | Company B |
+| :-- | :-- | :-- |
+| Q1 | 200 | 400 |
+| Q2 | 150 | 420 |
+| Q3 | 600 | 138 |
+| Q4 | 100 | 260 |
+
+Whereas, the Apex chart components would expect the same data in the following format:
+
+| Quarter | Data | Series |
+| :-- | :-- | :-- |
+| Q1 | 200 | Company A |
+| Q1 | 400 | Company B |
+| Q2 | 150 | Company A |
+| Q2 | 420 | Company B |
+| Q3 | 600 | Company A |
+| Q3 | 138 | Company B |
+| Q4 | 100 | Company A |
+| Q4 | 260 | Company B |
+
+This means the Material charts don't require quite as much wrangling of the data before it is usable. Stylistically, the Material charts look different to the Apex charts too, so which charts you choose will likely be down to which ones look better when placed in your app.
+
+![Material Charts Example](/src/assets/releases/8_2/material_charts.gif)
+
+**Material Bar Chart**
+
+The new Material Bar Chart allows you to display multiple series against a common X-axis, either vertically or horizontally. You can also add static reference lines to the chart as well as stack the data when plotting multiple series.
+
+**Material Line Chart**
+
+The Material Line Chart let's you plot a multi-series line chart and you can customise the type of line:
+- Linear
+- Step
+- Natural
+- And more!
+
+You can also fill in the area underneath the line if you want, to highlight the area covered by the data points.
+
+
+**Material Pie Chart**
+
+The Material Pie Chart is mainly for plotting a single series of data, but you can plot multiple series of data on this pie chart with each additional series appearing as an extra ring around the pie chart representing each series.
+
+> **Tip ✨**
+>
+> _You can turn a pie chart into a donut chart by adding an inner radius to your series._
+
+**Material Scatter Chart**
+
+The scatter chart is very similar to the line chart, just without the lines! You can plot multiple series on this chart as well as adding reference lines.
+
+#### Query Wrapper Component
+
+The Query Wrapper component is a new layout component that takes a datasource, usually a Table or View, and will return that data as context which is available for any of the child components placed inside the Query Wrapper. This would allow you to create a dashboard where the charts and tables are all nested inside a single Query Wrapper and then if the query changes or the underlying data changes, all the child components update at once. The query wrapper also allows you to expose a query interface to your app users so they can manipulate their own queries!
+
+The Query Wrapper is very similar to a Dynamic Data Wrapper but where the latter returns only one row of data as context, the former can return many rows which are then available to all child components.
+
+![Query Wrapper Example](/src/assets/releases/8_2/query_wrapper.gif)
+
+#### Automated AI Translations
+
+In version 7.10, we released the translations feature, a utility that made it easy to turn your app multilingual but the initial release required users to manually upload the translations. You can now use the inbuilt AI to automate the generation of the translations, meaning all you have to do is check them over to make sure they look right. For a list of all the languages supported by this feature, please see the :docs-link[languages documentation]{id="projects/apps/translations/languages"}.
+
+:video{src="/src/assets/releases/8_2/ai_translations.webm"}
+
+### Automation
+
+There have been no new features or changes to Automation in version 8.2.
+
+### General
+
+There are no general changes to the platform in version 8.2.
+>>>>>>> 3d7f66ae8c85f6f2ee57ba3f57e34ff005548ef8
 
 ## Bug Fixes
 
@@ -101,6 +190,7 @@ A number of bug fixes were included in this release across the platform.
 ## Deprecated
 
 Nothing has been deprecated in this release.
+<<<<<<< HEAD
 
 The following action versions are no longer supported and **will not** work in Version 8.0:
 
@@ -117,6 +207,12 @@ If you note any issues with these actions after the upgrade, please contact <sup
 
 ## Previous Releases
 
+=======
+
+## Previous Releases
+
+- :docs-link[8.1]{id="releases/8_1"}
+>>>>>>> 3d7f66ae8c85f6f2ee57ba3f57e34ff005548ef8
 - :docs-link[8.0]{id="releases/8_0"}
 - :docs-link[7.10]{id="releases/7_10"}
 - :docs-link[7.9]{id="releases/7_9"}
