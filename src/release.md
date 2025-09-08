@@ -54,6 +54,8 @@ The Query Wrapper is very similar to a Dynamic Data Wrapper but where the latter
 
 In version 7.10, we released the translations feature, a utility that made it easy to turn your app multilingual but the initial release required users to manually upload the translations. This new feature uses AI to automate the generation of the translations, meaning all you have to do is check them over to make sure they look right. For a list of all the languages supported by this feature, please see the :docs-link[languages documentation]{id="projects/apps/translations/languages"}.
 
+:video{src="/src/assets/releases/8_2/ai_translations.webm"}
+
 ### Automation
 
 There have been no new features or changes to Automation in version 8.2.
