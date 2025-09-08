@@ -1,7 +1,6 @@
 # 8.2 - Release Notes
 
 Version 8.2 is a small release which contains mostly app focused changes, with new components and improvements to the translations feature that originally launched in version :docs-link[7.10]{id="releases/7_10"}.
->>>>>>> 3d7f66ae8c85f6f2ee57ba3f57e34ff005548ef8
 
 ## What's New
 
