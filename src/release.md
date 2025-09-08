@@ -36,23 +36,44 @@ Whereas, the Apex chart components would expect the same data in the following f
 
 This means the Material charts don't require quite as much wrangling of the data before it is usable. Stylistically, the Material charts look different to the Apex charts too, so which charts you choose will likely be down to which ones look better when placed in your app.
 
+![Material Charts Example](/src/assets/releases/8_2/material_charts.gif)
+
 **Material Bar Chart**
+
+The new Material Bar Chart allows you to display multiple series against a common X-axis, either vertically or horizontally. You can also add static reference lines to the chart as well as stack the data when plotting multiple series.
 
 **Material Line Chart**
 
+The Material Line Chart let's you plot a multi-series line chart and you can customise the type of line:
+- Linear
+- Step
+- Natural
+- And more!
+
+You can also fill in the area underneath the line if you want, to highlight the area covered by the data points.
+
+
 **Material Pie Chart**
+
+The Material Pie Chart is mainly for plotting a single series of data, but you can plot multiple series of data on this pie chart with each additional series appearing as an extra ring around the pie chart representing each series.
+
+> **Tip ✨**
+>
+> _You can turn a pie chart into a donut chart by adding an inner radius to your series._
 
 **Material Scatter Chart**
 
+The scatter chart is very similar to the line chart, just without the lines! You can plot multiple series on this chart as well as adding reference lines.
+
 #### Query Wrapper Component
 
-The Query Wrapper component is a new app component that takes a datasource, usually a Table or View, and will return that data as context which is available for any of the child components placed inside the Query Wrapper. This would allow you to create a dashboard where the charts and tables are all nested inside a single Query Wrapper and then if the query changes or the underlying data changes, all the child components update at once. The query wrapper also allows you to expose a query interface to your app users so they can manipulate their own queries!
+The Query Wrapper component is a new layout component that takes a datasource, usually a Table or View, and will return that data as context which is available for any of the child components placed inside the Query Wrapper. This would allow you to create a dashboard where the charts and tables are all nested inside a single Query Wrapper and then if the query changes or the underlying data changes, all the child components update at once. The query wrapper also allows you to expose a query interface to your app users so they can manipulate their own queries!
 
 The Query Wrapper is very similar to a Dynamic Data Wrapper but where the latter returns only one row of data as context, the former can return many rows which are then available to all child components.
 
 #### Automated AI Translations
 
-In version 7.10, we released the translations feature, a utility that made it easy to turn your app multilingual but the initial release required users to manually upload the translations. This new feature uses AI to automate the generation of the translations, meaning all you have to do is check them over to make sure they look right. For a list of all the languages supported by this feature, please see the :docs-link[languages documentation]{id="projects/apps/translations/languages"}.
+In version 7.10, we released the translations feature, a utility that made it easy to turn your app multilingual but the initial release required users to manually upload the translations. You can now use the inbuilt AI to automate the generation of the translations, meaning all you have to do is check them over to make sure they look right. For a list of all the languages supported by this feature, please see the :docs-link[languages documentation]{id="projects/apps/translations/languages"}.
 
 :video{src="/src/assets/releases/8_2/ai_translations.webm"}
 
