@@ -23,7 +23,8 @@ Viewports are used for customising how an app looks across different screen size
 When you first create an app, there are default widths that are automatically set for each viewport. This can be adjusted, from the settings. 
 
 Go to **Theme > Viewport Breakpoints**
-![[fig1.png]]
+
+![Viewport Settings](/src/assets/cookbook/viewports/fig1.png)
 *Fig 1. Viewport Settings*
 
 **Viewport Breakpoints**
@@ -39,7 +40,7 @@ There are two modes:
 
 ## Editing Viewports
 
-![[fig2.png]]
+![App Designer - Desktop](/src/assets/cookbook/viewports/fig2.png)
 *Fig 2. App Designer - Desktop*
 
 When you enter an app page, by default, the 'Desktop' viewport is selected. This can be seen in the viewports bar and viewports drop down in *Fig 2.*
@@ -50,8 +51,8 @@ You will notice that when you make changes to a viewport, those changes will aut
 
 <figure>
 	<p align="center">
-		<img src="fig3_1.png" width="48%">
-		<img src="fig3_2.png" width="48%">
+		<img src="/src/assets/cookbook/viewports/fig3_1.png" width="48%">
+		<img src="/src/assets/cookbook/viewports/fig3_2.png" width="48%">
 	</p>
 </figure>
 *Fig 3. Changes across viewports*
@@ -60,31 +61,31 @@ You will notice that when you make changes to a viewport, those changes will aut
 To switch between viewports, you have few options available.
 
 **Viewports Bar**
-![[fig4a.gif]]
-*Fig 4a. Navigation using viewports bar.*
+![Navigation using viewports bar](/src/assets/cookbook/viewports/fig4a.gif)
+*Fig 4a. Navigation using viewports bar*
 
 The viewports bar provides a representation of the widths that the different viewports take up. Simply click on one of the sections, and your viewport wil be switched.
 
 **Viewports List**
-![[fig4b.png]]
-*Fig 4b. Navigation using viewports dropdown.*
+![Navigation using viewports dropdown](/src/assets/cookbook/viewports/fig4b.png)
+*Fig 4b. Navigation using viewports dropdown*
 
 **Resizing Canvas**
-![[fig4c.gif]]
-*Fig 4c. Navigation by resizing.*
+![Navigation by resizing](/src/assets/cookbook/viewports/fig4c.gif)
+*Fig 4c. Navigation by resizing*
 ### Visibility
 
-![[fig5.png]]
+![Visibility Toggle](/src/assets/cookbook/viewports/fig5.png)
 *Fig 5. Visibility Toggle*
 
 You won't always want to have all your components in all your viewports. For example, you might have a specific feature that you want users to have in desktop / laptop which you don't want them to have in mobile.
 
 To handle this, every component comes with a visibility toggle (see *Fig 5.*). This toggle lets you choose whether the selected component is visible in a specific viewport. After toggling this off, you will see the component disappear from your current viewport, but if you switch to another component.
 
-![[fig6a.png]]
+![](/src/assets/cookbook/viewports/fig6a.png)
 *Fig 6a. Visibility Icon in Explorer Tab*
 
-![[fig6b.png]]
+![](/src/assets/cookbook/viewports/fig6b.png)
 *Fig 6b. Visibility Menu*
 
 Alternatively, if we take a look in the explorer tab (right side of window, see *Fig 1.*), hovering over the component icon reveals an visibility button. On clicking this button, a menu will appear that lets you set the visibility for all work items at once.
@@ -96,7 +97,7 @@ Alternatively, if we take a look in the explorer tab (right side of window, see 
 Now that we know how to modify our different viewports to display only the relevant components, there may also be instances where you would like to show the same components in two viewports, but lay them out differently, or change some of the content or wording. This can be done with something called ===Responsive Overrides===. 
 ### Responsive Overrides
 
-![[fig7a.png]]
+![](/src/assets/cookbook/viewports/fig7a.png)
 *Fig 7a. App in Desktop Viewport*
 
 Let's take a look at this using an example. Feel free to follow along.
@@ -116,19 +117,19 @@ Root
 
 If we switch over to the 'Mobile' viewport, we can see that in this view, the components look very crammed (see *Fig. 7b)*.
 
-![[fig7b.png]]
+![App in Mobile Viewport (No overrides)](/src/assets/cookbook/viewports/fig7b.png)
 *Fig 7b. App in Mobile Viewport (No overrides)*
 
 To fix this, we could switch the flow of the parent *Flex Layout* to 'Vertical'. However, if we do this now, it will set the flow to vertical across all viewport.
 
 So, before we make our change to a component, we should first enable the overrides for this section. To do this, click the override button (which looks like a line through devices, see *Fig 5.*), and after reading the message presented in the confirmation box, press 'Yes' if you wish to continue.
 
-![[fig7c.png]]
+![Component properties after enabling overrides](/src/assets/cookbook/viewports/fig7c.png)
 *Fig 7c. Component properties after enabling overrides*
 
 Once the overrides have been enabled, we can now modify that component, without worrying about it affecting other viewports.
 
-![[fig7d.gif]]
+![Viewports after overrides and modifications](/src/assets/cookbook/viewports/fig7d.gif)
 *Fig 7d. Viewports after overrides and modifications*
 
 After all your modifications have been complete, and you switch between your viewports, you will notice that all your viewports have their own design (see *Fig 7d*).
