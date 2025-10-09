@@ -28,7 +28,7 @@ Used to confirm and submit an appointment booking form.
 Create the back end automation:   
 Create an automation project → datastore → table: 
 
-![test](src/assets/cookbook/buttons/image1.png)
+![](src/assets/cookbook/buttons/image1.png)
 
 ![](/src/assets/cookbook/buttons/image2.png)
 
@@ -40,7 +40,7 @@ Add the columns desired to the table, in this case
 * choose a date and time,   
 * staff member
 
-![](/src/assets/cookbook/buttons/image4.png)
+![](/src/assets/cookbook/buttons/image4.gif)
 
 Create the back end automations to connect your form to. For simplicity we will use the automation wizard: 
 
@@ -76,17 +76,17 @@ Add a repeating layout and a form component:
 
 *Add your form fields ( try to use form components that match the column type you configured in the table ) :* 
 
-*![( In this example the select list fields use the datastore lists for staff and services)][image12]*
+*![( In this example the select list fields use the datastore lists for staff and services)][/src/assets/cookbook/buttons/image12.gif]*
 
 *( In this example the select list fields use the datastore lists for staff and services)* 
 
 *link the listener outputs*
 
-*![][image13]*
+*![][/src/assets/cookbook/buttons/image13.gif]*
 
 *Add a submit button and test in preview*
 
-*![][image14]*
+*![][/src/assets/cookbook/buttons/image14.gif]*
 
 *On submit your form will return whether your booking was successful or not\!*
 
