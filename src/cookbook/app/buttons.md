@@ -1,5 +1,4 @@
 ### **Custom Button**
-
 A **Custom Button**, on the other hand, offers **full flexibility**.  
  It doesn’t have a predefined behavior — instead, you define exactly what it does using **actions**, **workflows**, or **page navigation** rules.
 
@@ -19,11 +18,9 @@ Furthermore custom buttons have a variant property which enable a wider range of
 ✅ **Best for:** actions that go beyond saving data — such as *“Book Appointment”*, *“Generate Report”*, *“Send Email”*, or *“Open Modal”*
 
 ## Form Button Scenarios: 
-
 Imagine you’re building a scheduling app where users can easily book services with available staff. On the **Create Appointment** page, users should be able to select a service, choose a date and time, pick a preferred staff member, and confirm their booking — all in one smooth flow.
 
 ### **📝 Background Configuration**
-
 Used to confirm and submit an appointment booking form.  
 Create the back end automation:   
 Create an automation project → datastore → table: 
