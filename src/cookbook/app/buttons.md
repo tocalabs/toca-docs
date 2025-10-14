@@ -49,7 +49,7 @@ Add the columns desired to the table, in this case
 
 ![](/src/assets/cookbook/buttons/image4.gif)
 
-Create the backend automations to connect your form. For simplicity, we will use the automation wizard:  
+Create the backend automations to connect your form. For simplicity, we will use the automation wizard (🪄) placed on the top left:  
 
 ![](/src/assets/cookbook/buttons/image5.png)
 
@@ -69,27 +69,27 @@ And a datastore variable list of staff:
 
 ### Create the App UI to Submit Using a Submit Button
 
-![](/src/assets/cookbook/buttons/image9.png)
+![](/src/assets/cookbook/buttons/image9.gif)
 
 Example steps:  
 - Add a repeating layout and a form component:  
-![](/src/assets/cookbook/buttons/image10.png)
+![](/src/assets/cookbook/buttons/image10.gif)
 
 - Add your listener to the app and update your form fields to use that listener:  
 
-*![](/src/assets/cookbook/buttons/image11.png)*
+*![](/src/assets/cookbook/buttons/image10.png)*
 
-- Add form fields (matching column types in the table):  
+- Add form fields mapping with the matching column in the table:  
 
-![](/src/assets/cookbook/buttons/image12.gif)
+![](/src/assets/cookbook/buttons/image11.gif)
 
 - Link the listener outputs:  
 
-![](/src/assets/cookbook/buttons/image13.gif)
+![](/src/assets/cookbook/buttons/image12.gif)
 
 - Add a submit button and test in preview:  
 
-![](/src/assets/cookbook/buttons/image14.gif)
+![](/src/assets/cookbook/buttons/image13.gif)
 
 On submit, the form will indicate whether the booking was successful.
 
