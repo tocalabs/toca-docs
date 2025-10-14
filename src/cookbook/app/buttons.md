@@ -57,7 +57,7 @@ And a datastore variable  list of staff:
 
 ![](/src/assets/cookbook/buttons/image8.png)
 
-Create the App UI to submit using a SUBMIT BUTTON: 
+### Create the App UI to submit using a SUBMIT BUTTON: 
 
 ![](/src/assets/cookbook/buttons/image9.png)
 
@@ -67,26 +67,24 @@ Add a repeating layout and a form component:
 
 ![](/src/assets/cookbook/buttons/image10.png)
 
-*Add your listener to the app and update your form field component to use that listener:* 
+Add your listener to the app and update your form field component to use that listener:
 
 *![](/src/assets/cookbook/buttons/image11.png)*
 
 *Add your form fields ( try to use form components that match the column type you configured in the table ) :* 
 
-*![( In this example the select list fields use the datastore lists for staff and services)][/src/assets/cookbook/buttons/image12.gif]*
+![][/src/assets/cookbook/buttons/image12.gif]
 
-*( In this example the select list fields use the datastore lists for staff and services)* 
+link the listener outputs
 
-*link the listener outputs*
+![][/src/assets/cookbook/buttons/image13.gif]
 
-*![][/src/assets/cookbook/buttons/image13.gif]*
+Add a submit button and test in preview
 
-*Add a submit button and test in preview*
+![][/src/assets/cookbook/buttons/image14.gif]
 
-*![][/src/assets/cookbook/buttons/image14.gif]*
+On submit your form will return whether your booking was successful or not
 
-*On submit your form will return whether your booking was successful or not\!*
-
-Create the App UI to submit using a CUSTOM BUTTON: 
+### Create the App UI to submit using a CUSTOM BUTTON: 
 
 Let’s change up the functionality for the form to check the availability of staff members: 
