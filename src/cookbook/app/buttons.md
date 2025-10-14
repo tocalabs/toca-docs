@@ -34,61 +34,53 @@ Used to confirm and submit an appointment booking form.
 Create the backend automation:  
 
 Create an automation project → datastore → table:
-
 ![](src/assets/cookbook/buttons/image1.png)
 
 ![](/src/assets/cookbook/buttons/image2.png)
-
-![](/src/assets/cookbook/buttons/image3.png)
 
 Add the columns desired to the table, in this case 
 
 * select a service,   
 * choose a date and time,   
 * staff member
+![](/src/assets/cookbook/buttons/image3.png)
 
-![](/src/assets/cookbook/buttons/image4.gif)
+
 
 Create the backend automations to connect your form. For simplicity, we will use the automation wizard (🪄) placed on the top left:  
-
-![](/src/assets/cookbook/buttons/image5.png)
+![](/src/assets/cookbook/buttons/image4.png)
 
 Select **Create a Row** and ensure a listener is created as well:  
+![](/src/assets/cookbook/buttons/image5.png)
 
-![](/src/assets/cookbook/buttons/image6.png)
 
 In this example, we will call the listener `book_appointment`. This will link the button in the frontend to the backend “add row” automation.  
 
 Create a list of options for users in the form:
+![](/src/assets/cookbook/buttons/image6.png)
 
-![](/src/assets/cookbook/buttons/image7.png)
 
 And a datastore variable list of staff:  
+![](/src/assets/cookbook/buttons/image7.png)
 
-![](/src/assets/cookbook/buttons/image8.png)
 
 ### Create the App UI to Submit Using a Submit Button
+![](/src/assets/cookbook/buttons/image8.png)
 
-![](/src/assets/cookbook/buttons/image9.gif)
 
 Example steps:  
-- Add a repeating layout and a form component:  
-![](/src/assets/cookbook/buttons/image10.gif)
+- Add a repeating layout and a form component:
+![](/src/assets/cookbook/buttons/image9.gif)  
+
 
 - Add your listener to the app and update your form fields to use that listener:  
+![](/src/assets/cookbook/buttons/image10.gif)
 
-*![](/src/assets/cookbook/buttons/image10.png)*
-
-- Add form fields mapping with the matching column in the table:  
-
+- Add form compoenent, fieldS and Map form fields the matching column in the table:  
 ![](/src/assets/cookbook/buttons/image11.gif)
-
-- Link the listener outputs:  
-
 ![](/src/assets/cookbook/buttons/image12.gif)
 
 - Add a submit button and test in preview:  
-
 ![](/src/assets/cookbook/buttons/image13.gif)
 
 On submit, the form will indicate whether the booking was successful.
