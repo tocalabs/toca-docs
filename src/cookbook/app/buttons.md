@@ -1,7 +1,7 @@
 # Custom Button
 
 A **Custom Button** provides complete **flexibility and control**.
-It has no predefined behavior — you decide exactly what it should do through **actions**, **workflows**, or **navigation rules**.
+It has no predefined behavior, you decide exactly what it should do through **actions**, **workflows**, or **navigation rules**.
 
 This makes it perfect for creating **tailored user interactions**, such as:
 
@@ -22,13 +22,13 @@ Custom buttons include a **variant** property that enables a wider range of styl
 - **Div** – Supports mouse click and hover events; behaves like a clickable container  
 - **Paper** – Includes mouse click and hover events, as well as elevation
 
-✅ **Best for:** Actions that go beyond saving data — such as *“Book Appointment”*, *“Generate Report”*, *“Send Email”*, or *“Open Modal”*
+✅ **Best for:** Actions that go beyond saving data, such as *“Book Appointment”*, *“Generate Report”*, *“Send Email”*, or *“Open Modal”*
 
 ---
 
 ## Form Button Scenarios
 
-Imagine you’re building a scheduling app where users can book services with available staff. On the **Create Appointment** page, users should be able to select a service, choose a date and time, pick a preferred staff member, and confirm their booking — all in one smooth flow.
+Imagine you’re building a scheduling app where users can book services with available staff. On the **Create Appointment** page, users should be able to select a service, choose a date and time, pick a preferred staff member, and confirm their booking, all in one smooth flow.
 
 ### 📝 Background Configuration
 
@@ -90,9 +90,9 @@ Unlike a submit button, a custom button in Toca provides much greater visual and
 
 As previously mentioned custom button allows you to:
 - Add other components inside it (like icons, loaders, or status messages).
-- Control exactly what happens on click — rather than immediately submitting the form.
+- Control exactly what happens on click, rather than immediately submitting the form.
 - Connect it to specific logic flows or automation (e.g., “Check Availability” before “Book Appointment”).
-- Customize its appearance — colors, animations, and layout — to better fit your app’s design.
+- Customize its appearance, colors, animations, and layout, to better fit your app’s design.
 
 Try to play around with some of the components and change the look of your button. 
 
