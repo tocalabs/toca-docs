@@ -84,7 +84,7 @@ Example steps:
 On submit, the form will indicate whether the booking was successful.
 
 ### Create the App UI to Submit Using a Custom Button
-At this stage, you’ll replace the standard submit button with a custom button and configure it to prevent users from booking a time when a staff member is unavailable. You can also add a small message to inform the user about availability.
+At this stage, you’ll replace the standard submit button with a custom button and configure to have a confirmation box before submitting the information.
 
 Unlike a submit button, a custom button in Toca provides much greater visual and functional control, allowing you to tailor both its appearance and behavior to fit your app’s workflow.
 
@@ -113,8 +113,76 @@ What this does is, instead of submitting the values, the form saves them in a te
 
 The form component also has a prefix setting, which is particularly useful to prevent variable name collisions when you have multiple in-page values. The configured prefix is added to your variable names automatically.
 
+Map the created variables to the form fields: 
+![alt text](image15-1.png)
+
+Preview the form and select some values, exit the preview, we need to do this so the chips values are selectable when configiring your button event.  
+
 Now that your form is configured we need to update the button to use the values set by the form and call the listener, you can do this by opening the events section on the button.
 ![alt text](/src/assets/cookbook/buttons/image15.png)
 
-Add a click event and an execute listener event 
+Add a `click event` and an `execute listener event` 
 ![alt text](/src/assets/cookbook/buttons/image16.png)
+
+Insert the in page values created by the form component, if you can't select them in the drop list you can type them
+![alt text](/src/assets/cookbook/buttons/image17.gif)
+Don't forget to add the prefix configured in your form.
+
+Test Your form in preview. 
+You can check if the form has been triggered correctly in Reports.
+![alt text](/src/assets/cookbook/buttons/image18.gif)
+
+#### Add a Confirmation Box to Prompt the User
+
+Now we’ll add a confirmation box to prompt the user before performing an action.
+
+##### Steps
+
+1. **Open the button event settings**  
+   Go back to the button’s event configuration and add a "confirmation dialog".
+
+2. **Add a custom message**  
+   Create a custom confirmation message.  
+   You can insert dynamic values from the page or form to make the message more personalized.
+   In this example we have inserted on of the form's in page values.
+
+3. **Customize button text**  
+   The dialog buttons default to OK and Cancel, but you can change these labels to match your desired wording.
+   Regardless of the wording, the logic will return true for a positive response (e.g., OK) and false for a negative response (e.g., Cancel).
+
+4. **Add an exclusive node**  
+   Add an exclusive node to control how the logic flows based on set criteria.  
+   In this case, use the confirmation dialog result to determine whether the event listener should be triggered or not.
+
+![alt text](/src/assets/cookbook/buttons/image19.png)
+![alt text](/src/assets/cookbook/buttons/image20.gif)
+
+Tip: you could also add a snackbar notification for informing users that their action has been cancelled or has succeded 
+![alt text](/src/assets/cookbook/buttons/image21.png)
+![alt text](/src/assets/cookbook/buttons/image22.gif)
+
+## Open modal using an icon button 
+Often, a button doesn’t need any text.  
+
+Icon buttons allow you to:  
+- Select from a series of pre-defined icons.  
+- Apply the site’s theme to the icon automatically.  
+- Avoid manually customizing icons or uploading images.  
+
+This approach helps keep icon sizes and appearance uniform across the entire site, ensuring a consistent and professional look.
+
+For this example we will configure an icon button that users can click to gain further information on the services provided.
+
+**Create a new page that describes the services**  
+   There are many dynamic ways to do this (e.i saving the services into a table) but for simplicy's sake we will just have a flex with a text for each service.
+
+**Add the icon button to your form**  
+   this can be anywhere on your page
+
+3. **Customize button text**  
+   The dialog buttons default to OK and Cancel, but you can change these labels to match your desired wording.
+   Regardless of the wording, the logic will return true for a positive response (e.g., OK) and false for a negative response (e.g., Cancel).
+
+4. **Add an exclusive node**  
+   Add an exclusive node to control how the logic flows based on set criteria.  
+   In this case, use the confirmation dialog result to determine whether the event listener should be triggered or not.
