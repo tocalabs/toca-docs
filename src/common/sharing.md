@@ -2,11 +2,11 @@
 
 Sharing allows you to collaborate on projects and apps within Toca with other users on the platform. Click on the share button and define the permissions of who you want to share with.
 
-Entities can be shared with either individual :docs-link[users or groups]{id="admin/users_and_groups"}. Groups are a collection of users. Either can have all of their permissions removed entirely by clicking the 'x'.
+Entities can be shared with either individual :docs-link[users or teams]{id="admin/users_and_teams"}. Teams are a collection of users. Either can have all of their permissions removed entirely by clicking the 'x'.
 
 **Permissions:** 
 
-When you share an app, project or resource with other users/groups, you can define what level of access they will get, this is controlled through _permissions_.
+When you share an app, project or resource with other users/teams, you can define what level of access they will get, this is controlled through _permissions_.
 The following permissions appear in descending order:
 
 - Owner - The highest level of permissions which is assigned by default to the creator of the entity. You can also remove other owners but there must always be at least one owner.

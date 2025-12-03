@@ -2,12 +2,12 @@
 
 This chapter is your guide to the administrative and advanced automation capabilities that transform Toca from a simple low-code tool into a robust enterprise platform. Here’s a summary of what you'll master in this section:
 
-## Managing Your Toca Developers: Users and Groups
+## Managing Your Toca Developers: Users and Teams
 
 A key component of any successful platform is the ability to manage who can access what. We'll start with the fundamentals of user management, a critical function for any Toca.io administrator. You will learn how to:
 
 - **Create and Update Users:** Add new team members to your Toca.io environment, assign them to specific roles, and manage their access credentials.
-- **Organize with Groups:** Discover the power of user groups. Instead of managing permissions for each individual, you'll learn how to create and manage groups that reflect your organizational structure (e.g., "Dev Team," "Test Team" and "DevOps"). Assigning permissions to a group automatically grants them to all its members, simplifying administration and ensuring consistency.
+- **Organize with teams:** Discover the power of user teams. Instead of managing permissions for each individual, you'll learn how to create and manage teams that reflect your organizational structure (e.g., "Dev Team," "Test Team" and "DevOps"). Assigning permissions to a tean automatically grants them to all its members, simplifying administration and ensuring consistency.
 
 ## Types of Automation Bots
 

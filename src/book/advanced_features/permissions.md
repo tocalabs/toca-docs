@@ -36,7 +36,7 @@ The other form of platform permissions is the ability to make someone an admin u
 - Add, modify and delete feeds for the pack manager
 - View and delete all files and folders stored in the platforms file system
 
-To make someone an admin user, another admin user must go to the Admin -> Users & Groups section, identify the user they which to elevate and click on the cog next to the user before finally ticking the admin toggle and clicking `update`.
+To make someone an admin user, another admin user must go to the Admin -> Users & Teams section, identify the user they which to elevate and click on the cog next to the user before finally ticking the admin toggle and clicking `update`.
 
 :video{src="/src/assets/book/set_user_to_admin.webm"}
 
