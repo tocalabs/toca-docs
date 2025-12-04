@@ -22,9 +22,9 @@ You will be given the option to merge when the entity which you are trying to im
 
 Merging works by comparing the __names__ of entities on the platform you are importing into and the export you are driving the import from. If it notices that you have an activity/project/datastore/app on the platform that matches those within the Exported zip, it will give you the option to merge. If selected, merging will overwrite the existing entities on the platform with the ones from the import.
 
-### User and groups reassignment
+### User and teams reassignment
 
-You will be given the option to reassign users and groups if the app which you are trying to import has authentication enabled. If the target environment recognises the users and groups in the export then it will automatically prepopulate them. If it does not then it will give you the option to reassign them.
+You will be given the option to reassign users and teams if the app which you are trying to import has authentication enabled. If the target environment recognises the users and teams in the export then it will automatically prepopulate them. If it does not then it will give you the option to reassign them.
 
 ### Sync dependencies
 
