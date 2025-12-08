@@ -174,15 +174,13 @@ This approach helps keep icon sizes and appearance uniform across the entire sit
 For this example we will configure an icon button that users can click to gain further information on the services provided.
 
 **Create a new page that describes the services**  
-   There are many dynamic ways to do this (e.i saving the services into a table) but for simplicy's sake we will just have a flex with a text for each service.
+   There are many dynamic ways to do this (e.i saving the services into a table) but for simplicy's sake we will just have a flex with text for each service.
+![alt text](/src/assets/cookbook/buttons/image23.png)
 
-**Add the icon button to your form**  
+**Add the icon button to your page**  
    this can be anywhere on your page
+![alt text](/src/assets/cookbook/buttons/image24.png)
 
-3. **Customize button text**  
-   The dialog buttons default to OK and Cancel, but you can change these labels to match your desired wording.
-   Regardless of the wording, the logic will return true for a positive response (e.g., OK) and false for a negative response (e.g., Cancel).
-
-4. **Add an exclusive node**  
-   Add an exclusive node to control how the logic flows based on set criteria.  
-   In this case, use the confirmation dialog result to determine whether the event listener should be triggered or not.
+**Configure the icon button in page logic**  
+The button will need to be configured to open the descriptions page on click.
+![alt text](/src/assets/cookbook/buttons/image25.png)
