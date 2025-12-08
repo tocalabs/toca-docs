@@ -184,3 +184,6 @@ For this example we will configure an icon button that users can click to gain f
 **Configure the icon button in page logic**  
 The button will need to be configured to open the descriptions page on click.
 ![alt text](/src/assets/cookbook/buttons/image25.png)
+
+**Test the button in preview**
+![alt text](/src/assets/cookbook/buttons/image26.gif)
