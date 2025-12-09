@@ -9,16 +9,15 @@ First, lets ingest the sample .csv file below. This file contains records for 5 
 [Sample CSV File](https://support.staffbase.com/hc/en-us/article_attachments/360009197031/username.csv)
 
 The input data looks like this.
-~~~
+
 | Username | Identifier | First name | Last name |
 | :-- | :-- | :-- | :-- |
-| booker12 | 9012 |Rachel | Booker |
+| booker12 | 9012 | Rachel | Booker |
 | grey07 | 2070 | Laura | Grey |
 | johnson81 | 4081 | Craig | Johnson |
 | jenkins46 | 9346 | Mary | Jenkins |
 | smith79 | 5079 | Jamie | Smith |
 
-~~~
 
 To ingest this data, we need the file to be available on the bot to which the activity is assigned. Once this file has been uploaded to the bot, drag a **XLSX/CSV to Table** action onto the action canvas and, within the action configuration, specify a name for your table, the type of file to be ingested and use the file navigator in the "File" input to select the .csv file from the bot. 
 
