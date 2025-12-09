@@ -1,4 +1,4 @@
-﻿# Reading a CSV/Excel file into a Table
+# Reading a CSV/Excel file into a Table
 
 There are several reasons you might want to import an **.xlsx** or **.csv** file into Toca. For example, a third-party system may only generate output data in CSV format, or you may have a large dataset stored in an Excel spreadsheet that you’d like to load into Toca for analysis and exploration. Toca makes ingesting this data easy with the **XLSX/CSV to Table** action.
 
