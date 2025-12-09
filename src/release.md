@@ -52,6 +52,7 @@ Prodigy makes Toca an even more powerful environment for team-based development,
 
 - **Stay Informed:** Receive real-time notifications for important events happening throughout the platform.
 - **Multi-Device Alerts:** Get alerts on a range of devices, ensuring you are always aware of critical activity without having to leave your current screen.
+- **Slack Notifications:** You can connect your Slack workspace to your Toca platform so that it sends notifications to a Slack channel of your choice. This lets you see what is happening with your Toca platform without ever leaving the comfort of your messaging platform.
 
 ## Bug Fixes
 
