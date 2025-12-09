@@ -16,6 +16,8 @@ In any complex environment, great organization is the key to velocity. Workspace
 
 #### Migration of existing projects
 
+Don't worry, your existing projects will continue to work but they will be grouped together when you first upgrade to version 9 and placed in their own workspaces. When you first arrive to the platform post upgrade to Prodigy, you'll be taken through a wizard that will show you how we've grouped them and give you the opportunity to change anything if you want to group things differently.
+
 ### UI Redesign
 
 We have completely re-engineered the Toca user interface. We stripped away the visual clutter, moving away from overly stylized elements to deliver an experience that is as **simple as possible, but no simpler**.
@@ -60,6 +62,14 @@ A number of bug fixes were included in this release across the platform.
 ## Deprecated
 
 Nothing has been deprecated in this release.
+
+--- 
+
+The Toca team is confident that Prodigy will redefine your development experience. Dive in, explore the new interface, and start leveraging these powerful features to build faster than you ever thought possible.
+
+**Happy Building!**
+
+---
 
 ## Previous Releases
 
