@@ -14,4 +14,5 @@
 - :docs-link[Automation]{id="cookbook/automation"}
   - :docs-link[Reading a CSV/Excel file to a table]{id="cookbook/reading_csv_to_table"}
   - :docs-link[Row Permissions]{id="cookbook/row_permissions"}
+  - :docs-link[Using Code in Automation]{id="cookbook/using_code_actions"}
 - :docs-link[Apps & Automation]{id="cookbook/apps_and_automation"}
