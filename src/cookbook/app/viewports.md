@@ -135,5 +135,6 @@ Once the overrides have been enabled, we can now modify that component, without 
 After all your modifications have been complete, and you switch between your viewports, you will notice that all your viewports have their own design (see *Fig 7d*).
 
 ### Orphaned Components
-![[Pasted image 20250912154047.png]]
 
+![Orphaned Flex](/src/assets/cookbook/viewports/fig8.png)
+Sometimes, your apps can have orphaned components. A component becomes orphaned when the parent of a component is deleted in one viewport but not removed in another.
