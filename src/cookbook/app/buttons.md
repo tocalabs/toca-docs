@@ -80,14 +80,14 @@ Imagine you’re building a scheduling app where users can book services with av
 Used to confirm and submit an appointment booking form.  
 Create a workspace:  
 ![](src/assets/cookbook/buttons/image0.png)
-Create an automation project → datastore → table:
+Create an automation project → datastore → table.
 ![](src/assets/cookbook/buttons/image1.gif)
 
-Add the columns desired to the table, in this case 
-
+Add the columns desired to the table, for example: 
 * select a service,   
 * choose appointment datetime,   
 * staff member
+
 ![](/src/assets/cookbook/buttons/image3.png)
 
 Create the backend automations to connect your form. For simplicity, we will use the automation wizard (🪄) placed on the top left:  
