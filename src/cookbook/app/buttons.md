@@ -129,8 +129,8 @@ Example steps:
 
 On submit, the form will indicate whether the booking was successful.
 
-### Basic Button Notes
-Basic Buttons are essentially a sell customizable version of custom buttons.
+### Basic Button
+Basic Buttons are in essence a simple version of of custom buttons.
 
 Unlike a submit button, Basic buttons are not directly linked to the form component. If you try to preview the button and click on it, nothing will happen by default.
 
