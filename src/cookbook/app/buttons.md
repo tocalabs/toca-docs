@@ -1,18 +1,38 @@
-# Custom Button
+# Buttons
+Buttons are one of the most common and essential components in any app interface. They allow users to **interact with your app**, perform actions, and navigate through content. There are a few main types of buttons: 
+- Normal (Basic) buttons
+- Submit buttons
+- Custom buttons
+- Icon buttons
+- Floating Action button 
+- Link Button
 
-A **Custom Button** provides complete **flexibility and control**.
-It has no predefined behavior, you decide exactly what it should do through **actions**, **workflows**, or **navigation rules**.
+## Basic Buttons
+Basic buttons are standard clickable elements that usually contain **text labels**. They are ideal for actions where you want the user to clearly understand what will happen when they click, such as:  
 
-This makes it perfect for creating **tailored user interactions**, such as:
+- **Submit a form** (e.g., “Book Appointment”)  
+- **Navigate to another page** (e.g., “View Details”)  
+- **Trigger an action** (e.g., “Generate Report”)  
 
-* Running automations or calling external APIs
-* Navigating to a different page
-* Triggering conditional logic or displaying popups
-* Executing tasks independently from form submissions
+**Key features of normal buttons:**
+- Display descriptive text for clarity  
+- Can include icons alongside text for added visual cues  
+- Support hover effects, click animations, and a bbasic level of styling  
+- Can trigger workflows, automations, or navigation events 
+- Can Automatically adopt the app’s theme for colors and sizing  
 
-Additionally, a custom button lets you **embed other components within it**, such as icons, loading indicators, or dynamic status messages, giving you both **functional and visual freedom** in your app design.
+## Submit Buttons
+Submit Buttons have all the futuers adn functionality you can find in a generic button, but is generally used for forms. 
 
----
+This is because it has the extra functionality of submitting any form the button is palced in witout having to configure it to do so. 
+
+> ⚠ **Warning**
+> A submit button submits **all forms it is contained within**.
+> If forms are nested, all nested forms will be submitted.
+
+# Custom Buttons
+
+A **Custom Button** provides complete **flexibility and control**. Unlike normal or submit buttons, which are mostly predefined, a custom button allows you to **decide more exacly how it should look**.
 
 ## Variants
 
@@ -20,25 +40,48 @@ Custom buttons include a **variant** property that enables a wider range of styl
 
 - **Button (default)** – Configurable size, click, hover effects, and corner rounding  
 - **Div** – Supports mouse click and hover events; behaves like a clickable container  
-- **Paper** – Includes mouse click and hover events, as well as elevation
+- **Paper** – Includes mouse click and hover events, as well as elevation  
 
-✅ **Best for:** Actions that go beyond saving data, such as *“Book Appointment”*, *“Generate Report”*, *“Send Email”*, or *“Open Modal”*
+**Best for:** Actions that go beyond saving data, such as *“Book Appointment”*, *“Generate Report”*, *“Send Email”*, or *“Open Modal”*  
+
+A custom button lets you **embed other components within it**, such as icons, loading indicators, or dynamic status messages, giving you more **functional and visual freedom** in your app design.
 
 ---
 
-## Form Button Scenarios
+## Icon Buttons
+Icon buttons contain **only an icon** instead of text. They are perfect for actions that are widely understood by their visual representation, such as:  
+
+- Opening a modal or popup  
+- Navigating to a section of the app  
+- Performing quick actions (e.g., edit, delete, or favorite)  
+
+**Key features of icon buttons:**
+- Use pre-defined icons or custom icons  
+- Automatically adopt the app’s theme for colors and sizing  
+- Maintain a clean and minimal interface  
+- Ideal for toolbar actions or secondary actions  
+
+---
+
+## Floating action Buttons
+Floating Action Buttons (FABs) are a type of button used to highlight a primary action on a page.
+They are designed to stand out and remain easily accessible, floating above other content rather than being embedded in the page.
+
+Common Use Cases:
+- Adding a new item (e.g., Add Contact, Create Task)
+- Starting a new message or email
+
+## Button Scenarios
 
 Imagine you’re building a scheduling app where users can book services with available staff. On the **Create Appointment** page, users should be able to select a service, choose a date and time, pick a preferred staff member, and confirm their booking, all in one smooth flow.
 
 ### 📝 Background Configuration
 
 Used to confirm and submit an appointment booking form.  
-Create the backend automation:  
-
+Create a workspace:  
+![](src/assets/cookbook/buttons/image0.png)
 Create an automation project → datastore → table:
-![](src/assets/cookbook/buttons/image1.png)
-
-![](/src/assets/cookbook/buttons/image2.png)
+![](src/assets/cookbook/buttons/image1.gif)
 
 Add the columns desired to the table, in this case 
 
@@ -62,18 +105,21 @@ Create a list of options for users in the form:
 And a datastore variable list of staff:  
 ![](/src/assets/cookbook/buttons/image7.png)
 
-
 ### Create the App UI to Submit Using a Submit Button
 ![](/src/assets/cookbook/buttons/image8.png)
 
 
 Example steps:  
-- Add a repeating layout and a form component:
+- Add a flex layout and a form component:
 ![](/src/assets/cookbook/buttons/image9.gif)  
 
 
-- Add your listener to the app using the app settings ⚙️ and update your form to use that listener:  
-![](/src/assets/cookbook/buttons/image10.gif)
+- Add your listener to the app using the app settings:  
+![](/src/assets/cookbook/buttons/image10-1.gif)
+![](/src/assets/cookbook/buttons/image10-2.gif)
+
+- Update your form to use that listener:
+![](/src/assets/cookbook/buttons/image10-3.gif)
 
 - Add form fields matching the type of data you are passing through:  
 ![Example Datetie form field](/src/assets/cookbook/buttons/image11.gif)
@@ -83,6 +129,13 @@ Example steps:
 
 On submit, the form will indicate whether the booking was successful.
 
+### Basic Button Notes
+Basic Buttons are essentially a sell customizable version of custom buttons.
+
+Unlike a submit button, Basic buttons are not directly linked to the form component. If you try to preview the button and click on it, nothing will happen by default.
+
+We demonstrate how to do this in the custom buttons section
+
 ### Create the App UI to Submit Using a Custom Button
 At this stage, you’ll replace the standard submit button with a custom button and configure to have a confirmation box before submitting the information.
 
@@ -91,7 +144,7 @@ Unlike a submit button, a custom button in Toca provides much greater visual and
 As previously mentioned custom button allows you to:
 - Add other components inside it (like icons, loaders, or status messages).
 - Control exactly what happens on click, rather than immediately submitting the form.
-- Connect it to specific logic flows or automation (e.g., “Check Availability” before “Book Appointment”).
+- Connect it to specific logic flows or automation before submitting a form (e.g., “Check Availability” before “Book Appointment”).
 - Customize its appearance, colors, animations, and layout, to better fit your app’s design.
 
 Try to play around with some of the components and change the look of your button. 
@@ -161,7 +214,7 @@ Tip: you could also add a snackbar notification for informing users that their a
 ![alt text](/src/assets/cookbook/buttons/image21.png)
 ![alt text](/src/assets/cookbook/buttons/image22.gif)
 
-## Open modal using an icon button 
+### Add app functionality using an icon button 
 Often, a button doesn’t need any text.  
 
 Icon buttons allow you to:  
@@ -187,3 +240,15 @@ The button will need to be configured to open the descriptions page on click.
 
 **Test the button in preview**
 ![alt text](/src/assets/cookbook/buttons/image26.gif)
+
+### Add app functionality using an Floating Action Button 
+In your app you may want for customers to easly contact support in the case of questions or issues with booking their appointment. 
+
+Lets use a floating button action to make the contact form easly acessible to your users:
+- Create a new page ( e.g. contact form) and configure a new form with some fields.
+- get the app URL and add the new page SLUG ( e.g. https://example.app.io/any-cabinet-8003 + / + PAGE SLUG)
+![url](/src/assets/cookbook/buttons/image27.png)
+![SLUG](/src/assets/cookbook/buttons/image28.png)
+![SLUG](/src/assets/cookbook/buttons/image29.png)
+- Configure the floating button to redirect to that page when clicked
+Preview page and click on the floating button
