@@ -249,6 +249,6 @@ Lets use a floating button action to make the contact form easly acessible to yo
 - get the app URL and add the new page SLUG ( e.g. https://example.app.io/any-cabinet-8003 + / + PAGE SLUG)
 ![url](/src/assets/cookbook/buttons/image27.png)
 ![SLUG](/src/assets/cookbook/buttons/image28.png)
-![SLUG](/src/assets/cookbook/buttons/image29.png)
 - Configure the floating button to redirect to that page when clicked
+![SLUG](/src/assets/cookbook/buttons/image29.png)
 Preview page and click on the floating button
