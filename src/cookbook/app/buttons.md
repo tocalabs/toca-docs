@@ -16,13 +16,16 @@ Basic buttons are standard clickable elements that usually contain **text labels
 
 **Key features of normal buttons:**
 - Display descriptive text for clarity  
-- Can include icons alongside text for added visual cues 
-   ***This feels wrong. Emojis aren't the same as icons***  
+- Can include emojis alongside text for added visual cues
 - Supports basic level of styling  
 - Can trigger in-page logic flows, automations, or navigation events 
 - Automatically adopt the app’s theme for colors and sizing  
 
-**MENTION STYLE OPTIONS**
+## Styles
+Buttons support multiple visual styles, allowing you to match the button’s appearance to its purpose and importance:
+- Text: Minimal styling with no background. Ideal for low-emphasis actions. Commonly used for inline actions or secondary navigation
+- Outlined: Transparent background with a visible border. Suitable for secondary or alternative actions
+- Filled: Solid background using the primary theme colour. Best for primary actions such as Save, or Confirm
 
 ## Submit Buttons
 Submit Buttons have all the features and functionality you can find in a generic button, but is exclusively used for forms. 
