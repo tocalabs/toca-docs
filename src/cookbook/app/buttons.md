@@ -4,8 +4,8 @@ Buttons are one of the most common and essential components in any app interface
 - Submit buttons
 - Custom buttons
 - Icon buttons
-- Floating Action button 
-- Link Button
+- Floating Action buttons 
+- Link buttons
 
 ## Basic Buttons
 Basic buttons are standard clickable elements that usually contain **text labels**. They are ideal for actions where you want the user to clearly understand what will happen when they click, such as:  
@@ -16,15 +16,18 @@ Basic buttons are standard clickable elements that usually contain **text labels
 
 **Key features of normal buttons:**
 - Display descriptive text for clarity  
-- Can include icons alongside text for added visual cues  
-- Support hover effects, click animations, and a bbasic level of styling  
-- Can trigger workflows, automations, or navigation events 
-- Can Automatically adopt the app’s theme for colors and sizing  
+- Can include icons alongside text for added visual cues 
+   ***This feels wrong. Emojis aren't the same as icons***  
+- Supports basic level of styling  
+- Can trigger in-page logic flows, automations, or navigation events 
+- Automatically adopt the app’s theme for colors and sizing  
+
+**MENTION STYLE OPTIONS**
 
 ## Submit Buttons
-Submit Buttons have all the futuers adn functionality you can find in a generic button, but is generally used for forms. 
+Submit Buttons have all the features and functionality you can find in a generic button, but is exclusively used for forms. 
 
-This is because it has the extra functionality of submitting any form the button is palced in witout having to configure it to do so. 
+This is because it has the extra functionality of submitting any form the button is placed in without having to configure it to do so. 
 
 > ⚠ **Warning**
 > A submit button submits **all forms it is contained within**.
@@ -32,7 +35,7 @@ This is because it has the extra functionality of submitting any form the button
 
 # Custom Buttons
 
-A **Custom Button** provides complete **flexibility and control**. Unlike normal or submit buttons, which are mostly predefined, a custom button allows you to **decide more exacly how it should look**.
+A **Custom Button** provides complete **flexibility and control** over its design and content. Unlike normal or submit buttons, which are mostly predefined, a custom button allows you to **decide exactly how it should look**.
 
 ## Variants
 
@@ -53,13 +56,13 @@ Icon buttons contain **only an icon** instead of text. They are perfect for acti
 
 - Opening a modal or popup  
 - Navigating to a section of the app  
-- Performing quick actions (e.g., edit, delete, or favorite)  
+- Performing quick actions (e.g., edit, delete, or favourite)  
 
 **Key features of icon buttons:**
-- Use pre-defined icons or custom icons  
+- Use pre-defined icons
 - Automatically adopt the app’s theme for colors and sizing  
-- Maintain a clean and minimal interface  
-- Ideal for toolbar actions or secondary actions  
+- Maintain a clean and minimal interface
+- Ideal for toolbar actions or secondary actions
 
 ---
 
@@ -77,15 +80,17 @@ Imagine you’re building a scheduling app where users can book services with av
 
 ### 📝 Background Configuration
 
-Used to confirm and submit an appointment booking form.  
+Let's first create the automation project for confirming and submitting an appointment booking form.  
+
 Create a workspace:  
-![](src/assets/cookbook/buttons/image0.png)
+![](/src/assets/cookbook/buttons/image0.png)
+
 Create an automation project → datastore → table.
-![](src/assets/cookbook/buttons/image1.gif)
+![](/src/assets/cookbook/buttons/image1.gif)
 
 Add the columns desired to the table, for example: 
-* select a service,   
-* choose appointment datetime,   
+* service 
+* appointment date
 * staff member
 
 ![](/src/assets/cookbook/buttons/image3.png)
