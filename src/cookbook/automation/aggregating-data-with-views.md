@@ -61,17 +61,3 @@ You want to see:
 - Number of orders per category  
 
 Instead of recalculating this every time, you create a **view**.
-
----
-
-## Creating the Aggregation View
-
-```sql
-CREATE VIEW category_sales_summary AS
-SELECT
-    p.category,
-    COUNT(o.order_id) AS total_orders,
-    SUM(o.order_total) AS total_sales
-FROM orders o
-JOIN products p ON o.product_id = p.product_id
-GROUP BY p.category;
