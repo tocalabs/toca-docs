@@ -1,5 +1,5 @@
 # Execute Javascript in In Page Logic
-In page logic allows you to execute a multide of action on page clicks and componenet loads,
+In page logic allows you to execute a multitude of action on page clicks and componenet loads,
 particularly important is the ExecuteJS in page logic that allows  custom JavaScript within your app when the inbuilt functionality doesnt quite do what you need it to.
 
 Executing JavaScript is useful when you need:
@@ -38,7 +38,6 @@ The script runs in the user’s browser, meaning it has access to:
 
 - Use JavaScript only when no combinationation of native TOCA configuration exists that will achive what you desire 
 - Comment your code for readability  
-- Avoid direct DOM manipulation unless absolutely necessary  
 - Prefer TOCA variables and events over hardcoded values  
 
 
@@ -46,19 +45,23 @@ The script runs in the user’s browser, meaning it has access to:
 
 ### Scenario: Using JavaScript to Validate and Prepare Data Before Submission
 
-Imagine you are building a **dashboard** that displays several **Key Performance Indicators (KPIs)**, such as:
+Imagine you are building a dashboard that displays several Key Performance Indicators (KPIs), such as:
 - Total revenue
 - Average order value
 - Percentage growth compared to the previous period
 
-While TOCA provides basic in-page addition and subtraction through page logic, this scenario requires **more complex calculations**, making it a good use case for executing **JavaScript**.
+While TOCA provides basic in-page addition and subtraction through page logic, this scenario requires more complex calculations, making it a good use case for executing JavaScript.
 
 #### Create a Dashboard in a toca app page
-In this example we will create a orders table to use for our app:
+In this example we will create a orders table in a datastore to use for our app:
+![SLUG](/src/assets/cookbook/buttons/image1.png)
 
+Create a new app and a page called Dashboard.
+For this example we will configure the page to have a Repeating Layout component to display the table you just created. The Repeating Layout will automatically render one row per record from the table.
+
+Now add a few flex layouts to display t
 
 ##### How JavaScript is used
-
 When the dashboard loads, JavaScript is executed to:
 
 1. Retrieve multiple numeric values from in-page or session variables  
@@ -74,18 +77,18 @@ When the dashboard loads, JavaScript is executed to:
 - Calculations go beyond simple arithmetic  
 - Logic needs to account for edge cases (e.g. missing or zero values)  
 - Formatting is required before displaying results to users  
-- The same logic can be reused across multiple KPI widgets  
+- The same logic can be reused across multiple KPI widgets 
 
 > 💡 Tip: If KPI calculations become data-heavy or rely on large datasets, consider moving the logic to a backend automation and using JavaScript only for presentation and formatting.
 
 ```javascript
 // Retrieve values from in-page variables
-const totalRevenue = Number(context[total_revenue] || 0);
-const totalOrders = Number(context[total_orders] || 0);
-const previousRevenue = Number(context[previous_revenue] || 0);
+const totalItemsBought = Number(context['quantity'] || 0);
+const totalOrders = Number(context['total_orders'] || 0);
+const mostPopularProduct = Number(context['previous_revenue'] || 0);
 
 // Calculate KPIs
-let averageOrderValue = 0;
+let averageOrderQuantity = 0;
 if (totalOrders > 0) {
   averageOrderValue = totalRevenue / totalOrders;
 }
@@ -101,7 +104,15 @@ averageOrderValue = averageOrderValue.toFixed(2);
 revenueGrowthPercentage = revenueGrowthPercentage.toFixed(2);
 
 // Store results back into in-page variables
-setaverageOrderValue;
-inPage.revenue_growth_percentage = revenueGrowthPercentage;
+
+const table = Context.get("table")
+
+let rows = table.values.map(e => e.recordValue)
+
+total = rows.reduce((acc, e) => acc + parseInt(e.number), 0)
+
+console.log(total)
+
+
 
 ```

@@ -1,6 +1,6 @@
 # Buttons
-Buttons are one of the most common and essential components in any app interface. They allow users to **interact with your app**, perform actions, and navigate through content. There are a few main types of buttons: 
-- Normal (Basic) buttons
+Buttons are one of the most common and essential components in any app interface. They allow users to interact with your app, perform actions, and navigate through content. There are a few main types of buttons: 
+- Basic buttons
 - Submit buttons
 - Custom buttons
 - Icon buttons
@@ -8,7 +8,7 @@ Buttons are one of the most common and essential components in any app interface
 - Link buttons
 
 ## Basic Buttons
-Basic buttons are standard clickable elements that usually contain **text labels**. They are ideal for actions where you want the user to clearly understand what will happen when they click, such as:  
+Basic buttons are standard clickable elements that usually contain text labels. They are ideal for actions where you want the user to clearly understand what will happen when they click, such as:  
 
 - **Submit a form** (e.g., “Book Appointment”)  
 - **Navigate to another page** (e.g., “View Details”)  
@@ -33,29 +33,26 @@ Submit Buttons have all the features and functionality you can find in a generic
 This is because it has the extra functionality of submitting any form the button is placed in without having to configure it to do so. 
 
 > ⚠ **Warning**
-> A submit button submits **all forms it is contained within**.
+> A submit button submits all forms it is contained within.
 > If forms are nested, all nested forms will be submitted.
 
 # Custom Buttons
 
-A **Custom Button** provides complete **flexibility and control** over its design and content. Unlike normal or submit buttons, which are mostly predefined, a custom button allows you to **decide exactly how it should look**.
+A Custom Button provides complete flexibility and control over its design and content. Unlike normal or submit buttons, which are mostly predefined, a custom button allows you to decide exactly how it should look.
 
 ## Variants
+Custom buttons include a variant property that enables a wider range of styling options:
 
-Custom buttons include a **variant** property that enables a wider range of styling options:
-
-- **Button (default)** – Configurable size, click, hover effects, and corner rounding  
+- **Button (Default)** – Configurable size, click, hover effects, and corner rounding  
 - **Div** – Supports mouse click and hover events; behaves like a clickable container  
 - **Paper** – Includes mouse click and hover events, as well as elevation  
 
 **Best for:** Actions that go beyond saving data, such as *“Book Appointment”*, *“Generate Report”*, *“Send Email”*, or *“Open Modal”*  
 
-A custom button lets you **embed other components within it**, such as icons, loading indicators, or dynamic status messages, giving you more **functional and visual freedom** in your app design.
-
----
+A custom button lets you embed other components within it, such as icons, loading indicators, or dynamic status messages, giving you more functional and visual freedom in your app design.
 
 ## Icon Buttons
-Icon buttons contain **only an icon** instead of text. They are perfect for actions that are widely understood by their visual representation, such as:  
+Icon buttons contain only an icon instead of text. They are perfect for actions that are widely understood by their visual representation, such as:  
 
 - Opening a modal or popup  
 - Navigating to a section of the app  
@@ -67,8 +64,6 @@ Icon buttons contain **only an icon** instead of text. They are perfect for acti
 - Maintain a clean and minimal interface
 - Ideal for toolbar actions or secondary actions
 
----
-
 ## Floating action Buttons
 Floating Action Buttons (FABs) are a type of button used to highlight a primary action on a page.
 They are designed to stand out and remain easily accessible, floating above other content rather than being embedded in the page.
@@ -78,11 +73,9 @@ Common Use Cases:
 - Starting a new message or email
 
 ## Button Scenarios
-
-Imagine you’re building a scheduling app where users can book services with available staff. On the **Create Appointment** page, users should be able to select a service, choose a date and time, pick a preferred staff member, and confirm their booking, all in one smooth flow.
+Imagine you’re building a scheduling app where users can book services with available staff. On the Create Appointment page, users should be able to select a service, choose a date and time, pick a preferred staff member, and confirm their booking, all in one smooth flow.
 
 ### 📝 Background Configuration
-
 Let's first create the automation project for confirming and submitting an appointment booking form.  
 
 Create a workspace:  
@@ -101,7 +94,7 @@ Add the columns desired to the table, for example:
 Create the backend automations to connect your form. For simplicity, we will use the automation wizard (🪄) placed on the top left:  
 ![](/src/assets/cookbook/buttons/image4.png)
 
-Select **Create a Row** and ensure a listener is created as well:  
+Select Create a Row and ensure a listener is created as well:  
 ![](/src/assets/cookbook/buttons/image5.png)
 
 In this example, by default the listener is named "table_name_action" (i.e. `add_appointment_table_row`) but we will rename it to `book_appointment`. This will be used to link the button in the frontend to the backend “add appointment table row” automation.  
@@ -194,24 +187,22 @@ You can check if the form has been triggered correctly in Reports.
 ![alt text](/src/assets/cookbook/buttons/image18.gif)
 
 #### Add a Confirmation Box to Prompt the User
-
 Now we’ll add a confirmation box to prompt the user before performing an action.
 
 ##### Steps
-
-1. **Open the button event settings**  
+1. Open the button event settings
    Go back to the button’s event configuration and add a "confirmation dialog".
 
-2. **Add a custom message**  
+2. Add a custom message
    Create a custom confirmation message.  
    You can insert dynamic values from the page or form to make the message more personalized.
    In this example we have inserted on of the form's in page values.
 
-3. **Customize button text**  
+3. Customize button text
    The dialog buttons default to OK and Cancel, but you can change these labels to match your desired wording.
    Regardless of the wording, the logic will return true for a positive response (e.g., OK) and false for a negative response (e.g., Cancel).
 
-4. **Add an exclusive node**  
+4. Add an exclusive node 
    Add an exclusive node to control how the logic flows based on set criteria.  
    In this case, use the confirmation dialog result to determine whether the event listener should be triggered or not.
 
@@ -230,8 +221,7 @@ Icon buttons allow you to:
 - Apply the site’s theme to the icon automatically.  
 - Avoid manually customizing icons or uploading images.  
 
-This approach helps keep icon sizes and appearance uniform across the entire site, ensuring a consistent and professional look.
-
+This approach helps keep icon sizes and appearance uniform across the entire site.
 For this example we will configure an icon button that users can click to gain further information on the services provided.
 
 **Create a new page that describes the services**  
