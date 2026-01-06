@@ -54,12 +54,12 @@ While TOCA provides basic in-page addition and subtraction through page logic, t
 
 #### Create a Dashboard in a toca app page
 In this example we will create a orders table in a datastore to use for our app:
-![SLUG](/src/assets/cookbook/buttons/image1.png)
+![SLUG](/src/assets/cookbook/execute-js-ipl/image0.png)
 
 Create a new app and a page called Dashboard.
 For this example we will configure the page to have a Repeating Layout component to display the table you just created. The Repeating Layout will automatically render one row per record from the table.
-
-Now add a few flex layouts to display t
+We will also add a few flex layouts containing cards that we will use to display our KPI values. 
+![SLUG](/src/assets/cookbook/buttons/image1.png)
 
 ##### How JavaScript is used
 When the dashboard loads, JavaScript is executed to:
