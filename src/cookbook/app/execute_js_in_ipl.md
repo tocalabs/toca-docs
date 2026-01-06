@@ -28,13 +28,13 @@ The script runs in the user’s browser, meaning it has access to:
 - Generate or format values (e.g. dates, strings, IDs)  
 - Show or hide components based on conditions  
 
-### Important considerations
+#### Important considerations
 
 - JavaScript execution is client-side only
 - Long-running or heavy logic should be handled in backend automations instead
 - Keep scripts small and maintainable
 
-### Best practices
+#### Best practices
 
 - Use JavaScript only when no combinationation of native TOCA configuration exists that will achive what you desire 
 - Comment your code for readability  
@@ -43,23 +43,37 @@ The script runs in the user’s browser, meaning it has access to:
 
 > Tip: If you find yourself writing large or complex scripts, it may be a sign that the logic belongs in a backend automation rather than the UI.
 
-### Scenario: Using JavaScript to Validate and Prepare Data Before Submission
+## Scenario: Using JavaScript to Calculate KPI's
 
 Imagine you are building a dashboard that displays several Key Performance Indicators (KPIs), such as:
-- Total revenue
-- Average order value
-- Percentage growth compared to the previous period
+- Total Items Bought
+- Total Orders
+- Average Order Quantity
 
-While TOCA provides basic in-page addition and subtraction through page logic, this scenario requires more complex calculations, making it a good use case for executing JavaScript.
+While TOCA provides basic in-page Logic Actions for addition and subtraction, this scenario requires more complex calculations, making it a good use case for executing JavaScript.
 
-#### Create a Dashboard in a toca app page
-In this example we will create a orders table in a datastore to use for our app:
+### Configure Table Data and a Dashboard
+
+In this example, we will create an orders table in a datastore to serve as the data source for our app.
 ![SLUG](/src/assets/cookbook/execute-js-ipl/image0.png)
 
-Create a new app and a page called Dashboard.
-For this example we will configure the page to have a Repeating Layout component to display the table you just created. The Repeating Layout will automatically render one row per record from the table.
-We will also add a few flex layouts containing cards that we will use to display our KPI values. 
-![SLUG](/src/assets/cookbook/buttons/image1.png)
+Next, create a new app and add a page called Dashboard. Configure this page with a Repeating Layout component bound to the orders table you just created. The Repeating Layout automatically renders one row per record from the table, making it easy to display tabular data.
+![SLUG](/src/assets/cookbook/execute-js-ipl/image1.gif)
+
+>Tip: Repeating Layouts automatically stay in sync with the table, so any new records added to the datastore will appear without additional configuration.
+
+We will also add several Flex Layouts containing Card components. These cards will be used to display key performance indicators (KPIs) calculated from the orders data.
+![SLUG](/src/assets/cookbook/execute-js-ipl/image2.png)
+
+To improve the overall appearance of the dashboard, adjust component settings such as margins and borders.
+
+### Configure In Page Logic Using the JavaScript Action
+Go to the page events and drag in the:
+1. `Page Mounted`: Runs the logic on page load
+2. `Get Table Data With Query`: Enables use of the table data configured in the datastore 
+3. `Execute Javascript`: Runs Javascript code
+Connect the 3 actions in the order mentioned.
+
 
 ##### How JavaScript is used
 When the dashboard loads, JavaScript is executed to:
