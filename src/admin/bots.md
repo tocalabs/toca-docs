@@ -74,7 +74,7 @@ The version specified can then be synchronised to all online bots rather than up
 
 Example:
 A hotpatch is released for the `Stateless` service and needs to be used on the platform.
-1. Pulls the new version via :docs-link[Packs]{id="packs/packs"}.
+1. Pull the new version via :docs-link[Packs]{id="packs/packs"}.
 2. Once installed, navigate to `Admin` -> `Bots`.
 3. Select [Default Services](#default-services) from the options available.
 4. Specify the newly installed version for `Stateless`.
