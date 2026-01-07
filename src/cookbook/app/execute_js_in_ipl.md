@@ -53,43 +53,49 @@ While TOCA provides basic in-page Logic Actions for addition and subtraction, th
 
 ### Configure Table Data and a Dashboard
 
-In this example, we will create an orders table in a datastore to serve as the data source for our app.
-![SLUG](/src/assets/cookbook/execute-js-ipl/image0.png)
+In this example, we will create an orders table in a datastore to serve as the data source for our app:
 
-Next, create a new app and add a page called **Dashboard**.  
-Add the datastore you previously created to the app’s **Resources**.
+![SLUG](/src/assets/cookbook/execute_js_in_ipl/image0.png)
 
-#### Display the Orders Data
+Next, create a new app and add a page called Dashboard.  
+Add the datastore you previously created to the app’s Resources.
 
-Configure a Repeating Layout component to use the `orders` table you just created.
+#### Display the Orders Data (Optional Step)
 
-While this step is not required to calculate the KPIs, it is useful for displaying the underlying data that the KPIs are based on.
-
-The Repeating Layout automatically renders one row per record, making it easy to present tabular data.
+Configure a Repeating Layout component to use the `orders` table you just created.The Repeating Layout automatically renders one row per record, making it easy to present tabular data.
 
 ![alt text](/src/assets/cookbook/execute_js_in_ipl/image1_0.gif)
 
-> **Tip:**  
-> Repeating Layouts automatically stay in sync with the table, so any new records added to the datastore will appear without additional configuration.  
->
+While this step is not required to calculate the KPIs, it is useful for displaying the underlying data that the KPIs are based on.
+
+<details>
+   <summary>Repeting Layout Tip
+  </summary>
+
+Repeating Layout components automatically stay in sync with the table, so any new records added to the datastore will appear without additional configuration.  
+
 > You can disable this behaviour by unticking the Subscribe to changes checkbox.
 
 ![SLUG](/src/assets/cookbook/execute_js_in_ipl/image1_1.png)
+</details>
 
-#### Add KPI Cards
+#### Configure KPI Dashboard Cards
+Add several Flex Layouts containing Card components (These can be replaced by any combination fo flex and text components).  
 
-Next, add several Flex Layouts containing Card components.  
 These cards will be used to display KPIs calculated from the orders data.
 
 ![SLUG](/src/assets/cookbook/execute_js_in_ipl/image2.png)
 
-#### Styling the Dashboard
+<details>
+   <summary>Styling the Dashboard
+  </summary>
 
 To improve the overall appearance of the dashboard, adjust component settings such as:
 - Margins and padding  
 - Borders and corner radius
 
 This will help create a more professional-looking dashboard.
+</details>
 
 ### Configure In Page Logic Using the JavaScript Action
 Go to the page events and drag in the:
@@ -99,14 +105,18 @@ Go to the page events and drag in the:
 
 Connect the 3 actions in the order mentioned.
 
-Configure the `Get Table Data With Query` to get the orders table in your datastore.
+Configure the `Get Table Data With Query` to get the orders table in your datastore:
+
 ![SLUG](/src/assets/cookbook/execute_js_in_ipl/image3_0.gif)
 
 Configure the `Execute Javascript` drag the output of `Get Table Data With Query` into the inputs and name the variable "orders_table". 
 
 ![SLUG](/src/assets/cookbook/execute_js_in_ipl/image3_1.gif)
 
-Here is an example code you can use to calculate the KPI's:
+
+<details>
+  <summary>Expand for example code to calculate the KPI's </summary>
+
 ```javascript
 const table = Context.get('orders_table');
 
@@ -162,6 +172,7 @@ set_in_page_value("Temporary","averageOrderQuantity", averageOrderQuantity, "Num
 set_in_page_value("Temporary","mostPopularProduct", mostPopularProduct, "Number");
 set_in_page_value("Temporary","leastPopularProduct", leastPopularProduct, "Number");
 ```
+</details>
 
 When using the Execute JavaScript action, you can call TOCA-specific helper functions directly from your script.
 
@@ -186,7 +197,6 @@ Preview your completed dashboard:
 As you can see in the above gif, calculating directly in JS actions may have a small delay when populating the visual components, even if deployed is faster than preview. 
 
 >Tip: To avoid confusion we add a toggle action that pauses the user from interacting with the page before the KPI's load. 
-
 ![SLUG](/src/assets/cookbook/execute_js_in_ipl/image7.gif)
 
 
