@@ -112,8 +112,7 @@ All in one smooth flow.
 
 Let's first create the automation project for confirming and submitting an appointment booking form.  
 
-1. Create a workspace:  
-
+1. Create a workspace
    ![](/src/assets/cookbook/buttons/image0.png)  
 
 2. Create an automation project → datastore → table:  
@@ -222,7 +221,7 @@ The form component also has a prefix setting to prevent variable name collisions
 
 Map the created variables to the form fields:  
 
-![alt text](image15-1.png)  
+![alt text](/src/assets/cookbook/buttons/image15-1.png)  
 
 Preview the form and select some values, then exit preview so chip values are selectable when configuring your button event.  
 
@@ -240,7 +239,7 @@ Insert the in-page values created by the form component. Include the configured 
 
 Test the form in preview and check Reports to confirm submission:  
 
-![alt text](/src/assets/cookbook/buttons/image18.gif)  
+![alt text](/src/assets/cookbook/buttons/image18.png)  
 
 ---
 
@@ -249,16 +248,17 @@ Test the form in preview and check Reports to confirm submission:
 Steps:
 
 1. Open the button event settings and add a "confirmation dialog"  
-2. Create a custom message using dynamic values if needed  
+2. Create a custom message using dynamic values if needed![alt text](/src/assets/cookbook/buttons/image19.png)  
 3. Customize dialog buttons text (OK/Cancel). You can change these labels to match your desired wording. Regardless of the wording, the logic will return true for a positive response (e.g., OK) and false for a negative response (e.g., Cancel) 
 4. Add an exclusive node to control logic based on the confirmation result 
-
-![alt text](/src/assets/cookbook/buttons/image19.png)  
 ![alt text](/src/assets/cookbook/buttons/image20.gif)  
 
 Tip: Add a snackbar notification to inform users if their action was cancelled or succeeded:  
 
-![alt text](/src/assets/cookbook/buttons/image21.png)  
+![alt text](/src/assets/cookbook/buttons/image21.png)
+
+Preview:
+
 ![alt text](/src/assets/cookbook/buttons/image22.gif)  
 
 ---
@@ -291,16 +291,15 @@ Test in preview:
 
 ### Add App Functionality Using a Floating Action Button
 In your app you may want for customers to easely contact support in the case of questions or issues with booking their appointment.
- 
+
 Use a floating button to make a contact form easily accessible:
 
 1. Create a new page (contact form) and configure fields  
-2. Get the app URL and add the page SLUG:  
-
-   ![url](/src/assets/cookbook/buttons/image27.png)  
-   ![SLUG](/src/assets/cookbook/buttons/image28.png)  
-
-3. Configure the floating button to redirect to that page on click:  
+2. Get the app URL
+![url](/src/assets/cookbook/buttons/image27.png)
+3. Get the page SLUG:
+![SLUG](/src/assets/cookbook/buttons/image28.gif)  
+4. Configure the floating button to redirect to URL/SLUG on click:  
 
    ![SLUG](/src/assets/cookbook/buttons/image29.png)  
 
