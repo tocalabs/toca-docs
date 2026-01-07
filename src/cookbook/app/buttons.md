@@ -297,10 +297,9 @@ Use a floating button to make a contact form easily accessible:
 1. Create a new page (contact form) and configure fields  
 2. Get the app URL
 ![url](/src/assets/cookbook/buttons/image27.png)
-3. Get the page SLUG:
+3. Get the page SLUG of your contact form page ( you can find it in the page settingd of your form):
 ![SLUG](/src/assets/cookbook/buttons/image28.gif)  
 4. Configure the floating button to redirect to URL/SLUG on click:  
-
    ![SLUG](/src/assets/cookbook/buttons/image29.png)  
 
-Preview page and click on the floating button
+**Save Changes**, preview page and click on the floating button.
