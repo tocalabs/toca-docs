@@ -22,7 +22,7 @@ For most tasks we usually suggest the following specifications for the Bots:
 | RAM | 4GB RAM | 8GB RAM |
 | Disk | 10GB upwards | 30GB upwards |
 
-> The main reason for the discrepancies above are that Windows requires more resource to run than Linux
+> The main reason for the discrepancies above are that Windows requires more resource to run than Linux.
 
 The Bots can be deployed completely separately to the main platform so can be deployed on-premise, in the cloud or even on your own PC. They communicate outbound to the core platform and once they have established a connection the Bots and Core platform can communicate back-and-forth freely.
 
@@ -55,11 +55,60 @@ Each Bot has a status that is used to determine the health of the Bot.
 | Unknown | Amber | The Bot is reporting as online but is unable to run activities due to an issue such as unable to load an :docs-link[Action Build]{id="admin/action_builds"} |
 | Offline | Red | The Bot cannot communicate with the main platform and cannot run activities |
 
-> If a Bot status is showing as `Offline` then check that the machine the Bot is installed on is running, then check that the Bot software is running, finally check the configuration is correct.
+> If a Bot status is showing as `Offline` then check that the machine the Bot is installed on is running, then check that the Bot software is running, finally check the [configuration](#default-service-configuration) is correct.
 
 ### Assigning Users to Bots
 
-Before a user can use a GUI bot, the Bot must be assigned to them via the Admin -> Bots screen. This ensures that only the appropriate users can access the GUI Bot as it might have secure data being stored on it so you only wish to assign it to the relevant users.
+Before a user can use a GUI bot, the Bot must be assigned to them via the `Admin` -> `Bots` screen. This ensures that only the appropriate users can access the GUI Bot as it might have secure data being stored on it so you only wish to assign it to the relevant users.
 
 Stateless Bots do not need assigning, as all users will have access to all Stateless Bots on the platform.
 
+## Administration
+The Bots page of the Admin section has functionality to ensure consistency of the versions and configurations each bot service uses across the platform.
+![Possible Hub Configuration](/src/assets/admin_bots_options.png)
+
+### Default Services
+
+This modal allows a user to specify a consistent version for each of the bot services each bot should use.
+The version specified can then be synchronised to all online bots rather than upgrading each bot one-by-one.
+
+Example:
+A hotpatch is released for the `Stateless` service and needs to be used on the platform.
+1. Pulls the new version via :docs-link[Packs]{id="packs/packs"}.
+2. Once installed, navigate to `Admin` -> `Bots`.
+3. Select [Default Services](#default-services) from the options available.
+4. Specify the newly installed version for `Stateless`.
+5. Synchronise the version across all online bots.
+
+### Default Service Configuration
+
+This modal allows users to modify the default configuration used by each service.
+If the hostname of the core or ports change these can be modified in here and utilised the next time that service is installed/upgraded.
+> The specific service must be reinstalled/upgraded for these changes to take effect. Restarting the service will not pull this new configuration.
+
+#### Tracing
+Tracing can be added to a service by including the following in the service configuration:
+
+```json
+"traceConfig": {
+    "enabled": true,
+    "otlpExporterEndpoint": "https://collector.<host>",
+    "probability": 1
+}
+```
+
+#### Logging
+Seq logging can be added to a service by including the following in the service configuration:
+```json
+"logSettings": {
+    ...
+    "seqInstance": "https://<seq-instance>"
+}
+```
+
+### Set Stateless Build ID
+This option allows you to easily set a specific action build for all `Stateless` services on your system.
+In most cases this should be necessary, but it is useful in situations where you have to rollback to a previous working Action Build.
+
+### Sync Agent Services
+A quick option to synchronise all services on your bots. The versions that will be used for the synchronisation are those specified in the [Default Service Configuration](#default-service-configuration).
