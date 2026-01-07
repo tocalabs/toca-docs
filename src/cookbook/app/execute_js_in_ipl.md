@@ -68,7 +68,7 @@ While this step is not required to calculate the KPIs, it is useful for displayi
 
 The Repeating Layout automatically renders one row per record, making it easy to present tabular data.
 
-![alt text](/src/assets/cookbook/execute_js_in_ipl/image1-0.gif)
+![alt text](/src/assets/cookbook/execute_js_in_ipl/image1_0.gif)
 
 > **Tip:**  
 > Repeating Layouts automatically stay in sync with the table, so any new records added to the datastore will appear without additional configuration.  
@@ -101,9 +101,11 @@ Go to the page events and drag in the:
 Connect the 3 actions in the order mentioned.
 
 Configure the `Get Table Data With Query` to get the orders table in your datastore.
-![SLUG](/src/assets/cookbook/execute_js_in_ipl/image3.gif)
+![SLUG](/src/assets/cookbook/execute_js_in_ipl/image3_0.gif)
 
-Configure the `Execute Javascript` drag the autput of `Get Table Data With Query` into the inputs and name the variable "orders_table". Here is an example code you can use to calculate the KPI's. 
+Configure the `Execute Javascript` drag the autput of `Get Table Data With Query` into the inputs and name the variable "orders_table". Here is an example code you can use to calculate the KPI's.
+
+![SLUG](/src/assets/cookbook/execute_js_in_ipl/image3_1.gif)
 
 ```javascript
 const table = Context.get('orders_table');
@@ -166,7 +168,7 @@ When using the Execute JavaScript action, you can call TOCA-specific helper func
 **Rule of thumb**
 >If there is a native TOCA action, there is usually an equivalent JavaScript function available.
 
-For exmaple as seen above the Set In-Page Value action maps to the function:
+For exaple as seen above the Set In-Page Value action maps to the function:
 ![SLUG](/src/assets/cookbook/execute_js_in_ipl/image4.png)
 
 ##### How JavaScript is used
@@ -186,6 +188,6 @@ When the dashboard loads, JavaScript is executed to:
 - Logic needs to account for edge cases (e.g. missing or zero values)  
 - Formatting is required before displaying results to users
 
-> 💡 Tip: If KPI calculations become data-heavy or rely on large datasets, consider moving the logic to a backend automation and using JavaScript only for presentation and formatting.
+> If KPI calculations become data-heavy or rely on large datasets, consider moving the logic to a backend automation and using JavaScript only for presentation and formatting.
 
 
