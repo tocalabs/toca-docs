@@ -21,12 +21,12 @@ The script runs in the user’s browser, meaning it has access to:
 - Session or in-page values
 - Component state
 
-### Example use cases
+#### When to use JavaScript
+- Calculations that go beyond simple arithmetic  
+- Logic that needs to account for edge cases (e.g. missing or zero values)  
+- Formatting is required before displaying results to users
 
-- Validate complex input before submitting a form  
-- Dynamically enable or disable components  
-- Generate or format values (e.g. dates, strings, IDs)  
-- Show or hide components based on conditions  
+> If KPI calculations become data-heavy or rely on large datasets, consider moving the logic to a backend automation and using JavaScript only for presentation and formatting.
 
 #### Important considerations
 
@@ -39,7 +39,6 @@ The script runs in the user’s browser, meaning it has access to:
 - Use JavaScript only when no combinationation of native TOCA configuration exists that will achive what you desire 
 - Comment your code for readability  
 - Prefer TOCA variables and events over hardcoded values  
-
 
 > Tip: If you find yourself writing large or complex scripts, it may be a sign that the logic belongs in a backend automation rather than the UI.
 
@@ -103,10 +102,11 @@ Connect the 3 actions in the order mentioned.
 Configure the `Get Table Data With Query` to get the orders table in your datastore.
 ![SLUG](/src/assets/cookbook/execute_js_in_ipl/image3_0.gif)
 
-Configure the `Execute Javascript` drag the autput of `Get Table Data With Query` into the inputs and name the variable "orders_table". Here is an example code you can use to calculate the KPI's.
+Configure the `Execute Javascript` drag the output of `Get Table Data With Query` into the inputs and name the variable "orders_table". 
 
 ![SLUG](/src/assets/cookbook/execute_js_in_ipl/image3_1.gif)
 
+Here is an example code you can use to calculate the KPI's:
 ```javascript
 const table = Context.get('orders_table');
 
@@ -168,26 +168,25 @@ When using the Execute JavaScript action, you can call TOCA-specific helper func
 **Rule of thumb**
 >If there is a native TOCA action, there is usually an equivalent JavaScript function available.
 
-For exaple as seen above the Set In-Page Value action maps to the function:
+For example as seen in the above script the Set In-Page Value action maps to the set_in_page_value function:
+
 ![SLUG](/src/assets/cookbook/execute_js_in_ipl/image4.png)
 
-##### How JavaScript is used
-When the dashboard loads, JavaScript is executed to:
+### Configure the Dasboard to Display the in page value KPI's
+Unlike In Page Values set with a set in page value action that pop up in the select list of in page values, in page value set through Javascript will need to be manually typed. 
 
-1. Retrieve multiple numeric values from in-page or session variables  
-2. Perform calculations such as:
-   - Averages
-   - Percentages
-   - Conditional calculations (e.g. handling divide-by-zero scenarios)
-3. Format the results (for example, rounding to two decimal places or adding percentage symbols)
-4. Store the calculated KPI values back into in-page variables for display in the UI
+Go to your KPI cards, choose where you want to insert the calculated KPI value. 
 
-#### Why JavaScript is needed
+In this example we have made a card per KPI and will insert the calculated value **totalQuantity** within a text component:
+![SLUG](/src/assets/cookbook/execute_js_in_ipl/image5.gif)
 
-- Calculations go beyond simple arithmetic  
-- Logic needs to account for edge cases (e.g. missing or zero values)  
-- Formatting is required before displaying results to users
+Preview your completed dashboard: 
+![SLUG](/src/assets/cookbook/execute_js_in_ipl/image6.gif)
 
-> If KPI calculations become data-heavy or rely on large datasets, consider moving the logic to a backend automation and using JavaScript only for presentation and formatting.
+As you can see in the above gif, calculating directly in JS actions may have a small delay when populating the visual components, even if deployed is faster than preview. 
+
+>Tip: To avoid confusion we add a toggle action that pauses the user from interacting with the page before the KPI's load. 
+
+![SLUG](/src/assets/cookbook/execute_js_in_ipl/image7.gif)
 
 
