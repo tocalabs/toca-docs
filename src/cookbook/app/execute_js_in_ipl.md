@@ -1,4 +1,4 @@
-# Execute Javascript in In Page Logic
+# Execute Javascript in In Page Logic (IPL)
 In page logic allows you to execute a multitude of action on page clicks and componenet loads,
 particularly important is the ExecuteJS in page logic that allows  custom JavaScript within your app when the inbuilt functionality doesnt quite do what you need it to.
 
@@ -57,23 +57,117 @@ While TOCA provides basic in-page Logic Actions for addition and subtraction, th
 In this example, we will create an orders table in a datastore to serve as the data source for our app.
 ![SLUG](/src/assets/cookbook/execute-js-ipl/image0.png)
 
-Next, create a new app and add a page called Dashboard. Configure this page with a Repeating Layout component bound to the orders table you just created. The Repeating Layout automatically renders one row per record from the table, making it easy to display tabular data.
-![SLUG](/src/assets/cookbook/execute-js-ipl/image1.gif)
+Next, create a new app and add a page called **Dashboard**.  
+Add the datastore you previously created to the app’s **Resources**.
 
->Tip: Repeating Layouts automatically stay in sync with the table, so any new records added to the datastore will appear without additional configuration.
+#### Display the Orders Data
 
-We will also add several Flex Layouts containing Card components. These cards will be used to display key performance indicators (KPIs) calculated from the orders data.
-![SLUG](/src/assets/cookbook/execute-js-ipl/image2.png)
+Configure a Repeating Layout component to use the `orders` table you just created.
 
-To improve the overall appearance of the dashboard, adjust component settings such as margins and borders.
+While this step is not required to calculate the KPIs, it is useful for displaying the underlying data that the KPIs are based on.
+
+The Repeating Layout automatically renders one row per record, making it easy to present tabular data.
+
+![alt text](/src/assets/cookbook/execute_js_in_ipl/image1-0.gif)
+
+> **Tip:**  
+> Repeating Layouts automatically stay in sync with the table, so any new records added to the datastore will appear without additional configuration.  
+>
+> You can disable this behaviour by unticking the Subscribe to changes checkbox.
+
+![SLUG](/src/assets/cookbook/execute_js_in_ipl/image1_1.png)
+
+#### Add KPI Cards
+
+Next, add several Flex Layouts containing Card components.  
+These cards will be used to display KPIs calculated from the orders data.
+
+![SLUG](/src/assets/cookbook/execute_js_in_ipl/image2.png)
+
+#### Styling the Dashboard
+
+To improve the overall appearance of the dashboard, adjust component settings such as:
+- Margins and padding  
+- Borders and corner radius
+
+This will help create a more professional-looking dashboard.
 
 ### Configure In Page Logic Using the JavaScript Action
 Go to the page events and drag in the:
-1. `Page Mounted`: Runs the logic on page load
-2. `Get Table Data With Query`: Enables use of the table data configured in the datastore 
-3. `Execute Javascript`: Runs Javascript code
+1. **Page Mounted**: Runs the logic on page load
+2. **Get Table Data With Query**: Enables use of the table data configured in the datastore 
+3. **Execute Javascript**: Runs Javascript code
+
 Connect the 3 actions in the order mentioned.
 
+Configure the `Get Table Data With Query` to get the orders table in your datastore.
+![SLUG](/src/assets/cookbook/execute_js_in_ipl/image3.gif)
+
+Configure the `Execute Javascript` drag the autput of `Get Table Data With Query` into the inputs and name the variable "orders_table". Here is an example code you can use to calculate the KPI's. 
+
+```javascript
+const table = Context.get('orders_table');
+
+const totalOrders = table.rowCount;
+let totalQuantity = 0;
+
+// Track product popularity
+let productCounts = {};
+
+for (let i = 0; i < totalOrders; i++) {
+  const row = table.values[i].recordValue;
+
+  const orderQuantity = Number(row.quantity || 0);
+  const productId = row.product_id;
+
+  totalQuantity += orderQuantity;
+
+  // Count quantity per product
+  if (productId) {
+    productCounts[productId] =
+      (productCounts[productId] || 0) + orderQuantity;
+  }
+}
+
+// Average Order Quantity
+const averageOrderQuantity =
+  totalOrders === 0 ? 0 : totalQuantity / totalOrders;
+
+// Most & Least Popular Products
+let mostPopularProduct = null;
+let leastPopularProduct = null;
+let maxQty = -Infinity;
+let minQty = Infinity;
+
+for (const product in productCounts) {
+  const qty = productCounts[product];
+
+  if (qty > maxQty) {
+    maxQty = qty;
+    mostPopularProduct = product;
+  }
+
+  if (qty < minQty) {
+    minQty = qty;
+    leastPopularProduct = product;
+  }
+}
+
+// Set KPI's as in page values
+set_in_page_value("Temporary","totalOrders", totalOrders, "Number");
+set_in_page_value("Temporary","totalQuantity", totalQuantity, "Number");
+set_in_page_value("Temporary","averageOrderQuantity", averageOrderQuantity, "Number");
+set_in_page_value("Temporary","mostPopularProduct", mostPopularProduct, "Number");
+set_in_page_value("Temporary","leastPopularProduct", leastPopularProduct, "Number");
+```
+
+When using the Execute JavaScript action, you can call TOCA-specific helper functions directly from your script.
+
+**Rule of thumb**
+>If there is a native TOCA action, there is usually an equivalent JavaScript function available.
+
+For exmaple as seen above the Set In-Page Value action maps to the function:
+![SLUG](/src/assets/cookbook/execute_js_in_ipl/image4.png)
 
 ##### How JavaScript is used
 When the dashboard loads, JavaScript is executed to:
@@ -90,43 +184,8 @@ When the dashboard loads, JavaScript is executed to:
 
 - Calculations go beyond simple arithmetic  
 - Logic needs to account for edge cases (e.g. missing or zero values)  
-- Formatting is required before displaying results to users  
-- The same logic can be reused across multiple KPI widgets 
+- Formatting is required before displaying results to users
 
 > 💡 Tip: If KPI calculations become data-heavy or rely on large datasets, consider moving the logic to a backend automation and using JavaScript only for presentation and formatting.
 
-```javascript
-// Retrieve values from in-page variables
-const totalItemsBought = Number(context['quantity'] || 0);
-const totalOrders = Number(context['total_orders'] || 0);
-const mostPopularProduct = Number(context['previous_revenue'] || 0);
 
-// Calculate KPIs
-let averageOrderQuantity = 0;
-if (totalOrders > 0) {
-  averageOrderValue = totalRevenue / totalOrders;
-}
-
-let revenueGrowthPercentage = 0;
-if (previousRevenue > 0) {
-  revenueGrowthPercentage =
-    ((totalRevenue - previousRevenue) / previousRevenue) * 100;
-}
-
-// Format results
-averageOrderValue = averageOrderValue.toFixed(2);
-revenueGrowthPercentage = revenueGrowthPercentage.toFixed(2);
-
-// Store results back into in-page variables
-
-const table = Context.get("table")
-
-let rows = table.values.map(e => e.recordValue)
-
-total = rows.reduce((acc, e) => acc + parseInt(e.number), 0)
-
-console.log(total)
-
-
-
-```

@@ -1,21 +1,10 @@
 # Forms
-# Intro to Toca.io Forms
-
-## What is a Form in Toca.io?
-
-A **form** in Toca.io is a screen or component used to collect user input and store it in a table. Forms are commonly used to capture business data and trigger workflows.
+A **form** is a component used to collect user input and store it in a table or send to an automation for processing.
 
 A form typically combines:
-
 * **UI inputs** (text, number, date, dropdowns)
 * **Data storage** (tables)
 * **Logic** (actions, scripts, workflows)
-
----
-
-## Core Components of a Toca Form
-
-### 1. Form Fields (Inputs)
 
 Common input types include:
 
