@@ -64,7 +64,7 @@ Before a user can use a GUI bot, the Bot must be assigned to them via the `Admin
 Stateless Bots do not need assigning, as all users will have access to all Stateless Bots on the platform.
 
 ## Administration
-The Bots page of the Admin section has functionality to ensure consistency of the versions and configurations each bot service uses across the platform.
+The Bots page in Admin provides controls to ensure consistent versions and configurations for each bot service across the platform.
 ![Possible Hub Configuration](/src/assets/admin_bots_options.png)
 
 ### Default Services
