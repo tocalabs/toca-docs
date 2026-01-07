@@ -108,7 +108,7 @@ Seq logging can be added to a service by including the following in the service 
 
 ### Set Stateless Build ID
 This option allows you to easily set a specific action build for all `Stateless` services on your system.
-In most cases this should be necessary, but it is useful in situations where you have to rollback to a previous working Action Build.
+In most cases this should not be necessary, but it is useful when you need to roll back to a previous working Action Build.
 
 ### Sync Agent Services
 A quick option to synchronise all services on your bots. The versions that will be used for the synchronisation are those specified in the [Default Service Configuration](#default-service-configuration).
