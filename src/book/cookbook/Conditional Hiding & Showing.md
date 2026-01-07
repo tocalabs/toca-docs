@@ -10,7 +10,7 @@ By default, this toggle is turned ON, but you can switch it OFF if you want to h
 
 This allows for tailored visibility depending on your design needs.
 
-![alt text](/src/assets/cookbook/conditional-hiding-showing/Gif1-1.gif)
+![alt text](/src\assets\cookbook\conditional-hiding-showing\Gif1.gif)
 
 ---
 
@@ -29,7 +29,7 @@ Next, add the button the user will interact with. In this example, we’ll use a
  - Color: Primary 
 - Size: Large
 
-![alt text](<Image 1-1.png>)
+![alt text](</src\assets\cookbook\conditional-hiding-showing\Image1.png>)
 
 **2. Add a Transition component**
 
@@ -42,7 +42,7 @@ Configure the Transition component with the desired effect (e.g. collapse, grow 
 
 Also, ensure the ‘**Component displayed on page load**’ toggle is disabled.
 
-![alt text](<Image 2-2.png>)
+![alt text](</src\assets\cookbook\conditional-hiding-showing\Image2.png>)
 
 **3. Add the Target Components**
 
@@ -51,13 +51,13 @@ Place the components to be shown/hidden inside the Transition. In our example, t
 - A **Flex** layout
 - An **Image** (placed inside the Flex layout)
 
-![alt text](<Image 3-1.png>)
+![alt text](</src\assets\cookbook\conditional-hiding-showing\Image3.png>)
 
 **4. Set Up In-Page Logic**
 
 Now it’s time to set up the In-Page Logic. For this, click on the **Icon Button**, then go to **Events**. 
 
-![alt text](<Image 4-1.png>)
+![alt text](</src\assets\cookbook\conditional-hiding-showing\Image4.png>)
 
 In the opened event editor, create the following logic: **Click > Trigger Event listener**. Save the changes.
 
@@ -65,17 +65,17 @@ You might be wondering which listener to use. For that, navigate back to the app
 
 Click on **Advanced**, and you will see the **Event Listener Toggle**. This is what you'll reference in the event logic. Be sure to copy the listener name.
 
-![alt text](<Image 5-1.png>)
+![alt text](</src\assets\cookbook\conditional-hiding-showing\Image5.png>)
 
 **5. Set up the Event Listener**
 
 Return to the **Events** panel of the Icon Button and set up the **Trigger Event listener** by entering the copied listener into the **Listener Name** field. Save the changes.
 
-![alt text](<Image 6-1.png>)
+![alt text](</src\assets\cookbook\conditional-hiding-showing\Image6.png>)
 
 **6. Now, it’s time to check that it all works as expected in preview mode.**
 
-![alt text](<Gif 2-1.gif>)
+![alt text](</src\assets\cookbook\conditional-hiding-showing\Gif2.gif>)
 
 ---
 
@@ -85,17 +85,17 @@ The third way is by using the **Conditional content** component. The components 
 
 For example, you can type in the Condition field **112>=100**. As this is true, the components put inside the Conditional component will be shown. In contrast, if you type in **112<=100**, the components will not be shown as **112<=100** is **not True**. 
 
-![alt text](<Gif 3-1.gif>)
+![alt text](</src\assets\cookbook\conditional-hiding-showing\Gif3.gif>)
 
 To make conditions dynamic, you can also insert **dataships**, which the app automatically converts into their real values. 
 
 Let’s explore how this works on the **People Details** page of the **Onboarding app**, by looking at specific parts of the configuration:
 
-![alt text](<Image 7-1.png>)
+![alt text](</src\assets\cookbook\conditional-hiding-showing\Image7.png>)
 
 If we look at the background of how these parts of the app are configured, we could see that the Conditional component was used:
 
-![alt text](<Image 8-1.png>)
+![alt text](</src\assets\cookbook\conditional-hiding-showing\Image8.png>)
 
 The **Conditional content component** was used in the following scenarios:
 
@@ -107,7 +107,7 @@ A notification is shown: *"You must add at least one person in order to continue
 The *Save & Continue* button becomes visible.
 **Condition**: people_added > 0
 
-![alt text](<Image 9-1.png>)
+![alt text](</src\assets\cookbook\conditional-hiding-showing\Image9.png>)
 
 **3. Less than four people added:**
 The *Add Person* button is displayed along with the instruction:
@@ -117,7 +117,7 @@ The *Add Person* button is displayed along with the instruction:
 **4. Exactly four people added:**
  The *Add Person* button is no longer shown.
 
-![alt text](<Image 10-1.png>)
+![alt text](</src\assets\cookbook\conditional-hiding-showing\Image10.png>)
 
 In all these examples, the **people_added** datachip was used. This variable is automatically updated in the background to reflect how many people have been added, and based on that value, the app dynamically shows or hides relevant buttons and messages. It all is implemented with the help of the Conditional content component.
 
