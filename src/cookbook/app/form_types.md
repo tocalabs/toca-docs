@@ -48,36 +48,39 @@ Imagine you’re building a scheduling app where users can book services with av
 3. Pick a preferred staff member  
 4. Confirm their booking  
 
-#### Background Configuration
+### Background Configuration
 First, we need to create the automation project and the database structure for an appointment booking system.
 
-1. Create a workspace: ![](/src/assets/cookbook/form_types/image0.png)
+Create a workspace: ![](/src/assets/cookbook/form_types/image0.png)
 
-2. Create an automation project → datastore → table.
+Create an automation project → datastore → table.
 ![](/src/assets/cookbook/buttons/image1.gif)
 
-3. Add the columns desired to the table, for example service, appointment date and staff member.
+Add the columns desired to the table, for example service, appointment date and staff member.
 ![](/src/assets/cookbook/buttons/image3.png)
 
-4. Create the backend automations to connect your form.
+##### Connect the Backend
+
+Create the backend automations to connect your form.
 For simplicity, we will use the automation wizard 🪄 placed on the top left: 
 ![](/src/assets/cookbook/buttons/image4.png)
 
-5. Select Create Table Row and ensure a listener is created as well:
+Select Create Table Row and ensure a listener is created as well:
 ![](/src/assets/cookbook/form_types/image5.png)
 
 In this example, by default the listener is named "table_name_action" (i.e. `add_appointment_table_row`) but we will rename it to `book_appointment`.
 
 >Note: This will be used to link the button in the frontend to the backend “add appointment table row” automation. 
 
-6. Create a list of options for users in the form:
+#### Prepare Data Sources
+Before building the UI, define the data your users will choose from:
+1. Create a list of options for users in the form:
 ![](/src/assets/cookbook/form_types/image6.png)
 
-
-7. And a datastore variable list of staff:  
+2. Create a datastore variable list of staff:  
 ![](/src/assets/cookbook/form_types/image7.png)
 
-### Create Listener form
+#### Create Listener form
 1. Add a flex layout and a form component:
 ![](/src/assets/cookbook/form_types/image9.gif)  
 
@@ -103,3 +106,35 @@ After some styling you could have something similar to this:
 You can check if the values have been sent correctly to the back end by looking into the "Reporting" section:
 ![](/src/assets/cookbook/form_types/image9.png)
 
+#### Create An In Page Value Form
+Change the form type from `Listener` to `In Page Value`:  
+
+![alt text](/src/assets/cookbook/buttons/image14.png)  
+
+This saves values in a temporary in-page variable, which can be configured to persistent, session or temporary storage.  
+
+The form component also has a prefix setting to prevent variable name collisions.  
+
+Map the created variables to the form fields:  
+
+![alt text](/src/assets/cookbook/buttons/image15-1.png)  
+
+Preview the form and select some values, then exit preview so chip values are selectable when configuring your button event.  
+
+Update the button to use the values set by the form and call the listener via the events section:
+
+![alt text](/src/assets/cookbook/buttons/image15.png)  
+
+Add a `click event` and an `execute listener event`:  
+
+![alt text](/src/assets/cookbook/buttons/image16.png)  
+
+Insert the in-page values created by the form component. Include the configured prefix if necessary:
+
+![alt text](/src/assets/cookbook/buttons/image17.gif)  
+
+Test the form in preview and check Reports to confirm submission:  
+
+![alt text](/src/assets/cookbook/buttons/image18.png)  
+
+---
