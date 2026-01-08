@@ -29,8 +29,8 @@ There is a variety of input fields that can be used in forms:
 
 ## Form Types
 A form is rarely an isolated element; its architecture depends on how it interacts with the rest of the system. While the most common pattern is a Listener Form which sits idle until a "Submit Button" clicked, other use cases may benefit from a different form interaction type:
-1. **Datastore:** directly synchronized with a Datastore table.
-2. **In-Page Values:** Captures user input for immediate use within the current page logic, without necessarily sending that data to a listener or a backend table.
+1. **In-Page Values:** Captures user input for immediate use within the current page logic, without necessarily sending that data to a listener or a backend table.
+2. **Datastore:** directly synchronized with a Datastore table.
 3. **Table:** Treats an entire data grid as an editable surface. It allows for inline editing, where rows can be toggled between "view" and "edit"
 4. **User Login:** specialized authentication form focused on credential validation. It handles the secure exchange of user identity for session tokens or access permissions.
 5. **User Registration:** A Creation Form that handles the complex logic of onboarding a new identity into the system.
@@ -135,4 +135,26 @@ Test the form in preview and check Reports to confirm submission:
 
 ![alt text](/src/assets/cookbook/form_types/image18.png)  
 
----
+### The Datastore Form
+The Datastore Form is designed to persist data directly into a datastore rather than simply responding to a single event.
+
+The Datastore Form works best when:
+- Data isolation is critical.
+- Each submission corresponds to a new entity (event, client, project, campaign).
+- Cross-table aggregation is not a frequent requirement.
+
+For example a company manages multiple products, services, or marketing campaigns simultaneously. They regularly collect customer feedback via surveys, but they want each campaign’s feedback to remain completely separate to simplify analysis, reporting, and archival.
+
+Instead of writing all survey responses into a single table (which would require filtering by campaign ID), we can configure a Datastore Form that automatically creates a table per campaign.
+
+### Background Configuration
+Let's configure the form on your app page to create a campaign table on submission:
+![alt text](/src/assets/cookbook/form_types/image19.png) 
+
+we want a form field set up for each column we configured in the form table above: 
+- customer_name: Text component of type text
+- email: Text component of type Email
+- feedback_text: Text component of type text
+- rating: Select Field component
+After some styling and a text title you should have a form similar to the following: 
+![alt text](/src/assets/cookbook/form_types/image20.png) 
