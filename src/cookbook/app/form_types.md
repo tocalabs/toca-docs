@@ -153,12 +153,15 @@ Let's configure the form on your app page to create a campaign table on submissi
 
 <details>
   <summary>Can't find the datastore?</summary>
+
 Check your app resources. 
 You may need to add it or create one to add to your app.
 ![alt text](/src/assets/cookbook/form_types/image19-2.png)
+![alt text](/src/assets/cookbook/form_types/image19-3.png)
+
 </details>
 
-we want a form field set up for each column we configured in the form table above: 
+Set up a form field for each column we configured in the form table above: 
 - customer_name: Text component of type text
 - email: Text component of type Email
 - feedback_text: Text component of type text
@@ -170,5 +173,6 @@ After some styling and a text title you should have a form similar to the follow
 Add a submit button within the form and update the form fields to map to the equivalent table column set up in the form. 
 ![alt text](/src/assets/cookbook/form_types/image21.png)
 
-Preview
-
+Preview your form fill in the values and submit.
+You shoudl be able to find in your datastore a new table with name Prefixed ```event_``` .
+![alt text](/src/assets/cookbook/form_types/image22.png)
