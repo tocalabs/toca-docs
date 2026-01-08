@@ -213,7 +213,7 @@ Change the form type from `Listener` to `In Page Value`:
 
 ![alt text](/src/assets/cookbook/buttons/image14.png)  
 
-This saves values in a temporary in-page variable, which can be configured to session or temporary storage.  
+This saves values in a temporary in-page variable, which can be configured to persistent, session or temporary storage.  
 
 The form component also has a prefix setting to prevent variable name collisions.  
 
