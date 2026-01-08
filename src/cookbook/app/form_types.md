@@ -109,32 +109,30 @@ You can check if the values have been sent correctly to the back end by looking 
 #### Create An In Page Value Form
 Change the form type from `Listener` to `In Page Value`:  
 
-![alt text](/src/assets/cookbook/buttons/image14.png)  
+![alt text](/src/assets/cookbook/form_types/image14.png)  
 
 This saves values in a temporary in-page variable, which can be configured to persistent, session or temporary storage.  
-
 The form component also has a prefix setting to prevent variable name collisions.  
 
 Map the created variables to the form fields:  
 
-![alt text](/src/assets/cookbook/buttons/image15-1.png)  
+![alt text](/src/assets/cookbook/form_types/image15-1.png)  
 
 Preview the form and select some values, then exit preview so chip values are selectable when configuring your button event.  
-
 Update the button to use the values set by the form and call the listener via the events section:
 
-![alt text](/src/assets/cookbook/buttons/image15.png)  
+![alt text](/src/assets/cookbook/form_types/image15.png)  
 
 Add a `click event` and an `execute listener event`:  
 
-![alt text](/src/assets/cookbook/buttons/image16.png)  
+![alt text](/src/assets/cookbook/form_types/image16.png)  
 
 Insert the in-page values created by the form component. Include the configured prefix if necessary:
 
-![alt text](/src/assets/cookbook/buttons/image17.gif)  
+![alt text](/src/assets/cookbook/form_types/image17.gif)  
 
 Test the form in preview and check Reports to confirm submission:  
 
-![alt text](/src/assets/cookbook/buttons/image18.png)  
+![alt text](/src/assets/cookbook/form_types/image18.png)  
 
 ---
