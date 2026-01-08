@@ -90,7 +90,7 @@ In this example, by default the listener is named "table_name_action" (i.e. `add
 ![](/src/assets/cookbook/form_types/image10-3.gif)
 
 4. Add form fields matching the type of data you are passing through:  
-![Example Datetie form field](/src/assets/cookbook/form_types/image11.gif)
+![Example Date form field](/src/assets/cookbook/form_types/image11.gif)
 
 5. Add a submit button and test in preview:  
 ![](/src/assets/cookbook/form_types/image12.png)
