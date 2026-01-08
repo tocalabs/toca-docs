@@ -6,193 +6,30 @@ A form typically combines:
 * **Data storage** (tables)
 * **Logic** (actions, scripts, workflows)
 
-Common input types include:
-
-* Text
-* Number
-* Date
-* Dropdown / Select
-* Checkbox
-* Hidden fields (IDs, metadata)
-
-Each input is usually mapped to a column in a table.
-
----
-
-### 2. Data Table
-
-Forms save data into tables. Example table:
-
-**orders_table**
-
-* order_id
-* product_name
-* quantity
-* price
-* created_at
-
-Each form submission creates a new row in the table.
-
----
-
-### 3. Submit Action
-
-A submit button typically performs one or more actions:
-
-* Insert a row into a table
-* Validate input data
-* Trigger workflows or scripts
-* Navigate to another screen
-* Send notifications or emails
-
----
-
-## Creating a Simple Form (Step-by-Step)
-
-### Step 1: Create a Table
-
-Create a table with the required fields, for example:
-
-* `product_name` (Text)
-* `quantity` (Number)
-
----
-
-### Step 2: Create a Screen
-
-Add a new screen and include:
-
-* Text input for product name
-* Number input for quantity
-* Submit button
-
----
-
-### Step 3: Bind Inputs to Table Columns
-
-For each input field:
-
-* Set the value binding to the corresponding table column
-
-Example:
-
-* Product Name → `product_name`
-* Quantity → `quantity`
-
----
-
-### Step 4: Configure the Submit Button
-
-On submit:
-
-* Action: Insert Row
-* Target table: `orders_table`
-* Map input fields to table columns
-
----
-
-## Accessing Form Data in Scripts
-
-Submitted form data can be accessed in scripts using the Context object:
-
-```js
-const table = Context.get('orders_table');
-```
-
-Each row is accessible as:
-
-```js
-table.values[i].recordValue.quantity
-```
-
----
-
-## Example: Basic KPI Calculation
-
-Calculate total orders and total quantity:
-
-```js
-const table = Context.get('orders_table');
-const totalOrders = table.rowCount;
-
-let totalQuantity = 0;
-for (let i = 0; i < totalOrders; i++) {
-  totalQuantity += Number(table.values[i].recordValue.quantity || 0);
-}
-
-console.log("Total Orders:", totalOrders);
-console.log("Total Quantity:", totalQuantity);
-```
-
----
-
-## Best Practices
-
-* Use correct data types (Number for quantities)
-* Set default values to avoid `NaN`
-* Validate required fields before submission
-* Keep one form per table when possible
-* Use scripts for calculations and KPIs
-
----
-
-## Example: Building an Orders Dashboard
-
-In this example, we will create an **orders table** in a datastore and use it to power a simple dashboard app.
-
-### Step 1: Create the Orders Table
-
-Create a new table in your datastore to store order data. This table will be used throughout the app.
-
-![Orders table](/src/assets/cookbook/execute-js-ipl/image0.png)
-
-Typical columns might include:
-
-* `order_id`
-* `product_name`
-* `quantity`
-* `price`
-* `created_at`
-
----
-
-### Step 2: Create a New App and Dashboard Page
-
-Create a new app and add a page called **Dashboard**.
-
-On this page, add a **Repeating Layout** component and bind it to the orders table you just created.
-
-The Repeating Layout automatically renders **one row per record** from the table.
-
-![Repeating layout bound to table](/src/assets/cookbook/execute-js-ipl/image1.gif)
-
----
-
-### Step 3: Display KPI Cards
-
-Next, add several **Flex Layouts** to the page. Inside each flex layout, place a **Card** component.
-
-These cards will be used to display KPI values such as:
-
-* Total Orders
-* Total Quantity
-* Average Order Quantity
-* Other calculated metrics
-
-![KPI cards layout](/src/assets/cookbook/execute-js-ipl/image2.png)
-
----
-
-### Styling Notes
-
-To improve the visual appearance of the dashboard, adjust component settings such as:
-
-* Margins
-* Padding
-* Alignment
-* Card spacing
-
-These small layout tweaks can significantly improve readability and overall UX.
+There is a variety of input fields that can be used in forms:
+* **Text Field:** alphanumeric data, such as names, emails, or short descriptions
+* **Select Field:** A dropdown menu allowing users to choose one option from a pre-defined list.
+* **Check Box:** A toggle used for binary choices (Yes/No) or for selecting multiple options from a list.
+* **Radio Group:** A set of mutually exclusive options where a user can select only one item at a time.
+* **File Uploader:** A drag-and-drop or browse area for attaching documents, images, or other files.
+* **Auto Complete:** An enhanced text input that suggests matching options as the user types.
+* **Date and Time picker:** A specialized interface (often with a calendar/clock) to ensure standardized date and time entries.
+
+<details>
+  <summary>Expand for more form components</summary>
+
+* **Range:** A slider control used to select a value or a range of values from a numerical scale.
+* **Form Image:** Allows you to input base64 encoded images into your app.
+* **Graphical Field:** Allows you to add a graphical input field to your app's forms. This component is especially useful for capturing signatures or other freehand inputs from users.
+* **Postcode Field:** A text input optimized for postal codes. This Field can be configured to validate the entered data, display error messages, and integrate with external postcode lookup services.
+* **Transfer List**
+* **File Downloader:** A specialized button or link used to retrieve documents or exports saved withing a datachip.
+* **Interactive Data Table:** A complex component for displaying, filtering, and editing relational data directly within a form.
+</details>
+
+
+
+Interactive Data Table: A complex component for displaying, filtering, and editing relational data directly within a form.
 
 ### 📝 Background Configuration
 Let's first create the automation project for confirming and submitting an appointment booking form.  
