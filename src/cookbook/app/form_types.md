@@ -51,10 +51,10 @@ Imagine you’re building a scheduling app where users can book services with av
 ### Background Configuration
 First, we need to create the automation project and the database structure for an appointment booking system.
 
-Create a workspace: ![](/src/assets/cookbook/form_types/image0.png)
+Create a workspace: ![](/src/assets/cookbook/form_types/image1.png)
 
 Create an automation project → datastore → table.
-![](/src/assets/cookbook/buttons/image1.gif)
+![](/src/assets/cookbook/buttons/image2.gif)
 
 Add the columns desired to the table, for example service, appointment date and staff member.
 ![](/src/assets/cookbook/buttons/image3.png)
@@ -148,13 +148,27 @@ For example a company manages multiple products, services, or marketing campaign
 Instead of writing all survey responses into a single table (which would require filtering by campaign ID), we can configure a Datastore Form that automatically creates a table per campaign.
 
 ### Background Configuration
-Let's configure the form on your app page to create a campaign table on submission:
-![alt text](/src/assets/cookbook/form_types/image19.png) 
+Let's configure the form on your app page to create a campaign table on submission. Add a form component and select the datastore you want to create new tables in.
+![alt text](/src/assets/cookbook/form_types/image19-1.png)
+
+<details>
+  <summary>Can't find the datastore?</summary>
+Check your app resources. 
+You may need to add it or create one to add to your app.
+![alt text](/src/assets/cookbook/form_types/image19-2.png)
+</details>
 
 we want a form field set up for each column we configured in the form table above: 
 - customer_name: Text component of type text
 - email: Text component of type Email
 - feedback_text: Text component of type text
 - rating: Select Field component
+
 After some styling and a text title you should have a form similar to the following: 
-![alt text](/src/assets/cookbook/form_types/image20.png) 
+![alt text](/src/assets/cookbook/form_types/image20.png)
+
+Add a submit button within the form and update the form fields to map to the equivalent table column set up in the form. 
+![alt text](/src/assets/cookbook/form_types/image21.png)
+
+Preview
+
