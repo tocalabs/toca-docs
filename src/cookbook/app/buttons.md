@@ -106,8 +106,6 @@ Imagine you’re building a scheduling app where users can book services with av
 3. Pick a preferred staff member  
 4. Confirm their booking  
 
-All in one smooth flow.
-
 ### Background Configuration
 
 Let's first create the automation project for confirming and submitting an appointment booking form.  

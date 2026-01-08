@@ -22,66 +22,84 @@ There is a variety of input fields that can be used in forms:
 * **Form Image:** Allows you to input base64 encoded images into your app.
 * **Graphical Field:** Allows you to add a graphical input field to your app's forms. This component is especially useful for capturing signatures or other freehand inputs from users.
 * **Postcode Field:** A text input optimized for postal codes. This Field can be configured to validate the entered data, display error messages, and integrate with external postcode lookup services.
-* **Transfer List**
+* **Transfer List**: Shows two sets of lists, with checkboxes over each option, you can then move options between these lists, either individually or in bulk.
 * **File Downloader:** A specialized button or link used to retrieve documents or exports saved withing a datachip.
 * **Interactive Data Table:** A complex component for displaying, filtering, and editing relational data directly within a form.
 </details>
 
+## Form Types
+A form is rarely an isolated element; its architecture depends on how it interacts with the rest of the system. While the most common pattern is a Listener Form which sits idle until a "Submit Button" clicked, other use cases may benefit from a different form interaction type:
+1. **Datastore:** directly synchronized with a Datastore table.
+2. **In-Page Values:** Captures user input for immediate use within the current page logic, without necessarily sending that data to a listener or a backend table.
+3. **Table:** Treats an entire data grid as an editable surface. It allows for inline editing, where rows can be toggled between "view" and "edit"
+4. **User Login:** specialized authentication form focused on credential validation. It handles the secure exchange of user identity for session tokens or access permissions.
+5. **User Registration:** A Creation Form that handles the complex logic of onboarding a new identity into the system.
+6. **Change Password:** A specialized Security Update Form designed to protect sensitive account credentials.
 
+In the following sections, we will discuss the peculiarities of each form type and the specific scenarios where they are best applied.
 
-Interactive Data Table: A complex component for displaying, filtering, and editing relational data directly within a form.
+### The Event Listener Form
+The Event Listener Form is the standard "Request/Response" model. It gathers data and waits for a specific trigger (the Submit button) to execute a backend automation.
 
-### 📝 Background Configuration
-Let's first create the automation project for confirming and submitting an appointment booking form.  
+Imagine you’re building a scheduling app where users can book services with available staff. On the Create Appointment page, users should be able to:
 
-Create a workspace:  
-![](/src/assets/cookbook/buttons/image0.png)
+1. Select a service  
+2. Choose a date and time  
+3. Pick a preferred staff member  
+4. Confirm their booking  
 
-Create an automation project → datastore → table.
+#### Background Configuration
+First, we need to create the automation project and the database structure for an appointment booking system.
+
+1. Create a workspace: ![](/src/assets/cookbook/form_types/image0.png)
+
+2. Create an automation project → datastore → table.
 ![](/src/assets/cookbook/buttons/image1.gif)
 
-Add the columns desired to the table, for example: 
-* service 
-* appointment date
-* staff member
-
+3. Add the columns desired to the table, for example service, appointment date and staff member.
 ![](/src/assets/cookbook/buttons/image3.png)
 
-Create the backend automations to connect your form. For simplicity, we will use the automation wizard (🪄) placed on the top left:  
+4. Create the backend automations to connect your form.
+For simplicity, we will use the automation wizard 🪄 placed on the top left: 
 ![](/src/assets/cookbook/buttons/image4.png)
 
-Select Create a Row and ensure a listener is created as well:  
-![](/src/assets/cookbook/buttons/image5.png)
+5. Select Create Table Row and ensure a listener is created as well:
+![](/src/assets/cookbook/form_types/image5.png)
 
-In this example, by default the listener is named "table_name_action" (i.e. `add_appointment_table_row`) but we will rename it to `book_appointment`. This will be used to link the button in the frontend to the backend “add appointment table row” automation.  
+In this example, by default the listener is named "table_name_action" (i.e. `add_appointment_table_row`) but we will rename it to `book_appointment`.
 
-Create a list of options for users in the form:
-![](/src/assets/cookbook/buttons/image6.png)
+>Note: This will be used to link the button in the frontend to the backend “add appointment table row” automation. 
 
-
-And a datastore variable list of staff:  
-![](/src/assets/cookbook/buttons/image7.png)
-
-### Create the App UI to Submit Using a Submit Button
-![](/src/assets/cookbook/buttons/image8.png)
+6. Create a list of options for users in the form:
+![](/src/assets/cookbook/form_types/image6.png)
 
 
-Example steps:  
-- Add a flex layout and a form component:
-![](/src/assets/cookbook/buttons/image9.gif)  
+7. And a datastore variable list of staff:  
+![](/src/assets/cookbook/form_types/image7.png)
+
+### Create Listener form
+1. Add a flex layout and a form component:
+![](/src/assets/cookbook/form_types/image9.gif)  
 
 
-- Add your listener to the app using the app settings:  
-![](/src/assets/cookbook/buttons/image10-1.gif)
-![](/src/assets/cookbook/buttons/image10-2.gif)
+2. Add your listener to the app using the app settings:  
+![](/src/assets/cookbook/form_types/image10-1.gif)
+![](/src/assets/cookbook/form_types/image10-2.gif)
 
-- Update your form to use that listener:
-![](/src/assets/cookbook/buttons/image10-3.gif)
+3. Update your form to use that listener:
+![](/src/assets/cookbook/form_types/image10-3.gif)
 
-- Add form fields matching the type of data you are passing through:  
-![Example Datetie form field](/src/assets/cookbook/buttons/image11.gif)
+4. Add form fields matching the type of data you are passing through:  
+![Example Datetie form field](/src/assets/cookbook/form_types/image11.gif)
 
-- Add a submit button and test in preview:  
-![](/src/assets/cookbook/buttons/image12.png)
+5. Add a submit button and test in preview:  
+![](/src/assets/cookbook/form_types/image12.png)
 
 On submit, the form will indicate whether the booking was successful.
+
+After some styling you could have something similar to this:
+![](/src/assets/cookbook/form_types/image8.png)
+
+You can check if the values have been sent correctly to the back end by looking into the "Reporting" section:
+![](/src/assets/cookbook/form_types/image9.png)
+
