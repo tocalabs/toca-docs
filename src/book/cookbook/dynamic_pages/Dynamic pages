@@ -1,0 +1,54 @@
+### Dynamic pages
+
+A dynamic page is a page that is driven by data from a datasource such as a table in a datastore. It allows for a design to be implemented and then repeated for every row of data in the datasource.
+
+Dynamic Pages support both **Tables** and **CMS Types** as data sources.
+
+The data from the data source is available to each component and app action on the dynamic page through the **Context** object.
+![Image1](../../../assets/book/cookbook/dynamic_pages/Image1.png)
+
+**Dynamic Page Context**
+
+When you are editing app components and app actions within a Dynamic Page, you will notice that whenever you go to select a datachip, there is a new tab available to select data from called **Context**. The **Context** available is the data coming from the data source that is driving the Dynamic Page, so if you had selected a table as your data source for the Dynamic Page then the **Context** object represents the current row, therefore giving you access to the data within each column of the row.
+
+**Data Sources**
+
+There are two types of data source which are supported in a dynamic page:
+
+- Table - Each page produced by the dynamic page represents a single row of data
+- CMS Type - Each page produced by the dynamic page represents a single content entry
+![Image2](../../../assets/book/cookbook/dynamic_pages/Image2.png)
+
+Let’s look at Dynamic Pages at the example of a **Bug Reporting tool**.
+
+Imagine you have a Bug Reporting tool with a list of bugs, and you want to be able to open the details for each individual bug.
+
+![Image3](../../../assets/book/cookbook/dynamic_pages/Image3.png)
+
+By clicking the **More details** button (the button next to Delete), the user can view detailed information about each particular bug report opened in a module (for example, Bug Title Example 1):
+
+![Image4](../../../assets/book/cookbook/dynamic_pages/Image4.png)
+![Image5](../../../assets/book/cookbook/dynamic_pages/Image5.png)
+
+In the background, the **Bug Details page** is a **dynamic page** that uses the **Bugs table** as its data source, with the **ID column** serving as the unique identifier. See **Page settings** below:
+
+![Image6](../../../assets/book/cookbook/dynamic_pages/Image6.png)
+
+Information displayed on the **Bug Details page** is populated using data from the **Context** tab. For each data field (for example, Steps), the corresponding information is selected from **Variables > Context** and is then displayed as a data chip. Corresponding information from the Context tab was selected for all fields (Bug Title, Bug Status etc.).
+
+![Image7](../../../assets/book/cookbook/dynamic_pages/Image7.png)
+![Image8](../../../assets/book/cookbook/dynamic_pages/Image8.png)
+
+To navigate to the dynamic page, **In-Page Logic** was created for the **More details** button.
+
+![Image9](../../../assets/book/cookbook/dynamic_pages/Image9.png)
+
+The **ID column** of the table was selected in the **Context** tab as the unique identifier, which allows the page to display information related only to the specific bug for which details are requested.
+
+![Image10](../../../assets/book/cookbook/dynamic_pages/Image10.png)
+
+As a result of this setup, the **information shown in the Bug Details module is dynamic** and changes based on the selected bug. For example, when Bug Title Example 2 is selected, the corresponding bug details will be displayed:
+
+![Image11](../../../assets/book/cookbook/dynamic_pages/Image11.png)
+
+![Image12](../../../assets/book/cookbook/dynamic_pages/Image12.png)
