@@ -135,7 +135,7 @@ Test the form in preview and check Reports to confirm submission:
 
 ![alt text](/src/assets/cookbook/form_types/image18.png)  
 
-### The Datastore Form
+### Create a Datastore Form
 The Datastore Form is designed to persist data directly into a datastore rather than simply responding to a single event.
 
 The Datastore Form works best when:
@@ -147,7 +147,6 @@ For example a company manages multiple products, services, or marketing campaign
 
 Instead of writing all survey responses into a single table (which would require filtering by campaign ID), we can configure a Datastore Form that automatically creates a table per campaign.
 
-### Background Configuration
 Let's configure the form on your app page to create a campaign table on submission. Add a form component and select the datastore you want to create new tables in.
 ![alt text](/src/assets/cookbook/form_types/image19-1.png)
 
@@ -171,8 +170,15 @@ After some styling and a text title you should have a form similar to the follow
 ![alt text](/src/assets/cookbook/form_types/image20.png)
 
 Add a submit button within the form and update the form fields to map to the equivalent table column set up in the form. 
-![alt text](/src/assets/cookbook/form_types/image21.png)
+![alt text](/src/assets/cookbook/form_types/image21.gif)
 
 Preview your form fill in the values and submit.
-You shoudl be able to find in your datastore a new table with name Prefixed ```event_``` .
-![alt text](/src/assets/cookbook/form_types/image22.png)
+![alt text](/src/assets/cookbook/form_types/image22.gif)
+
+You should be able to find in your datastore a new table with name Prefixed ```event_``` .
+![alt text](/src/assets/cookbook/form_types/image23.gif)
+
+### Create a Table Form
+The Table Form is designed to add data directly into a Table.
+It is configured very similarly to the Datastore form, 
+
