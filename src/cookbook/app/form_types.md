@@ -179,6 +179,18 @@ You should be able to find in your datastore a new table with name Prefixed ```e
 ![alt text](/src/assets/cookbook/form_types/image23.gif)
 
 ### Create a Table Form
-The Table Form is designed to add data directly into a Table.
-It is configured very similarly to the Datastore form, 
+Reusing the previous scenario, we have a **survey that customers need to complete for a previously created campaign**.
+To set this up:
+1. **Reuse an existing form** created for the campaign in the create Datastore Form 
+   - Or create a new set of form fields that match the structure of an existing table in the datastore.
+2. **Edit the Form component**
+   - Set the form type to `table`
+   - Select the target table from the datastore
+3. **Select the Table**
+   - In this example, we select one of the tables created by the Datastore Form:
+   ![alt text](/src/assets/cookbook/form_types/image23.gif)
+4. **Test the Form**
+   - Preview the page.
+   - Fill in the form with sample data.
+   - Check the selected table to confirm the data has been successfully added in your table.
 
