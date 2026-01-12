@@ -176,7 +176,7 @@ Preview your form fill in the values and submit.
 ![alt text](/src/assets/cookbook/form_types/image22.gif)
 
 You should be able to find in your datastore a new table with name Prefixed ```event_``` .
-![alt text](/src/assets/cookbook/form_types/image23.gif)
+![alt text](/src/assets/cookbook/form_types/image23.png)
 
 ### Create a Table Form
 Reusing the previous scenario, we have a **survey that customers need to complete for a previously created campaign**.
@@ -188,7 +188,7 @@ To set this up:
    - Select the target table from the datastore
 3. **Select the Table**
    - In this example, we select one of the tables created by the Datastore Form:
-   ![alt text](/src/assets/cookbook/form_types/image23.gif)
+   ![alt text](/src/assets/cookbook/form_types/image24.png)
 4. **Test the Form**
    - Preview the page.
    - Fill in the form with sample data.
