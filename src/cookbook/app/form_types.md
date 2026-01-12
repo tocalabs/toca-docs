@@ -1,40 +1,39 @@
-# Forms
-A **form** is a component used to collect user input and store it in a table or send to an automation for processing.
+ form is a component used to collect user input and store it in a table or send to an automation for processing.
 
 A form typically combines:
-* **UI inputs** (text, number, date, dropdowns)
-* **Data storage** (tables)
-* **Logic** (actions, scripts, workflows)
+* UI inputs (text, number, date, dropdowns)
+* Data storage (tables)
+* Logic (actions, scripts, workflows)
 
 There is a variety of input fields that can be used in forms:
-* **Text Field:** alphanumeric data, such as names, emails, or short descriptions
-* **Select Field:** A dropdown menu allowing users to choose one option from a pre-defined list.
-* **Check Box:** A toggle used for binary choices (Yes/No) or for selecting multiple options from a list.
-* **Radio Group:** A set of mutually exclusive options where a user can select only one item at a time.
-* **File Uploader:** A drag-and-drop or browse area for attaching documents, images, or other files.
-* **Auto Complete:** An enhanced text input that suggests matching options as the user types.
-* **Date and Time picker:** A specialized interface (often with a calendar/clock) to ensure standardized date and time entries.
+* Text Field: alphanumeric data, such as names, emails, or short descriptions
+* Select Field: A dropdown menu allowing users to choose one option from a pre-defined list.
+* Check Box: A toggle used for binary choices (Yes/No) or for selecting multiple options from a list.
+* Radio Group: A set of mutually exclusive options where a user can select only one item at a time.
+* File Uploader: A drag-and-drop or browse area for attaching documents, images, or other files.
+* Auto Complete: An enhanced text input that suggests matching options as the user types.
+* Date and Time picker: A specialized interface (often with a calendar/clock) to ensure standardized date and time entries.
 
 <details>
   <summary>Expand for more form components</summary>
 
-* **Range:** A slider control used to select a value or a range of values from a numerical scale.
-* **Form Image:** Allows you to input base64 encoded images into your app.
-* **Graphical Field:** Allows you to add a graphical input field to your app's forms. This component is especially useful for capturing signatures or other freehand inputs from users.
-* **Postcode Field:** A text input optimized for postal codes. This Field can be configured to validate the entered data, display error messages, and integrate with external postcode lookup services.
-* **Transfer List**: Shows two sets of lists, with checkboxes over each option, you can then move options between these lists, either individually or in bulk.
-* **File Downloader:** A specialized button or link used to retrieve documents or exports saved withing a datachip.
-* **Interactive Data Table:** A complex component for displaying, filtering, and editing relational data directly within a form.
+* Range: A slider control used to select a value or a range of values from a numerical scale.
+* Form Image: Allows you to input base64 encoded images into your app.
+* Graphical Field: Allows you to add a graphical input field to your app's forms. This component is especially useful for capturing signatures or other freehand inputs from users.
+* Postcode Field: A text input optimized for postal codes. This Field can be configured to validate the entered data, display error messages, and integrate with external postcode lookup services.
+* Transfer List: Shows two sets of lists, with checkboxes over each option, you can then move options between these lists, either individually or in bulk.
+* File Downloader: A specialized button or link used to retrieve documents or exports saved withing a datachip.
+* Interactive Data Table: A complex component for displaying, filtering, and editing relational data directly within a form.
 </details>
 
 ## Form Types
-A form is rarely an isolated element; its architecture depends on how it interacts with the rest of the system. While the most common pattern is a Listener Form which sits idle until a "Submit Button" clicked, other use cases may benefit from a different form interaction type:
-1. **In-Page Values:** Captures user input for immediate use within the current page logic, without necessarily sending that data to a listener or a backend table.
-2. **Datastore:** directly synchronized with a Datastore table.
-3. **Table:** Treats an entire data grid as an editable surface. It allows for inline editing, where rows can be toggled between "view" and "edit"
-4. **User Login:** specialized authentication form focused on credential validation. It handles the secure exchange of user identity for session tokens or access permissions.
-5. **User Registration:** A Creation Form that handles the complex logic of onboarding a new identity into the system.
-6. **Change Password:** A specialized Security Update Form designed to protect sensitive account credentials.
+ form is rarely an isolated element; its architecture depends on how it interacts with the rest of the system. While the most common pattern is a Listener Form which sits idle until a Submit Button clicked, other use cases may benefit from a different form interaction type:
+1. In-Page Values: Captures user input for immediate use within the current page logic, without necessarily sending that data to a listener or a backend table.
+2. Datastore: directly synchronized with a Datastore table.
+3. Table: Treats an entire data grid as an editable surface. It allows for inline editing, where rows can be toggled between view and edit
+4. User Login: specialized authentication form focused on credential validation. It handles the secure exchange of user identity for session tokens or access permissions.
+5. User Registration: A Creation Form that handles the complex logic of onboarding a new identity into the system.
+6. Change Password: A specialized Security Update Form designed to protect sensitive account credentials.
 
 In the following sections, we will discuss the peculiarities of each form type and the specific scenarios where they are best applied.
 
