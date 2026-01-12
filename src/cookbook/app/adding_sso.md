@@ -33,5 +33,7 @@ Or if it's an existing app you can enable authentication in the app settings:
 
 You can read more about the parameters at <a href="https://github.com/tocalabs/toca-docs/blob/main/src/projects/apps/authentication.md">App Authentication & Authorization</a>
 
-Once set up deploy the app and navigate to the url. 
+Once set up deploy the app and navigate to the url
 ![alt text](/src/assets/cookbook/adding_sso/image4.png)
+
+The app shoudl automatically redirect you to your identity provider to sign in. 
