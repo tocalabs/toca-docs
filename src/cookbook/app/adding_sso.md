@@ -31,6 +31,6 @@ You can add it on app creation through the creation wizard on the workspace page
 Or if it's an existing app you can enable authentication in the app settings: 
 ![alt text](/src/assets/cookbook/adding_sso/image3.png)
 
-
+You can read more about the parameters at <a href="https://github.com/tocalabs/toca-docs/blob/main/src/projects/apps/authentication.md">App Authentication & Authorization</a>
 
 
