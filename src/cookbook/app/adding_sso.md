@@ -12,28 +12,31 @@ SSO is especially useful for:
 - Customer-facing apps for enterprise clients
 - Multi-tenant applications requiring controlled access
 
-Once configured, toca.io delegates authentication to your identity provider, and trusted user identity information is securely passed back to your app, allowing you to control authorization and access within your workflows.
+Once configured, the platform delegates authentication to your identity provider, and trusted user identity information is securely passed back to your app, allowing you to control authorization and access within your workflows.
 
-You can set us SSO for the toca platform and for your individual apps. In this docuemntation we will set up SSO for your app rather than the platform ( for details on the platform go to the Admin → Users and Teams → SSO Providers)
+You can set up SSO for the toca platform and for your individual apps. In this documentation we will set up SSO for your app rather than the platform (for details on the platform go to Admin → Users and Teams → SSO Providers).
 
 ## Set Up and Add an identity provider
-You can learn details on how to do this in our <a href="https://github.com/tocalabs/toca-docs/blob/main/src/admin/identity_providers.md#identity-providers"> Identity Providers Documentation</a>.
 
-You will need to go to Admin → Identity Providers and add your identity provider
-![alt text](/src/assets/cookbook/adding_sso/image0.png)
-Here is an example: 
-![alt text](/src/assets/cookbook/adding_sso/image1.png)
-Add the identity provider to your app.
+You can learn details on how to do this in our [Identity Providers Documentation](https://github.com/tocalabs/toca-docs/blob/main/src/admin/identity_providers.md#identity-providers).
 
-You can add it on app creation through the creation wizard on the workspace page: 
-![alt text](/src/assets/cookbook/adding_sso/image2.gif)
+1. Go to Admin → Identity Providers and add your identity provider.
+![Add Identity Provider](/src/assets/cookbook/adding_sso/image0.png)
 
-Or if it's an existing app you can enable authentication in the app settings: 
-![alt text](/src/assets/cookbook/adding_sso/image3.png)
+2. Example view:
+![Example Identity Provider](/src/assets/cookbook/adding_sso/image1.png)
 
-You can read more about the parameters at <a href="https://github.com/tocalabs/toca-docs/blob/main/src/projects/apps/authentication.md">App Authentication & Authorization</a>
+3. Add the identity provider to your app, you can do this:
 
-Once set up deploy the app and navigate to the url
-![alt text](/src/assets/cookbook/adding_sso/image4.png)
+- On app creation through the creation wizard on the workspace page:
+![App Creation Wizard](/src/assets/cookbook/adding_sso/image2.gif)
 
-The app shoudl automatically redirect you to your identity provider to sign in. 
+- For an existing apps, in the app settings:
+![App Settings Authentication](/src/assets/cookbook/adding_sso/image3.png)
+
+You can read more about the parameters at [App Authentication & Authorization](https://github.com/tocalabs/toca-docs/blob/main/src/projects/apps/authentication.md).
+
+4. Once set up, deploy the app and navigate to the URL:
+![App Redirect to IdP](/src/assets/cookbook/adding_sso/image4.png)
+
+The app should automatically redirect you to your identity provider to sign in.
