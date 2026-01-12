@@ -19,9 +19,17 @@ You can set us SSO for the toca platform and for your individual apps. In this d
 ## Set Up and Add an identity provider
 You can learn details on how to do this in our <a href="https://github.com/tocalabs/toca-docs/blob/main/src/admin/identity_providers.md#identity-providers"> Identity Providers Documentation</a>.
 
-You will need to go to Admin → Identity Providers an dadd your identity provider
-![alt text](/src/assets/cookbook/form_types/adding_sso/image0.png)
+You will need to go to Admin → Identity Providers and add your identity provider
+![alt text](/src/assets/cookbook/adding_sso/image0.png)
+Here is an example: 
+![alt text](/src/assets/cookbook/adding_sso/image1.png)
+Add the identity provider to your app.
 
+You can add it on app creation through the creation wizard on the workspace page: 
+![alt text](/src/assets/cookbook/adding_sso/image2.gif)
+
+Or if it's an existing app you can enable authentication in the app settings: 
+![alt text](/src/assets/cookbook/adding_sso/image3.png)
 
 
 
