@@ -7,11 +7,6 @@ By enabling SSO for your app, you can:
 - Enforce enterprise-grade security policies (MFA, password rules, access controls)
 - Reduce password-related support and maintenance overhead
 
-SSO is especially useful for:
-- Internal tools used by employees
-- Customer-facing apps for enterprise clients
-- Multi-tenant applications requiring controlled access
-
 Once configured, the platform delegates authentication to your identity provider, and trusted user identity information is securely passed back to your app, allowing you to control authorization and access within your workflows.
 
 You can set up SSO for the toca platform and for your individual apps. In this documentation we will set up SSO for your app rather than the platform (for details on the platform go to Admin → Users and Teams → SSO Providers).
