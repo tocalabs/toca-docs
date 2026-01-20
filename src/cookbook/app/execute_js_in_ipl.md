@@ -1,7 +1,7 @@
 # Execute Javascript in In Page Logic (IPL)
 
-In page logic allows you to execute a multitude of action on page clicks and componenet loads,
-particularly important is the ExecuteJS in page logic that allows  custom JavaScript within your app when the inbuilt functionality doesnt quite do what you need it to.
+In page logic allows you to execute a multitude of actions on page clicks and component loads,
+particularly important is the ExecuteJS in page logic that allows custom JavaScript within your app when the inbuilt functionality doesnt quite do what you need it to.
 
 Executing JavaScript is useful when you need:
 - Custom calculations or data manipulation
@@ -221,3 +221,4 @@ As you can see above, calculating directly in JS actions may have a small delay 
 > Tip: To avoid confusion you can add a toggle action that pauses user interaction until the KPI's load.
 
 ![SLUG](/src/assets/cookbook/execute_js_in_ipl/image7.gif)
+
