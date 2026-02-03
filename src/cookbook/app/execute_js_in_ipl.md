@@ -86,7 +86,7 @@ The Repeating Layout automatically renders one row per record, making it easy to
 While this step is not required to calculate the KPIs, it is useful for displaying the underlying data that the KPIs are based on.
 
 <details>
-  <summary>Repeting Layout Tip</summary>
+  <summary>Repeating Layout Tip</summary>
 
 Repeating Layout components automatically stay in sync with the table, so any new records added to the datastore will appear without additional configuration.
 
@@ -120,9 +120,9 @@ This will help create a more professional-looking dashboard.
 ## Configure In Page Logic Using the JavaScript Action
 
 Go to the page events and drag in the:
-1. Page Mounted – Runs the logic on page load  
-2. Get Table Data With Query – Enables use of the table data configured in the datastore  
-3. Execute Javascript – Runs Javascript code  
+1. Page Mounted: Runs the logic on page load  
+2. Get Table Data With Query: Enables use of the table data configured in the datastore  
+3. Execute Javascript: Runs Javascript code  
 
 Connect the 3 actions in the order mentioned.
 
@@ -192,7 +192,7 @@ set_in_page_value("Temporary","leastPopularProduct", leastPopularProduct, "Numbe
 
 ---
 
-## Rule of thumb
+#### Rule of thumb
 
 If there is a native TOCA action, there is usually an equivalent JavaScript function available.
 
@@ -204,7 +204,7 @@ For example, the Set In-Page Value action maps to the set_in_page_value function
 
 ## Configure the Dasboard to Display the in page value KPI's
 
-Unlike In Page Values set with a set in page value action that pop up in the select list of in page values, in page value set through Javascript will need to be manually typed.
+In Page Values defined via the Set In Page Value action automatically appear as a selectable datachip in the In Page Values dropdown. In contrast, values set through JavaScript must be manually typed in.
 
 Go to your KPI cards and choose where you want to insert the calculated KPI value.
 
