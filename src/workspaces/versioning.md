@@ -18,7 +18,7 @@ If an entity has a change, you can see a diff between it and the committed versi
 If you want to undo a change (before it has been committed) you can do so via the version control panel. Each change will have the option to `Discard change`. This will discard the change and revert it to the last committed version of the file.
 
 ## Commits
-fix
+
 Once you have finished creating, updating, or deleting an entity (or multiple entities) you can commit the change. This will associate the change with a specific user, a date, and a commit message describing what and/or why the change was made. To commit change do the following:
 
 1. Go to the version control panel (and expand the `Changes` panel if the workspace has a remote repository)
