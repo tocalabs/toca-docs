@@ -1,13 +1,13 @@
 # Remote workspaces
 
-Remote workspaces allow a workspace to be used on more than 1 environment. This is done via a Github repository: changes on one repository can be pushed to the remote repository so they can be pulled onto another.
+Remote workspaces allow a workspace to be used on more than 1 environment. This is done via a Git repository: changes on one repository can be pushed to the remote repository so they can be pulled onto another.
 
 ## Connecting a workspace to a remote
 
 You can connect an existing workspace to a remote repository OR connect to the remote as part of the workspace creation process. In either case you should follow the following steps:
 
-1. Log in to Github and create a new blank respository.
-2. Navigate to Github profile -> Settings -> Developer settings -> Personal access tokens -> [Fine-grained tokens](https://github.com/settings/personal-access-tokens). Here create a new token linked to the repository and store it somewhere safe (you cannot retrieve it later so make sure you save it now). Give the token the following permissions:
+1. Log in to your Git host provider and create a new blank respository.
+2. Generate a PAT token. For example on Github navigate to Profile -> Settings -> Developer settings -> Personal access tokens -> [Fine-grained tokens](https://github.com/settings/personal-access-tokens). Here create a new token linked to the repository and store it somewhere safe (you cannot retrieve it later so make sure you save it now). Give the token the following permissions:
   * **Administration:** Read-only
   * **Contents:** Read and write
   * **Metadata:** Read-only
@@ -22,7 +22,7 @@ After successfully connecting to a remote you will see some extra features appea
 
 ## Pushing and pulling commits
 
-Once a workspace if configured with a remote you can push committed changes to the repository. Ideally commits should be pushed immediately to avoid conflicting commits from different environments (although you _can_ push commits at any point). Once a commit has been pushed to the remote repository it becomes available to all other environments using that workspace to pull from the remote.
+Once a workspace is configured with a remote you can push committed changes to the repository. Ideally commits should be pushed immediately to avoid conflicting commits from different environments (although you _can_ push commits at any point). Once a commit has been pushed to the remote repository it becomes available to all other environments using that workspace to pull from the remote.
 
 * To **push** commits go to the version control tab in the main sidebar and expand the `Commits` panel and click the `PUSH` button. Alternatively selected `COMMIT & PUSH` when committing a change.
 * To **pull** commits from the remote go to the version control tab in the main sidebar and expand the `Remote` panel and click the `PULL` button.

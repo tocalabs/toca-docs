@@ -1,6 +1,6 @@
 # Workspace branches
 
-Workspaces are versioned using branches. Every workspace will have 1 or more branches, each independent of the other. Automation and apps can be created or updated on once branch without affecting other branches.
+Workspaces are versioned using branches. Every workspace will have 1 or more branches, each independent of the other. Automation and apps can be created or updated on one branch without affecting other branches.
 
 ## Main branch
 
