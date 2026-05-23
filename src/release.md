@@ -1,91 +1,58 @@
-# 8.2 - Release Notes
+# 9.0: Prodigy - Release Notes
 
-Version 8.2 is a small release which contains mostly app focused changes, with new components and improvements to the translations feature that originally launched in version :docs-link[7.10]{id="releases/7_10"}.
+We are incredibly proud to announce the launch of version 9.0, codename _Prodigy_, a seismic update that fundamentally transforms how you build and collaborate on the Toca platform. Every change in this release is focused on one central goal: **empowering you to build applications faster than ever before.**
+
+From a simpler, more focused interface to powerful new organizational layers and seamless external connectivity, Prodigy is a monumental step forward for low-code development. Get ready to experience a platform that truly keeps pace with your ambition.
 
 ## What's New
 
-### Apps
+### Workspaces
 
-There are a series of new components released with 8.2 that should make building dashboards and charts much easier. There is also an improvement to the translations feature for multilingual apps, making it quicker than ever to make an app international!
+In any complex environment, great organization is the key to velocity. Workspaces introduce a powerful new organizational layer to Toca, simplifying navigation and dramatically improving collaboration.
 
-#### Material Chart Components
+- **Group Everything:** A Workspace is a dedicated container where you can logically group related Automation Projects, Apps (Web Applications), and Data Stores (Persistent Storage).
+- **Simplify Collaboration:** Share and manage access to entire solution sets with specific teams or users in one place.
+- **Streamlined Navigation:** Contextualize your work and easily switch between distinct projects or departmental initiatives without losing focus.
 
-Four new chart components have been added to compliment the existing chart components. These chart components are built on top of the [Material UI chart library](https://mui.com/x/react-charts/), and offer plenty of customisation so you can make the charts look exactly as you want.
+#### Migration of existing projects
 
-One of the key differences between these new Material charts and the existing Apex charts is the format the data is expected in. In the material charts it is expecting a column for each series:
+Don't worry, your existing projects will continue to work but they will be grouped together when you first upgrade to version 9 and placed in their own workspaces. When you first arrive to the platform post upgrade to Prodigy, you'll be taken through a wizard that will show you how we've grouped them and give you the opportunity to change anything if you want to group things differently.
 
-| Quarter | Company A | Company B |
-| :-- | :-- | :-- |
-| Q1 | 200 | 400 |
-| Q2 | 150 | 420 |
-| Q3 | 600 | 138 |
-| Q4 | 100 | 260 |
+### UI Redesign
 
-Whereas, the Apex chart components would expect the same data in the following format:
+We have completely re-engineered the Toca user interface. We stripped away the visual clutter, moving away from overly stylized elements to deliver an experience that is as **simple as possible, but no simpler**.
 
-| Quarter | Data | Series |
-| :-- | :-- | :-- |
-| Q1 | 200 | Company A |
-| Q1 | 400 | Company B |
-| Q2 | 150 | Company A |
-| Q2 | 420 | Company B |
-| Q3 | 600 | Company A |
-| Q3 | 138 | Company B |
-| Q4 | 100 | Company A |
-| Q4 | 260 | Company B |
+- **Clarity and Purpose:** Every single pixel now serves a purpose. The design focuses your attention squarely on the design environments where you build your automation and apps.
+- **Unrivaled Focus:** Gone are the distracting drop shadows and rounded corners. The new UI champions a clean, direct aesthetic, letting the software you build be the star.
+- **Optimized Navigation:** We've introduced improved signposting and a suite of new hotkeys to make moving through the platform swift and intuitive.
 
-This means the Material charts don't require quite as much wrangling of the data before it is usable. Stylistically, the Material charts look different to the Apex charts too, so which charts you choose will likely be down to which ones look better when placed in your app.
+### External Datastores
 
-![Material Charts Example](/src/assets/releases/8_2/material_charts.gif)
+Stop rebuilding your data structure! With External Datastores, Toca now allows you to connect directly to your existing SQL databases, integrating your applications with enterprise data in seconds.
 
-**Material Bar Chart**
+- **Zero-Migration Integration:** Connect to an external database and immediately begin using its tables and views within your Toca applications.
+- **Broad Support:** We offer native support for the industry's leading SQL databases:
+  - Microsoft SQL Server
+  - Azure SQL Server
+  - PostgreSQL
+  - MySQL
+  - MariaDB
+- **Secure Connection:** For enhanced security, you can establish connections via SSH Tunneling.
 
-The new Material Bar Chart allows you to display multiple series against a common X-axis, either vertically or horizontally. You can also add static reference lines to the chart as well as stack the data when plotting multiple series.
+### Notifications and Comments
 
-**Material Line Chart**
+Prodigy makes Toca an even more powerful environment for team-based development, ensuring you stay in sync whether you're building, debugging, or monitoring.
 
-The Material Line Chart let's you plot a multi-series line chart and you can customise the type of line:
-- Linear
-- Step
-- Natural
-- And more!
+#### In-Designer Comments
 
-You can also fill in the area underneath the line if you want, to highlight the area covered by the data points.
+- **Contextual Feedback:** Leave comments, reply, and react directly next to the code or components in the automation and app designers.
+- **Tag and Link:** Effortlessly tag other users to bring them into the discussion or natively link to other entities (like apps or projects) within the platform for crystal-clear reference.
 
+#### Platform-Wide Notifications
 
-**Material Pie Chart**
-
-The Material Pie Chart is mainly for plotting a single series of data, but you can plot multiple series of data on this pie chart with each additional series appearing as an extra ring around the pie chart representing each series.
-
-> **Tip ✨**
->
-> _You can turn a pie chart into a donut chart by adding an inner radius to your series._
-
-**Material Scatter Chart**
-
-The scatter chart is very similar to the line chart, just without the lines! You can plot multiple series on this chart as well as adding reference lines.
-
-#### Query Wrapper Component
-
-The Query Wrapper component is a new layout component that takes a datasource, usually a Table or View, and will return that data as context which is available for any of the child components placed inside the Query Wrapper. This would allow you to create a dashboard where the charts and tables are all nested inside a single Query Wrapper and then if the query changes or the underlying data changes, all the child components update at once. The query wrapper also allows you to expose a query interface to your app users so they can manipulate their own queries!
-
-The Query Wrapper is very similar to a Dynamic Data Wrapper but where the latter returns only one row of data as context, the former can return many rows which are then available to all child components.
-
-![Query Wrapper Example](/src/assets/releases/8_2/query_wrapper.gif)
-
-#### Automated AI Translations
-
-In version 7.10, we released the translations feature, a utility that made it easy to turn your app multilingual but the initial release required users to manually upload the translations. You can now use the inbuilt AI to automate the generation of the translations, meaning all you have to do is check them over to make sure they look right. For a list of all the languages supported by this feature, please see the :docs-link[languages documentation]{id="projects/apps/translations/languages"}.
-
-:video{src="/src/assets/releases/8_2/ai_translations.webm"}
-
-### Automation
-
-There have been no new features or changes to Automation in version 8.2.
-
-### General
-
-There are no general changes to the platform in version 8.2.
+- **Stay Informed:** Receive real-time notifications for important events happening throughout the platform.
+- **Multi-Device Alerts:** Get alerts on a range of devices, ensuring you are always aware of critical activity without having to leave your current screen.
+- **Slack Notifications:** You can connect your Slack workspace to your Toca platform so that it sends notifications to a Slack channel of your choice. This lets you see what is happening with your Toca platform without ever leaving the comfort of your messaging platform.
 
 ## Bug Fixes
 
@@ -97,8 +64,17 @@ A number of bug fixes were included in this release across the platform.
 
 Nothing has been deprecated in this release.
 
+--- 
+
+The Toca team is confident that Prodigy will redefine your development experience. Dive in, explore the new interface, and start leveraging these powerful features to build faster than you ever thought possible.
+
+**Happy Building!**
+
+---
+
 ## Previous Releases
 
+- :docs-link[8.2]{id="releases/8_2"}
 - :docs-link[8.1]{id="releases/8_1"}
 - :docs-link[8.0]{id="releases/8_0"}
 - :docs-link[7.10]{id="releases/7_10"}
