@@ -1,23 +1,13 @@
 # Export
 
-Export and :docs-link[Import]{id="projects/import"} is a vitally important aspect of the Toca ecosystem which allows you to not only backup your data locally, but also to transfer it to other Toca platforms.
+> Version 10 has changed the way import and export work, meaning that most sharing of automation and apps is done through :docs-link[version control]{id="workspaces/versioning"} instead.
 
-To export a project is to request a compressed file containing all of the data which you have specified. The export can then be found in the Exports section of your platform where it will be downloadable indefinitely.
+Data can be exported from one environment for use on another. The following can be exported:
 
-When you choose to export you will be shown a modal labelled 'Select Export Content', with a list of everything that can be exported. The majority of the time you will want to export the project in its entirety to ensure the integrity of the end result.
+* **Table data** - specifically the rows of a table (not the table model as this is now part of version control)
+* **File drive files**
 
-A project can be exported individually or in relation to an app. It is highly likely that an app will have extraneous resources which it relies on to function. This includes things such as listeners and datastores which are frequently contained within projects. In this case, exporting an app will include every project which is linked to it.
+Data is exported via the data export tool accessible from the main workspace homepage. When exporting data you will be able to choose what table data to include, and which file drives. The data export tool will export the data for the selected branch (the current branch by default), and exports will be listed by workspace and branch name.
 
-### Datastore Sanitisation
-
-In the event that you would like to export a project but are concerned about sensitive data inside your datastores, you have the option to sanitise them. All datastore variables i.e variables, tables, will have their data replaced with anonymised auto-generated data of the same type.
-
-### Select Datastores to Export without Table Data
-
-There are occasions where you would just like to export the tables within a datastore without any rows of data inside them. This could be because they contain sensitive data or you could be moving your project to from a Development environment to a Production environment and you don't need to carry the data across. This is also a useful feature if you have lots of table data as that can really slow down the export process, so checking this option would allow you to expedite the process.
-
-## Environment Variables
-
-When exporting a project, you have the option mark `Text`, `Boolean`, `Number`, and `Password` Datastore Parameters as 'Environment Variables'.
-When this project is imported, users are given the option to either accept the current value of each Environment Variable or provide a new value.
-This allows you to configure environment-specific settings like **API keys** or **passwords**.
+## One time download
+To ensure your environment doesn't get filled up with old exports, the exported files are now available as a 1-time download - they will automatically be deleted once they have been downloaded. If you need to download it again you will need to run the data export tool a second time.
