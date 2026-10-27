@@ -1,4 +1,4 @@
-# 9.0: Prodigy - Release Notes
+# 10.0: Odin - Release Notes
 
 We are incredibly proud to announce the launch of version 9.0, codename _Prodigy_, a seismic update that fundamentally transforms how you build and collaborate on the Toca platform. Every change in this release is focused on one central goal: **empowering you to build applications faster than ever before.**
 
@@ -6,53 +6,76 @@ From a simpler, more focused interface to powerful new organizational layers and
 
 ## What's New
 
-### Workspaces
+### Workspace Versioning
 
-In any complex environment, great organization is the key to velocity. Workspaces introduce a powerful new organizational layer to Toca, simplifying navigation and dramatically improving collaboration.
+In any complex environment, having a full audit trail of who changed what when is very powerful. Having the ability to revert back to a previous snapshot in time for your work. Being able to back up your workspace to a 3rd party server. That is the promise of Toca's new Version Control System (VCS). Out goes the _Draft/Published/Previous_ states and in comes our Git based VCS. With this change, there is a new bottom bar that now underpins every screen in Toca offering you easy access to the most common version related features.
 
-- **Group Everything:** A Workspace is a dedicated container where you can logically group related Automation Projects, Apps (Web Applications), and Data Stores (Persistent Storage).
-- **Simplify Collaboration:** Share and manage access to entire solution sets with specific teams or users in one place.
-- **Streamlined Navigation:** Contextualize your work and easily switch between distinct projects or departmental initiatives without losing focus.
+You can find out more about the new VCS :docs-link[here]{id="book/general_concepts/versioning"}.
 
 #### Migration of existing projects
 
-Don't worry, your existing projects will continue to work but they will be grouped together when you first upgrade to version 9 and placed in their own workspaces. When you first arrive to the platform post upgrade to Prodigy, you'll be taken through a wizard that will show you how we've grouped them and give you the opportunity to change anything if you want to group things differently.
+In order to seamlessly update your workspaces to the new VCS, a migration has taken place under the hood whereby all:
+- Draft resources now live in a branch called `dev`
+- Published resources now exist in a branch called `main`
+- Previous resourced reside in the `legacy` branch
 
-### UI Redesign
+### New App Explorer
 
-We have completely re-engineered the Toca user interface. We stripped away the visual clutter, moving away from overly stylized elements to deliver an experience that is as **simple as possible, but no simpler**.
+The explorer panel in the App Designer has had a big visual uplift and now supports a host of new useful features such as:
+- Component search
+- Improved performance on larger pages
+- Highlight strip
+- Right click context menu
 
-- **Clarity and Purpose:** Every single pixel now serves a purpose. The design focuses your attention squarely on the design environments where you build your automation and apps.
-- **Unrivaled Focus:** Gone are the distracting drop shadows and rounded corners. The new UI champions a clean, direct aesthetic, letting the software you build be the star.
-- **Optimized Navigation:** We've introduced improved signposting and a suite of new hotkeys to make moving through the platform swift and intuitive.
+Be sure to check it out!
 
-### External Datastores
+### Passkey authentication
 
-Stop rebuilding your data structure! With External Datastores, Toca now allows you to connect directly to your existing SQL databases, integrating your applications with enterprise data in seconds.
+There is now a new way to sign into your Toca platform, you can use a _Passkey_. A passkey is a passwordless alternative and they typically use biometrics, PIN codes or push notifications to authenticate your user. You can configure a passkey for your account in your Profile section of the platform.
 
-- **Zero-Migration Integration:** Connect to an external database and immediately begin using its tables and views within your Toca applications.
-- **Broad Support:** We offer native support for the industry's leading SQL databases:
-  - Microsoft SQL Server
-  - Azure SQL Server
-  - PostgreSQL
-  - MySQL
-  - MariaDB
-- **Secure Connection:** For enhanced security, you can establish connections via SSH Tunneling.
+> Passkeys are enabled platform wide in the Security page of the Admin section.
 
-### Notifications and Comments
+### Flexible Table views
 
-Prodigy makes Toca an even more powerful environment for team-based development, ensuring you stay in sync whether you're building, debugging, or monitoring.
+Views now support a few new features which make them much more useful and easier to work with. These are:
+- Ability to use functions in the `GROUP BY` and `HAVING` sections
+- Free-form inputs when you're crafting your column definitions: combine columns, functions and free text in a single input.
+- We have also improved the View interface so that you can now sort and query it directly from the Datastore page.
 
-#### In-Designer Comments
+### Retention Periods
 
-- **Contextual Feedback:** Leave comments, reply, and react directly next to the code or components in the automation and app designers.
-- **Tag and Link:** Effortlessly tag other users to bring them into the discussion or natively link to other entities (like apps or projects) within the platform for crystal-clear reference.
+If left unattended, your Toca platform can start to consume quite a lot of disk space. This is usually due to the hundreds of thousands of reports which are generated each time a workflow runs. 
 
-#### Platform-Wide Notifications
+To keep these reports in check, a workflow now has a _retention_ period setting. This allows you to have granular control over how long each workflow's reports will be kept on the system. The default is 30 days so if you want your data to stick around for longer than that then make sure to edit the relevant workflow settings!
 
-- **Stay Informed:** Receive real-time notifications for important events happening throughout the platform.
-- **Multi-Device Alerts:** Get alerts on a range of devices, ensuring you are always aware of critical activity without having to leave your current screen.
-- **Slack Notifications:** You can connect your Slack workspace to your Toca platform so that it sends notifications to a Slack channel of your choice. This lets you see what is happening with your Toca platform without ever leaving the comfort of your messaging platform.
+### Various Quality of Life improvements
+
+#### User roles simplified
+
+A user can now have up to 3 roles:
+- Developer
+- TDK Developer
+- Administrator
+
+This replaces the complex roles system that existed before. Each user will be accurately migrated to the new roles automatically.
+
+#### Querying tables for null
+
+You can now query for `NULL`  values much more easily when you select the `IS` or `IS NOT` operator in the query builder.
+
+We have also made improvements to the table query builder in the App Designer. The user can now define what ought to happen if part of their query cannot be resolved. This allows you to build in much more predictable behaviour for your app.
+
+#### Pin Admin pages to main navigation panel
+
+When you are an administrator of a Toca platform, there are pages you will frequently visit such as the **Admin > Bots** page or the **Admin > Users** page. It can become annoying having to go to the Admin section just to open these pages. Now though, you can pin specific pages to your main navigation panel so you can instantly access them. _Look out for the pin icon next to each page in the Admin section!_
+
+#### Right click context menus
+
+You can now right click on the platform in most places to perform an action. Try right clicking in the following places:
+- On the list of your activities
+- On the explorer panel in your App designer
+- On the Automation header in the main navigation panel
+
 
 ## Bug Fixes
 
@@ -62,11 +85,11 @@ A number of bug fixes were included in this release across the platform.
 
 ## Deprecated
 
-Nothing has been deprecated in this release.
+Project / App Export and Import has been deprecated and replaced with the new Workspace VCS and Data Export/Import tools. You can find out more about how this works by reading our :docs-link[VCS page]{ id="book/general_concepts/versioning" }.
 
 --- 
 
-The Toca team is confident that Prodigy will redefine your development experience. Dive in, explore the new interface, and start leveraging these powerful features to build faster than you ever thought possible.
+You can read about these features in more detail by going to the Misc section of your Profile page and pressing the play icon next to the word "Odin".
 
 **Happy Building!**
 
@@ -74,6 +97,7 @@ The Toca team is confident that Prodigy will redefine your development experienc
 
 ## Previous Releases
 
+- :docs-link[9.0]{id="releases/9_0"}
 - :docs-link[8.2]{id="releases/8_2"}
 - :docs-link[8.1]{id="releases/8_1"}
 - :docs-link[8.0]{id="releases/8_0"}
