@@ -1,8 +1,8 @@
 # 10.0: Odin - Release Notes
 
-We are incredibly proud to announce the launch of version 9.0, codename _Prodigy_, a seismic update that fundamentally transforms how you build and collaborate on the Toca platform. Every change in this release is focused on one central goal: **empowering you to build applications faster than ever before.**
+Introducing version 10 of Toca – a paradigm shift in the way you manage and version your Toca workspaces. The old publish states and import/export have gone, replaced with a full Git integration.
 
-From a simpler, more focused interface to powerful new organizational layers and seamless external connectivity, Prodigy is a monumental step forward for low-code development. Get ready to experience a platform that truly keeps pace with your ambition.
+This release is also jam-packed with other new features so if you don't have time to review all the changes now remember you can always get back to this intro via your user profile -> Misc.
 
 ## What's New
 
