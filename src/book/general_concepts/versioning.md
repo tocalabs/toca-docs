@@ -175,7 +175,7 @@ If an entity is _tracked_ by the VCS, it means that any modification (adding, up
 ### Tracked Entities
 
 - **Workspaces:** Core settings and ReadMe
-- **Automation Projects:** Activites, Workflows (Listeners & Connectors), and Schedules.
+- **Automation Projects:** Activities, Workflows (Listeners & Connectors), and Schedules.
 - **Apps:** Pages (Components & IPL), Blocks, Settings, Themes, and Resources.
 - **Datastores:** Table Schemas, View Configurations, Variables and Credential Names.
 
