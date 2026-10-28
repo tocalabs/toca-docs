@@ -19,36 +19,9 @@ Platform users can have their access to various parts of the platform controlled
 
 | Role | Description |
 | :--- | :--- |
-| Project | Access to automation projects |
-| Workflow | Access to create, read and update automation workflows |
-| Schedule | Access to create, read and update workflow schedules |
-| Dash | Access to Apps |
-| Data Store | Access to Datastores |
-| Profile | Access to update their profile settings, for users who register in the system via Single-Sign-On, this is by default the only Role they have until they are approved |
-| Authentication | Access to authenticate |
-| Execution Engine | Ability to run automation workflows |
-| Object | Ability to save Files in the platform |
-| Cryptography | Ability to encrypt and decrypt sensitive variables such as _Passwords_ in Datastores |
-| Web Packager | Ability to deploy an App |
-| Preview | _Deprecated_ |
-| Email | Ability to send emails, either via the Send Email action or use functionality like sending an email alert on workflow failure |
-| Pack Manager Push | Push components from the Toca Development Kit to the Hub |
-| Activity | Access to create, read and update automation activities |
-| Agent | Access to Bots, both GUI and Stateless |
-| Listener | Access to create Connectors |
-| Publish Dash | Access to deploy an App |
-| Pipeline | Access to reporting and pipeline data |
-| Export | Ability to export an App or Automation project |
-| Tdk | Access to the Toca Development Kit |
-| Document | Ability to save and retrieve images in Automation projects |
-| Import | Ability to import either Automation or App projects |
-| Identity | Ability to create and use Identities in Datastores |
-| Types | Used to view types in the system such as Tables, Lists etc. |
-| Download | Used to pull down Bot services |
-| Pack Manager Pull | Used to install packs from the Pack manager |
-| Admin | Gives user access to all roles listed above but also access to the Admin panel on the platform |
-
-A good general rule of thumb is that anyone who is not an Administrator should get all Roles _except_ for `Admin`, any users which are considered Administrators should get _only_ `Admin`.
+| Developer | A low code developer, someone who can develop automation and apps on Toca *(Recommended)* |
+| TDK Developer | A user who needs access to the Toca Development Kit to build new automation actions, app components and more |
+| Administrator | A user who will be administering the Toca platform, controlling Bot allocation, user management and more |
 
 ### Approval
 
@@ -56,10 +29,8 @@ If a user signs into the platform for the first time via Single-Sign-On and the 
 
 ## Teams
 
-> Teams is the new name for user groups to differentiate them from other types of group on the platform.
-
 Teams are predominantly used in the :docs-link[sharing]{id="common/sharing"} functionality, as this allows you to easily share projects, apps and resources with many users at once.
 
-Imagine you are building a project and you want to give all the developers working on your project `Read`, `Write` and `Execute` permissions. You might then create a Test team containing testers and they might only have `Read` and `Execute` permissions. By grouping the users into "Developers" and "Testers" you can easily share the right entities with them quickly and efficiently.
+Imagine you are building a project and you want to give all the developers working on your project `Read`, `Write` and `Execute` permissions. You might then create a Test team containing testers and they might only have `Read` and `Execute` permissions. By grouping the users into "Developers" and "Testers" teams you can easily share the right entities with them quickly and efficiently.
 
 ![User Teams Diagram](/src/assets/user_groups.png)

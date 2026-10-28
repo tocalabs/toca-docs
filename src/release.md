@@ -1,91 +1,81 @@
-# 8.2 - Release Notes
+# 10.0: Odin - Release Notes
 
-Version 8.2 is a small release which contains mostly app focused changes, with new components and improvements to the translations feature that originally launched in version :docs-link[7.10]{id="releases/7_10"}.
+Introducing version 10 of Toca – a paradigm shift in the way you manage and version your Toca workspaces. The old publish states and import/export have gone, replaced with a full Git integration.
+
+This release is also jam-packed with other new features so if you don't have time to review all the changes now remember you can always get back to this intro via your user profile -> Misc.
 
 ## What's New
 
-### Apps
+### Workspace Versioning
 
-There are a series of new components released with 8.2 that should make building dashboards and charts much easier. There is also an improvement to the translations feature for multilingual apps, making it quicker than ever to make an app international!
+In any complex environment, having a full audit trail of who changed what when is very powerful. Having the ability to revert back to a previous snapshot in time for your work. Being able to back up your workspace to a 3rd party server. That is the promise of Toca's new Version Control System (VCS). Out goes the _Draft/Published/Previous_ states and in comes our Git based VCS. With this change, there is a new bottom bar that now underpins every screen in Toca offering you easy access to the most common version related features.
 
-#### Material Chart Components
+You can find out more about the new VCS :docs-link[here]{id="book/general_concepts/versioning"}.
 
-Four new chart components have been added to compliment the existing chart components. These chart components are built on top of the [Material UI chart library](https://mui.com/x/react-charts/), and offer plenty of customisation so you can make the charts look exactly as you want.
+#### Migration of existing projects
 
-One of the key differences between these new Material charts and the existing Apex charts is the format the data is expected in. In the material charts it is expecting a column for each series:
+In order to seamlessly update your workspaces to the new VCS, a migration has taken place under the hood whereby all:
+- Draft resources now live in a branch called `dev`
+- Published resources now exist in a branch called `main`
+- Previous resourced reside in the `legacy` branch
 
-| Quarter | Company A | Company B |
-| :-- | :-- | :-- |
-| Q1 | 200 | 400 |
-| Q2 | 150 | 420 |
-| Q3 | 600 | 138 |
-| Q4 | 100 | 260 |
+### New App Explorer
 
-Whereas, the Apex chart components would expect the same data in the following format:
+The explorer panel in the App Designer has had a big visual uplift and now supports a host of new useful features such as:
+- Component search
+- Improved performance on larger pages
+- Highlight strip
+- Right click context menu
 
-| Quarter | Data | Series |
-| :-- | :-- | :-- |
-| Q1 | 200 | Company A |
-| Q1 | 400 | Company B |
-| Q2 | 150 | Company A |
-| Q2 | 420 | Company B |
-| Q3 | 600 | Company A |
-| Q3 | 138 | Company B |
-| Q4 | 100 | Company A |
-| Q4 | 260 | Company B |
+Be sure to check it out!
 
-This means the Material charts don't require quite as much wrangling of the data before it is usable. Stylistically, the Material charts look different to the Apex charts too, so which charts you choose will likely be down to which ones look better when placed in your app.
+### Passkey authentication
 
-![Material Charts Example](/src/assets/releases/8_2/material_charts.gif)
+There is now a new way to sign into your Toca platform, you can use a _Passkey_. A passkey is a passwordless alternative and they typically use biometrics, PIN codes or push notifications to authenticate your user. You can configure a passkey for your account in your Profile section of the platform.
 
-**Material Bar Chart**
+> Passkeys are enabled platform wide in the Security page of the Admin section.
 
-The new Material Bar Chart allows you to display multiple series against a common X-axis, either vertically or horizontally. You can also add static reference lines to the chart as well as stack the data when plotting multiple series.
+### Flexible Table views
 
-**Material Line Chart**
+Views now support a few new features which make them much more useful and easier to work with. These are:
+- Ability to use functions in the `GROUP BY` and `HAVING` sections
+- Free-form inputs when you're crafting your column definitions: combine columns, functions and free text in a single input.
+- We have also improved the View interface so that you can now sort and query it directly from the Datastore page.
 
-The Material Line Chart let's you plot a multi-series line chart and you can customise the type of line:
-- Linear
-- Step
-- Natural
-- And more!
+### Retention Periods
 
-You can also fill in the area underneath the line if you want, to highlight the area covered by the data points.
+If left unattended, your Toca platform can start to consume quite a lot of disk space. This is usually due to the hundreds of thousands of reports which are generated each time a workflow runs. 
 
+To keep these reports in check, a workflow now has a _retention_ period setting. This allows you to have granular control over how long each workflow's reports will be kept on the system. The default is 30 days so if you want your data to stick around for longer than that then make sure to edit the relevant workflow settings!
 
-**Material Pie Chart**
+### Various Quality of Life improvements
 
-The Material Pie Chart is mainly for plotting a single series of data, but you can plot multiple series of data on this pie chart with each additional series appearing as an extra ring around the pie chart representing each series.
+#### User roles simplified
 
-> **Tip ✨**
->
-> _You can turn a pie chart into a donut chart by adding an inner radius to your series._
+A user can now have up to 3 roles:
+- Developer
+- TDK Developer
+- Administrator
 
-**Material Scatter Chart**
+This replaces the complex roles system that existed before. Each user will be accurately migrated to the new roles automatically.
 
-The scatter chart is very similar to the line chart, just without the lines! You can plot multiple series on this chart as well as adding reference lines.
+#### Querying tables for null
 
-#### Query Wrapper Component
+You can now query for `NULL`  values much more easily when you select the `IS` or `IS NOT` operator in the query builder.
 
-The Query Wrapper component is a new layout component that takes a datasource, usually a Table or View, and will return that data as context which is available for any of the child components placed inside the Query Wrapper. This would allow you to create a dashboard where the charts and tables are all nested inside a single Query Wrapper and then if the query changes or the underlying data changes, all the child components update at once. The query wrapper also allows you to expose a query interface to your app users so they can manipulate their own queries!
+We have also made improvements to the table query builder in the App Designer. The user can now define what ought to happen if part of their query cannot be resolved. This allows you to build in much more predictable behaviour for your app.
 
-The Query Wrapper is very similar to a Dynamic Data Wrapper but where the latter returns only one row of data as context, the former can return many rows which are then available to all child components.
+#### Pin Admin pages to main navigation panel
 
-![Query Wrapper Example](/src/assets/releases/8_2/query_wrapper.gif)
+When you are an administrator of a Toca platform, there are pages you will frequently visit such as the **Admin > Bots** page or the **Admin > Users** page. It can become annoying having to go to the Admin section just to open these pages. Now though, you can pin specific pages to your main navigation panel so you can instantly access them. _Look out for the pin icon next to each page in the Admin section!_
 
-#### Automated AI Translations
+#### Right click context menus
 
-In version 7.10, we released the translations feature, a utility that made it easy to turn your app multilingual but the initial release required users to manually upload the translations. You can now use the inbuilt AI to automate the generation of the translations, meaning all you have to do is check them over to make sure they look right. For a list of all the languages supported by this feature, please see the :docs-link[languages documentation]{id="projects/apps/translations/languages"}.
+You can now right click on the platform in most places to perform an action. Try right clicking in the following places:
+- On the list of your activities
+- On the explorer panel in your App designer
+- On the Automation header in the main navigation panel
 
-:video{src="/src/assets/releases/8_2/ai_translations.webm"}
-
-### Automation
-
-There have been no new features or changes to Automation in version 8.2.
-
-### General
-
-There are no general changes to the platform in version 8.2.
 
 ## Bug Fixes
 
@@ -95,10 +85,20 @@ A number of bug fixes were included in this release across the platform.
 
 ## Deprecated
 
-Nothing has been deprecated in this release.
+Project / App Export and Import has been deprecated and replaced with the new Workspace VCS and Data Export/Import tools. You can find out more about how this works by reading our :docs-link[VCS page]{ id="book/general_concepts/versioning" }.
+
+--- 
+
+You can read about these features in more detail by going to the Misc section of your Profile page and pressing the play icon next to the word "Odin".
+
+**Happy Building!**
+
+---
 
 ## Previous Releases
 
+- :docs-link[9.0]{id="releases/9_0"}
+- :docs-link[8.2]{id="releases/8_2"}
 - :docs-link[8.1]{id="releases/8_1"}
 - :docs-link[8.0]{id="releases/8_0"}
 - :docs-link[7.10]{id="releases/7_10"}

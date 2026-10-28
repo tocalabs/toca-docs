@@ -2,15 +2,17 @@
 
 Welcome to the "General Concepts" chapter. This is your foundational guide to understanding the Toca platform and how its core components work together to build powerful applications. Whether you're a seasoned developer or completely new to the world of low-code, this chapter will provide you with a mental model for thinking about Toca and its unique approach to application development.
 
-At its heart, Toca is about three interconnected pillars: **Apps**, **Automations**, and **Datastores**.
+At its heart, Toca is about three interconnected pillars: **Apps**, **Automation**, and **Datastores**.
 
 * **Apps** are your user interfaces—the front-end of your application. This is what your users interact with. They contain the buttons, forms, tables, and visual elements that define the user experience.
-* **Automations** are the logic and processes that power your applications—the back-end. They perform the actions triggered by your users or by a schedule, such as sending emails, calculating values, or integrating with other systems.
-* **Datastores** are where your information lives. These are the databases that hold your application's data, providing a structured way to manage and retrieve the information your apps and automations need.
+* **Automation** are the logic and processes that power your applications—the back-end. They perform the actions triggered by your users or by a schedule, such as sending emails, calculating values, or integrating with other systems.
+* **Datastores** are where your information lives. These are the databases that hold your application's data, providing a structured way to manage and retrieve the information your apps and automation need.
+
+These 3 pillars are all wrapped in a container called a **Workspace**. A Workspace should represent a particular project or collection of applications that are related.
 
 In Toca, these three pillars are not isolated; they are deeply connected. An App might trigger an Automation to process data from a Data Store. That Automation might then update a different Data Store and send a notification back to the user's App. This seamless integration is what makes Toca so effective for building end-to-end solutions.
 
-To help you get started, we'll first translate these Toca concepts into familiar terms. We will explore how Toca's Apps, Automations, and Data Stores relate to the conventional ideas of **front-end**, **back-end**, and **database**. This will provide a common ground for understanding the platform's architecture.
+To help you get started, we'll first translate these Toca concepts into familiar terms. We will explore how Toca's Apps, Automation, and Datastores relate to the conventional ideas of **front-end**, **back-end**, and **database**. This will provide a common ground for understanding the platform's architecture.
 
 Next, we will introduce the essential building blocks of all logic and processes: **control flow**, **data types**, and **variables & datachips**.
 
