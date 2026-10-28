@@ -34,10 +34,10 @@ These changes are stored in a staging area, a draft zone where you can preview a
 
 ### Commits
 
-When you have got your workspace into a state you're happy with, you can *commit* the changes in your staging area. A **commit** saves a point-in-time snapshot of all staged changes in your workspace. Commits should represent an _atomic unit of change_ - a complete, functional update (e.g. _"Added navbar to app pages"_). 
+When you have got your workspace into a state you're happy with, you can *commit* the changes in your staging area. A **commit** saves a point-in-time snapshot of the selected staged changes in your workspace. Commits should represent an _atomic unit of change_ - a complete, functional update (e.g. _"Added navbar to app pages"_). 
 
 A commit is comprised of:
-- The changes made since the previous commit
+- The selected changes made since the previous commit
 - The author of the commit
 - A message relating to the commit
 - A timestamp representing when the commit was created
@@ -89,7 +89,7 @@ Toca provides three merge strategies depending on how you want your commit histo
 
 **1. Squash Merge _(Recommended for merging into `main`)_**
 
-A squash merge takes all the individual commits on your source branch and condense them into a single, cohesive commit on the target branch.
+A squash merge takes all the individual commits on your source branch and condense them into a single, cohesive commit on the target branch. There is an option to delete your source branch after completing a squash merge, this is recommended to keep your workspace tidy.
 
 * **Why use it:** Feature branches often contain messy interim commits (e.g. _"Fix typo", "Adjust navbar margin", "Test connector response"_). Squashing bundles all of these into one clean record, such as _"Address user feedback"_.
 * **Best for:** Merging completed feature branches or bug fixes into `main` to keep your production commit history tidy and easy to audit.
@@ -138,10 +138,13 @@ To revert to a previous state:
 2. Browse the chronological commit log and select the desired snapshot.
 3. Review the changes introduced at that point and click **Revert this commit.**
 
+> [!NOTE]
+Reverting to a particular commit will actually create a _new_ commit at the head of your current branch. This is because in Git is designed around append-only history. Instead of erasing the past, the VCS undoes changes by adding an inverse action.
+
 
 ### Remote Repositories
 
-Connecting your Toca workspace to a remote Git repository (GitHub, GitLab, or Azure DevOps) creates an external backup and unlocks  features like branch policies, pull requests, and CI/CD pipelines.
+Connecting your Toca workspace to a remote Git repository (GitHub, GitLab, or Azure DevOps) creates an external backup and allows a workspace to exist on multiple Toca environments.
 
 ![Remote Repository](/src/assets/book/remote-repo.png)
 
@@ -149,7 +152,7 @@ Connecting your Toca workspace to a remote Git repository (GitHub, GitLab, or Az
 
 1. Create an **empty** repository in your Git provider (don't initialise it with a README or .gitignore, it must be empty).
 2. Copy the **HTTPS Clone URL**
-3. Generate a **Personal Access Token (PAT)** in your Git provider with repository read/write
+3. Generate a **Personal Access Token (PAT)** in your Git provider with repository read/write. Each provider labels these permissions slightly differently but as long as you have permission to read, write and get the status of the repository then this should work.
 4. Navigate to **Workspace Settings > Add remote repository** in Toca, paste the URL and PAT, and save.
 > [!WARNING]
 PATs typically expire after 6 to 12 months. Keep track of your token's expiration date. If it expires, Toca will display an authentication error message until updated in Workspace settings.
@@ -191,7 +194,7 @@ If an entity is _tracked_ by the VCS, it means that any modification (adding, up
 To support testing schema updates without corrupting live application data, **each branch maintains an isolated copy of your Datastore behind the scenes.**
 
 > [!NOTE]
-This does come with the side effect of increased disk space usage, so be mindful to delete your branches when you are no longer in need of it, this will keep your workspaces tidy in the interface and on the backend.
+This does come with the side effect of increased disk space usage, so be mindful to delete your branches when you are no longer in need of it, this will keep your workspaces tidy in the interface and on the backend. When you create a new branch, you'll notice an option to copy the data records over, you can be selective about what tables to copy as well.
 
 ### Schema Migrations
 
@@ -220,7 +223,7 @@ You may be wondering why do we track these differently and the answer comes down
 ### Data Transfer & Export
 
 Because each branch maintains its own isolated data layer, Toca provides dedicated tools to move data across branches or environments:
-* **Data Copy on Branch Creation:** When creating a new branch, toggle **Copy Data from Origin** to clone existing records into the new branch
+* **Data Copy on Branch Creation:** When creating a new branch, select the table data and files you want to clone into the new branch
 * **Data Transfer Tool:** Located in the **Workspace Menu**, this tool lets you sync table rows and files between existing branches at any point.
 * **Data Export / Import:** Export table records and file drives as CSV, SQL or JSON files to transfer data between distinct Toca environments.
 
@@ -275,9 +278,9 @@ Toca polls the remote repo once a minute. If incoming changes do not appear imme
 
 A **hotfix** is an unscheduled, high-priority patch applied directly to your production code to resolve a critical bug (e.g., a broken login flow, an unhandled authentication error, or an unhandled timeout automation).
 
-In real-world building, critical bugs often strike at the least convenient time, usually when you are mid-way through building a new feature on a separate branch. This guide covers the best practices and step-by-step procedure to pause feature work, isolate and deploy a hotfix to main, and then seamlessly resume where you left off.
+In real-world building, critical bugs often strike at the least convenient time, usually when you are mid-way through building a new feature on a separate branch. This guide covers the best practices and step-by-step procedure to pause feature work, isolate and deploy a hotfix to `main`, and then seamlessly resume where you left off.
 
-When you need to patch production immediately, you must never patch `main` directory from within an unfinished feature branch. Instead, commit your in-progress feature changes, switch back to `main`, create an isolated `hotfix/*`  branch, apply the fix, and release it.
+When you need to patch production immediately, you should never patch `main` directly from within an unfinished feature branch. Instead, commit your in-progress feature changes, switch back to `main`, create an isolated `hotfix/*`  branch, apply the fix, and release it.
 
 #### Best practices for a hotfix
 - **Keep the scope surgical:** A hotfix should address the critical defect and nothing else. Resist the temptation to refactor, tweak or enhance anything else.
@@ -287,10 +290,9 @@ When you need to patch production immediately, you must never patch `main` direc
 
 #### Step-by-Step Hotfix flow
 
-1. Secure your active feature work. Open the **VCS Panel** and head to the changes panel. Review your current draft modifications and commit them with an interim commit message such as _"WIP: In-progress navigation layout"_. Commit the changes.
+1. Secure your active feature work. Make sure you have saved any unsaved changes on your feature branch.
 2. Create a hotfix branch from `main`. Click on the branch selector in the bottom bar and click `+` to create a new branch. Make sure the source branch is `main` and give your branch an appropriate name.
 3. Develop, test and commit the fix. Apply the minimal fix required to resolve the bug and test the fix thoroughly. Once the fix is signed off, commit the changes you have made with a descriptive commit message.
 4. Merge the hotfix into `main`. In the VCS panel menu, click **Merge branch**. Make sure the source branch is your hotfix branch and the target branch is `main`. Select **Squash Merge** as your merge strategy to keep your production commit history clean. Confirm the merge.
 5. Redeploy the app if the fix requires it.
 6. Sync the fix into your feature branches. This is to ensure you don't regress or conflict on the fix later when your feature is finally merged. Open the VCS panel menu and click **Merge branch**. Set `main` as the source branch and your feature branch as the target branch. Complete the merge and now your feature branch includes both the in-progress feature work and the latest production hotfix.
-7. Make sure you have switched back to your feature branch and continue building your feature as normal.
