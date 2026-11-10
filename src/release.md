@@ -8,7 +8,7 @@ This release is also jam-packed with other new features so if you don't have tim
 
 ### Workspace Versioning
 
-In any complex environment, having a full audit trail of who changed what when is very powerful. Having the ability to revert back to a previous snapshot in time for your work. Being able to back up your workspace to a 3rd party server. That is the promise of Toca's new Version Control System (VCS). Out goes the _Draft/Published/Previous_ states and in comes our Git based VCS. With this change, there is a new bottom bar that now underpins every screen in Toca offering you easy access to the most common version related features.
+ Out goes the _Draft/Published/Previous_ states and in comes our new Git based Version Control System. With this change, there is a new bottom bar that now underpins every screen in Toca, offering you easy access to the most common version related features. This new VCS gives you a full audit trail of who changed what and when. It also introduces many powerful features such as the ability to revert back to a previous snapshot, the ability to back up your workspace to a 3rd party server and an easy way to pull changes across different Toca environments.
 
 You can find out more about the new VCS :docs-link[here]{id="book/general_concepts/versioning"}.
 

@@ -280,7 +280,7 @@ A **hotfix** is an unscheduled, high-priority patch applied directly to your pro
 
 In real-world building, critical bugs often strike at the least convenient time, usually when you are mid-way through building a new feature on a separate branch. This guide covers the best practices and step-by-step procedure to pause feature work, isolate and deploy a hotfix to `main`, and then seamlessly resume where you left off.
 
-When you need to patch production immediately, you should never patch `main` directly from within an unfinished feature branch. Instead, commit your in-progress feature changes, switch back to `main`, create an isolated `hotfix/*`  branch, apply the fix, and release it.
+ When you need to patch production immediately switch back to `main`, create an isolated `hotfix/*` branch, apply the fix, and release it.
 
 #### Best practices for a hotfix
 - **Keep the scope surgical:** A hotfix should address the critical defect and nothing else. Resist the temptation to refactor, tweak or enhance anything else.
