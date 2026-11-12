@@ -19,7 +19,7 @@ So, our table will then look like the following:
 | 2 | Tim Berners-Lee | tim@worldwideweb.com | 🌐 | `1955-06-08` |
 | 3 | Linus Torvalds | linus@linux.net | 🐧 | `1969-12-28` |
 
-> **Note** 📝
+> [!NOTE]
 > All tables in Toca contain an `Id` column of type `UUID`, this means that there will always be a column containing unique values. This is used behind the scenes for certain performance optimisations as well as providing a column that is guaranteed to be unique which is handy for identifying individual rows.
 
 ## Tables in the real world

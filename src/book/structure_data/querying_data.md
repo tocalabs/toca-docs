@@ -78,8 +78,7 @@ Maybe you need to return data for a certain list of categories? Well, in that ca
 :video{src="/src/assets/book/querying_with_like.webm"}
 
 
-> **Tip ✨**
->
+> [!TIP]
 > When using the `LIKE` operator, you can use as many instances of a wildcard (e.g. `%`) as you like. There is also another wildcard character which represents a single wildcard character: `_`. So if you wanted to search for `L%on` then that would match "London", "Leon" and "Lisbon" but if you did `L___on`, that would only match "Lisbon" and "London" and if you did `L_on` that would only return "Leon".
 
 #### Boolean Columns
@@ -96,8 +95,7 @@ You can also query data that is related to your current table! In our example, t
 
 The same rules apply for filtering on table relationships as other column types.
 
-> **Note 📝**
->
+> [!NOTE]
 > You cannot filter on File or Image columns.
 
 
@@ -151,8 +149,7 @@ The video below shows how we use a group in a query.
 :video{src="/src/assets/book/query_with_group.webm"}
 
 
-> **Note📝**
->
+> [!NOTE]
 > Whilst there is no limit for how many conditions you can have in your query, you should be aware that the more queries you add, the more performance impact you might have. This is especially true if you are filtering over a large number of rows. Searching in `String` columns with wildcards is particularly costly in terms of performance but you will likely only notice this over a large number of rows. If you notice a query is taking a long time, think about adding an :docs-link[Index]{id="projects/automation/datastores/tables/index"} to your column.
 
 ### Ordering your conditions

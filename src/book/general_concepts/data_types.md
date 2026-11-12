@@ -41,8 +41,7 @@ In Toca, a `String` can be anything from a single letter to a long article. It c
 
 While there's no strict limit on length, very long strings (tens of thousands of characters) might cause minor performance slowdowns.
 
-> **Warning ⚠️**
->
+> [!WARNING]
 > Don't use `$$` inside a `String`. Toca uses these characters behind the scenes to identify variables.
 
 #### Converting to a String (Casting)
@@ -131,8 +130,7 @@ For example, from the following data:
   * `$.industry` would get you `"Technology"`.
   * `$.available_jobs[0].title` would get you `"Application Builder"`.
 
-> **Note 📝**
->
+> [!NOTE]
 > Like Toca's `List` type, the first item in a JSON list is always at position `0`.
 
 #### Converting to a JSON (Casting)
@@ -151,8 +149,7 @@ The `File` type represents any kind of file within the Toca platform, from a PDF
 
 The `File` type stores important information about the file, such as its name, size, and type.
 
-> **Note 📝**
->
+> [!NOTE]
 > A `File` type is **not** the same as a file path on a bot's computer. It's a special type for moving files around the Toca platform.
 
 ### Image
@@ -187,8 +184,7 @@ my_list = ["james", 28, False, "Toca.io"]
 
 You can get an item from a `List` by its position, called its "index." You can also go through each item one by one.
 
-> **Note 📝**
->
+> [!NOTE]
 > Toca lists start counting at `0`. So, the first item is at position `0`, and the last item is at position `list length - 1`.
 
 #### Converting to a List (Casting)
@@ -231,8 +227,7 @@ A bounding box is represented like this:
 
 You can access the individual `X`, `Y`, `Width`, and `Height` values if you need them.
 
-> **Note 📝**
->
+> [!NOTE]
 > A `Bounding Box` can only represent a perfect rectangle. It can't be used for more complex shapes.
 
 ### Grid
@@ -264,14 +259,12 @@ Here’s an example:
 | 2 | Aragorn | 87 | ✅ |
 | 3 | Frodo | 33 | ✅ |
 
-> **Note 📝**
->
+> [!NOTE]
 > Every table row must have a unique ID, typically in a special format called a `UUID`. This ensures every row can be uniquely identified.
 
 Tables are stored in a database, so they can handle thousands of rows with excellent performance.
 
-> **Warning ⚠️**
->
+> [!WARNING]
 > While tables can be huge, moving very large amounts of data can slow things down. To keep your apps fast, only retrieve the data you absolutely need, and use pagination in apps to load data in smaller chunks.
 
 #### Converting to a Table (Casting)

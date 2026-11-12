@@ -25,8 +25,7 @@ Stateless bots are designed for high volume automation tasks which do not requir
 
 In general, unless you need a desktop environment to perform desktop automation, you should always use a Stateless bot.
 
-> **Note 📝**
->
+> [!NOTE]
 > _A GUI bot will have access to GUI specific actions (like browser actions, keyboard and mouse actions and clipboard actions) as well as actions that can run on stateless bots. Stateless bots will only have access to stateless actions so if you convert an activity from GUI to Stateless and there are GUI actions within the activity then this will be highlighted red and you will not be able to save the activity until you remove these actions or switch back to a GUI bot._
 
 

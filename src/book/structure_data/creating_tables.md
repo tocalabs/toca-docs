@@ -44,8 +44,7 @@ When we create a table we need to give it a name so that we can reference the ta
 
 :video{src="/src/assets/book/create_users_table.webm"}
 
-> **Note** 📝
->
+> [!NOTE]
 > All tables start with 3 columns by default, an `ID` column which you cannot remove, a `Created` column which is a Datetime column which will auto populate with the current UTC date and time when a row is added to the table and finally an `Updated` column which will contain the UTC date and time from whenever the row was updated. The latter two columns can be deleted if they are not required, but don't worry, you can always add them back if you need them later on.
 
 Now that we have created the table, we can add our data.
@@ -78,8 +77,7 @@ In the above screen recording, we define each value that we want to add in our r
 
 Now, if we place the activity into a Workflow and attach a Listener to it or a Connector, we can allow anyone running this new Workflow to define their own values for each input!
 
-> **Tip** ✨
->
+> [!TIP]
 > You can imagine that building tables and then constructing the necessary automation required to add data, update data, delete data and read data is a pretty common (and tedious) pattern. That's why you can now get all this automation generated automatically for you! Look out for the magic wand icon that can be found in the datastore interface when you've got a table selected!
 > :video{src="/src/assets/book/table_generation_wizard.webm"}
 

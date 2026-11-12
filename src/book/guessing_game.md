@@ -77,8 +77,7 @@ We can use the `If Then` Action to perform the checks and we can use the `Set Va
 
 :video{src="/src/assets/book/check_guess_activity.webm"}
 
-> #### Tip 👀
->
+> [!TIP]
 > In the video above, we used the "Duplicate Action" button on the actions to place our logic down a bit more quickly.
 
 ### Testing Our Logic
@@ -200,8 +199,7 @@ It will take a few seconds for the App to complete it's deployment, once it has 
 
 Now you can share this URL with other people and they can play too!
 
-> #### Tip 👀
->
+> [!TIP]
 > If you want to verify your automation Workflows are running as expected, then check the Reporting page. You can access it from the main navbar.
 
 ## Extending this Project
@@ -210,6 +208,5 @@ You might have realised that because we're only ever keeping track of _one_ rand
 
 How would you improve this project so that each user gets their own random number to guess?
 
-> #### Tip 👀
->
+> [!TIP]
 > When designing an App for multiple users, it's usually good practice to store any user specific state on the App rather than Automation

@@ -16,8 +16,7 @@ Nodes can be dragged onto your workflow canvas.
 
 By adding :docs-link[Inputs]{id="projects/automation/activities/inputs"} to an activity, you are telling the activity to expect to be started with some variables and these inputs can be injected into a Workflow when it starts, regardless of how the Workflow is triggered.
 
-> **Warning** ⚠️
->
+> [!WARNING]
 > You cannot define what inputs to run a Workflow with when triggering a Workflow via a Schedule, it will automatically use any default input values provided.
 
 ### Outputs
