@@ -233,7 +233,7 @@ Because each branch maintains its own isolated data layer, Toca provides dedicat
 * **Data Export / Import:** Export table records and file drives as CSV, SQL or JSON files to transfer data between distinct Toca environments.
 
 > [!TIP]
-**Disk space management: _Deleting a branch permanently removes its isolated datastore copy and associated file storage. Regularly prune merged or abandoned branches to optimise workspace storage.
+**Disk space management:** _Deleting a branch permanently removes its isolated datastore copy and associated file storage. Regularly prune merged or abandoned branches to optimise workspace storage.
 
 
 ## Best Practices
