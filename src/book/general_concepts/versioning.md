@@ -91,6 +91,8 @@ Toca provides three merge strategies depending on how you want your commit histo
 
 A squash merge takes all the individual commits on your source branch and condense them into a single, cohesive commit on the target branch. There is an option to delete your source branch after completing a squash merge, this is recommended to keep your workspace tidy.
 
+This is the strategy used if you select to delete source branch in the basic mode.
+
 * **Why use it:** Feature branches often contain messy interim commits (e.g. _"Fix typo", "Adjust navbar margin", "Test connector response"_). Squashing bundles all of these into one clean record, such as _"Address user feedback"_.
 * **Best for:** Merging completed feature branches or bug fixes into `main` to keep your production commit history tidy and easy to audit.
 
@@ -99,6 +101,9 @@ A squash merge takes all the individual commits on your source branch and conden
 **2. Fast-Forward**
 
 A fast-forward merge moved the target branch pointer directly forward to match the source branch, preserving every individual commit in chronological order without creating a separate merge commit.
+
+This is the strategy used if you select to keep source branch in the basic mode.
+
 * **Why use it:** It maintains the full, granular step-by-step history of how the work was developed.
 * **Best for:** Merging feature branches into one another when multiple developers are collaborating on the same large initiative and need full visibility into every intermediate change.
 
