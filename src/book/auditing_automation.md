@@ -99,8 +99,7 @@ Reports can also be deleted by creating and running a filter:
 
 The Delete Jobs Data Action can be used in an automation Activity to instigate the deletion of Job Data using a pre-configured Filter.
 
-> **Tip** ✨
->
+> [!TIP]
 > When creating filter queries involving dates, the filter can be  reusable when `RELATIVE` date offsets are used e.g. delete jobs in the last 7 days.
 
-> Note that Job Reports will immediately be marked as deleted (the re-run icon will be greyed out), but the actual data will be removed overnight so as to not burden the system in working hours.
+> [!NOTE] Job Reports will immediately be marked as deleted (the re-run icon will be greyed out), but the actual data will be removed overnight so as to not burden the system in working hours.

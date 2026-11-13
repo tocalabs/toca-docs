@@ -20,8 +20,7 @@ To create a decision point in a workflow, drag an exclusive node onto the workfl
 
 :video{src="/src/assets/book/exclusive_decision_in_workflow.webm"}
 
-> **Note 📝**
->
+> [!NOTE]
 > _If you have multiple conditions which are met in an exclusive then it will only go down the branch for one of them. Due to this, you probably shouldn't rely on this behaviour._
 
 ### Looping
@@ -32,8 +31,7 @@ To set up an exclusive in such a way that it should loop, you need to set up you
 
 :video{src="/src/assets/book/exclusive_loop_in_workflow.webm"}
 
-> **Note 📝**
->
+> [!NOTE]
 > _Looping at the Workflow level will perform each loop a bit slower than doing it at the activity level but provided you are not doing something time critical, in most scenarios this will still run fast enough to be practical._
 
 ## Run Workflow
@@ -50,6 +48,5 @@ When you develop an activity that is useful for more than one project, you can a
 
 :video{src="/src/assets/book/copy_activity_to_project.webm"}
 
-> **Note 📝**
->
+> [!NOTE]
 > _If your activity references datachips from a datastore, you must make sure that the project you are copying the activity to also has access to the same datastore._

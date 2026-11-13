@@ -8,6 +8,5 @@ There are 3 steps to the tool:
 3. Verify Schema Changes: Check the schema migrations that are about to be performed are valid, this helps identify issues such as changing a column to an incompatible type
 4. Summary: A summary of the changes that the tool is about to make before
 
-> **Tip** ✨
->
+> [!TIP]
 > You can also use this tool to clear all data from a table. To do this, set the source and target table  to the same table and then make sure you have selected the option to "Transfer data" and "Clear Target Table before transfer" and then click through the tool. Once completed, your target table will now contain no rows of data.

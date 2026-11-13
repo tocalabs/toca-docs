@@ -16,8 +16,7 @@ To submit an action for review, open the action in the TDK and click the "Submit
 
 :video{src="/src/assets/book/submitting_action_for_review.webm"}
 
-> **Tip ✨**
->
+> [!TIP]
 > _If you run an action build whilst an action or action helper are submitted for review, it will build these components so that you can check that they build successfully before approving them._
 
 #### Add Action to a Group
@@ -43,8 +42,7 @@ Once your action build is complete, you need to load it onto the Bot. Like runni
 
 To load a new build onto a Bot, head to the Admin section and the Bots subsection. From here, click on each bot that you want to update. On the Summary tab for each bot, there is a Bot build ID and a Stateless build ID field, each of these fields will only be populated if you have the corresponding Bot service running (GUI and/or Stateless). If there is a new build available, you can press the refresh icon and this will load the latest action build onto the Bot.
 
-> **Note 📝**
->
+> [!NOTE]
 > _In almost all cases you'll want to update all bots to the latest action builds, this is so that all your bots have the same actions available. This is especially prominent with Stateless bots as a stateless bot can be chosen at random to run automation so making sure that all stateless bots have the same actions is imperative to ensure your platform operates predictably._
 
 
@@ -54,8 +52,7 @@ To load a new build onto a Bot, head to the Admin section and the Bots subsectio
 
 Action Helpers are built into the same action builds as the actions, so you don't need to build them separately or add them to any groups, but you still need to submit them for review and get them approved before they can be used in actions.
 
-> **Tip ✨**
->
+> [!TIP]
 > _Like actions, action helpers will be built in action builds when they are "In Review", this allows you to check your helper code compiles before approving it._
 
 ### Connectors

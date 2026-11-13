@@ -40,8 +40,7 @@ To make someone an admin user, another admin user must go to the Admin -> Users 
 
 :video{src="/src/assets/book/set_user_to_admin.webm"}
 
-> **Note 📝**
->
+> [!NOTE]
 > _It is recommended that only users that require admin functionality are given admin functionality as there is the potential to do quite a lot of damage if not used properly._
 
 ## App User Permissions

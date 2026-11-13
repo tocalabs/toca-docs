@@ -38,8 +38,7 @@ In the clip above, we can see that we create a number variable equal to 25, and 
 
 The first time we run it, it does not run the Stop Activity action and we can see the result of the If Then is false. Once we change the value of our number variable to 26, this means the condition now evaluates to true and the Stop Activity action runs as expected.
 
-> **Note** 📝
->
+> [!NOTE]
 > It can be useful to perform the some conditional logic if a condition is _not_ true, this is usually referred to as an `else` statement, i.e. if condition is true do this, else do this other thing. Whilst there is no specific Else action, there is a way you can achieve the same effect using the result of an `If Then` action.
 > :video{src="/src/assets/book/ifthen_else_conditional.webm"}
 
@@ -49,8 +48,7 @@ You can also introduce decisions to your Workflows, this allows your workflow to
 
 :video{src="/src/assets/book/ifthen_workflow.webm"}
 
-> **Warning** ⚠️
->
+> [!WARNING]
 > If more than 1 condition evaluates to true in an exclusive, it will only execute the first condition that it evaluates to true, so don't rely on this behaviour. You can avoid this by always making sure that all of your conditions are _exclusive_! Additionally, if none of your conditions evaluate to true, the Workflow will stop there and error.
 
 You can also have your Workflow travel down a default path of execution if none of the conditions evaluate to true. To do this, you simply need to use the `else` keyword in your exclusive condition.

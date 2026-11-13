@@ -11,8 +11,7 @@ Preview mode solves this for you by taking away the distractions of the App Desi
 
 Whilst in preview mode, you can click on links to other pages and they will work as expected, your IPL will also work as expected.
 
-> _**Note 📝**_
->
+> [!NOTE]
 > _Preview mode allows you to see your App as your users would, but as you are still viewing the App within the Toca platform, it will perform a bit slower than your real deployed app, particularly if there is lots of IPL or data being rendered on the page._
 
 :video{src="/src/assets/book/book_preview_app.webm"}

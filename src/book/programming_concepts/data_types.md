@@ -32,8 +32,7 @@ A value of type `String` in Toca is a variable-length piece of text that can ran
 
 There is no real upper limit on how many letters can be stored within a single `String` type but once you start getting to the 100,000's of characters, you might notice some performance issues when trying to view the value.
 
-> #### Warning ⚠️
->
+> [!WARNING]
 > `String` type values cannot contain 2 or more instances of `$$` as these are reserved characters used behind the scenes to denote variables and datachips.
 
 #### Casting
@@ -142,8 +141,7 @@ The `JSON` types are for storing JSON (JavaScript Object Notation) data. This is
 
 If I wanted to get the industry value out of the above example, I can query it with JSONPath using `$.industry`, if I wanted the title of the first available job I can use `$.available_jobs[0].title`.
 
-> #### Note 📝
->
+> [!NOTE]
 > Like a `List` type, lists in JSON are also indexed from 0, so the first item is at position 0
 
 #### Casting
@@ -164,8 +162,7 @@ A `File` type can be used to represent any sort of File being used throughout th
 
 The `File` type will store information about the file such as the name, extension, size and the [MIME type](https://en.wikipedia.org/wiki/Media_type).
 
-> #### Note 📝
->
+> [!NOTE]
 > The `File` type is different from providing a file path to a file or folder on a Bot. The `File` type is exclusively used for when you are moving a file around the Toca platform such as between an App input, a Datastore and your Activity.
 
 ### Image
@@ -207,8 +204,7 @@ A `List` is a very useful way of tracking a collection of values that need to st
 
 Individual items in a List can be accessed by their position, this is also known as their "index". A List can also be iterated over to get each item within the List in turn.
 
-> #### Note 📝
->
+> [!NOTE]
 > List indexing starts at 0, so the first item in a list is at position 0, this means the last item in a List will be at position of `list length - 1`.
 
 #### Casting
@@ -253,8 +249,7 @@ Below is an example of how a Bounding Box value is represented behind the scenes
 
 You can access the individual `X`, `Y`, `Width` and `Height` components if you need to extract out the individual `Numbers`.
 
-> #### Note 📝
->
+> [!NOTE]
 > You can only represent a square or rectangular shape with a `Bounding Box`, where the alternate sides _must_ be equal. There is no way of expressing a more complex shape in Toca types.
 
 ### Grid

@@ -130,8 +130,7 @@ App components are written using React and TypeScript. There are two main points
 
 These components can import [NPM](https://npm.js) packages if you provide them with a `package.json` file at the root of your app component.
 
-> **Note 📝**
->
+> [!NOTE]
 > _Unlike automation actions, app components can have multiple files per component. Automation actions only have one file available to each action for you to define your logic._
 
 There are also a series of imports that you can bring in from the Toca ecosystem to help you bring your component to life. These are all documented in the docs panel that exists on the right of the code editor, but the most important are:

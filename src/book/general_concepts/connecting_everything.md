@@ -66,8 +66,7 @@ If you want to connect a listener to a pre-existing app then:
 
 :video{src="/src/assets/book/link_listener_with_app.webm"}
 
-> **Note** 📝
->
+> [!NOTE]
 > Once you have linked a listener with your app, you can set permissions on it if your app has :docs-link[authentication]{id="projects/apps/authentication"} configured. This will let you control what roles user must have in order to trigger the listener.
 
 ### Inputs and Outputs
